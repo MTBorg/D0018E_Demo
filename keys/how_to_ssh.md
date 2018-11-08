@@ -3,9 +3,9 @@
 
 ### Windows
 
-```
+
 Download [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
-```
+
 
 Now start putty.exe
 
