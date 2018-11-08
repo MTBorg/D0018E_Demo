@@ -30,9 +30,9 @@ User: bugmana
 
 Click "yes" on prompts...
 
-```
+
 Done.
-```
+
 
 ### Linux
 
@@ -46,6 +46,6 @@ then
 ssh bugmana@130.240.202.225
 ```
 
-```
+
 Done.
-```
+
