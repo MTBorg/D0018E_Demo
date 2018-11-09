@@ -48,6 +48,7 @@ För att "pusha" dina commits till github repon skriver du
 ```
 git push origin <branchName>
 ```
+Du bör pusha varje gång du slutar arbeta.
 **ALLA MERGES I DET HÄR PROJEKTET SKA SKE VIA PULL REQUEST PÅ GITHUB. DÄRFÖR KOMMER JAG INTE DELA MED MIG OM HUR MAN
 MERGAR LOKALT. HA!**
 
@@ -59,9 +60,14 @@ Det kan hända att din lokala branch ligger efter motsvarande branch som ligger 
 ```
 git pull origin <branchName>
 ```
+Du bör "pulla" varje gång du varit borta från projektet.
 För att byta till en annan branch skriver du
 ```
 git checkout <branchName>
+```
+För att visa commit loggen för den branch du är på skriver du
+```
+git log
 ```
 
 ####### Tutorial på pull requests kommer ske live.
