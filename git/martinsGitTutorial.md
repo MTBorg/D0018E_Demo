@@ -2,13 +2,16 @@
 ### Här får ni möjligheten att fördjupa er i versionshanteringsverktyget Git.
 
 #### Naming convention för branches
-f feature, implenting new features
-b bug, fixing bugs
-t testing, testing functionality
-s sketch, trying out new ideas
-EX: Du ska testa din experimentella idè om hur du kan fixa en bug som uppstår i en feature du försöker implementera.
-fFeature/bBug/sSketch/tTest
 
+  * f - feature implenting new features
+  * b - bug fixing bugs
+  * t - testing testing functionality
+  * s - sketch trying out new ideas
+  
+EX: Du ska testa din experimentella idè om hur du kan fixa en bug som uppstår i en feature du försöker implementera.
+`
+fFeature/bBug/sSketch/tTest
+`
 
 För att klona repositoryn
 ```
