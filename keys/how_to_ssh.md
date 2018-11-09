@@ -52,7 +52,7 @@ Done.
 ### Make a sudo user
 
 ```
-adduser username
+sudo adduser username
 ```
 
 Använd ditt riktiga namn i lowercase, ex. "aron"
@@ -61,7 +61,7 @@ Fyll i dina uppgifter.
 För att ge dig root (sudo)
 
 ```
-usermod -aG sudo username
+sudo usermod -aG sudo username
 ```
 
 Logga in på din användare med
