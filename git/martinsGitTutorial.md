@@ -44,3 +44,24 @@ Sedan kan du commita ändringarna genom att skriva
 git commit -m <"This is a commit message">
 ```
 Flaggan -m anger ett commit message och det är **VÄLDIGT** viktigt att du alltid skriver tydliga meddelanden.
+För att "pusha" dina commits till github repon skriver du
+```
+git push origin <branchName>
+```
+**ALLA MERGES I DET HÄR PROJEKTET SKA SKE VIA PULL REQUEST PÅ GITHUB. DÄRFÖR KOMMER JAG INTE DELA MED MIG OM HUR MAN
+MERGAR LOKALT. HA!**
+
+Du kan ta bort en lokal branch (du kan inte vara på den branch du ska ta bort) genom
+```
+git branch -D <branchName>
+```
+Det kan hända att din lokala branch ligger efter motsvarande branch som ligger uppe på servern, du drar då ner ändringar med
+```
+git pull origin <branchName>
+```
+För att byta till en annan branch skriver du
+```
+git checkout <branchName>
+```
+
+####### Tutorial på pull requests kommer ske live.
