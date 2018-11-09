@@ -49,3 +49,29 @@ ssh bugmana@130.240.202.225
 
 Done.
 
+### Make a sudo user
+
+```
+adduser username
+```
+
+Använd ditt riktiga namn i lowercase, ex. "aron"
+Fyll i dina uppgifter.
+
+För att ge dig root (sudo)
+
+```
+usermod -aG sudo username
+```
+
+Logga in på din användare med
+
+
+```
+su - username
+```
+Testa om du är root
+ 
+```
+sudo whoami
+```
