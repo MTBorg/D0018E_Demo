@@ -30,7 +30,7 @@ git status
 ```
 **OBS! Ändra ALDRIG någonting på master.**
 **DEN SOM ÄNDÅ BESTÄMMER SIG FÖR ATT GÖRA DET HAR TVÅ VAL:**
-1. **FÅ KICKEN** 
+1. **FÅ KICKEN**
 2. **BLI AVRÄTTAD**
 
 Alla förändringar du vill göra **MÅSTE** du göra på en ny branch.
