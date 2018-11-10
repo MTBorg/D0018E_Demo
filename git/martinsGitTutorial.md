@@ -27,7 +27,11 @@ Du kan se vilken branch du är på genom att skriva
 ```
 git status
 ```
-**OBS! Ändra ALDRIG någonting på master**
+**OBS! Ändra ALDRIG någonting på master.**
+**DEN SOM ÄNDÅ BESTÄMMER SIG FÖR ATT GÖRA DET HAR TVÅ VAL:**
+1. **FÅ KICKEN** 
+2. **BLI AVRÄTTAD**
+
 Alla förändringar du vill göra **MÅSTE** du göra på en ny branch.
 Du kan se vilken branch du är på samt alla som finns med
 ```
@@ -82,4 +86,6 @@ För att visa commit loggen för den branch du är på skriver du
 git log
 ```
 
-####### Tutorial på pull requests kommer ske live.
+Här en bra video som visar workflowet som vi **SKA** ha under projektets gång. (Börja kolla på den angivna tiden och strunta i allt annat)
+
+[![GITHUB PULL REQUEST, Branching, Merging & Team Workflow](http://img.youtube.com/vi/oFYyTZwMyAg/0.jpg)](https://youtu.be/oFYyTZwMyAg?t=395)
