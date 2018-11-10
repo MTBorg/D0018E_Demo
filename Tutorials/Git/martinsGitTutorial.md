@@ -94,7 +94,7 @@ Här är ett exempel på ett bra workflow
 4. Du gör stegvis små ändringar som du commitar lokalt och pushar till github regelbundet
 5. Du går och vattnar asfalten
 6. Du kommer tillbaka efter att ha varit borta en stund och pullar din branch
-7. När du känner dig nöjd med din branch committar du allt det sista med meddelandet "ready for merge" och pushar till github.
+7. När du känner dig nöjd med din branch committar du allt och pushar till github.
 8. Du går in på github och skapar en pull-request och ber någon att testa och kolla igenom koden
 9. De andra personerna testar branchen och lämnar kommentarer om de har något att påpeka och godkänner sedan pull-requesten om de känner sig nöjda (du ska **ABSOLUT INTE** godkänna pull-requesten)
 10. Branchen är nu mergad och du kan ta bort branchen
