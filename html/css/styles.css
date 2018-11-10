@@ -1,0 +1,46 @@
+/* ---------------------------------------------------------
+   HTML5 Bones
+   This stylesheet contains print styling and a section for 
+   you to simply add your own. This is a basic template 
+   after all.
+   ---------------------------------------------------------*/
+
+/* ========================================================================== */
+/* =================== HERE YOU CAN ADD YOUR CSS CODE ======================= */
+/* ========================================================================== */
+/* ============================ ONLY HERE :) ================================ */
+/* ========================================================================== */
+/* ===========================THANK YOU! /ARON ============================== */
+
+    body {
+   
+    }
+    /* Default link styling */
+    a:link { color:#0271fb; }
+    a:visited { color:#bd02fb; }
+    a:hover, a:focus { color:#000; }
+    a:active { color:#fb0e02; }
+    
+    
+    
+/* ---------------------------------------------------------
+   Author's styles
+   ---------------------------------------------------------*/
+    body {
+   
+    }
+
+
+    
+/* ---------------------------------------------------------
+   Print styles
+   ---------------------------------------------------------*/
+   /* Fattar ni? testa ändra storlek på window */
+@media screen and (max-width: 480px) {
+    body {
+        background-color: gray !important;
+        box-shadow:none !important;
+        text-shadow:none !important;
+    }
+
+}
