@@ -78,6 +78,12 @@ Det kan hända att din lokala branch ligger efter motsvarande branch som ligger 
 ```
 git pull origin <branchName>
 ```
+Det kan även hända att branches som ligger på github tas bort medans de ligger kvar på din maskin. För att updatera vilka branches
+som ligger på github skriver du
+```
+git remote update origin --prune
+```
+
 Du bör "pulla" varje gång du varit borta från projektet.
 För att byta till en annan branch skriver du
 ```
