@@ -27,6 +27,8 @@ Update and edit/add/remove products to the database and web page.
 
 ### Scrum board
 
+![zube](https://lh3.googleusercontent.com/I0tZq_vSQ36kczN9FZRPzQcJi48XH9VgEJ6-41cKjnbWUe2crPfF7TFARoFVX1uPZt5WLS6gBwXTWjnby__G4C-D0m8LratMvKME-1yQ6MzIfh5wrL0CpVNDEVtQMbBLzlv7tCPM)
+
 
 ### Database tables
 
