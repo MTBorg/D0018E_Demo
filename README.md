@@ -4,10 +4,10 @@ A minimalistic website with a e-commerce system were you can buy products, a sho
 
 # Group 1
 
-Hugo Wangler, hugwan-6
-Aron Strandberg, arostr-5
-Martin Terneborg, termar-5
-Robin Vernström Persson, robper-6
+* Hugo Wangler, hugwan-6
+* Aron Strandberg, arostr-5
+* Martin Terneborg, termar-5
+* Robin Vernström Persson, robper-6
 
 ## Plan for Sprint 1 
 
