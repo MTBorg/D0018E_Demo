@@ -1,7 +1,7 @@
 <?php
     $dbhost = 'localhost';
     $dbuser = 'admin';
-    $dbpass = 'qwerty';
+    $dbpass = 'adminpass';
     
     $dbconn=mysqli_connect($dbhost,$dbuser,$dbpass);
 
@@ -11,7 +11,7 @@
     
     echo "connected... \n";
 
-    $query = "CREATE DATABASE schabing;";
+    $query = "CREATE DATABASE maindb;";
         
     mysqli_query($dbconn, $query);
 

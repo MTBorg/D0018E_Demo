@@ -1,8 +1,8 @@
 <?php
     $dbhost = 'localhost';
-    $dbuser = 'user1';
-    $dbpass = 'qwerty';
-    $db = 'mainDB';
+    $dbuser = 'admin';
+    $dbpass = 'adminpass';
+    $db = 'maindb';
     
     $dbconn=mysqli_connect($dbhost,$dbuser,$dbpass,$db);
 
