@@ -1,15 +1,4 @@
 <?php
-    $dbhost = 'localhost';
-    $dbuser = 'admin';
-    $dbpass = 'adminpass';
-    $db = 'maindb';
-    
-    $dbconn=mysqli_connect($dbhost,$dbuser,$dbpass, $db);
-
-    if($dbconn->connect_error){
-        die("Database connection failed: " . $dbconn->connect_error);
-    }
-    
     /*Below are entries added into the products table */
     echo "connected.. \n";
 
@@ -51,7 +40,7 @@
     /* Below are entries added into the Orders table */
 
 
-    
+
     /* Below are entries added into the ShoppingCart table */
 
 ?>
