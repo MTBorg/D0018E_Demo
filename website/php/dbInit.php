@@ -1,17 +1,4 @@
 <?php
-    $dbhost = 'localhost';
-    $dbuser = 'admin';
-    $dbpass = 'adminpass';
-    $db = 'maindb';
-    
-    $dbconn=mysqli_connect($dbhost,$dbuser,$dbpass,$db);
-
-    if($dbconn->connect_error){
-        die("Database connection failed: " . $dbconn->connect_error);
-    }
-    
-    echo "connected... \n";
-
     $query = "CREATE TABLE IF NOT EXISTS Products(
                 id INT NOT NULL AUTO_INCREMENT,
                 name VARCHAR(20) NOT NULL,
@@ -56,5 +43,5 @@
 
     mysqli_query($dbconn, $query);
 
-    echo "table addEed\n";
+    echo "The tables Products, Users, Orders and ShoppingCart created in the maindb database\n";
 ?>
