@@ -19,6 +19,12 @@ Customer
 ```
 Order from site, grade and comment a product and login.
 ```
+
+~~Support~~
+```
+Handle customer complaints, help with orders and respond tp customer comments.
+```
+
 Administrator
 ```
 Update and edit/add/remove products to the database and web page.
