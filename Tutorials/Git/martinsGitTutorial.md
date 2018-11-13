@@ -84,6 +84,14 @@ som ligger på github skriver du
 git remote update origin --prune
 ```
 
+Om du har gjort ändringar lokalt och inte kan byta branch skriver du
+
+```
+git fetch --all
+git reset --hard origin/<branch_name>
+```
+
+
 Du bör "pulla" varje gång du varit borta från projektet.
 För att byta till en annan branch skriver du
 ```
