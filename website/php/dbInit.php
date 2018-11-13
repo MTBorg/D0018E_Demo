@@ -17,7 +17,7 @@
                 name VARCHAR(20) NOT NULL,
                 price INT NOT NULL CHECK (price>=0),
                 stock INT NOT NULL CHECK (stock>=0),
-                rating INT NOT NULL CHECK (rating>=0), 
+                rating INT NOT NULL, 
                 comment_section VARCHAR(1),
                 img_url VARCHAR(90),
                 PRIMARY KEY(id)
