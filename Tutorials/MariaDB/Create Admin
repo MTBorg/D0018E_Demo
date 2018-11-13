@@ -1,0 +1,8 @@
+To create an admin for your database that has all privileges on all databases and tables you have to log in as root. 
+
+In the root of the database (no database selected etc) type:
+CREATE USER 'admin'@'localhost' IDENTIFIED BY 'adminpass';
+  then type
+GRANT ALL PRIVILEGES ON * . * TO 'admin'@'localhost'; 
+
+This is the user used in dbConnect, dbCreate, dbInit.
