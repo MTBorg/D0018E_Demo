@@ -60,7 +60,7 @@
 
                 <!---->
                 <?php
-                    include 'php/loadProducts.php';
+                    include 'php/loadImgUrl.php';
                     loadProducts();
                 ?>
 
