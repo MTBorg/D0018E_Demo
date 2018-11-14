@@ -1,4 +1,8 @@
 <?php
+    require_once 'dbConnect.php';
+
+    $dbconn = dbConnect();
+
     /*Below are entries added into the products table */
     echo "connected.. \n";
 
@@ -43,4 +47,6 @@
 
     /* Below are entries added into the ShoppingCart table */
 
+    # Close the connection to the DB
+    mysqli_close($dbconn);
 ?>

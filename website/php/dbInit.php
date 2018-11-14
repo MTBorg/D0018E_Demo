@@ -1,4 +1,8 @@
 <?php
+    require_once 'dbConnect.php';
+
+    $dbconn = dbConnect();
+
     $query = "CREATE TABLE IF NOT EXISTS Products(
                 id INT NOT NULL AUTO_INCREMENT,
                 name VARCHAR(20) NOT NULL,
@@ -44,4 +48,7 @@
     mysqli_query($dbconn, $query);
 
     echo "The tables Products, Users, Orders and ShoppingCart created in the maindb database\n";
+    
+    # Close the connection to the DB
+    mysqli_close($dbconn);
 ?>
