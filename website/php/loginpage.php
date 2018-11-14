@@ -8,7 +8,7 @@
 <body>
 
 	<div class="LogInBox">
-		<form action="" style="text-align:center" target="_blank"> <!-- action should use a log in script -->
+		<form action="" style="text-align:center" target="_self"> <!-- action should use a log in script -->
 			<p>Username
 			<input type="text" class="LogInForm">
 			<p>Password
