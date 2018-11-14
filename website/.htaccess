@@ -1,3 +1,4 @@
 # Add WebVTT MIME Type to ensure Internet Explorer support
 # (without this being set, IE will ignore .vtt files)
 AddType text/vtt vtt
+DirectoryIndex index.php

@@ -1,21 +1,27 @@
 <?php
-    require_once 'dbConnect.php';
+    // Setup connection, we do not use dbConnect.php since 3 parameters and not 4
+    $dbhost = 'localhost';
+    $dbuser = 'admin';
+    $dbpass = 'adminpass';
 
-    $dbconn = dbConnect();
-
-    if($dbconn->connect_error){
-        die("Database connection failed: " . $dbconn->connect_error);
+    $dbconn=mysqli_connect($dbhost,$dbuser,$dbpass);
+    $checkdbname = "SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = 'maindb'";
+    
+    // To know if database exists or not...
+    if($checkdbname) {
+        echo "Database already exists!\n";
     }
-    
-    echo "connected... \n";
-
-    $query = "CREATE DATABASE maindb;";
+    else {
         
-    mysqli_query($dbconn, $query);
-
-    
-
-    echo "table addHEEed\n";
+        // If already exists we make sure we do not create one
+        $query = "CREATE DATABASE IF NOT EXISTS maindb;";
+            
+        mysqli_query($dbconn, $query);
+        
+        
+        echo "Database created.\n";
+        
+    }
 
     # Close the connection  to the DB.
     mysqli_close($dbconn);

@@ -57,18 +57,13 @@
             <!-- PROTOTYPE. This is the grid for the shop, each item is a square and inside the
             item you can add images, buttons etc. -->
             <div class="shop">
-                <div class="item">
-                    <img src="img/rocket.jpg" alt="rocket">
-                    <button type="button">Buy</button>
-                </div>
-                <div class="item">
-                    <img src="img/car.jpg" alt="car">
-                    <button type="button">Buy</button>
-                </div>
-                <div class="item">
-                    <img src="img/boat.png" alt="boat">
-                    <button type="button">Buy</button>
-                </div>
+
+                <!---->
+                <?php
+                    include 'php/loadImgUrl.php';
+                    loadProducts();
+                ?>
+
 
             </div>
         </main>
