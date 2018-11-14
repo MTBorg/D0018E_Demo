@@ -12,7 +12,7 @@
   
 EX: Du ska testa din experimentella idè om hur du kan fixa en bug som uppstår i en feature du försöker implementera.
 `
-fFeature/bBug/sSketch/tTest
+fFeature-bBug-sSketch-tTest
 `
 
 För att klona repositoryn
