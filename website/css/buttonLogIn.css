@@ -1,4 +1,11 @@
 button.buttonLogIn{
 	color : white;
 	background-color:gray;
+	
+	float:right;
 }
+
+button.buttonLogIn:hover{
+	background-color:black;
+}
+
