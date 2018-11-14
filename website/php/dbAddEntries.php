@@ -47,4 +47,6 @@
 
     /* Below are entries added into the ShoppingCart table */
 
+    # Close the connection to the DB
+    mysqli_close($dbconn);
 ?>

@@ -16,4 +16,7 @@
     
 
     echo "table addHEEed\n";
+
+    # Close the connection  to the DB.
+    mysqli_close($dbconn);
 ?>
