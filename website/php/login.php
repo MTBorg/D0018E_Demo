@@ -5,12 +5,11 @@
 
 	<title>Log in</title>
 </head>	
-	<nav role="navigation"> 
+<body>
 
-	</nav>	
-
-	<div class="logInBox">
-		<a href=""; class="buttonLogIn">Log In</a>
+	<div class="LogInBox">
+		<a href="#"; class="ButtonLogInBox">Log In</a>
 	</div>
 
+</body>
 </html>
