@@ -1,9 +1,7 @@
 <?php
-    $dbhost = 'localhost';
-    $dbuser = 'admin';
-    $dbpass = 'adminpass';
-    
-    $dbconn=mysqli_connect($dbhost,$dbuser,$dbpass);
+    require_once 'dbConnect.php';
+
+    $dbconn = dbConnect();
 
     if($dbconn->connect_error){
         die("Database connection failed: " . $dbconn->connect_error);

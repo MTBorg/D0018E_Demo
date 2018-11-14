@@ -1,4 +1,8 @@
 <?php
+    require_once 'dbConnect.php';
+
+    $dbconn = dbConnect();
+
     /*Below are entries added into the products table */
     echo "connected.. \n";
 
