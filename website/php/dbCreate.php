@@ -5,23 +5,16 @@
     $dbpass = 'adminpass';
 
     $dbconn=mysqli_connect($dbhost,$dbuser,$dbpass);
-    $checkdbname = "SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = 'maindb'";
+
+        
+    // If already exists we make sure we do not create one
+    $query = "CREATE DATABASE IF NOT EXISTS maindb;";
+        
+    mysqli_query($dbconn, $query);
     
-    // To know if database exists or not...
-    if($checkdbname) {
-        echo "Database already exists!\n";
-    }
-    else {
+    
+    echo "Database created.\n";
         
-        // If already exists we make sure we do not create one
-        $query = "CREATE DATABASE IF NOT EXISTS maindb;";
-            
-        mysqli_query($dbconn, $query);
-        
-        
-        echo "Database created.\n";
-        
-    }
 
     # Close the connection  to the DB.
     mysqli_close($dbconn);
