@@ -12,9 +12,9 @@
 	<div class="LogInBox">
 		<form action="javascript:LogInSubmit()" method="post" style="text-align:center" target="_self">
 			<p>Username
-			<input type="text" class="LogInForm" />
+			<input type="text" name="username" class="LogInForm" />
 			<p>Password
-			<input type="text" class="LogInForm" />
+			<input type="text" name="password" class="LogInForm" />
 			<br>
 			<input type="submit" class="ButtonLogIn" value="Log in"  />
 		</form>

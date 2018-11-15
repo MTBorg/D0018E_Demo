@@ -7,6 +7,17 @@ function LogInSubmit(){
 		}	
 	};
 
+	var inputs = document.getElementsByTagName("input");
+	var password;
+	var username;
+	var i;
+	for(i = 0; i < inputs.length; i++){
+		if(inputs[i].name == "password"){
+			password = inputs[i].value;
+		}else if(inputs[i].name == "username"){
+			username = inputs[i].value;
+		}
+	}	
 	xmlhttp.open("GET", "../php/login.php", true);
 	xmlhttp.send();
 	
