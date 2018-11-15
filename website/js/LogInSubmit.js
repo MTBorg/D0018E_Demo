@@ -9,19 +9,19 @@ function LogInSubmit(){
 
 	var inputs = document.getElementsByTagName("input");
 	var password;
-	var username;
+	var email;
 	var i;
 
 	for(i = 0; i < inputs.length; i++){
-		if(inputs[i].name == "password"){
+		if(inputs[i].name == "email"){
+			email = inputs[i].value;
+		}else if(inputs[i].name == "password"){
 			password = inputs[i].value;
-		}else if(inputs[i].name == "username"){
-			username = inputs[i].value;
 		}
 	}	
 	
 	xmlhttp.open("POST", "../php/login.php", true);
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	xmlhttp.send("username=" + username + "&password=" + password);
+	xmlhttp.send("email=" + email + "&password=" + password);
 	
 }	
