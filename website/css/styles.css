@@ -12,102 +12,92 @@
 /* ========================================================================== */
 /* ===========================THANK YOU! /ARON ============================== */
 
-    body {
-   
-    }
-    /* Default link styling */
-    a:link { color:#0271fb; }
-    a:visited { color:#bd02fb; }
-    a:hover, a:focus { color:#000; }
-    a:active { color:#fb0e02; }
-    
-    
-    
+body {
+}
+/* Default link styling */
+a:link {
+  color: #0271fb;
+}
+a:visited {
+  color: #bd02fb;
+}
+a:hover,
+a:focus {
+  color: #000;
+}
+a:active {
+  color: #fb0e02;
+}
+
 /* ---------------------------------------------------------
    Author's styles
    ---------------------------------------------------------*/
-    body {
-   
-    }
+body {
+}
 
-    h1 {
-        text-align: center;
-    }
+h1 {
+  text-align: center;
+}
 
+.wrap {
+  margin: 50px;
+  text-align: center;
+}
 
-    .wrap {
+.shop {
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: gray;
+  padding: 10px;
+}
 
-        margin: 50px;
-        text-align: center;
-    
-    }
+.item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  overflow: hidden;
+}
 
+#namePos,
+#pricePos,
+#ratingPos {
+  text-align: right;
+}
+.stockPos {
+  text-align: right;
+}
 
-    .shop {
-        text-align: center;
-        display: grid;
-        grid-template-columns: auto auto auto;
-        background-color: gray;
-        padding: 10px; 
-    }
+button {
+  text-align: left;
+}
 
-    .item {
-        background-color: rgba(255, 255, 255, 0.8);
-        border: 1px solid rgba(0, 0, 0, 0.8);
-        padding: 20px;
-        font-size: 30px;
-        overflow: hidden;
+img {
+  width: 200px;
+  height: 200px;
+  text-align: left;
+  overflow: hidden;
+}
 
-    }
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: gray;
+  color: white;
+  text-align: center;
+}
 
-    #namePos, #pricePos, #stockPos, #ratingPos  {
-        text-align: right;
-    }
-
-
-    
-
-    button {
-        text-align: left;
-        
-    }
-
-
-    img {
-        width: 200px;
-        height: 200px;
-        text-align: left;
-        overflow: hidden;
-        
-        
-    }
-
-    footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: gray;
-        color: white;
-        text-align: center;
-
-    }
-
-
-    
-
-
-
-    
 /* ---------------------------------------------------------
    Print styles
    ---------------------------------------------------------*/
-   /* Fattar ni? testa ändra storlek på window */
+/* Fattar ni? testa ändra storlek på window */
 @media screen and (max-width: 480px) {
-    body {
-        background-color: gray !important;
-        box-shadow:none !important;
-        text-shadow:none !important;
-    }
-
+  body {
+    background-color: gray !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
 }

@@ -1,6 +1,6 @@
 <?php
     
-    function orderProduct() {
+
         include 'dbConnect.php';
        
         $prodID = intval($_GET['id']);
@@ -28,7 +28,7 @@
             
         }
 
-    }
+    
 
 ?>
     

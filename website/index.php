@@ -58,18 +58,21 @@
             <!-- PROTOTYPE. This is the grid for the shop, each item is a square and inside the
             item you can add images, buttons etc. -->
             <div class="shop">
+                    
+                <!-- <div id="1" class="item">
+                <img src="img/boat.png">
+                <p id="namePos">boat</p>
+                <p id="pricePos">5000</p>
+                <p id="stockpos">9</p>
+                <p id="ratingPos">99</p>
+                <button id = "1" type="button" onclick="orderEvent(this.id)">Test</button>
+                </div> -->
 
-                <div class="item">;
-                    <!-- <button type="button" onclick="orderEvent(this.id)">Test</button>; -->
-                    <button id = "1" type="button" onclick="orderEvent(this.id)">Test</button>;
-                    <p id="stockPos">100</p>;
-                </div>
-
-                <!---->
-                <!-- <?php
+                
+                <?php
                     include 'php/loadProducts.php';
                     loadProducts();
-                ?> -->
+                ?>
 
 
             </div>
