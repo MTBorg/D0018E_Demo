@@ -24,6 +24,7 @@
 
     <!-- Include the HTML5 shiv print polyfill for Internet Explorer browsers 8 and below -->
     <!--[if lt IE 9]><script src="js/html5shiv-printshiv.js" media="all"></script><![endif]-->
+    <script src="../js/orderEvent.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -58,11 +59,17 @@
             item you can add images, buttons etc. -->
             <div class="shop">
 
+                <div class="item">;
+                    <!-- <button type="button" onclick="orderEvent(this.id)">Test</button>; -->
+                    <button id = "1" type="button" onclick="orderEvent(this.id)">Test</button>;
+                    <p id="stockPos">100</p>;
+                </div>
+
                 <!---->
-                <?php
+                <!-- <?php
                     include 'php/loadProducts.php';
                     loadProducts();
-                ?>
+                ?> -->
 
 
             </div>
