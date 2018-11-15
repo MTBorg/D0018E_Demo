@@ -1,4 +1,6 @@
 <?php
-
-	echo "Fuck off";
+	$username = $_POST["username"];
+	$password = $_POST["password"];	
+	
+	echo $username, $password;
 ?>

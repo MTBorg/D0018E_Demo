@@ -1,6 +1,6 @@
 function LogInSubmit(){
 	xmlhttp = new XMLHttpRequest();
-
+	
 	xmlhttp.onreadystatechange = function(){
 		if(this.readyState == 4 && this.status == 200){
 			alert(this.responseText);
@@ -11,6 +11,7 @@ function LogInSubmit(){
 	var password;
 	var username;
 	var i;
+
 	for(i = 0; i < inputs.length; i++){
 		if(inputs[i].name == "password"){
 			password = inputs[i].value;
@@ -18,7 +19,9 @@ function LogInSubmit(){
 			username = inputs[i].value;
 		}
 	}	
-	xmlhttp.open("GET", "../php/login.php", true);
-	xmlhttp.send();
+	
+	xmlhttp.open("POST", "../php/login.php", true);
+	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xmlhttp.send("username=" + username + "&password=" + password);
 	
 }	
