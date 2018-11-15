@@ -30,7 +30,4 @@
 
     }
 
-    orderProduct(1);
-
-
 ?>
