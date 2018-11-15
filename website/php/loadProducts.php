@@ -21,7 +21,7 @@
                 echo '<p id="pricePos">' . $row['price'] . '</p>';
                 echo '<p id="stockPos">' . $row['stock'] . '</p>';
                 echo '<p id="ratingPos">' . $row['rating'] . '</p>';
-                echo '<button type="button">Order</button>';
+                echo '<button name="'.$row['name'].'" type="button">Order</button>';
                 echo '</div>';
                 
             }
