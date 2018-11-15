@@ -61,8 +61,8 @@
 
                 <div class="item">;
                     <!-- <button type="button" onclick="orderEvent(this.id)">Test</button>; -->
-                    <button id = "1" type="button" onclick="test(this.id)">Test</button>;
-                    <p id="stockPos">100</p>';
+                    <button id = "1" type="button" onclick="orderEvent(this.id)">Test</button>;
+                    <p id="stockPos">100</p>;
                 </div>
 
                 <!---->
