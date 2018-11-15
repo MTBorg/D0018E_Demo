@@ -15,7 +15,7 @@
             // Fetch associated array
             while ($row = mysqli_fetch_array($products)) {
                 // Hence we do not need to know the url only the name
-                echo '<div class="item">';
+                echo '<div id="'.$row['id'].'" class="item">';
                 echo '<img src="'. $row['img_url'] .'">';
                 echo '<p id="namePos">' . $row['name'] . '</p>';
                 echo '<p id="pricePos">' . $row['price'] . '</p>';
