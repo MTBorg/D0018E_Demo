@@ -8,6 +8,6 @@ function orderEvent(product_id) {
         .getElementsByTagName("p")[0].innerHTML = this.responseText;
     }
   };
-  xmlhttp.open("GET", "orderProduct.php?q=" + product_id, true);
+  xmlhttp.open("GET", "orderProduct.php?id=" + product_id, true);
   xmlhttp.send();
 }
