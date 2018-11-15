@@ -1,8 +1,9 @@
 <?php
     
-    function orderProduct($prodID) {
+    function orderProduct() {
         include 'dbConnect.php';
        
+        $prodID = intval($_GET['id']);
         $dbconn = dbConnect();
 
         $queryProduct = "SELECT * FROM Products WHERE Products.id = $prodID";
