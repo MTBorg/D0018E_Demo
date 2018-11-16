@@ -18,7 +18,7 @@
 				</tr>
 				<tr>
 					<td align="right"><p style="font-family:Helvetica">Password</td>
-					<td align="left"><input type="password" placeholder="password" name="email" class="LogInForm"/></td>
+					<td align="left"><input type="password" placeholder="password" name="password" class="LogInForm"/></td>
 				</tr>
 			</table>
 			<input type="submit" class="ButtonLogIn" value="Log in"  />
