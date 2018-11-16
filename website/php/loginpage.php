@@ -11,9 +11,9 @@
 
 	<div class="LogInBox">
 		<form action="javascript:LogInSubmit()" method="post" style="text-align:center" target="_self">
-			<p>Username
+			<p style="font-family:Helvetica">Email
 			<input type="text" placeholder="email" name="email" class="LogInForm" />
-			<p>Password
+			<p style="font-family:Helvetica">Password
 			<input type="password" placeholder="password" name="password" class="LogInForm" />
 			<br>
 			<input type="submit" class="ButtonLogIn" value="Log in"  />
