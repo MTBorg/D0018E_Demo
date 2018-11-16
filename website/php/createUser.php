@@ -11,5 +11,21 @@
 
     $query_values = '(NULL, 0, "'.$first_name.'","'.$last_name.'","'.$email.'","'.$password.'");'; 
 
-    $query = 'INSERT INTO Users VALUES '.$query_values;
+
+    $query_findEmail = 'SELECT email FROM Users WHERE email = '.$email';';
+
+    $search = mysqli_query($dbconn, $query_findEmail);
+
+    if($search == false) {
+        $query = 'INSERT INTO Users VALUES '.$query_values;
+        mysqli_query($dbconn, $query);
+        echo 1;
+        
+    } else {
+        echo 0;
+    }
+    
+
+
+    
 ?>
