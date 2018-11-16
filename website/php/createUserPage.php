@@ -41,6 +41,7 @@
                     </tr>
                 </table>
                 <input type="submit" class="Button" value="Submit">
+                <p id="submit-info"></p>
             </form>
         </div>
     </body>
