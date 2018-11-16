@@ -44,6 +44,7 @@
         <nav role="navigation">
             <!-- This can contain your site navigation either in an unordered list or even a paragraph that contains links that allow users to navigate your site -->
 	<a href="php/loginpage.php" id="loginmain" class="ButtonLogIn">Log In</a>
+	<a href="php/createUserPage.php">Sign up</a>
         </nav>
 
     </header>
