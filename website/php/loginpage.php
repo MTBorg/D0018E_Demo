@@ -9,7 +9,7 @@
 </head>	
 <body>
 
-	<div class="LogInBox">
+	<div class="SubmitBox">
 		<form action="javascript:LogInSubmit()" method="post" style="text-align:center" target="_self">
 			<table style="width:50%; margin:auto;">
 				<tr>
