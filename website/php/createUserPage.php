@@ -5,7 +5,24 @@
         <link href="../css/styles.css" rel="stylesheet">
     </head>
     <body>
+        <header role="banner">
+
+		    <h1 id="logoText"> StarTrader </h1>
+		    <h3 id="logoSlogan"> The biggest market in the universe </h3>
+
+            <!-- ARIA: the landmark role "navigation" is added here as the element contains site navigation
+            NOTE: The <nav> element does not have to be contained within a <header> element, even though the two examples on this page are. -->
+            <nav role="navigation">
+             <!-- This can contain your site navigation either in an unordered list or even a paragraph that contains links that allow users to navigate your site -->
+
+		        <i id="navIcon" class="fa fa-align-justify" style="font-size:36px; color:white"></i>
+
+	            <a href="php/loginpage.php" id="loginmain" class="Button">Log In</a>
+            </nav>
+
+    </header>
     <form action="javascript:getUserInput()" method="post" target="_self">
+
             <h1>Sign up</h1>
 
             <p>
