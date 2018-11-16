@@ -14,7 +14,7 @@
 			<p>Username
 			<input type="text" name="email" class="LogInForm" />
 			<p>Password
-			<input type="text" name="password" class="LogInForm" />
+			<input type="password" name="password" class="LogInForm" />
 			<br>
 			<input type="submit" class="ButtonLogIn" value="Log in"  />
 		</form>
