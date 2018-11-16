@@ -90,7 +90,7 @@ footer {
   text-align: center;
 }
 
-	.ButtonLogIn{
+	.Button{
 		color:white;
 		background-color:black;
 		padding:5px;
@@ -99,7 +99,7 @@ footer {
 		text-decoration: none;
 	}
 
-	a.ButtonLogIn{
+	a.Button{
 		color:white;
 	}
 
@@ -107,7 +107,7 @@ footer {
 		float:right;
 	}
 
-	.ButtonLogIn:hover{
+	.Button:hover{
 		background-color:gray;
 	}
 
