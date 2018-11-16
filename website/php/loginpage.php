@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link href="../css/LogInStyles.css" rel="stylesheet"> 
+	<link href="../css/styles.css" rel="stylesheet"> 
 
 	<title>Log in</title>
 	<script src="../js/LogInSubmit.js" type="text/javascript">
