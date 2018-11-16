@@ -13,7 +13,8 @@ function orderEvent(product_id) {
        */
       document
         .getElementById(product_id)
-        .getElementsByTagName("p")[2].innerHTML = this.responseText;
+        .getElementsByTagName("p")[2].innerHTML =
+        "<b>stock</b>: " + this.responseText;
     }
   };
   xmlhttp.open("GET", "../php/orderProduct.php?id=" + product_id, true);
