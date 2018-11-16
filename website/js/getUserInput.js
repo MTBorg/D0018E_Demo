@@ -6,9 +6,7 @@ function getUserInput(idFirst_name, idLast_name, idEmail, idPassword) {
 
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      if (this.responeText) {
-        document.getElementById("submit-info").innerHTML = "Sucess!";
-      }
+      document.getElementById("submit-info").innerHTML = this.responseText;
     }
   };
 
@@ -18,26 +16,17 @@ function getUserInput(idFirst_name, idLast_name, idEmail, idPassword) {
   var email = user_inputs[2].value;
   var password = user_inputs[3].value;
 
-  if (typeof first_name != "string" || first_name == NULL) {
-    document.getElementById("name-info").innerHTML = "None valid input!";
-  }
-  if (typeof last_name != "string" || last_name == NULL) {
-    document.getElementById("lName-info").innerHTML = "None valid input!";
-  } else {
-    xmlhttp.open("POST", "../php/createUser.php", true);
-    xmlhttp.setRequestHeader(
-      "Content-type",
-      "application/x-www-form-urlencoded"
-    );
-    xmlhttp.send(
-      "first_name=" +
-        first_name +
-        "&last_name=" +
-        last_name +
-        "&email=" +
-        email +
-        "&password=" +
-        password
-    );
-  }
+  xmlhttp.open("POST", "../php/createUser.php", true);
+  xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xmlhttp.send(
+    "first_name=" +
+      first_name +
+      "&last_name=" +
+      last_name +
+      "&email=" +
+      email +
+      "&password=" +
+      password
+  );
 }
+// }
