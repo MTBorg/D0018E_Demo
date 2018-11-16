@@ -20,38 +20,28 @@
 	            <a href="php/loginpage.php" id="loginmain" class="Button">Log In</a>
             </nav>
 
-    </header>
-    <form action="javascript:getUserInput()" method="post" target="_self">
-
-            <h1>Sign up</h1>
-
-            <p>
-                <label>First Name</label>
-                <input type = "text" id = "first_name" name = "first_name">
-                <p id="name-info"></p>
-            </p>
-
-            <p>
-                <label>Last Name</label>
-                <input type = "text" id = "last_name" name = "last_name">
-                <p id="lName-info"></p>
-            </p>
-
-            <p>
-                <label>Email</label>
-                <input type = "text" id = "email">
-                
-            </p>
-
-            <p>
-                <label>Password</label>
-                <input type = "text" id = "password">
-                <p id="password-info"></p>
-            </p>
-            <div>
-            <input type="submit" class="Button" value="Log in" />
-            <p id="submit-info"></p>
-            </div>
-        </form>
+        </header>
+        <div>
+            <form action="javascript:getUserInput()" method="post" target="_self">
+                <table>
+                    <tr>
+                        <td align="left"><p style="font-family:Helvetica">First name</p></td>
+                        <td align="right"><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td align="left"><p style="font-family:Helvetica">Last name</p></td>
+                        <td align="right"><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td align="left"><p style="font-family:Helvetica">Email</p></td>
+                        <td align="right"><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td align="left"><p style="font-family:Helvetica">Password</p></td>
+                        <td align="right"><input type="password"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
     </body>
 </html>
