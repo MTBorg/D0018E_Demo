@@ -22,7 +22,7 @@
     <!-- Include the site stylesheet -->
     <link href="css/styles.css" rel="stylesheet" media="all">
 
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Include the HTML5 shiv print polyfill for Internet Explorer browsers 8 and below -->
     <!--[if lt IE 9]><script src="js/html5shiv-printshiv.js" media="all"></script><![endif]-->
     <script src="../js/orderEvent.js" type="text/javascript"></script>
@@ -35,14 +35,16 @@
     <!-- ARIA: the landmark role "banner" is set as it is the prime heading or internal title of the page -->
     <header role="banner">
 
-        <h1>
-            E-Commerce
-        </h1>
+		<h1 id="logoText"> StarTrader </h1>
+		<h3 id="logoSlogan"> The biggest market in the universe </h3>
 
         <!-- ARIA: the landmark role "navigation" is added here as the element contains site navigation
         NOTE: The <nav> element does not have to be contained within a <header> element, even though the two examples on this page are. -->
         <nav role="navigation">
             <!-- This can contain your site navigation either in an unordered list or even a paragraph that contains links that allow users to navigate your site -->
+
+		<i id="navIcon" class="fa fa-align-justify" style="font-size:36px; color:white"></i>
+
 	<a href="php/createUserPage.php" id="signUpMain" class="Button">Sign up</a>
 	<a href="php/loginpage.php" id="loginmain" class="Button">Log In</a>
         </nav>
