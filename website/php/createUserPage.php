@@ -15,13 +15,12 @@
             <nav role="navigation">
              <!-- This can contain your site navigation either in an unordered list or even a paragraph that contains links that allow users to navigate your site -->
 
-		        <i id="navIcon" class="fa fa-align-justify" style="font-size:36px; color:white"></i>
 
 	            <a href="php/loginpage.php" id="loginmain" class="Button">Log In</a>
             </nav>
 
         </header>
-        <div>
+        <div class="SubmitBox">
             <form action="javascript:getUserInput()" method="post" target="_self">
                 <table>
                     <tr>
