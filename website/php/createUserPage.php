@@ -40,6 +40,7 @@
                         <td align="right"><input type="password"></td>
                     </tr>
                 </table>
+                <input type="submit" class="Button" value="Submit">
             </form>
         </div>
     </body>
