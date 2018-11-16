@@ -17,10 +17,10 @@
                 // Hence we do not need to know the url only the name
                 echo '<div id="'.$row['id'].'" class="item">';
                 echo '<img src="'. $row['img_url'] .'">';
-                echo '<p id="namePos">' . $row['name'] . '</p>';
-                echo '<p id="pricePos">' . $row['price'] . '</p>';
-                echo '<p class="stockpos">' . $row['stock'] . '</p>';
-                echo '<p id="ratingPos">' . $row['rating'] . '</p>';
+                echo '<p id="namePos"> <b>name</b>: ' . $row['name'] . '</p>';
+                echo '<p id="pricePos"> <b>price</b>: ' . $row['price'] . '</p>';
+                echo '<p class="stockpos"> <b>stock</b>: ' . $row['stock'] . '</p>';
+                echo '<p id="ratingPos"> <b>rating</b>: ' . $row['rating'] . '</p>';
                 echo '<button id="'.$row['id'].'" type="button" onclick="orderEvent(this.id)">Order</button>';
                 echo '</div>';
                 
