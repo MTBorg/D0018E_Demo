@@ -1,13 +1,13 @@
 <?php
-	/*
-	There is a bug: If you put a space in the username field after entering your username
-	and then enter your password in the same field it will succeed"*/
-
-
 	include_once 'dbConnect.php';
 	
 	$email = $_POST["email"];
 	$password = $_POST["password"];	
+
+	if($email == "" or $password == ""){
+		return; //TODO: Return something useful
+	}
+
 	$connection = dbConnect();
 	$query_result = mysqli_query($connection, 'SELECT password FROM Users WHERE email="'.$email.'";');
 	if($query_result == FALSE){
