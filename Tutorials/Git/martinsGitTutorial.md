@@ -9,6 +9,7 @@
   * s - sketch trying out new ideas
   * m - branch for merging process
   * p - project related changes, such as renaming/moving folder and updating readme's
+  * d - Design changes
   
 EX: Du ska testa din experimentella idè om hur du kan fixa en bug som uppstår i en feature du försöker implementera.
 `
