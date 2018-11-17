@@ -16,6 +16,9 @@
 		$row = $query_result->fetch_assoc();
 		if($password == $row["password"]){
 			echo "Login success";
+
+			# Start the user session
+			
 		}else{
 			echo "Login failure";
 		}
