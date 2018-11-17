@@ -25,11 +25,11 @@
 		<form action="javascript:LogInSubmit()" method="post" style="text-align:center" target="_self">
 			<table style="width:50%; margin:auto;">
 				<tr>
-					<td align="right"><p style="font-family:Helvetica">Email</td>
+					<td align="right"><p class="submitText" style="font-family:Helvetica">Email</td>
 					<td align="left"><input type="text" placeholder="email" name="email" class="LogInForm" /></td>
 				</tr>
 				<tr>
-					<td align="right"><p style="font-family:Helvetica">Password</td>
+					<td align="right"><p class="submitText" style="font-family:Helvetica">Password</td>
 					<td align="left"><input type="password" placeholder="password" name="password" class="LogInForm"/></td>
 				</tr>
 			</table>
