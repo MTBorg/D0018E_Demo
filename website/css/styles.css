@@ -33,6 +33,7 @@ a:active {
    Author's styles
    ---------------------------------------------------------*/
 body {
+	background-color: rgb(4, 27, 68);
 }
 
 h1 {
@@ -151,12 +152,18 @@ footer {
 	}
 
 	.SubmitBox{
+		border-color: #FC3D21;
 		border-style:solid;
 		border-width:thin;
 	}
 	
 	input.LogInForm{
 		border-radius:10px;
+	}
+	
+	.submitText{
+			color:white;
+			font-family: "Helvetica";
 	}
     
 
