@@ -145,7 +145,10 @@ footer {
 		float:right;
 		width:5%;
 	}
-
+	#logOutMain{
+		float:right;
+		width:5%;
+	}
 	.Button:hover{
 		background-color:gray;
 	}
