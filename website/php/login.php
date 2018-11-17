@@ -21,16 +21,13 @@
 			$query_user = mysqli_query($connection, 'SELECT id, role_id FROM Users WHERE email="'.$email.'";');
 			$userInfo = $query_user->fetch_assoc();
 			$session = session_start();
-
+			
 			if ($session) {
 				$_SESSION["user_id"] = $userInfo["id"];
 				$_SESSION["user_role"] = $userInfo["role_id"];
 				echo $_SESSION["user_id"];
 				echo $_SESSION["user_role"];
-				
-				# Test
-				<input type = "hidden" name = "PHPSESSID" value = "<?php print session_id(); ?>"/>;
-				
+								
 			} else {
 				echo "Error: Session for this log in could not be started.";
 			}

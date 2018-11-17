@@ -26,16 +26,15 @@
             # Store the order in the table Orders
             # NEED IN THE FUTURE: We need to implement a way to get the user_id (See Zube card)
             # The temp value for user_id is 1 right now, THERE NEEDS TO BE A USER WITH ID 1 in your Users database for this to work.
+            session_start();
             $user_id = $_SESSION["user_id"];
             $queryInsertOrder = "INSERT INTO Orders VALUES (NULL, ".$user_id.", ".$prodInfo['id'].")";
             mysqli_query($dbconn, $queryInsertOrder);
+
         } else {
             echo $prodInfo['stock'];
         }
         
     }
-
-    
-
 ?>
     
