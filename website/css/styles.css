@@ -152,6 +152,7 @@ footer {
 	}
 
 	.LogInBox{
+		border-color: #FC3D21;
 		border-style:solid;
 		border-width:thin;
 	}
