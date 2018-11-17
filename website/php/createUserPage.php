@@ -24,19 +24,19 @@
             <form action="javascript:getUserInput()" method="post" target="_self">
                 <table>
                     <tr>
-                        <td align="left"><p style="font-family:Helvetica">First name</p></td>
+                        <td align="left"><p class="submitText" style="font-family:Helvetica">First name</p></td>
                         <td align="right"><input type="text"></td>
                     </tr>
                     <tr>
-                        <td align="left"><p style="font-family:Helvetica">Last name</p></td>
+                        <td align="left"><p class="submitText" style="font-family:Helvetica">Last name</p></td>
                         <td align="right"><input type="text"></td>
                     </tr>
                     <tr>
-                        <td align="left"><p style="font-family:Helvetica">Email</p></td>
+                        <td align="left"><p class="submitText" style="font-family:Helvetica">Email</p></td>
                         <td align="right"><input type="text"></td>
                     </tr>
                     <tr>
-                        <td align="left"><p style="font-family:Helvetica">Password</p></td>
+                        <td align="left"><p class="submitText" style="font-family:Helvetica">Password</p></td>
                         <td align="right"><input type="password"></td>
                     </tr>
                 </table>
