@@ -16,7 +16,7 @@
              <!-- This can contain your site navigation either in an unordered list or even a paragraph that contains links that allow users to navigate your site -->
 
 
-	            <a href="php/loginpage.php" id="loginmain" class="Button">Log In</a>
+	            <a href="loginpage.php" id="loginmain" class="Button">Log In</a>
             </nav>
 
         </header>

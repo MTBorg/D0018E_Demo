@@ -81,7 +81,6 @@ header{
   text-align: center;
   display: grid;
   grid-template-columns: auto auto auto;
-  background-color: rgba(26, 28, 37, 0.877);
 	padding: 10px;
 	border-radius: 3px;
 
