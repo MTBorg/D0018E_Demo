@@ -2,38 +2,47 @@
     <head>
         <title>Create user</title>
         <script src="../js/getUserInput.js" type="text/javascript"></script>
+        <link href="../css/styles.css" rel="stylesheet">
     </head>
     <body>
-    <form action="javascript:getUserInput()" method="post" target="_self">
-            <h1>Sign up</h1>
-            
-            <p>
-                <label>First Name</label>
-                <input type = "text" id = "first_name" name = "first_name">
-                <p id="name-info"></p>
-            </p>
+        <header role="banner">
 
-            <p>
-                <label>Last Name</label>
-                <input type = "text" id = "last_name" name = "last_name">
-                <p id="lName-info"></p>
-            </p>
+		    <h1 id="logoText"> StarTrader </h1>
+		    <h3 id="logoSlogan"> The biggest market in the universe </h3>
 
-            <p>
-                <label>Email</label>
-                <input type = "text" id = "email">
-                
-            </p>
+            <!-- ARIA: the landmark role "navigation" is added here as the element contains site navigation
+            NOTE: The <nav> element does not have to be contained within a <header> element, even though the two examples on this page are. -->
+            <nav role="navigation">
+             <!-- This can contain your site navigation either in an unordered list or even a paragraph that contains links that allow users to navigate your site -->
 
-            <p>
-                <label>Password</label>
-                <input type = "text" id = "password">
-                <p id="password-info"></p>
-            </p>
-            <div>
-            <input type="submit" class="ButtonLogIn" value="Log in" />
-            <p id="submit-info"></p>
-            </div>
-        </form>
+
+	            <a href="php/loginpage.php" id="loginmain" class="Button">Log In</a>
+            </nav>
+
+        </header>
+        <div class="SubmitBox">
+            <form action="javascript:getUserInput()" method="post" target="_self">
+                <table>
+                    <tr>
+                        <td align="left"><p class="submitText" style="font-family:Helvetica">First name</p></td>
+                        <td align="right"><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td align="left"><p class="submitText" style="font-family:Helvetica">Last name</p></td>
+                        <td align="right"><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td align="left"><p class="submitText" style="font-family:Helvetica">Email</p></td>
+                        <td align="right"><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td align="left"><p class="submitText" style="font-family:Helvetica">Password</p></td>
+                        <td align="right"><input type="password"></td>
+                    </tr>
+                </table>
+                <input type="submit" class="Button" value="Submit">
+                <p id="submit-info"></p>
+            </form>
+        </div>
     </body>
 </html>
