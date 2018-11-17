@@ -18,7 +18,7 @@
         <nav role="navigation">
             <!-- This can contain your site navigation either in an unordered list or even a paragraph that contains links that allow users to navigate your site -->
 
-			<a href="php/createUserPage.php" id="signUpMain" class="Button">Sign up</a>
+			<a href="createUserPage.php" id="signUpMain" class="Button">Sign up</a>
         </nav>
     </header>
 	<div class="SubmitBox">
