@@ -135,7 +135,7 @@ footer {
 		color:white;
 	}
 
-	#loginmain{
+	#logInMain{
 		float:right;
 		width:5%;
 		margin-bottom: 0%;
@@ -145,7 +145,10 @@ footer {
 		float:right;
 		width:5%;
 	}
-
+	#logOutMain{
+		float:right;
+		width:5%;
+	}
 	.Button:hover{
 		background-color:gray;
 	}
@@ -159,7 +162,9 @@ footer {
 		border-radius:10px;
 	}
     
-
+	.initHidden{
+		display:none;
+	}
 
 
     
