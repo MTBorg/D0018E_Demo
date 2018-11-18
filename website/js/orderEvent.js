@@ -1,7 +1,11 @@
 function orderEvent(product_id) {
+
+
+
   xmlhttp = new XMLHttpRequest();
 
-  xmlhttp.onreadystatechange = function() {
+  xmlhttp.onreadystatechange = function () {
+
     if (this.readyState == 4 && this.status == 200) {
       /** Selects product id which is unique
        * Selects the 3rd <p> tag which is stock
@@ -11,12 +15,26 @@ function orderEvent(product_id) {
        *  [3] = rating
        * That said this script can be reused!
        */
-      document
-        .getElementById(product_id)
-        .getElementsByTagName("p")[2].innerHTML =
-        "<b>stock</b>: " + this.responseText;
+      // If user not logged in. Is "false" to not collide with boolean 0 when stock is 0
+      if (this.responseText == "false") {
+        window.location.replace("../php/loginpage.php");
+      } else {
+        document
+          .getElementById(product_id)
+          .getElementsByTagName("p")[2].innerHTML =
+          "<b>stock</b>: " + this.responseText;
+      }
     }
+
   };
+
+  // OrderEvent, if user is logged in ok
   xmlhttp.open("GET", "../php/orderProduct.php?id=" + product_id, true);
   xmlhttp.send();
+
+
+
+
+
+
 }

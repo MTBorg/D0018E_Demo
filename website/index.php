@@ -27,10 +27,9 @@
     <!--[if lt IE 9]><script src="js/html5shiv-printshiv.js" media="all"></script><![endif]-->
     <script src="../js/orderEvent.js" type="text/javascript"></script>
     <script src="js/initNavButtons.js" type="text/javascript"></script> 
-    <script src="../js/initOrderButtons.js" type ="text/javscript"></script>
 </head>
 
-<body onload ='initNavButtons(); initOrderButtons();'>
+<body onload ='initNavButtons()'>
 
     <!-- The page header typically contains items such as your site heading, logo and possibly the main site navigation -->
     <!-- ARIA: the landmark role "banner" is set as it is the prime heading or internal title of the page -->
