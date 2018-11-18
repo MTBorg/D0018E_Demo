@@ -162,7 +162,9 @@ footer {
 		border-radius:10px;
 	}
     
-
+	.initHidden{
+		display:none;
+	}
 
 
     

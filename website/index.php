@@ -45,9 +45,9 @@
 
 		<i id="navIcon" class="fa fa-align-justify" style="font-size:36px; color:white"></i>
 
-	<a href="php/createUserPage.php" id="signUpMain" class="Button">Sign up</a>
-    <a href="php/logOut.php" id="logOutMain" class="Button">Log out</a>
-	<a href="php/loginpage.php" id="logInMain" class="Button">Log In</a>
+	<a href="php/createUserPage.php" id="signUpMain" class="Button initHidden">Sign up</a>
+    <a href="php/logOut.php" id="logOutMain" class="Button initHidden">Log out</a>
+	<a href="php/loginpage.php" id="logInMain" class="Button initHidden">Log In</a>
         </nav>
 
     </header>
