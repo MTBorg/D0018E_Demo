@@ -15,8 +15,9 @@ function orderEvent(product_id) {
        *  [3] = rating
        * That said this script can be reused!
        */
-      // If user not logged in. Is "false" to not collide with boolean 0 when stock is 0
-      if (this.responseText == "false") {
+      // If user not logged in. 
+      console.log(this.response);
+      if (this.responseText == -1) {
         window.location.replace("../php/loginpage.php");
       } else {
         document

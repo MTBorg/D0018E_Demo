@@ -43,8 +43,8 @@
 
 // If user not logged in
 } else {
-    // Do not change this to false wihoout "" since it will collide with above echo stock
-    echo "false";
+    // Only solution I found
+    echo -1; 
 }
 ?>
     
