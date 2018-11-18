@@ -29,7 +29,7 @@
     <script src="js/initNavButtons.js" type="text/javascript"></script> 
 </head>
 
-<body onload='initNavButtons()'>
+<body onload ='initNavButtons()'>
 
     <!-- The page header typically contains items such as your site heading, logo and possibly the main site navigation -->
     <!-- ARIA: the landmark role "banner" is set as it is the prime heading or internal title of the page -->
