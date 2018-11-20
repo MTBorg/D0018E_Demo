@@ -15,18 +15,17 @@
 	}else{
 		$row = $query_result->fetch_assoc();
 		if($password == $row["password"]){
-			echo "Login success";
+			//echo "Login success";
 
 			# Since log in was successful the session is started and user id and role is stored in the session vars.
 			$query_user = mysqli_query($connection, 'SELECT id, role_id FROM Users WHERE email="'.$email.'";');
 			$userInfo = $query_user->fetch_assoc();
 			$session = session_start();
-
+			
 			if ($session) {
 				$_SESSION["user_id"] = $userInfo["id"];
 				$_SESSION["user_role"] = $userInfo["role_id"];
-				echo $_SESSION["user_id"];
-				echo $_SESSION["user_role"];
+				echo true;	
 			} else {
 				echo "Error: Session for this log in could not be started.";
 			}
