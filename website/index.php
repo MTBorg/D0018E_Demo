@@ -42,13 +42,25 @@
         NOTE: The <nav> element does not have to be contained within a <header> element, even though the two examples on this page are. -->
         <nav role="navigation">
             <!-- This can contain your site navigation either in an unordered list or even a paragraph that contains links that allow users to navigate your site -->
-
-		<i id="navIcon" class="fa fa-align-justify" style="font-size:36px; color:white"></i>
-
+        <div class="dropdown" >
+        <button class="fa fa-align-justify" style="font-size:36px; color:white"></button>
+		<!-- <i id="navIcon" class="fa fa-align-justify" style="font-size:36px; color:white"></i> -->
+            <div class="dropdown-content">
+                <a href="#">Home</a>
+                <a href="#">Products</a>
+                <a href="#">Contact</a>
+                <a href="#">About</a>   
+            </div>
+            
+            
+        </div>
+    <div>
 	<a href="php/createUserPage.php" id="signUpMain" class="Button initHidden">Sign up</a>
     <a href="php/logOut.php" id="logOutMain" class="Button initHidden">Log out</a>
 	<a href="php/loginpage.php" id="logInMain" class="Button initHidden">Log In</a>
+    </div>
         </nav>
+        
 
     </header>
 
