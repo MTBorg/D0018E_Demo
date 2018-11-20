@@ -50,6 +50,23 @@
 
         mysqli_query($dbconn, $query);
 
+        $query = "CREATE TABLE IF NOT EXISTS Orderline(
+                    order_id INT NOT NULL REFERENCES Order(id),
+                    product_id INT NOT NULL REFERENCES Products(id),
+                    quantity INT NOT NULL,
+                    price FLOAT NOT NULL,
+                    PRIMARY KEY(order_id, product_id)
+        );";
+
+        mysqli_query($dbconn, $query);
+        
+        $query = "CREATE TABLE IF NOT EXISTS ShoppingCartLine(
+                    cart_id INT NOT NULL REFERENCES ShoppingCart(id),
+                    product_id INT NOT NULL REFERENCES Products(id),
+                    quantity INT NOT NULL,
+                    price FLOAT NOT NULL,
+                    PRIMARY KEY(cart_id, product_id)
+        );";
         echo "The tables Products, Users, Orders and ShoppingCart created in the maindb database\n";
     
     
