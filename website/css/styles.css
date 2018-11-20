@@ -193,14 +193,14 @@ input.LogInForm {
 }
 
 .dropdown {
-    position: fixed;
+    position: relative;
     display: inline-block;
     outline: none;
 }
 
 .dropdown-content {
     display: none;
-    position: absolute;
+    position: fixed;
     background-color: white;
     min-width: 160px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.8);
