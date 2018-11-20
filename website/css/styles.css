@@ -175,6 +175,12 @@ footer {
 		display:none;
 	}
 
+	#shoppingCart{
+		float:right;
+		color:white;
+		font-size:36px;
+		margin-right:10px;
+	}
 
     
 /* ---------------------------------------------------------
