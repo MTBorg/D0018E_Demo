@@ -22,7 +22,7 @@
         </header>
  
         <div class="SubmitBox">
-            <form action="javascript:getUserInput()" method="post" target="_self">
+            <form action="javascript:CreateProductSubmit()" method="post" target="_self">
                 <table class="tableBox">
                 <p style="color:white">ADD PRODUCT</p>
                     <tr>

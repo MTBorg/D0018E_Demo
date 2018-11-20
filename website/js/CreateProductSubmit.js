@@ -7,10 +7,12 @@ function CreateProductSubmit() {
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       //document.getElementById("submit-info").innerHTML = this.responseText;
-      alert(this.responseText);
 
-      if (this.responseText == "Ok! Product added") {
-        window.location.replace("..");
+      if (this.response == true) {
+        alert("Product added");
+        // window.location.replace("..");
+      } else {
+        alert(this.responseText);
       }
     }
   };
