@@ -34,9 +34,11 @@
     <!-- The page header typically contains items such as your site heading, logo and possibly the main site navigation -->
     <!-- ARIA: the landmark role "banner" is set as it is the prime heading or internal title of the page -->
     <header role="banner">
-
+        <!-- When you press the header you will be redirect to home -->
+        <a href="../index.php" style = "text-decoration:none">
 		<h1 id="logoText"> StarTrader </h1>
-		<h3 id="logoSlogan"> The biggest market in the universe </h3>
+        <h3 id="logoSlogan"> The biggest market in the universe </h3>
+</a>
 
         <!-- ARIA: the landmark role "navigation" is added here as the element contains site navigation
         NOTE: The <nav> element does not have to be contained within a <header> element, even though the two examples on this page are. -->
