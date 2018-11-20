@@ -47,7 +47,7 @@
 
 	<a href="php/createUserPage.php" id="signUpMain" class="Button initHidden">Sign up</a>
     <a href="php/logOut.php" id="logOutMain" class="Button initHidden">Log out</a>
-    <i class="fa fa-shopping-cart" id="shoppingCart"></i>
+    <i class="fa fa-shopping-cart initHidden" style="display:none" id="shoppingCart"></i>
 	<a href="php/loginpage.php" id="logInMain" class="Button initHidden">Log In</a>
         </nav>
 
