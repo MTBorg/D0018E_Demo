@@ -67,8 +67,30 @@
                     price FLOAT NOT NULL,
                     PRIMARY KEY(cart_id, product_id)
         );";
+
+        mysqli_query($dbconn, $query);
+
+        $query = "CREATE TABLE IF NOT EXISTS Review(
+                    id INT NOT NULL AUTO_INCREMENT,
+                    product_id INT NOT NULL,
+                    user_id INT NOT NULL,
+                    rating INT NOT NULL,
+                    PRIMARY KEY(id),
+                    FOREIGN KEY (product_id) REFERENCES Products(id),
+                    FOREIGN KEY (user_id) REFERENCES Users(id)
+        );";
+
+        mysqli_query($dbconn, $query);
+
+        $query = "CREATE TABLE IF NOT EXISTS Categories(
+                    catName VARCHAR(25) NOT NULL,
+                    PRIMARY KEY(catName)
+        );";
+
+        mysqli_query($dbconn, $query);
+
         echo "The tables Products, Users, Orders and ShoppingCart created in the maindb database\n";
-    
+
     
     } catch (Exception $e) {
         echo 'Exception: ', $e -> getMessage(), "\n";
