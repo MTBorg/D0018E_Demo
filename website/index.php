@@ -26,11 +26,10 @@
     <!-- Include the HTML5 shiv print polyfill for Internet Explorer browsers 8 and below -->
     <!--[if lt IE 9]><script src="js/html5shiv-printshiv.js" media="all"></script><![endif]-->
     <script src="../js/orderEvent.js" type="text/javascript"></script>
-
-
+    <script src="js/initNavButtons.js" type="text/javascript"></script> 
 </head>
 
-<body>
+<body onload ='initNavButtons()'>
 
     <!-- The page header typically contains items such as your site heading, logo and possibly the main site navigation -->
     <!-- ARIA: the landmark role "banner" is set as it is the prime heading or internal title of the page -->
@@ -46,8 +45,9 @@
 
 		<i id="navIcon" class="fa fa-align-justify" style="font-size:36px; color:white"></i>
 
-	<a href="php/createUserPage.php" id="signUpMain" class="Button">Sign up</a>
-	<a href="php/loginpage.php" id="loginmain" class="Button">Log In</a>
+	<a href="php/createUserPage.php" id="signUpMain" class="Button initHidden">Sign up</a>
+    <a href="php/logOut.php" id="logOutMain" class="Button initHidden">Log out</a>
+	<a href="php/loginpage.php" id="logInMain" class="Button initHidden">Log In</a>
         </nav>
 
     </header>
