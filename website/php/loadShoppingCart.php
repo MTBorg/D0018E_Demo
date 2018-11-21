@@ -17,7 +17,7 @@ function loadShoppingCart(){
     $lines = mysqli_query($dbconn, $query);
 
     if($lines){
-    echo '<table>';
+        echo '<table>';
         while($row = mysqli_fetch_array($lines)){
             echo '<tr>';
 
@@ -33,9 +33,9 @@ function loadShoppingCart(){
 
             echo '</tr>';
         }
+        echo '</table>';
     }else{
         echo "<p> No items in shopping cart </p>";
     }
-    echo '</table>';
 }
 ?>
