@@ -182,6 +182,22 @@ footer {
 		margin-right:10px;
 	}
 
+	.shoppingCartTable{
+		border-bottom: 1px solid black;
+		border-color:#FC3D21;
+		border-collapse: collapse;
+	}
+
+	.shoppingCartTable td{
+		border-bottom: 1px solid #FC3D21;
+		color:white;
+	}
+
+	.shoppingCartTable th{
+		color:white;
+		padding-right: 25px;
+	}
+
     
 /* ---------------------------------------------------------
    Print styles
