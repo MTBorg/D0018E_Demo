@@ -39,6 +39,10 @@ function loadShoppingCart(){
             $price = $row["price"];
             echo "<td></p>Price: $price</p></td>";
 
+            //Sum
+            $sum = $price * $quantity;
+            echo "<td></p>Sum: $sum </p></td>";
+
             echo '</tr>';
         }
         echo '</table>';
