@@ -21,15 +21,23 @@ function loadShoppingCart(){
         while($row = mysqli_fetch_array($lines)){
             echo '<tr>';
 
-            //Get the product id
+            //Product id
             $product_id = $row["product_id"];
-            echo "<td><p>$product_id</p></td> ";
+            echo "<td><p>Product id: $product_id</p></td> ";
 
-            //Get the product name
+            //Product name
             $query = 'SELECT name FROM Products WHERE id="'.$product_id.'";';
             $result = mysqli_query($dbconn, $query);
             $product_name = mysqli_fetch_object($result)->name;
-            echo "<td><p>$product_name</p></td>";
+            echo "<td><p>Product name: $product_name</p></td>";
+
+            //Quantity
+            $quantity = $row["quantity"];
+            echo "<td></p>Quantity: $quantity</p></td>";
+
+            //Price
+            $price = $row["price"];
+            echo "<td></p>Price: $price</p></td>";
 
             echo '</tr>';
         }
