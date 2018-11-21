@@ -18,7 +18,7 @@ function loadShoppingCart(){
 
     if($lines){
         echo '<table class="shoppingCartTable">';
-        echo '<tr>';
+        echo '<tr id="shoppingCartTableHeader">';
         echo '<th>ID</th><th>Product name</th><th>Quantity</th><th>Price</th><th>Sum</th>';
         while($row = mysqli_fetch_array($lines)){
             echo '<tr>';
