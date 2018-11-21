@@ -22,7 +22,7 @@
         </header>
  
         <div class="SubmitBox">
-            <!-- <form action="javascript:CreateProductSubmit()" method="post" target="_self">
+            <form action="javascript:CreateProductSubmit()" method="post" target="_self">
                 <table class="tableBox">
                 <p style="color:white">ADD PRODUCT</p>
                     <tr>
@@ -41,17 +41,11 @@
                         <td><p class="submitText" style="font-family:Helvetica">img_url</p></td>
                         <td><input type="text"></td>
                     </tr>
-                    <!-- <tr>
-                        <td><p class="submitText" style="font-family:Helvetica">Password</p></td>
-                        <td><input type="password"></td>
-                    </tr> -->
-                </table> -->
-            <!-- Upload image -->
-                <form action="uploadimg.php" method = "post" enctype="multipart/form-data">
-                <input type="file" name="fileToUpload" id="fileToUpload">
-                <input type="submit" name="submit" class="Button" value="Submit">
-                <p id="submit-info"></p>
-                </form>
+
+                </table>
+
+                <input type="submit" class="Button" value="Submit">
+
                 
             </form>
         </div>
