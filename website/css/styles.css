@@ -183,9 +183,9 @@ footer {
 	}
 
 	.shoppingCartTable{
-		border-bottom: 1px solid black;
 		border-color:#FC3D21;
 		border-collapse: collapse;
+		margin:auto;
 	}
 
 	.shoppingCartTable td{
