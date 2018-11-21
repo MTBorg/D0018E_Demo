@@ -6,16 +6,24 @@
     
     try {
 
+        $query = "CREATE TABLE IF NOT EXISTS Categories(
+            id INT NOT NULL AUTO_INCREMENT,
+            cat_name VARCHAR(255),
+            PRIMARY KEY (id)
+        );";
+
+        mysqli_query($dbconn, $query);
+
         $query = "CREATE TABLE IF NOT EXISTS Products(
                     id INT NOT NULL AUTO_INCREMENT,
                     name VARCHAR(20) NOT NULL,
                     price INT NOT NULL CHECK (price>=0),
-                    stock INT NOT NULL CHECK (stock>=0),
-                    rating INT NOT NULL, 
-                    comment_section VARCHAR(1),
+                    stock INT NOT NULL CHECK (stock>=0), 
                     img_url VARCHAR(90),
-                    PRIMARY KEY(id)
-                )";
+                    cat_id INT NOT NULL,
+                    PRIMARY KEY(id),
+                    FOREIGN KEY (cat_id) REFERENCES Categories(id)
+                );";
             
         mysqli_query($dbconn, $query);
 
@@ -27,7 +35,7 @@
                     email VARCHAR(25) NOT NULL, 
                     password VARCHAR(18) NOT NULL,
                     PRIMARY KEY(id)
-                )";
+                );";
 
         mysqli_query($dbconn, $query);
 
@@ -43,29 +51,34 @@
         mysqli_query($dbconn, $query);
 
         $query = "CREATE TABLE IF NOT EXISTS ShoppingCart(
-                    id INT NOT NULL AUTO_INCREMENT,
+                    user_id INT NOT NULL,
                     cost_sum INT NOT NULL,
-                    PRIMARY KEY(id)
+                    PRIMARY KEY (user_id),
+                    FOREIGN KEY (user_id) REFERENCES Users(id)
                 );";
 
         mysqli_query($dbconn, $query);
 
-        $query = "CREATE TABLE IF NOT EXISTS Orderline(
-                    order_id INT NOT NULL REFERENCES Order(id),
-                    product_id INT NOT NULL REFERENCES Products(id),
+        $query = "CREATE TABLE IF NOT EXISTS OrderLine(
+                    order_id INT NOT NULL,
+                    product_id INT NOT NULL,
                     quantity INT NOT NULL,
                     price FLOAT NOT NULL,
-                    PRIMARY KEY(order_id, product_id)
+                    PRIMARY KEY (order_id, product_id),
+                    FOREIGN KEY (order_id) REFERENCES Orders(id), 
+                    FOREIGN KEY (product_id) REFERENCES Products(id)
         );";
 
         mysqli_query($dbconn, $query);
         
         $query = "CREATE TABLE IF NOT EXISTS ShoppingCartLine(
-                    cart_id INT NOT NULL REFERENCES ShoppingCart(id),
-                    product_id INT NOT NULL REFERENCES Products(id),
+                    user_id INT NOT NULL,
+                    product_id INT NOT NULL,
                     quantity INT NOT NULL,
                     price FLOAT NOT NULL,
-                    PRIMARY KEY(cart_id, product_id)
+                    PRIMARY KEY (user_id, product_id),
+                    FOREIGN KEY (user_id) REFERENCES ShoppingCart(user_id),
+                    FOREIGN KEY (product_id)  REFERENCES Products(id)
         );";
 
         mysqli_query($dbconn, $query);
@@ -75,6 +88,7 @@
                     product_id INT NOT NULL,
                     user_id INT NOT NULL,
                     rating INT NOT NULL,
+                    comment VARCHAR(255),
                     PRIMARY KEY(id),
                     FOREIGN KEY (product_id) REFERENCES Products(id),
                     FOREIGN KEY (user_id) REFERENCES Users(id)
@@ -82,12 +96,6 @@
 
         mysqli_query($dbconn, $query);
 
-        $query = "CREATE TABLE IF NOT EXISTS Categories(
-                    catName VARCHAR(25) NOT NULL,
-                    PRIMARY KEY(catName)
-        );";
-
-        mysqli_query($dbconn, $query);
 
         echo "The tables Products, Users, Orders and ShoppingCart created in the maindb database\n";
 
