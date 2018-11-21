@@ -17,31 +17,33 @@ function loadShoppingCart(){
     $lines = mysqli_query($dbconn, $query);
 
     if($lines){
-        echo '<table>';
+        echo '<table class="shoppingCartTable">';
+        echo '<tr id="shoppingCartTableHeader">';
+        echo '<th>ID</th><th>Product name</th><th>Quantity</th><th>Price</th><th>Sum</th>';
         while($row = mysqli_fetch_array($lines)){
             echo '<tr>';
 
             //Product id
             $product_id = $row["product_id"];
-            echo "<td><p>Product id: $product_id</p></td> ";
+            echo "<td><p>$product_id</p></td> ";
 
             //Product name
             $query = 'SELECT name FROM Products WHERE id="'.$product_id.'";';
             $result = mysqli_query($dbconn, $query);
             $product_name = mysqli_fetch_object($result)->name;
-            echo "<td><p>Product name: $product_name</p></td>";
+            echo "<td><p>$product_name</p></td>";
 
             //Quantity
             $quantity = $row["quantity"];
-            echo "<td></p>Quantity: $quantity</p></td>";
+            echo "<td></p>$quantity</p></td>";
 
             //Price
             $price = $row["price"];
-            echo "<td></p>Price: $price</p></td>";
+            echo "<td></p>$price</p></td>";
 
             //Sum
             $sum = $price * $quantity;
-            echo "<td></p>Sum: $sum </p></td>";
+            echo "<td></p>$sum </p></td>";
 
             echo '</tr>';
         }

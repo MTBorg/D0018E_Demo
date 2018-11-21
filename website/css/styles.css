@@ -182,6 +182,30 @@ footer {
 		margin-right:10px;
 	}
 
+	.shoppingCartTable{
+		border-color:#FC3D21;
+		border-collapse: collapse;
+		margin:auto;
+	}
+
+	.shoppingCartTable td{
+		border-bottom: 1px solid #FC3D21;
+		color:white;
+	}
+
+	.shoppingCartTable th{
+		color:white;
+		padding-right: 25px;
+	}
+
+	#shoppingCartTableHeader:hover{
+		background-color:transparent;
+	}
+
+	.shoppingCartTable tr:hover{
+		background-color:#0B3D91;
+	}
+
     
 /* ---------------------------------------------------------
    Print styles
