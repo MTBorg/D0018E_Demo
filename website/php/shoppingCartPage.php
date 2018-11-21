@@ -16,5 +16,10 @@
             <i id="navIcon" class="fa fa-align-justify" style="font-size:36px; color:white"></i>
         </nav>
     </header>
+
+    <?php
+        include 'loadShoppingCart.php';
+        loadShoppingCart();
+    ?>
 </body>
 </html>
