@@ -175,9 +175,17 @@ a.Button {
   text-align: center;
 }
 
+.addBox {
+  text-align: center;
+}
+.deleteBox {
+  text-align: center;
+}
+
 .tableBox {
   margin-left: auto;
   margin-right: auto;
+  color: white;
 }
 
 input.LogInForm {

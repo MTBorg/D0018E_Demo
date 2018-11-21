@@ -21,7 +21,7 @@
 
         </header>
  
-        <div class="SubmitBox">
+        <div class="addBox">
             <form action="javascript:CreateProductSubmit()" method="post" target="_self">
                 <table class="tableBox">
                 <p style="color:white">ADD PRODUCT</p>
@@ -43,11 +43,26 @@
                     </tr>
 
                 </table>
-
                 <input type="submit" class="Button" value="Submit">
-
-                
             </form>
+        </div>
+
+        <div class="deleteBox">
+                <p style="color:white">PRODUCTS</p>
+                
+                <table class="tableBox">
+
+                <?php
+                    
+                    include 'listProducts.php';
+                    listProducts();
+
+                ?>
+
+                </table>
+
+
+
         </div>
         
     </body>
