@@ -326,6 +326,14 @@ Button{
         border-bottom: 1px solid #ddd;
     }
 
+    #myOrdersTable tr:hover{
+        background-color: #0B3D91;
+    }
+
+    #myOrdersTable #myOrdersTableHeader:hover{
+        background-color:transparent;
+    }
+
     .orderTable{
         color:white;
         border-collapse: collapse;
