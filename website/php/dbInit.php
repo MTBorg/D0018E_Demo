@@ -42,6 +42,7 @@
         $query = "CREATE TABLE IF NOT EXISTS Orders(
                     id INT NOT NULL AUTO_INCREMENT,
                     user_id INT NOT NULL,
+                    status VARCHAR(20),
                     PRIMARY KEY(id),
                     FOREIGN KEY(user_id) REFERENCES Users(id)
                 );";
