@@ -14,8 +14,29 @@
         echo "Please fill all fields";
         mysqli_close($dbconn);
         return;
+
+    } elseif(strlen($first_name) > 20) {
+        echo "Max 20 characters as first name";
+        mysqli_close($dbconn);
+        return;
+
+    } elseif(strlen($last_name) > 20) {
+        echo "Max 20 characters as last name";
+        mysqli_close($dbconn);
+        return;
+    
+    } elseif(strlen($email) > 25) {
+        echo "Max 25 characters as email";
+        mysqli_close($dbconn);
+        return;
+    
+    } elseif(strlen($password) > 18) {
+        echo "Max 18 characters as password";
+        mysqli_close($dbconn);
+        return;
     }
 
+    //echo strlen($first_name);
 
     $query_values = '(NULL, 0, "'.$first_name.'","'.$last_name.'","'.$email.'","'.$password.'");'; 
 
