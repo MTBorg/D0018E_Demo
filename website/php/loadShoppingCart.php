@@ -40,7 +40,8 @@ function loadShoppingCart(){
             echo "<td></p>$quantity</p></td>";
 
             //Price
-            $price = $row["price"];
+            $query = 'SELECT price FROM Products WHERE id='.$product_id.';';
+            $price = mysqli_fetch_object(mysqli_query($dbconn, $query))->price;
             echo "<td></p>$price</p></td>";
 
             //Sum

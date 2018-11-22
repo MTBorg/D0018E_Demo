@@ -42,7 +42,7 @@
                 # ------------- #
                 # ---- OBS ---- #  !!!!!!!!! Price needs to be removed once database is updated to not have price in ShoppingCartLines !!!!!!!
                 # ------------- #
-                $queryCreateLine = 'INSERT INTO ShoppingCartLines VALUES ('.$user_id.', '.$prodInfo['id'].', 1, '.$prodInfo['price'].');';
+                $queryCreateLine = 'INSERT INTO ShoppingCartLines VALUES ('.$user_id.', '.$prodInfo['id'].', 1);';
                 mysqli_query($dbconn, $queryCreateLine);
             }
 
