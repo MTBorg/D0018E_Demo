@@ -4,6 +4,7 @@ function checkoutSubmit(){
 	xmlhttp.onreadystatechange = function () {
 		if (this.readyState == 4 && this.status == 200) {
 			if (this.responseText == true) {
+                alert("Order is on the way!");
 				window.location.reload();
 			}else{
 				alert(this.responseText);
