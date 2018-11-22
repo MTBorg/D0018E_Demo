@@ -39,7 +39,7 @@
         $orderID = mysqli_insert_id($dbconn);
 
         # Create a order line for the product
-        $queryAddOrderLine = 'INSERT INTO OrderLine VALUES ('.$orderID.', '.$prodInfo['id'].', 1, '.$prodInfo['price'].');';
+        $queryAddOrderLine = 'INSERT INTO OrderLines VALUES ('.$orderID.', '.$prodInfo['id'].', 1, '.$prodInfo['price'].');';
         mysqli_query($dbconn, $queryAddOrderLine);
 
     } else {
