@@ -23,6 +23,7 @@ function CreateProductSubmit() {
   var prod_price = user_inputs[1].value;
   var prod_stock = user_inputs[2].value;
   var prod_img_url = user_inputs[3].value;
+  var prod_cat_id = user_inputs[4].value;
 
   xmlhttp.open("POST", "../php/createProduct.php", true);
   xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -34,7 +35,9 @@ function CreateProductSubmit() {
       "&stock=" +
       prod_stock +
       "&img_url=" +
-      prod_img_url
+      prod_img_url +
+      "&cat_id=" +
+      prod_cat_id
   );
 }
 // }

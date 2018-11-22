@@ -42,6 +42,10 @@
                         <td><p class="submitText" style="font-family:Helvetica">img_url</p></td>
                         <td><input type="text"></td>
                     </tr>
+                    <tr>
+                        <td><p class="submitText" style="font-family:Helvetica">cat_id</p></td>
+                        <td><input type="text"></td>
+                    </tr>
 
                 </table>
                 <input type="submit" class="Button" value="Submit">
