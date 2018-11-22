@@ -42,19 +42,8 @@
         $query = "CREATE TABLE IF NOT EXISTS Orders(
                     id INT NOT NULL AUTO_INCREMENT,
                     user_id INT NOT NULL,
-                    product_id INT NOT NULL,
                     PRIMARY KEY(id),
-                    FOREIGN KEY(user_id) REFERENCES Users(id),
-                    FOREIGN KEY(product_id) REFERENCES Products(id)
-                );";
-
-        mysqli_query($dbconn, $query);
-
-        $query = "CREATE TABLE IF NOT EXISTS ShoppingCart(
-                    user_id INT NOT NULL,
-                    cost_sum INT NOT NULL,
-                    PRIMARY KEY (user_id),
-                    FOREIGN KEY (user_id) REFERENCES Users(id)
+                    FOREIGN KEY(user_id) REFERENCES Users(id)
                 );";
 
         mysqli_query($dbconn, $query);
@@ -70,6 +59,17 @@
         );";
 
         mysqli_query($dbconn, $query);
+
+        $query = "CREATE TABLE IF NOT EXISTS ShoppingCart(
+                    user_id INT NOT NULL,
+                    cost_sum INT NOT NULL,
+                    PRIMARY KEY (user_id),
+                    FOREIGN KEY (user_id) REFERENCES Users(id)
+                );";
+
+        mysqli_query($dbconn, $query);
+
+
         
         $query = "CREATE TABLE IF NOT EXISTS ShoppingCartLine(
                     user_id INT NOT NULL,
