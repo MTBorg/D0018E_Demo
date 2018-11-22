@@ -21,6 +21,7 @@ function loadShoppingCart(){
         echo '<table class="shoppingCartTable">';
         echo '<tr id="shoppingCartTableHeader">';
         echo '<th>ID</th><th>Product name</th><th>Quantity</th><th>Price</th><th>Sum</th><th></th>';
+        $total_sum = 0;
         while($row = mysqli_fetch_array($lines)){
             echo '<tr>';
 
@@ -46,11 +47,17 @@ function loadShoppingCart(){
             $sum = $price * $quantity;
             echo "<td></p>$sum </p></td>";
 
+            $total_sum += $sum;
+
             $arg = $user_id . "," . $product_id;
             echo '<td><button onClick="removeShoppingCartItemSubmit(' . $arg . ')"><i class="fa fa-trash-o" style="font-size:18px"></i></button></td>';
 
             echo '</tr>';
         }
+
+
+        echo '<tr> <td><td><td><td><td>'. $total_sum .'</td></td></td></td></td> </tr>';
+
         echo '</table>';
     }else{
         echo "<p> No items in shopping cart </p>";
