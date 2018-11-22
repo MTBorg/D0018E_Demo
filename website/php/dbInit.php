@@ -61,15 +61,6 @@
 
         mysqli_query($dbconn, $query);
 
-        $query = "CREATE TABLE IF NOT EXISTS ShoppingCarts(
-                    user_id INT NOT NULL,
-                    cost_sum INT NOT NULL,
-                    PRIMARY KEY (user_id),
-                    FOREIGN KEY (user_id) REFERENCES Users(id)
-                );";
-
-        mysqli_query($dbconn, $query);
-    
         $query = "CREATE TABLE IF NOT EXISTS ShoppingCartLines(
                     user_id INT NOT NULL,
                     product_id INT NOT NULL,
