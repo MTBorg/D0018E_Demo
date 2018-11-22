@@ -57,6 +57,7 @@
         <th>name</th>
         <th>price</th>
         <th>stock</th>
+        <th>category</th>
         <th>MODIFY</th>
    </tr>
  
@@ -66,6 +67,7 @@
         <th><input type="text" name="product name" size="5"></th>
         <th><input type="text" name="product price" size="5"></th>
         <th><input type="text" name="product stock" size="5"></th>
+        <th><input type="text" name="product category" size="5"></th>
         
     </tr>
 

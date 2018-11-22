@@ -31,6 +31,7 @@ function modifyProduct(product_id) {
   var name = usr_inputs[0].value;
   var price = usr_inputs[1].value;
   var stock = usr_inputs[2].value;
+  var cat_id = usr_inputs[3].value;
 
 
   xmlhttp.open("POST", "../php/modifyProduct.php", true);
@@ -43,7 +44,9 @@ function modifyProduct(product_id) {
       "&price=" +
       price +
       "&stock=" +
-      stock
+      stock +
+      "&cat_id=" +
+      cat_id
   );
 }
 
