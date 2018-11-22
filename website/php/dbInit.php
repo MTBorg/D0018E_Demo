@@ -61,34 +61,11 @@
 
         mysqli_query($dbconn, $query);
 
-        # Old code with seperate table for shopping carts
-/*        $query = "CREATE TABLE IF NOT EXISTS ShoppingCarts(
-                    user_id INT NOT NULL,
-                    cost_sum INT NOT NULL,
-                    PRIMARY KEY (user_id),
-                    FOREIGN KEY (user_id) REFERENCES Users(id)
-                );";
-
-        mysqli_query($dbconn, $query);
-
-        $query = "CREATE TABLE IF NOT EXISTS ShoppingCartLines(
-                    user_id INT NOT NULL,
-                    product_id INT NOT NULL,
-                    quantity INT NOT NULL,
-                    price FLOAT NOT NULL,
-                    PRIMARY KEY (user_id, product_id),
-                    FOREIGN KEY (user_id) REFERENCES ShoppingCarts(user_id),
-                    FOREIGN KEY (product_id)  REFERENCES Products(id)
-        );";
-
-        mysqli_query($dbconn, $query);
-*/
         # New code using only shopping cart lines
         $query = "CREATE TABLE IF NOT EXISTS ShoppingCartLines(
             user_id INT NOT NULL,
             product_id INT NOT NULL,
             quantity INT NOT NULL,
-            price FLOAT NOT NULL,
             PRIMARY KEY (user_id, product_id),
             FOREIGN KEY (user_id) REFERENCES Users(id),
             FOREIGN KEY (product_id)  REFERENCES Products(id)
