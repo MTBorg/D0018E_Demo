@@ -66,7 +66,6 @@
             user_id INT NOT NULL,
             product_id INT NOT NULL,
             quantity INT NOT NULL,
-            price FLOAT NOT NULL,
             PRIMARY KEY (user_id, product_id),
             FOREIGN KEY (user_id) REFERENCES Users(id),
             FOREIGN KEY (product_id)  REFERENCES Products(id)
