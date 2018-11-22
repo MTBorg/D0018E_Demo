@@ -312,6 +312,10 @@ Button{
     #checkoutButton{
         margin: 10px;
     }
+
+    #myOrders{
+        float:right;
+    }
     
 /* ---------------------------------------------------------
    Print styles
