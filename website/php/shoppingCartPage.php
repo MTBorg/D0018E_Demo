@@ -4,7 +4,8 @@
     <title>Shopping Cart</title>
 
     <link href="../css/styles.css" rel="stylesheet" media="all">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../js/checkoutSubmit.js" type="text/javascript"></script>
 </head>
 <body>
     <header role="banner"> 
@@ -24,7 +25,7 @@
     ?>
 
     <div style="text-align:center">
-        <button id="checkoutButton">Checkout</button>
+        <button  id="checkoutButton" onClick="checkoutSubmit()">Checkout</button>
     </div>
 </body>
 </html>
