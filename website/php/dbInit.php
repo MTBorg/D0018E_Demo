@@ -49,7 +49,7 @@
 
         mysqli_query($dbconn, $query);
 
-        $query = "CREATE TABLE IF NOT EXISTS OrderLine(
+        $query = "CREATE TABLE IF NOT EXISTS OrderLines(
                     order_id INT NOT NULL,
                     product_id INT NOT NULL,
                     quantity INT NOT NULL,
@@ -61,7 +61,7 @@
 
         mysqli_query($dbconn, $query);
 
-        $query = "CREATE TABLE IF NOT EXISTS ShoppingCart(
+        $query = "CREATE TABLE IF NOT EXISTS ShoppingCarts(
                     user_id INT NOT NULL,
                     cost_sum INT NOT NULL,
                     PRIMARY KEY (user_id),
@@ -69,22 +69,20 @@
                 );";
 
         mysqli_query($dbconn, $query);
-
-
-        
-        $query = "CREATE TABLE IF NOT EXISTS ShoppingCartLine(
+    
+        $query = "CREATE TABLE IF NOT EXISTS ShoppingCartLines(
                     user_id INT NOT NULL,
                     product_id INT NOT NULL,
                     quantity INT NOT NULL,
                     price FLOAT NOT NULL,
                     PRIMARY KEY (user_id, product_id),
-                    FOREIGN KEY (user_id) REFERENCES ShoppingCart(user_id),
+                    FOREIGN KEY (user_id) REFERENCES ShoppingCarts(user_id),
                     FOREIGN KEY (product_id)  REFERENCES Products(id)
         );";
 
         mysqli_query($dbconn, $query);
 
-        $query = "CREATE TABLE IF NOT EXISTS Review(
+        $query = "CREATE TABLE IF NOT EXISTS Reviews(
                     id INT NOT NULL AUTO_INCREMENT,
                     product_id INT NOT NULL,
                     user_id INT NOT NULL,
@@ -97,13 +95,10 @@
 
         mysqli_query($dbconn, $query);
 
-
         echo "The tables Products, Users, Orders and ShoppingCart created in the maindb database\n";
 
-    
     } catch (Exception $e) {
         echo 'Exception: ', $e -> getMessage(), "\n";
     }
 
-    
 ?>
