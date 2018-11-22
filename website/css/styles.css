@@ -316,6 +316,15 @@ Button{
     #myOrders{
         float:right;
     }
+
+    #myOrdersTable{
+        color:white;
+        border-collapse: collapse;
+        margin:auto;
+    }
+    #myOrdersTable tr{
+        border-bottom: 1px solid #ddd;
+    }
     
 /* ---------------------------------------------------------
    Print styles
