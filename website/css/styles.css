@@ -228,7 +228,7 @@ input.LogInForm {
 .dropdown:hover .dropdown-content {
     display: block;
 }
-	.Button{
+Button{
 		color:white;
 		background-color:black;
 		padding:5px;
@@ -307,7 +307,11 @@ input.LogInForm {
 
 	.shoppingCartTable tr:hover{
 		background-color:#0B3D91;
-	}
+    }
+    
+    #checkoutButton{
+        margin: 10px;
+    }
     
 /* ---------------------------------------------------------
    Print styles
