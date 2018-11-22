@@ -24,7 +24,7 @@
             echo '<tr> <th> Order ID </th> </tr>';
             while($row = mysqli_fetch_object($orders)){
                 $order_id = $row->id;
-                echo '<tr><td><a href="">'.$order_id.'</a></td></tr>';
+                echo '<tr><td><a href="orderPage.php?order_id='.$order_id.'">'.$order_id.'</a></td></tr>';
             }
             echo '</table>';
         }
