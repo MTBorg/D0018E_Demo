@@ -2,6 +2,7 @@
     <head>
         <title>Admin panel</title>
         <script src="../js/CreateProductSubmit.js" type="text/javascript"></script>
+        <script src="../js/modifyProduct.js" type="text/javascript"></script>
         <link href="../css/styles.css" rel="stylesheet">
     </head>
     <body>
@@ -10,20 +11,20 @@
 		    <h1 id="logoText"> StarTrader </h1>
 		    <h3 id="logoSlogan"> The biggest market in the universe </h3>
 </a>
-            <!-- ARIA: the landmark role "navigation" is added here as the element contains site navigation
-            NOTE: The <nav> element does not have to be contained within a <header> element, even though the two examples on this page are. -->
             <nav role="navigation">
-             <!-- This can contain your site navigation either in an unordered list or even a paragraph that contains links that allow users to navigate your site -->
 
 
-	            <a href="loginpage.php" id="loginmain" class="Button">Log In</a>
+	           
             </nav>
 
         </header>
  
-        <div class="addBox">
+      
+        <div class="wrap">
+            <div class="adminBox">
+                <div>
             <form action="javascript:CreateProductSubmit()" method="post" target="_self">
-                <table class="tableBox">
+                <table class="addTable">
                 <p style="color:white">ADD PRODUCT</p>
                     <tr>
                         <td><p class="submitText" style="font-family:Helvetica">name</p></td>
@@ -44,13 +45,31 @@
 
                 </table>
                 <input type="submit" class="Button" value="Submit">
-            </form>
-        </div>
+                    </form>
+</div>
+        
+            <div>
+                <form id="adminForm">
+                <table class="modifyTable" style="color:white" >
+                <p style="color:white">MODIFY PRODUCT</p>
+                <tr>
+       <th>id</th>
+        <th>name</th>
+        <th>price</th>
+        <th>stock</th>
+        <th>MODIFY</th>
+   </tr>
+ 
 
-        <div class="deleteBox">
-                <p style="color:white">PRODUCTS</p>
-                
-                <table class="tableBox">
+                <tr>
+        <th></th>
+        <th><input type="text" name="product name" size="5"></th>
+        <th><input type="text" name="product price" size="5"></th>
+        <th><input type="text" name="product stock" size="5"></th>
+        
+    </tr>
+
+
 
                 <?php
                     
@@ -61,9 +80,13 @@
 
                 </table>
 
+    </form>
 
-
-        </div>
+    
+</div>
+</div>
+</div>
+       
         
     </body>
 </html>

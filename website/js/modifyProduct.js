@@ -1,5 +1,9 @@
-function orderEvent(product_id) {
+function modifyProduct(product_id) {
   xmlhttp = new XMLHttpRequest();
+
+
+
+
 
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -12,14 +16,34 @@ function orderEvent(product_id) {
        * That said this script can be reused!
        */
       // If user not logged in.
-      console.log(this.response);
+      //console.log(this.response);
       if (this.responseText) {
+
+        alert("modified:\n" + this.responseText);
         window.location.reload();
+
       }
+      
     }
   };
 
-  // OrderEvent, if user is logged in ok
-  xmlhttp.open("GET", "../php/deleteProduct.php?id=" + product_id, true);
-  xmlhttp.send();
+  usr_inputs =document.getElementById("adminForm").getElementsByTagName("input");
+  var name = usr_inputs[0].value;
+  var price = usr_inputs[1].value;
+  var stock = usr_inputs[2].value;
+
+
+  xmlhttp.open("POST", "../php/modifyProduct.php", true);
+  xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xmlhttp.send(
+    "id=" + 
+    product_id + 
+    "&name=" +
+      name +
+      "&price=" +
+      price +
+      "&stock=" +
+      stock
+  );
 }
+
