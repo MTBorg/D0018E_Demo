@@ -116,6 +116,12 @@ header {
 button {
     text-align: left;
 }
+.adminBox {
+   
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
 
 img {
     width: 200px;
