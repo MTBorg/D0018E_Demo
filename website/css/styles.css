@@ -228,7 +228,91 @@ input.LogInForm {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+Button{
+		color:white;
+		background-color:black;
+		padding:5px;
+		text-decoration: none;
+		text-align:center;
+		font-family: "Helvetica";
+	}
 
+	a.Button{
+		color:white;
+	}
+
+	#logInMain{
+		float:right;
+		width:5%;
+		margin-bottom: 0%;
+	}
+
+	#signUpMain{
+		float:right;
+		width:5%;
+	}
+	#logOutMain{
+		float:right;
+		width:5%;
+	}
+	.Button:hover{
+		background-color:gray;
+	}
+
+	.SubmitBox{
+		border-color: #FC3D21;
+		border-style:solid;
+		border-width:thin;
+	}
+	
+	input.LogInForm{
+		border-radius:10px;
+	}
+	
+	.submitText{
+			color:white;
+			font-family: "Helvetica";
+	}
+    
+	.initHidden{
+		display:none;
+	}
+
+	#shoppingCart{
+		float:right;
+		color:white;
+		font-size:36px;
+		margin-right:10px;
+	}
+
+	.shoppingCartTable{
+		border-color:#FC3D21;
+		border-collapse: collapse;
+		margin:auto;
+	}
+
+	.shoppingCartTable td{
+		border-bottom: 1px solid #FC3D21;
+		color:white;
+	}
+
+	.shoppingCartTable th{
+		color:white;
+		padding-right: 25px;
+	}
+
+	#shoppingCartTableHeader:hover{
+		background-color:transparent;
+	}
+
+	.shoppingCartTable tr:hover{
+		background-color:#0B3D91;
+    }
+    
+    #checkoutButton{
+        margin: 10px;
+    }
+    
 /* ---------------------------------------------------------
    Print styles
    ---------------------------------------------------------*/

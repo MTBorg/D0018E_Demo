@@ -1,4 +1,4 @@
-function orderEvent(product_id) {
+function addToCartOnClick(product_id) {
 
 
 
@@ -29,8 +29,8 @@ function orderEvent(product_id) {
 
   };
 
-  // OrderEvent, if user is logged in ok
-  xmlhttp.open("GET", "../php/orderProduct.php?id=" + product_id, true);
+  // addToCartOnClick, if user is logged in ok
+  xmlhttp.open("GET", "../php/addToCart.php?id=" + product_id, true);
   xmlhttp.send();
 
 

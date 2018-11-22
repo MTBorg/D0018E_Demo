@@ -25,7 +25,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Include the HTML5 shiv print polyfill for Internet Explorer browsers 8 and below -->
     <!--[if lt IE 9]><script src="js/html5shiv-printshiv.js" media="all"></script><![endif]-->
-    <script src="../js/orderEvent.js" type="text/javascript"></script>
+    <script src="../js/addToCartOnClick.js" type="text/javascript"></script>
     <script src="js/initNavButtons.js" type="text/javascript"></script> 
 </head>
 
@@ -59,6 +59,7 @@
     <a href="../php/adminpage.php" id="adminMain" class="Button">Admin panel</a>
 	<a href="php/createUserPage.php" id="signUpMain" class="Button initHidden">Sign up</a>
     <a href="php/logOut.php" id="logOutMain" class="Button initHidden">Log out</a>
+    <a href="php/shoppingCartPage.php"> <i class="fa fa-shopping-cart initHidden" style="display:none" id="shoppingCart"></i></a>
 	<a href="php/loginpage.php" id="logInMain" class="Button initHidden">Log In</a>
     </div>
     <div>
