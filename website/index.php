@@ -25,7 +25,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Include the HTML5 shiv print polyfill for Internet Explorer browsers 8 and below -->
     <!--[if lt IE 9]><script src="js/html5shiv-printshiv.js" media="all"></script><![endif]-->
-    <script src="../js/orderEvent.js" type="text/javascript"></script>
+    <script src="../js/addToCartOnClick.js" type="text/javascript"></script>
     <script src="js/initNavButtons.js" type="text/javascript"></script> 
 </head>
 
