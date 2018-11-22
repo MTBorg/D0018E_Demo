@@ -6,7 +6,12 @@ function getUserInput(idFirst_name, idLast_name, idEmail, idPassword) {
 
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("submit-info").innerHTML = this.responseText;
+      //document.getElementById("submit-info").innerHTML = this.responseText;
+      alert(this.responseText);
+
+      if (this.responseText == "Success!") {
+        window.location.replace("..");
+      }
     }
   };
 

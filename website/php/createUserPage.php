@@ -6,10 +6,10 @@
     </head>
     <body>
         <header role="banner">
-
+        <a href="../index.php" style = "text-decoration:none">
 		    <h1 id="logoText"> StarTrader </h1>
 		    <h3 id="logoSlogan"> The biggest market in the universe </h3>
-
+</a>
             <!-- ARIA: the landmark role "navigation" is added here as the element contains site navigation
             NOTE: The <nav> element does not have to be contained within a <header> element, even though the two examples on this page are. -->
             <nav role="navigation">

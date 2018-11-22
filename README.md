@@ -38,4 +38,4 @@ Update and edit/add/remove products to the database and web page.
 
 ### Database tables
 
-![db tables](https://lh3.googleusercontent.com/3ywzEY1gmNByiKPyKksbSronrzqbmhU9kDBkPAkcr97Blkoh1gmK1kPx7-DT5OpoofuB1WSUT3AfVRDLY5mIUbC6CW058emKa7v-MbqYgrNdae98K2XXf824jhbgLeFa4reKPd06)
+![db tables](https://i.imgur.com/WFVeHy7.png)

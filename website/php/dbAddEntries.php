@@ -4,23 +4,31 @@
     /*Below are entries added into the products table */
     try {
 
-        $query = "INSERT INTO Products VALUES (NULL, 'boat', 1000, 3, 5, 'x', 'img/boat.png');";
+        // Create categories 1 2 3
+        $query = "INSERT INTO Categories VALUES(1, 'temp');";
+
+        mysqli_query($dbconn, $query);
+
+    
+
+        $query = "INSERT INTO Products VALUES (NULL, 'boat', 10, 3, 'img/boat.png', 1);";
 
         mysqli_query($dbconn, $query);
 
         //echo "added new entry into database \n";
 
-        $query = "INSERT INTO Products VALUES (NULL, 'car', 5000, 5, 7, 'x', 'img/car.jpg');";
+        $query = "INSERT INTO Products VALUES (NULL, 'car', 50, 5, 'img/car.jpg', 1);";
 
         mysqli_query($dbconn, $query);
 
         //echo "added new entry into database \n";   
 
-        $query = "INSERT INTO Products VALUES (NULL, 'rocket', 7000, 5, 3, 'x', 'img/rocket.jpg');";
+        $query = "INSERT INTO Products VALUES (NULL, 'rocket', 70, 5, 'img/rocket.jpg', 1);";
 
         mysqli_query($dbconn, $query);
 
         //echo "added new entry into database \n";
+
 
     } catch (Exception $e) {
         echo 'Exception: ', $e -> getMessage(), "\n";

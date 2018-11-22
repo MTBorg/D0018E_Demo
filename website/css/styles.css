@@ -6,125 +6,228 @@
    ---------------------------------------------------------*/
 
 /* ========================================================================== */
+
 /* =================== HERE YOU CAN ADD YOUR CSS CODE ======================= */
+
 /* ========================================================================== */
+
 /* ============================ ONLY HERE :) ================================ */
+
 /* ========================================================================== */
+
 /* ===========================THANK YOU! /ARON ============================== */
 
-body {
-}
+body {}
+
 /* Default link styling */
+
 a:link {
-  color: #0271fb;
+    color: #0271fb;
 }
+
 a:visited {
-  color: #bd02fb;
+    color: #bd02fb;
 }
-a:hover,
-a:focus {
-  color: #000;
+
+a:focus,
+a:hover {
+    color: #000;
 }
+
 a:active {
-  color: #fb0e02;
+    color: #fb0e02;
 }
 
 /* ---------------------------------------------------------
    Author's styles
    ---------------------------------------------------------*/
+
 body {
-	background-color: rgb(4, 27, 68);
+    background-color: rgb(4, 27, 68);
 }
 
 h1 {
-  text-align: center;
+    text-align: center;
 }
 
-nav{
-	display:block;
-	overflow:hidden;
+nav {
+    display: block;
+    overflow: hidden;
 }
 
-#navIcon{
-	font-size:36px;
-	color:white;
-	float:left;
-	margin-left: 1%;
+#navIcon {
+    font-size: 36px;
+    color: white;
+    float: left;
+    margin-left: 1%;
 }
 
-#logoSlogan{
-	margin-top:0.5%;
-	text-align:center;
-	color:#FC3D21;
-	font-family:"Helvetica";
+#logoSlogan {
+    margin-top: 0.5%;
+    text-align: center;
+    color: #fc3d21;
+    font-family: "Helvetica";
 }
 
-#logoText{
-	margin-top:0%;
-	margin-bottom:0%;
-	padding-top:1%;
-	color:#FC3D21;
-	font-family:"Helvetica";
+#logoText {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 1%;
+    color: #fc3d21;
+    font-family: "Helvetica";
 }
-header{
-	background-color: #0B3D91;
-	margin-top: 0;
-	padding: 0;
+
+header {
+    background-color: #0b3d91;
+    margin-top: 0;
+    padding: 0;
 }
+
 .wrap {
-  margin: 50px;
-	text-align: center;
-
+    margin: 50px;
+    text-align: center;
 }
 
 .shop {
-  text-align: center;
-  display: grid;
-  grid-template-columns: auto auto auto;
-	padding: 10px;
-	border-radius: 3px;
-
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    border-radius: 3px;
 }
 
 .item {
-  background-color: white;
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  padding: 10%;
-	font-size: 30px;
-	border-radius: 3px;
-	margin: 10px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 10%;
+    font-size: 30px;
+    border-radius: 3px;
+    margin: 10px;
 }
 
 #namePos,
 #pricePos,
 #ratingPos,
 #stockPos {
-	margin-top: 0%;
-	text-align: right;
+    margin-top: 0;
+    text-align: right;
 }
 
-
 button {
-  text-align: left;
+    text-align: left;
+}
+.adminBox {
+   
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
 
 img {
-  width: 200px;
-  height: 200px;
-	float: left;
-	border-radius: 3px;
+    width: 200px;
+    height: 200px;
+    float: left;
+    border-radius: 3px;
 }
 
 footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: gray;
-  color: white;
-  text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: gray;
+    color: white;
+    text-align: center;
 }
 
+.Button {
+    color: white;
+    background-color: black;
+    padding: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-family: "Helvetica";
+}
+
+a.Button {
+    color: white;
+}
+
+#logInMain {
+    float: right;
+    width: 5%;
+    margin-bottom: 0;
+}
+
+#signUpMain {
+    float: right;
+    width: 5%;
+}
+
+#logOutMain {
+    float: right;
+    width: 5%;
+}
+
+.Button:hover {
+    background-color: gray;
+}
+
+.SubmitBox {
+    border-color: #fc3d21;
+    border-style: solid;
+    border-width: thin;
+}
+
+input.LogInForm {
+    border-radius: 10px;
+}
+
+.submitText {
+    color: white;
+    font-family: "Helvetica";
+}
+
+.initHidden {
+    display: none;
+}
+
+.dropbutton {
+    color: white;
+    padding: 3px;
+    background-color: black;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    outline: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.8);
+    /* Go to front */
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 	.Button{
 		color:white;
 		background-color:black;
@@ -205,18 +308,17 @@ footer {
 	.shoppingCartTable tr:hover{
 		background-color:#0B3D91;
 	}
-
     
 /* ---------------------------------------------------------
    Print styles
    ---------------------------------------------------------*/
+
 /* Fattar ni? testa ändra storlek på window */
+
 @media screen and (max-width: 480px) {
     body {
         background-color: gray !important;
-        box-shadow:none !important;
-        text-shadow:none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
     }
-
 }
-

@@ -20,7 +20,7 @@
                 echo '<p id="namePos"> <b>name</b>: ' . $row['name'] . '</p>';
                 echo '<p id="pricePos"> <b>price</b>: ' . $row['price'] . '</p>';
                 echo '<p id="stockPos"> <b>stock</b>: ' . $row['stock'] . '</p>';
-                echo '<p id="ratingPos"> <b>rating</b>: ' . $row['rating'] . '</p>';
+                // echo '<p id="ratingPos"> <b>rating</b>: ' . $row['rating'] . '</p>';
                 echo '<button id="'.$row['id'].'" type="button" onclick="orderEvent(this.id)">Order</button>';
                 echo '</div>';
                 
