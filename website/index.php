@@ -56,7 +56,7 @@
                 <a href="#">About</a>   
             </div>
         </div>
-    
+    <a href="../php/adminpage.php" id="adminMain" class="Button">Admin panel</a>
 	<a href="php/createUserPage.php" id="signUpMain" class="Button initHidden">Sign up</a>
     <a href="php/logOut.php" id="logOutMain" class="Button initHidden">Log out</a>
 	<a href="php/loginpage.php" id="logInMain" class="Button initHidden">Log In</a>
