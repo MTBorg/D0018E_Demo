@@ -3,16 +3,10 @@
 <head>
     <title> Order </title>
 
-    <link rel="stylesheet" href="../css/styles.css" media="all">
+    <link  href="../css/styles.css" rel="stylesheet" media="all">
 </head>
 <body>
     <?php
-        echo '<table>';
-        echo '<tr>';
-        echo '<th>Product ID</th><th>Product name</th><th>Quantity</th>';
-        echo '<th>Price</th><th>Sum</th>';
-        echo '</tr>';
-        
         include_once 'dbConnect.php';
         $dbconn = dbConnect();
 
@@ -28,7 +22,13 @@
             echo '<p>Order id not set in GET request';
             return;
         }
-        
+
+        echo '<table class="orderTable">';
+        echo '<tr id="orderTableHeader">';
+        echo '<th>Product ID</th><th>Product name</th><th>Quantity</th>';
+        echo '<th>Price</th><th>Sum</th>';
+        echo '</tr>';
+  
         $query = 'SELECT * FROM OrderLines WHERE order_id='.$order_id.';';
         $orderLines = mysqli_query($dbconn, $query);
         if($orderLines){

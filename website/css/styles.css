@@ -325,7 +325,25 @@ Button{
     #myOrdersTable tr{
         border-bottom: 1px solid #ddd;
     }
-    
+
+    .orderTable{
+        color:white;
+        border-collapse: collapse;
+        margin:auto;
+    }
+
+    .orderTable tr{
+        border-bottom: 1px solid #FFF;
+    }
+
+    .orderTable tr:hover{
+        background: #0B3D91;
+    }
+
+    #orderTableHeader:hover{
+        background-color:transparent;
+    }
+   
 /* ---------------------------------------------------------
    Print styles
    ---------------------------------------------------------*/
