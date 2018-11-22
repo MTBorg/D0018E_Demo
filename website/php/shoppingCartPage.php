@@ -22,5 +22,9 @@
         include 'loadShoppingCart.php';
         loadShoppingCart();
     ?>
+
+    <div style="text-align:center">
+        <button id="checkoutButton">Checkout</button>
+    </div>
 </body>
 </html>
