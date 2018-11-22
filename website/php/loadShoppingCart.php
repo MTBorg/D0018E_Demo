@@ -1,5 +1,6 @@
 <?php
 function loadShoppingCart(){
+    echo '<script type="text/javascript" src="../js/removeShoppingCartItemSubmit.js"></script>';
     include 'dbConnect.php';
     $dbconn = dbConnect();
 
@@ -45,7 +46,8 @@ function loadShoppingCart(){
             $sum = $price * $quantity;
             echo "<td></p>$sum </p></td>";
 
-            echo '<td><i class="fa fa-trash-o" style="font-size:24px"></i></td>';
+            $arg = $user_id . "," . $product_id;
+            echo '<td><button onClick="removeShoppingCartItemSubmit(' . $arg . ')"><i class="fa fa-trash-o" style="font-size:18px"></i></button></td>';
 
             echo '</tr>';
         }
