@@ -19,7 +19,7 @@
                     name VARCHAR(20) NOT NULL,
                     price INT NOT NULL CHECK (price>=0),
                     stock INT NOT NULL CHECK (stock>=0), 
-                    img_url VARCHAR(90),
+                    img_url VARCHAR(255),
                     cat_id INT NOT NULL,
                     PRIMARY KEY(id),
                     FOREIGN KEY (cat_id) REFERENCES Categories(id)
