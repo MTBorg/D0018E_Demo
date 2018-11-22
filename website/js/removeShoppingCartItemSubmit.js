@@ -1,8 +1,6 @@
 function removeShoppingCartItemSubmit(user_id, product_id) {
 	xmlhttp = new XMLHttpRequest();
 
-    console.log(user_id);
-    console.log(product_id);
 	xmlhttp.onreadystatechange = function () {
 		if (this.readyState == 4 && this.status == 200) {
 			if (this.responseText == true) {
