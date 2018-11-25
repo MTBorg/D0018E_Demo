@@ -21,7 +21,7 @@
                 echo '<p id="pricePos"> <b>price</b>: ' . $row['price'] . '</p>';
                 echo '<p id="stockPos"> <b>stock</b>: ' . $row['stock'] . '</p>';
                 // echo '<p id="ratingPos"> <b>rating</b>: ' . $row['rating'] . '</p>';
-                echo '<p><button id="'.$row['id'].'" type="button" onclick="goToProductPage(this.id)">Review</button</p>';
+                echo '<a href="../php/productPage.php?product_id='.$row['id'].'"><button>Review</button></a>';
                 echo '<button id="'.$row['id'].'" type="button" onclick="addToCartOnClick(this.id)">Add to cart</button>';
                 echo '</div>';
                 

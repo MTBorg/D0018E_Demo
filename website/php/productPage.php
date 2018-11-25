@@ -38,14 +38,23 @@
 
 <div class="product-background">
 
-        <!-- <div id="'.$row['id'].'" class="product">
-        <img src="'. $row['img_url'] .'">
-        <p id="namePos"> <b>name</b> boat </p>
-        <p id="pricePos"> <b>price</b> 22 </p>
-        <p id="stockPos"> <b>stock</b>5 </p>
-        <p id="ratingPos"> <b>rating</b>5</p>
-       </div> -->
-        
+
+<?php
+    include 'getProduct.php';
+
+    if(isset($_GET["product_id"])){
+        $product_id = $_GET["product_id"];
+
+    }else{
+        echo '<p>Product id not set in GET request</p>';
+        return;
+    }
+
+    getProduct($product_id);
+    
+       
+
+       ?>
         
 
 </div>
