@@ -4,8 +4,10 @@
 	<link href="../css/styles.css" rel="stylesheet"> 
 
 	<title>Log in</title>
-	<script src="../js/LogInSubmit.js" type="text/javascript">
-	</script>
+	<script src="../js/LogInSubmit.js" type="text/javascript">	</script>
+ 
+
+
 </head>	
 <body>
 	<header role="banner">
@@ -34,15 +36,17 @@
 <main role="main">
 
 
-<div class="product">
+<div class="product-background">
 
+        <!-- <div id="'.$row['id'].'" class="product">
+        <img src="'. $row['img_url'] .'">
+        <p id="namePos"> <b>name</b> boat </p>
+        <p id="pricePos"> <b>price</b> 22 </p>
+        <p id="stockPos"> <b>stock</b>5 </p>
+        <p id="ratingPos"> <b>rating</b>5</p>
+       </div> -->
         
-        <?php
-            // include 'php/loadProducts.php';
-            // loadProducts();
-        ?>
-
-        <p> TEST </p>
+        
 
 </div>
 
@@ -51,4 +55,5 @@
 	
 
 </body>
+<script src="../js/goToProductPage.js" type="text/javascript"> </script>
 </html>
