@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link href="../css/styles.css" rel="stylesheet"> 
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title>Log in</title>
 	<script src="../js/LogInSubmit.js" type="text/javascript">	</script>
  
@@ -38,6 +38,7 @@
 
 <div class="product-background">
 
+<div class="product">
 
 <?php
     include 'getProduct.php';
@@ -50,12 +51,50 @@
         return;
     }
 
+    // Get product info as name, price and stock
     getProduct($product_id);
     
        
 
        ?>
         
+        </div>
+
+        <div class="add-product-review">
+
+        <p> Add review </p>
+
+            <form action="" method="post" target="_self">
+                <table class="addReview">
+                    <tr>
+                        <td><p class="submitTextBlack">Rate: </p></td>
+                        <td>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+
+
+                    </td>
+                    </tr>
+                    <tr>
+                        <td><p class="submitTextBlack">Comment: </p></td>
+                        <td><textarea rows="4" cols="50" placeholder="How did you like the product?"></textarea></td>
+                    </tr>
+
+
+                </table>
+                <input type="submit" class="Button" value="Submit">
+                    </form>
+
+        </div>
+
+        <div class="product-review">
+
+        <p> Product Review </p>
+
+        </div>
 
 </div>
 
