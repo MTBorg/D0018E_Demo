@@ -56,6 +56,8 @@
 
         echo '</table>';
     ?>
-
+    <div style="text-align:center; margin-top:10px">
+        <button onClick='window.location="myOrdersPage.php"'>Go back</button>
+    </div>
 </body>
 </html>

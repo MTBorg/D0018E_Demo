@@ -16,5 +16,9 @@
         include_once 'loadMyOrders.php';
         loadMyOrders();
     ?>
+
+    <div style="text-align:center; margin-top:10px">
+        <button onClick="window.location='../index.php'"> Go back</button>
+    </div>
 </body>
 </html>
