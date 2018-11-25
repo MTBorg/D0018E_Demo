@@ -20,8 +20,8 @@
         </header>
 
         <script>
-            function updateCatText(element) {
-                document.getElementById("catID").value = element;
+            function updateCatText(id, element) {
+                document.getElementById(id).value = element;
             }
         </script>
       
@@ -49,13 +49,13 @@
                     </tr>
                     <tr>
                         <td><p class="submitText" style="font-family:Helvetica">Category</p></td>
-                        <td><input type="hidden" id="catID" value="1">
-                            <select name="category" onchange="updateCatText(this.value);">
-                                <?php
-                                    include_once 'getCategories.php';
-                                    getCategories();
-                                ?>
-                            </select>
+                        <td><input type="hidden" id="AddForm_catID" value="1">
+                                <select name="category" onchange="updateCatText('AddForm_catID', this.value);">
+                                    <?php
+                                        include_once 'getCategories.php';
+                                        getCategories();
+                                    ?>
+                                </select>
                         </td>
                     </tr>
 
@@ -83,7 +83,15 @@
         <th><input type="text" name="product name" size="5"></th>
         <th><input type="text" name="product price" size="5"></th>
         <th><input type="text" name="product stock" size="5"></th>
-        <th><input type="text" name="product category" size="5"></th>
+        <th>
+            <input type="hidden" id="modForm_CatID" name="product category" size="5" value="1">
+                <select name="category" onchange="updateCatText('modForm_CatID', this.value);">
+                    <?php
+                        include_once 'getCategories.php';
+                        getCategories();
+                    ?>
+                </select>
+        </th>
         
     </tr>
 

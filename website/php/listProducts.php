@@ -16,7 +16,12 @@ function listProducts() {
         echo "<td>" . $row['name'] . "</td>";
         echo "<td>" . $row['price'] . "</td>";
         echo "<td>" . $row['stock'] . "</td>";
-        echo "<td>" . $row['cat_id'] . "</td>";
+
+        # Get the name of the products cat_id
+        $fetchCatName = mysqli_query($dbconn, 'SELECT cat_name FROM Categories WHERE id = '.$row['cat_id'].';');
+        $cat_name = mysqli_fetch_array($fetchCatName);
+
+        echo "<td>" . $cat_name['cat_name'] . "</td>";
         echo "<td> <input id='".$row['id']."' type='button' value='Modify' onclick='modifyProduct(this.id)'> </td>";
         echo "</tr>";
     }
