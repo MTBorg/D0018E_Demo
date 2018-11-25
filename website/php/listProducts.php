@@ -3,7 +3,7 @@
 
 
 function listProducts() {
-    include 'dbConnect.php';
+    include_once 'dbConnect.php';
     $dbconn = dbConnect();
 
 
