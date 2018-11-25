@@ -8,7 +8,7 @@
     <script src="../js/checkoutSubmit.js" type="text/javascript"></script>
     <script src="/js/initNavButtons.js" type="text/javascript"></script>
 </head>
-<body>
+<body onload="initNavButtons()">
     <?php
         echo include 'initHeader.php';
         include 'loadShoppingCart.php';
