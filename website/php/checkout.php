@@ -24,6 +24,10 @@
     $query = 'SELECT * FROM ShoppingCartLines WHERE user_id='.$user_id;
     $lines = mysqli_query($dbconn, $query);
     if($lines){
+        if(!$row = mysqli_fetch_array($lines)){
+            echo "Empty shopping cart";
+            return;
+        }
         while($row = mysqli_fetch_array($lines)){
             $product_id=$row["product_id"];
             $quantity = $row["quantity"];
@@ -36,7 +40,7 @@
             mysqli_query($dbconn, $query);
         }
     }else{
-        echo "Empty shopping cart";
+        echo "Failed to get shopping cart";
         return;
     }
 
