@@ -3,14 +3,15 @@
 <?php
 
     function loadProducts() {
-        include 'dbConnect.php';
+        include 'isAdmin.php';
+        include_once 'dbConnect.php';
         $dbconn = dbConnect();
 
 
         $query = "SELECT * FROM Products";
 
         $products = mysqli_query($dbconn, $query);
-
+        
         if($products) {
             // Fetch associated array
             while ($row = mysqli_fetch_array($products)) {
@@ -21,7 +22,12 @@
                 echo '<p id="pricePos"> <b>price</b>: ' . $row['price'] . '</p>';
                 echo '<p id="stockPos"> <b>stock</b>: ' . $row['stock'] . '</p>';
                 // echo '<p id="ratingPos"> <b>rating</b>: ' . $row['rating'] . '</p>';
-                echo '<button id="'.$row['id'].'" type="button" onclick="addToCartOnClick(this.id)">Add to cart</button>';
+                
+                if(isAdmin()) {
+                    echo '<button id="'.$row['id'].'" type="button">Add to admin</button>';
+                } else {
+                    echo '<button id="'.$row['id'].'" type="button" onclick="addToCartOnClick(this.id)">Add to user</button>';
+                }
                 echo '</div>';
                 
             }
