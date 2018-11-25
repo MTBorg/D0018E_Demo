@@ -25,7 +25,7 @@
 
         echo '<table class="ordersTable">';
         echo '<tr class="ordersTableHeader">';
-        echo '<th>Product ID</th><th>Product name</th><th>Quantity</th>';
+        echo '<th></th><th>Product ID</th><th>Product name</th><th>Quantity</th>';
         echo '<th>Price</th><th>Sum</th>';
         echo '</tr>';
   
@@ -38,10 +38,16 @@
                 $price = $line["price"];
 
                 $sum = $quantity * $price;
-                $query = 'SELECT name FROM Products WHERE id='.$product_id.';';
-                $name = mysqli_fetch_object(mysqli_query($dbconn, $query))->name;
+
+                //Get the name and image url
+                $query = 'SELECT name, img_url FROM Products WHERE id='.$product_id.';';
+                $result = mysqli_query($dbconn, $query);
+                $obj = mysqli_fetch_object($result);
+                $name = $obj->name;
+                $img_url = $obj->img_url;
 
                 echo '<tr>';
+                echo '<td><img src="../'.$img_url.'" style="width:64px;height:64px"></img></td>';
                 echo '<td>'.$product_id.'</td>';
                 echo '<td>'.$name.'</td>';
                 echo '<td>'.$quantity.'</td>';
