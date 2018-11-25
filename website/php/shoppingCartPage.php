@@ -26,6 +26,7 @@
 
     <div style="text-align:center">
         <button  id="checkoutButton" onClick="checkoutSubmit()">Checkout</button>
+        <button onClick='window.location = "/index.php"'>Go back</button>
     </div>
 </body>
 </html>
