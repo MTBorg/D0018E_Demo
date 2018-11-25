@@ -1,5 +1,5 @@
 <?php
-    echo '<header role="banner">
+    return '<header role="banner">
         <a href="../index.php" style = "text-decoration:none">
 		    <h1 id="logoText"> StarTrader </h1>
             <h3 id="logoSlogan"> The biggest market in the universe </h3>
