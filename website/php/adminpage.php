@@ -32,15 +32,15 @@
                 <table class="addTable">
                 <p style="color:white">ADD PRODUCT</p>
                     <tr>
-                        <td><p class="submitText" style="font-family:Helvetica">name</p></td>
+                        <td><p class="submitText" style="font-family:Helvetica">Name</p></td>
                         <td><input type="text"></td>
                     </tr>
                     <tr>
-                        <td><p class="submitText" style="font-family:Helvetica">price</p></td>
+                        <td><p class="submitText" style="font-family:Helvetica">Price</p></td>
                         <td><input type="text"></td>
                     </tr>
                     <tr>
-                        <td><p class="submitText" style="font-family:Helvetica">stock</p></td>
+                        <td><p class="submitText" style="font-family:Helvetica">Stock</p></td>
                         <td><input type="text"></td>
                     </tr>
                     <tr>
@@ -48,13 +48,13 @@
                         <td><input type="text"></td>
                     </tr>
                     <tr>
-                        <td><p class="submitText" style="font-family:Helvetica">cat_id</p></td>
+                        <td><p class="submitText" style="font-family:Helvetica">Category</p></td>
                         <td><input type="hidden" id="catID" value="1">
                             <select name="category" onchange="updateCatText(this.value);">
-                                <option value="1">Misc</option>
-                                <option value="2">Car</option>
-                                <option value="3">Rocket</option>
-                                <option value="4">Food</option>
+                                <?php
+                                    include_once 'getCategories.php';
+                                    getCategories();
+                                ?>
                             </select>
                         </td>
                     </tr>
@@ -91,7 +91,7 @@
 
                 <?php
                     
-                    include 'listProducts.php';
+                    include_once 'listProducts.php';
                     listProducts();
 
                 ?>
