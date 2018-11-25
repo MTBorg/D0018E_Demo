@@ -317,41 +317,23 @@ Button{
         float:right;
     }
 
-    #myOrdersTable{
+    .ordersTable{
         color:white;
         border-collapse: collapse;
         margin:auto;
     }
-    #myOrdersTable tr{
+    .ordersTable tr{
         border-bottom: 1px solid #ddd;
     }
 
-    #myOrdersTable tr:hover{
+    .ordersTable tr:hover{
         background-color: #0B3D91;
     }
 
-    #myOrdersTable #myOrdersTableHeader:hover{
+    .ordersTable .ordersTableHeader:hover{
         background-color:transparent;
     }
 
-    .orderTable{
-        color:white;
-        border-collapse: collapse;
-        margin:auto;
-    }
-
-    .orderTable tr{
-        border-bottom: 1px solid #FFF;
-    }
-
-    .orderTable tr:hover{
-        background: #0B3D91;
-    }
-
-    #orderTableHeader:hover{
-        background-color:transparent;
-    }
-   
 /* ---------------------------------------------------------
    Print styles
    ---------------------------------------------------------*/

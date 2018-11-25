@@ -23,8 +23,8 @@
             return;
         }
 
-        echo '<table class="orderTable">';
-        echo '<tr id="orderTableHeader">';
+        echo '<table class="ordersTable">';
+        echo '<tr class="ordersTableHeader">';
         echo '<th>Product ID</th><th>Product name</th><th>Quantity</th>';
         echo '<th>Price</th><th>Sum</th>';
         echo '</tr>';
