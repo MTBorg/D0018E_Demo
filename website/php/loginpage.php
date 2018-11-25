@@ -8,11 +8,11 @@
 	<script src="../js/LogInSubmit.js" type="text/javascript">
 	</script>
 
-	<script> src="/js/InitNavButtons" type="text/javscript"></script>
+	<script src="/js/initNavButtons.js" type="text/javascript"></script>
 </head>	
 <body onload="initNavButtons()">
 	<?php
-		echo include 'initHeader.php';	
+		 echo include 'initHeader.php';	
 	?>
 	<div class="SubmitBox">
 		<form action="javascript:LogInSubmit()" method="post" style="text-align:center" target="_self">
