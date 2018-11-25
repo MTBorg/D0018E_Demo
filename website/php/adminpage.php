@@ -18,7 +18,12 @@
             </nav>
 
         </header>
- 
+
+        <script>
+            function updateCatText(element) {
+                document.getElementById("catID").value = element;
+            }
+        </script>
       
         <div class="wrap">
             <div class="adminBox">
@@ -44,7 +49,14 @@
                     </tr>
                     <tr>
                         <td><p class="submitText" style="font-family:Helvetica">cat_id</p></td>
-                        <td><input type="text"></td>
+                        <td><input type="hidden" id="catID" value="1">
+                            <select name="category" onchange="updateCatText(this.value);">
+                                <option value="1">Misc</option>
+                                <option value="2">Car</option>
+                                <option value="3">Rocket</option>
+                                <option value="4">Food</option>
+                            </select>
+                        </td>
                     </tr>
 
                 </table>
