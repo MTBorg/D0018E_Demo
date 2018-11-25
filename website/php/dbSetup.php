@@ -118,20 +118,12 @@
 
         mysqli_query($dbconn, $query);
 
-
-        $query = "INSERT INTO Products VALUES (NULL, 'boat', 10, 3, 'img/boat.png', 1);";
-
-        mysqli_query($dbconn, $query);
-
-        //echo "added new entry into database \n";
-
-        $query = "INSERT INTO Products VALUES (NULL, 'car', 50, 5, 'img/car.jpg', 1);";
-
-        mysqli_query($dbconn, $query);
-
-        //echo "added new entry into database \n";   
-
-        $query = "INSERT INTO Products VALUES (NULL, 'rocket', 70, 5, 'img/rocket.jpg', 1);";
+        $query = "INSERT INTO Products VALUES (NULL, 'Boat', 10, 3, 'img/boat.png', 1), 
+                                              (NULL, 'Car', 50, 5, 'img/car.jpg', 1), 
+                                              (NULL, 'Rocket', 70, 5, 'img/rocket.jpg', 1),
+                                              (NULL, 'Dog', 100, 20, 'img/dog.jpg', 1),
+                                              (NULL, 'Rover', 50, 30, 'img/rover.jpg', 1),
+                                              (NULL, 'Space Monkey', 200, 5, 'img/spacemonkey.jpg', 1);";
 
         mysqli_query($dbconn, $query);
 
@@ -139,12 +131,11 @@
 
         mysqli_query($dbconn, $query);
 
-        //echo "added new entry into database \n";
-
 
     } catch (Exception $e) {
         echo 'Exception: ', $e -> getMessage(), "\n";
     }
+
 
     /* Below are entries added into the ShoppingCart table */
         # Close the connection to the DB
