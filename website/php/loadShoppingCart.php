@@ -20,36 +20,27 @@ function loadShoppingCart(){
     if($lines){
         echo '<table class="shoppingCartTable">';
         echo '<tr id="shoppingCartTableHeader">';
-        echo '<th>ID</th><th>Product name</th><th>Quantity</th><th>Price</th><th>Sum</th><th></th>';
+        echo '<th></th><th>ID</th><th>Product name</th><th>Quantity</th><th>Price</th><th>Sum</th><th></th>';
         $total_sum = 0;
         while($row = mysqli_fetch_array($lines)){
-            echo '<tr>';
-
-            //Product id
             $product_id = $row["product_id"];
-            echo "<td><p>$product_id</p></td> ";
-
-            //Product name
-            $query = 'SELECT name FROM Products WHERE id="'.$product_id.'";';
+            $query = 'SELECT name, price, img_url FROM Products WHERE id="'.$product_id.'";';
             $result = mysqli_query($dbconn, $query);
-            $product_name = mysqli_fetch_object($result)->name;
-            echo "<td><p>$product_name</p></td>";
+            $obj = mysqli_fetch_object($result);
 
-            //Quantity
+            $product_name = $obj->name;
+            $price = $obj->price;
             $quantity = $row["quantity"];
-            echo "<td></p>$quantity</p></td>";
-
-            //Price
-            $query = 'SELECT price FROM Products WHERE id='.$product_id.';';
-            $price = mysqli_fetch_object(mysqli_query($dbconn, $query))->price;
-            echo "<td></p>$price</p></td>";
-
-            //Sum
             $sum = $price * $quantity;
-            echo "<td></p>$sum </p></td>";
-
             $total_sum += $sum;
-
+                        
+            echo '<tr>';
+            echo '<td><img src="/'.$obj->img_url.'" alt="Product image" style="width:64px;height:64px"></src></td>';
+            echo "<td><p>$product_id</p></td> ";
+            echo "<td><p>$product_name</p></td>";
+            echo "<td></p>$quantity</p></td>";
+            echo "<td></p>$price</p></td>";
+            echo "<td></p>$sum </p></td>";
             $arg = $user_id . "," . $product_id;
             echo '<td><button onClick="removeShoppingCartItemSubmit(' . $arg . ')"><i class="fa fa-trash-o" style="font-size:18px"></i></button></td>';
 
@@ -57,7 +48,7 @@ function loadShoppingCart(){
         }
 
 
-        echo '<tr> <td><td><td><td><td>'. $total_sum .'</td></td></td></td></td> </tr>';
+        echo '<tr> <td><td><td><td><td><td>'. $total_sum .'</td></td></td></td></td></td> </tr>';
 
         echo '</table>';
     }else{
