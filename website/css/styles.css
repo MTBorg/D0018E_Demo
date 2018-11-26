@@ -262,8 +262,8 @@ input.LogInForm {
 }
 
 .addToCartButton{
-    background-color:#0B3D91;
-    color: #FFFFFF;
+    background-color:#FFFFFF;
+    color: #0B3D91;
     border-radius: 50px;
     font-family: "Helvetica";
     opacity: 0.5;
@@ -272,6 +272,7 @@ input.LogInForm {
 }
 
 .addToCartButton:hover{
+    background-color: #
     opacity: 1;
     transition: 0.3s;
 }
