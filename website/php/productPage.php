@@ -41,22 +41,22 @@
 <div class="product">
 
 <?php
-    include 'getProduct.php';
+include 'getProduct.php';
 
-    if(isset($_GET["product_id"])){
-        $product_id = $_GET["product_id"];
+if (isset($_GET["product_id"])) {
+    $product_id = $_GET["product_id"];
 
-    }else{
-        echo '<p>Product id not set in GET request</p>';
-        return;
-    }
+} else {
+    echo '<p>Product id not set in GET request</p>';
+    return;
+}
 
     // Get product info as name, price and stock
-    getProduct($product_id);
-    
-       
+getProduct($product_id);
 
-       ?>
+
+
+?>
         
         </div>
 
@@ -93,6 +93,30 @@
         <div class="product-review">
 
         <p> Product Review </p>
+        
+        <?php
+
+        include 'getProduct.php';
+
+        if (isset($_GET["product_id"])) {
+            $product_id = $_GET["product_id"];
+
+        } else {
+            echo '<p>Product id not set in GET request</p>';
+            return;
+        }
+
+        include_once 'getReview.php';
+        getReview($product_id);
+
+
+
+
+
+
+
+        ?>
+
 
         </div>
         
