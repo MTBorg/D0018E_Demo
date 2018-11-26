@@ -94,28 +94,25 @@ getProduct($product_id);
 
         <p> Product Review </p>
         
-        <?php
+        <table class="Reviews">
+                    <tr>
+                        <td><p class="submitTextBlack">Comments: </p></td>
+                        <td><textarea disabled rows="2" cols="50">
+                        <?php
 
-        include 'getProduct.php';
+                        include 'getReview.php';
+                        // Here I don't check if product_id since I assume it does as we passed above check
+                        getReview($_GET["product_id"]);
 
-        if (isset($_GET["product_id"])) {
-            $product_id = $_GET["product_id"];
-
-        } else {
-            echo '<p>Product id not set in GET request</p>';
-            return;
-        }
-
-        include_once 'getReview.php';
-        getReview($product_id);
-
+                        ?></textarea>
+                        </td>
+                    </tr>
 
 
+                </table>
 
 
-
-
-        ?>
+        
 
 
         </div>
@@ -128,5 +125,4 @@ getProduct($product_id);
 	
 
 </body>
-<script src="../js/goToProductPage.js" type="text/javascript"> </script>
 </html>
