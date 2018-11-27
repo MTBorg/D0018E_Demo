@@ -7,12 +7,17 @@
         <script src="/js/initNavButtons.js" type="text/javascrtip"></script>
 	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
+
     <body onload="initNavButtons()">
         <?php
             echo include 'initHeader.php'; 
         ?>
- 
-      
+        <script>
+            function updateCatText(id, element) {
+                document.getElementById(id).value = element;
+            }
+        </script>
+  
         <div class="wrap">
             <div class="adminBox">
                 <div>
@@ -20,15 +25,15 @@
                 <table class="addTable">
                 <p style="color:white">ADD PRODUCT</p>
                     <tr>
-                        <td><p class="submitText" style="font-family:Helvetica">name</p></td>
+                        <td><p class="submitText" style="font-family:Helvetica">Name</p></td>
                         <td><input type="text"></td>
                     </tr>
                     <tr>
-                        <td><p class="submitText" style="font-family:Helvetica">price</p></td>
+                        <td><p class="submitText" style="font-family:Helvetica">Price</p></td>
                         <td><input type="text"></td>
                     </tr>
                     <tr>
-                        <td><p class="submitText" style="font-family:Helvetica">stock</p></td>
+                        <td><p class="submitText" style="font-family:Helvetica">Stock</p></td>
                         <td><input type="text"></td>
                     </tr>
                     <tr>
@@ -36,8 +41,15 @@
                         <td><input type="text"></td>
                     </tr>
                     <tr>
-                        <td><p class="submitText" style="font-family:Helvetica">cat_id</p></td>
-                        <td><input type="text"></td>
+                        <td><p class="submitText" style="font-family:Helvetica">Category</p></td>
+                        <td><input type="hidden" id="AddForm_catID" value="1">
+                                <select name="category" onchange="updateCatText('AddForm_catID', this.value);">
+                                    <?php
+                                        include_once 'getCategories.php';
+                                        getCategories();
+                                    ?>
+                                </select>
+                        </td>
                     </tr>
 
                 </table>
@@ -64,7 +76,15 @@
         <th><input type="text" name="product name" size="5"></th>
         <th><input type="text" name="product price" size="5"></th>
         <th><input type="text" name="product stock" size="5"></th>
-        <th><input type="text" name="product category" size="5"></th>
+        <th>
+            <input type="hidden" id="modForm_CatID" name="product category" size="5" value="1">
+                <select name="category" onchange="updateCatText('modForm_CatID', this.value);">
+                    <?php
+                        include_once 'getCategories.php';
+                        getCategories();
+                    ?>
+                </select>
+        </th>
         
     </tr>
 
@@ -72,7 +92,7 @@
 
                 <?php
                     
-                    include 'listProducts.php';
+                    include_once 'listProducts.php';
                     listProducts();
 
                 ?>

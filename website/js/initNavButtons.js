@@ -9,11 +9,13 @@ function initNavButtons(){
 				document.getElementById("logInMain").style.display = "none";
 				document.getElementById("logOutMain").style.display = "inline";
 				document.getElementById("shoppingCart").style.display = "inline";
+				document.getElementById("myOrders").style.display = "inline";
 			}else if(this.responseText == false){ //If logged out
 				document.getElementById("logOutMain").style.display = "none";
 				document.getElementById("signUpMain").style.display = "inline";
 				document.getElementById("logInMain").style.display = "inline";
 				document.getElementById("shoppingCart").style.display = "none";
+				document.getElementById("myOrders").style.display = "none";
 			}
 		}	
 	};

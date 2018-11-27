@@ -29,6 +29,17 @@
 
         //echo "added new entry into database \n";
 
+        $query = "INSERT INTO Products VALUES (NULL, 'Dog', 100, 20, 'img/dog.jpg', 1);";
+
+        mysqli_query($dbconn, $query);
+
+        $query = "INSERT INTO Products VALUES (NULL, 'Rover', 50, 30, 'img/rover.jpg', 1);";
+
+        mysqli_query($dbconn, $query);
+
+        $query = "INSERT INTO Products VALUES (NULL, 'Space Monkey', 200, 5, 'img/spacemonkey.jpg', 1);";
+
+        mysqli_query($dbconn, $query);
 
     } catch (Exception $e) {
         echo 'Exception: ', $e -> getMessage(), "\n";
