@@ -3,11 +3,15 @@
 <?php
 
     function loadProducts() {
-        include 'isAdmin.php';
+        include_once 'isAdmin.php';
+        include_once 'isLoggedIn.php';
         include_once 'dbConnect.php';
         $dbconn = dbConnect();
-
-
+        
+        if(!isset($_SESSION["user_id"])) {
+            @session_start();
+        }
+        
         $query = "SELECT * FROM Products";
 
         $products = mysqli_query($dbconn, $query);
@@ -24,7 +28,7 @@
                 // echo '<p id="ratingPos"> <b>rating</b>: ' . $row['rating'] . '</p>';
                 
                 if(isAdmin()) {
-                    echo '<button id="'.$row['id'].'" type="button">Add to admin</button>';
+                    echo '<button id="'.$row['id'].'" type="button">Add to cart</button>';
                 } else {
                     echo '<button id="'.$row['id'].'" type="button" onclick="addToCartOnClick(this.id)">Add to user</button>';
                 }
