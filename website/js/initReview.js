@@ -14,12 +14,15 @@ function initReview() {
           var reviewData = this.responseText.split("|");
           console.log(reviewData);
           for (var i = 0; i < reviewData.length; i++) {
-            document.getElementById(
-              "ReviewsTextArea"
-            ).appendChild(document.createElement("textarea")) = reviewData[i];
+
             
 
-            document.getElementById("userBox").appendChild(document.createElement("div")) = reviewData[i + 1];
+            document.getElementById("userBox").appendChild(document.createElement("div")).innerHTML = reviewData[i + 1];
+
+
+            document.getElementById(
+              "userBox"
+            ).appendChild(document.createElement("textarea")).innerHTML = reviewData[i];
         }
           }
       }

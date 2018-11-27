@@ -107,7 +107,7 @@ getProduct($product_id);
                         <div id="userBox"></div>
                         
                         
-                        <textarea id="ReviewsTextArea" disabled rows="2" cols="50"></textarea>
+                        <!-- <textarea id="ReviewsTextArea" disabled rows="2" cols="50"></textarea> -->
                         </td>
                     </tr>
 
