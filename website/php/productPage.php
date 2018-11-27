@@ -4,12 +4,23 @@
 	<link href="../css/styles.css" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title>Log in</title>
-	<script src="../js/LogInSubmit.js" type="text/javascript">	</script>
- 
+         
+    <script src="../js/initReview.js" type="text/javascript"></script>
+    <!-- Ref: https://css-tricks.com/snippets/javascript/random-hex-color/ -->
+    <script type="text/javascript">
+    // Wait till content loaded, script could be placed in bottom also
+    document.addEventListener("DOMContentLoaded", function(event) {
+        
+    var randomColor = Math.floor(Math.random()*16777215).toString(16);
+    document.getElementById('userBox').style.backgroundColor = "#" + randomColor;
+    
+});
+    </script>
+
 
 
 </head>	
-<body>
+<body onload='initReview();'> 
 	<header role="banner">
 	<a href="../index.php" style = "text-decoration:none">
 		<h1 id="logoText"> StarTrader </h1>
@@ -25,14 +36,9 @@
 
 
 
-    <!-- Content -->
-
-     <!-- If you want to use an element as a wrapper, i.e. for styling only, then <div> is still the element to use -->
      <div class="wrap">
 
-<!-- The <main> element is used to enclose the main content, i.e. that which contains the central topic of a document -->
-<!-- ARIA: the landmark role "main" is added here as it contains the main content of the document, and it is recommended to add it to the
-<main> element until user agents implement the required role mapping. -->
+
 <main role="main">
 
 
@@ -97,14 +103,11 @@ getProduct($product_id);
         <table class="Reviews">
                     <tr>
                         <td><p class="submitTextBlack">Comments: </p></td>
-                        <td><textarea disabled rows="2" cols="50">
-                        <?php
-
-                        include 'getReview.php';
-                        // Here I don't check if product_id since I assume it does as we passed above check
-                        getReview($_GET["product_id"]);
-
-                        ?></textarea>
+                        <td>
+                        <div id="userBox"></div>
+                        
+                        
+                        <textarea id="ReviewsTextArea" disabled rows="2" cols="50"></textarea>
                         </td>
                     </tr>
 
@@ -125,4 +128,5 @@ getProduct($product_id);
 	
 
 </body>
+
 </html>
