@@ -278,6 +278,12 @@ input.LogInForm {
     opacity: 1;
     transition: 0.2s;
 }
+
+.addToCartButton:hover i{
+    transform: rotate(360deg);
+    transition: 1s;
+}
+
 Button{
 		color:white;
 		background-color:black;
