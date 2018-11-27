@@ -22,15 +22,15 @@
                 // Hence we do not need to know the url only the name
                 echo '<div id="'.$row['id'].'" class="item">';
                 echo '<img src="'. $row['img_url'] .'">';
-                echo '<p id="namePos"> <b>name</b>: ' . $row['name'] . '</p>';
-                echo '<p id="pricePos"> <b>price</b>: ' . $row['price'] . '</p>';
+                echo '<p id="namePos">' . $row['name'] . '</p>';
+                echo '<p id="pricePos">' . $row['price'] . '$</p>';
                 echo '<p id="stockPos"> <b>stock</b>: ' . $row['stock'] . '</p>';
                 // echo '<p id="ratingPos"> <b>rating</b>: ' . $row['rating'] . '</p>';
                 
                 if(isAdmin()) {
-                    echo '<button id="'.$row['id'].'" class="addToCartButton" type="button">Add to cart</button>';
+                    echo '<button id="'.$row['id'].'" class="addToCartButton" type="button">Add to cart <i class="fa fa-shopping-cart"></i></button>';
                 } else {
-                    echo '<button id="'.$row['id'].'" class="addToCartButton" type="button" onclick="addToCartOnClick(this.id)">Add to Cart</button>';
+                    echo '<button id="'.$row['id'].'" class="addToCartButton" type="button" onclick="addToCartOnClick(this.id)">Add to Cart<i class="fa fa-shopping-cart"></i></button>';
                 }
                 echo '</div>';
                 
