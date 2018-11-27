@@ -38,7 +38,11 @@ function loadShoppingCart(){
             echo '<td><img src="/'.$obj->img_url.'" alt="Product image" style="width:64px;height:64px"></src></td>';
             echo "<td><p>$product_id</p></td> ";
             echo "<td><p>$product_name</p></td>";
-            echo "<td></p>$quantity</p></td>";
+            echo '<td></p>
+            '.$quantity.'
+            <a href="#"><i class="fa fa-plus shopCartQuantityIcon"></i></a>
+            <a href="#"><i class="fa fa-minus shopCartQuantityIcon"></i></a>
+            </p></td>';
             echo "<td></p>$price</p></td>";
             echo "<td></p>$sum </p></td>";
             $arg = $user_id . "," . $product_id;

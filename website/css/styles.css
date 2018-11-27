@@ -340,6 +340,11 @@ Button{
         background-color:transparent;
     }
 
+.shopCartQuantityIcon{
+    text-decoration: none;
+    color:white;
+}
+
 /* ---------------------------------------------------------
    Print styles
    ---------------------------------------------------------*/
