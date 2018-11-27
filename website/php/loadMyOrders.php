@@ -27,7 +27,6 @@
 
                 $href = '\'location.href="/php/orderPage.php?order_id='.$order_id.'"\'';
                 echo '<tr><td><button style="padding-right:10px;padding-left:10px" type="button" onclick='.$href.'>'.$order_id.'</button></td></tr>';
-                //echo '<tr><td><a href="orderPage.php?order_id='.$order_id.'">'.$order_id.'</a></td></tr>';
             }
             echo '</table>';
         }
