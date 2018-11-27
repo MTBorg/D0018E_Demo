@@ -6,16 +6,7 @@
 	<title>Log in</title>
          
     <script src="../js/initReview.js" type="text/javascript"></script>
-    <!-- Ref: https://css-tricks.com/snippets/javascript/random-hex-color/ -->
-    <script type="text/javascript">
-    // Wait till content loaded, script could be placed in bottom also
-    document.addEventListener("DOMContentLoaded", function(event) {
-        
-    var randomColor = Math.floor(Math.random()*16777215).toString(16);
-    document.getElementById('userBox').style.backgroundColor = "#" + randomColor;
-    
-});
-    </script>
+
 
 
 
@@ -102,21 +93,14 @@ getProduct($product_id);
         
         <table class="Reviews">
                     <tr>
-                        <td><p class="submitTextBlack">Comments: </p></td>
                         <td>
                         <div id="userBox"></div>
                         
-                        
-                        <!-- <textarea id="ReviewsTextArea" disabled rows="2" cols="50"></textarea> -->
                         </td>
                     </tr>
 
 
                 </table>
-
-
-        
-
 
         </div>
         

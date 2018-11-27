@@ -7,9 +7,11 @@ $product_id = intval($_GET['id']);
 
 $query = "SELECT comment, user_id FROM Reviews WHERE Reviews.product_id = $product_id";
 $review = mysqli_query($dbconn, $query);
+
+
     
     // Check if review exists
-if ($row = mysqli_fetch_array($review)) {
+while ($row = mysqli_fetch_array($review)) {
     // $comment_array = array('comment' => $row['comment']);
     echo $row['comment'] . "|";
     // echo json_encode($comment_array);
@@ -20,14 +22,11 @@ if ($row = mysqli_fetch_array($review)) {
 
     $row = mysqli_fetch_array($first_name);
     // $first_name_array = array('first_name' => $row['first_name']);
-    echo $row['first_name'];
+    echo $row['first_name'] . "|";
     // echo json_encode($first_name_array);
 
-
-    // No review exists
-} else {
-    echo 'No product review exist...';
 }
+
 
 
 
