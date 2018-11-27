@@ -22,7 +22,7 @@
         <div class="wrap">
             <div class="adminBox">
                 <div>
-                    <form action="javascript:CreateProductSubmit()" method="post" target="_self">
+                    <form id="adminCreateProd" action="javascript:CreateProductSubmit()" method="post" target="_self">
                         <table class="addTable" style="margin:auto;">
                         <p style="color:white">ADD PRODUCT</p>
                             <tr>

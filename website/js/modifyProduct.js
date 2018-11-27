@@ -20,6 +20,7 @@ function modifyProduct(product_id) {
       if (this.responseText) {
 
         alert("modified:\n" + this.responseText);
+        document.getElementById('adminForm').reset();
         window.location.reload();
 
       }

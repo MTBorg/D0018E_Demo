@@ -5,6 +5,7 @@ function addCatSubmit() {
         if (this.readyState == 4 && this.status == 200) {
             if (this.response == true) {
                 alert("Category added");
+                document.getElementById('adminAddCat').reset();
                 window.location.reload();
             } else {
                 alert(this.responseText);
