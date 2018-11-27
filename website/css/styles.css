@@ -397,7 +397,7 @@ button:hover{
     }
 
     .ordersTable{
-        color:white;
+        color:#0B3D91;
         border-collapse: collapse;
         margin:auto;
     }
@@ -412,11 +412,14 @@ button:hover{
     }
 
     .ordersTable tr:hover{
-        background-color: #0B3D91;
+        background-color: #0271fb;
+        color:#FFFFFF;
+        transition: 0.2s;
     }
 
     .ordersTable .ordersTableHeader:hover{
         background-color:transparent;
+        color: #0B3D91;
     }
 
 /* ---------------------------------------------------------
