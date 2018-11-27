@@ -4,7 +4,6 @@ function shopCartAlterQuantitySubmit($user_id, $product_id, $increase){
 	xmlhttp.onreadystatechange = function () {
 		if (this.readyState == 4 && this.status == 200) {
 			if (this.response){
-                //alert(this.responseText); //DEBUG
                 window.location.reload();
 			}
 		}
