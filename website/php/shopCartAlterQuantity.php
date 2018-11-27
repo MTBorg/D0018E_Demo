@@ -37,6 +37,9 @@
 
         echo $quantity; //DEBUG;
 
+        //TODO: Fix so that you cannot increase an item
+        //that is out of stock
+
         if($increase == 1){
             $quantity += 1;
         }else{
