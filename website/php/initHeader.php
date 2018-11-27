@@ -20,6 +20,7 @@
             <a href="/php/adminpage.php" id="adminMain" class="Button">Admin panel</a>
 	        <a href="/php/createUserPage.php" id="signUpMain" class="Button initHidden">Sign up</a>
             <a href="/php/logOut.php" id="logOutMain" class="Button initHidden">Log out</a>
+            <a href="/php/myOrdersPage.php" id="myOrders" class="Button initHidden">My Orders</a>
             <a href="/php/shoppingCartPage.php"> <i class="fa fa-shopping-cart initHidden" style="display:none" id="shoppingCart"></i></a>
 	        <a href="/php/loginpage.php" id="logInMain" class="Button initHidden">Log In</a>
         </div>
