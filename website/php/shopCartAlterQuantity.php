@@ -2,22 +2,13 @@
     include_once 'dbConnect.php';
     $dbConn = dbConnect();
 
-    if(!$dbConn){
-        echo "Failed to connect to database";
+    if(!$dbConn
+        or !isset($_POST["user_id"])
+        or !isset($_POST["product_id"])
+        or !isset($_POST["increase"])){
+        echo "Missing argument in POST request";
+        return;
     }
-
-    if(!isset($_POST["user_id"])){
-        echo "Missing user id in POST request";
-    }
-
-    if(!isset($_POST["product_id"])){
-        echo "Missing product id in POST request";
-    }
-
-    if(!isset($_POST["increase"])){
-        echo "Missing operator in POST request";
-    }
-
     $user_id = $_POST["user_id"];
     $product_id = $_POST["product_id"];
     $increase = $_POST["increase"];
@@ -26,38 +17,33 @@
     $query = 'SELECT quantity 
     FROM ShoppingCartLines
     WHERE user_id='.$user_id.' AND product_id='.$product_id.';';
-
     $result = mysqli_query($dbConn, $query);
 
     if($result){
         $obj = mysqli_fetch_object($result);
         $quantity = $obj->quantity; 
 
-
-        //TODO: Fix so that you cannot increase an item
-        //that is out of stock
+        //Get the product stock
+        $query = 'SELECT stock FROM Products WHERE id='.$product_id.';';
+        $result = mysqli_query($dbConn, $query);
+        if(!$result){
+            echo "Failed to get stock from product";
+            return;
+        }
+        $stock = mysqli_fetch_object($result)->stock;
 
         if($increase == 1){ //Increase quantity
-            $query = 'SELECT stock FROM Products WHERE id='.$product_id.';';
-            $result = mysqli_query($dbConn, $query);
-            if(!$result){
-                echo "Failed to get stock from product";
-            }
-            else{
-                $stock = mysqli_fetch_object($result)->stock;
-                if($stock){
-                    echo $stock; 
-                    $quantity += 1;
-                }else{
-                    echo "Product out of stock";
-                    return;
-                }
+            if($stock){
+                $quantity += 1;
+            }else{
+                echo "Product out of stock";
+                return;
             }
         }else{ //Decrease quantity
             $quantity -= 1;
             if($quantity == 0){
+                //Remove the shopping cart line
                 $query = 'DELETE FROM ShoppingCartLines WHERE user_id='.$user_id.' AND product_id='.$product_id.';';
-
                 $result = mysqli_query($dbConn, $query);
                 if(!$result){
                     echo "Failed to remove shopping cart line";
@@ -65,17 +51,27 @@
                 }
             }
         }
+
+        //Update the shopping cart line
         $query = 'UPDATE ShoppingCartLines
         Set quantity='.$quantity.'
         WHERE user_id='.$user_id.' AND product_id='.$product_id.';';
-
         $result = mysqli_query($dbConn, $query);
         if(!$result){
             echo "Failed to update database (UPDATE)";
-        }else{
-            echo true;
         }
 
+        //Update the product stock
+        $stock += $increase == 1 ? -1 : 1;
+        $query = 'UPDATE Products
+                    SET stock='.$stock.'
+                    WHERE id='.$product_id.';';
+        $result = mysqli_query($dbConn, $query);
+        if(!$result){
+            echo "Failed to update product stock";
+        }else{
+            echo true; //Everything was successfull if this is reached
+        }
     }else{
         echo "Failed to query database (SELECT)";
     }
