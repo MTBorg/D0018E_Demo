@@ -108,6 +108,13 @@
                     </table>
                 </form>
             </div>
+
+            <div>
+                <?php
+                    include_once 'loadAllOrders.php';
+                    loadAllOrders();
+                ?>
+            </div>
     </div>
 </div>
        
