@@ -126,6 +126,16 @@ header {
     margin-left:auto;
     margin-right:auto;
 }
+/* With help from https://css-tricks.com/star-ratings/  */
+.star-rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+.star-rating > span:hover:before,
+.star-rating > span:hover ~ span:before {
+    color: #0b3d91;
+
+}
 
 .userBox {
     /* background-color: gray; */

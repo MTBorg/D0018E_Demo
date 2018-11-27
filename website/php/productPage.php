@@ -6,6 +6,7 @@
 	<title>Log in</title>
          
     <script src="../js/initReview.js" type="text/javascript"></script>
+    <script src="../js/starRate.js" type="text/javascript"></script>
 
 
 
@@ -66,12 +67,14 @@ getProduct($product_id);
                     <tr>
                         <td><p class="submitTextBlack">Rate: </p></td>
                         <td>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-
+                            <div class="star-rating">
+                            <!-- You might think the parameters of function call are wrong BUT they are NOT! Check style.css -> .star-rating they have been reversed for reasons... -->
+                            <span class="fa fa-star" onclick=starRate(5);></span>
+                            <span class="fa fa-star" onclick=starRate(4);></span>
+                            <span class="fa fa-star" onclick=starRate(3);></span>
+                            <span class="fa fa-star" onclick=starRate(2);></span>
+                            <span class="fa fa-star" onclick=starRate(1);></span>
+</div>
 
                     </td>
                     </tr>
