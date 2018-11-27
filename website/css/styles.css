@@ -112,6 +112,7 @@ header {
     font-size: 30px;
     border-radius: 3px;
     margin: 10px;
+    font-family: "Helvetica";
 }
 
 .item:hover{
@@ -274,7 +275,6 @@ input.LogInForm {
     border: solid 2px #0B3D91;
     border-radius: 50px;
     font-family: "Helvetica";
-    opacity: 0.5;
     padding: 10px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
@@ -282,8 +282,7 @@ input.LogInForm {
 .addToCartButton:hover{
     background-color: #0271fb;
     color: #FFFFFF;
-    opacity: 1;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 
 .addToCartButton:hover i{
