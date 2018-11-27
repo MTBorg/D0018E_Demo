@@ -156,9 +156,10 @@ footer {
     text-align: center;
 }
 
-.navButton{
+a.navButton{
     color:#0B3D91;
     background-color: #FFFFFF;
+    border: solid 2px #0B3D91;
     border-radius: 50px;
     padding: 20px;
     text-decoration: none;
@@ -171,13 +172,10 @@ footer {
     font-size: 16px;
 }
 
-a.navButton{
-    color:#0B3D91;
-}
-
 a.navButton:hover{
     color:#FFFFFF;
     background-color: #0271fb;
+    transition: 0.3s;
 }
 
 .Button {
