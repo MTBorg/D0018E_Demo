@@ -267,20 +267,23 @@ input.LogInForm {
     display: block;
 }
 
-.addToCartButton{
-    background-color:#FFFFFF;
+button{
+    background-color: #FFFFFF;
     color: #0B3D91;
-    border: solid 2px #0B3D91;
     border-radius: 50px;
     font-family: "Helvetica";
-    padding: 10px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border: solid 2px #0B3D91;
 }
 
-.addToCartButton:hover{
+button:hover{
     background-color: #0271fb;
-    color: #FFFFFF;
+    color:#FFFFFF;
     transition: 0.3s;
+}
+
+.addToCartButton{
+    padding: 10px;
 }
 
 .addToCartButton:hover i{
@@ -364,12 +367,7 @@ input.LogInForm {
     }
    
     .shoppingCartRemoveItemButton{
-        color:#0B3D91;
-        background-color:#FFFFFF;
-        border-radius: 50px;
         padding: 10px;
-        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-        border: solid 2px #0B3D91;
     }
 
     .shoppingCartRemoveItemButton:hover{
@@ -385,6 +383,13 @@ input.LogInForm {
 
     #checkoutButton{
         margin: 10px;
+        padding: 10px;
+    }
+
+    #checkoutButton:hover{
+        color: #FFFFFF;
+        background-color: #0271fb;
+        transition: 0.2s;
     }
 
     #myOrders{
