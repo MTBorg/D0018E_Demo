@@ -42,7 +42,7 @@ function loadShoppingCart(){
             echo "<td></p>$price</p></td>";
             echo "<td></p>$sum </p></td>";
             $arg = $user_id . "," . $product_id;
-            echo '<td><button onClick="removeShoppingCartItemSubmit(' . $arg . ')"><i class="fa fa-trash-o" style="font-size:18px"></i></button></td>';
+            echo '<td><button class="shoppingCartRemoveItemButton" onClick="removeShoppingCartItemSubmit(' . $arg . ')">Remove<i class="fa fa-trash-o" style="font-size:18px"></i></button></td>';
 
             echo '</tr>';
         }
