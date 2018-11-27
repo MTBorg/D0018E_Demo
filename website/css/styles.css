@@ -370,7 +370,34 @@ Button{
     #checkoutButton{
         margin: 10px;
     }
-    
+
+    #myOrders{
+        float:right;
+    }
+
+    .ordersTable{
+        color:white;
+        border-collapse: collapse;
+        margin:auto;
+    }
+    .ordersTable tr{
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .ordersTable th{
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .ordersTable tr:hover{
+        background-color: #0B3D91;
+    }
+
+    .ordersTable .ordersTableHeader:hover{
+        background-color:transparent;
+    }
+
 /* ---------------------------------------------------------
    Print styles
    ---------------------------------------------------------*/
