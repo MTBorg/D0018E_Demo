@@ -19,11 +19,11 @@
 			<table style="width:50%; margin:auto;">
 				<tr>
 					<td align="right">Email</td>
-					<td align="left"><input type="text" name="email" class="LogInForm" /></td>
+					<td align="left"><input type="text" name="email" class="submitField" /></td>
 				</tr>
 				<tr>
 					<td align="right">Password</td>
-					<td align="left"><input type="password" name="password" class="LogInForm"/></td>
+					<td align="left"><input type="password" name="password" class="submitField"/></td>
 				</tr>
 			</table>
 			<button type="submit" class="button" value="Log in">Log In</button>

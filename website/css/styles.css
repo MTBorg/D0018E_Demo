@@ -302,7 +302,7 @@ button:hover{
 		background-color:gray;
 	}
 
-	input.LogInForm{
+	input.submitField{
         border-radius:50px;
         border: solid 2px #0B3D91;
         color: #0B3D91;
