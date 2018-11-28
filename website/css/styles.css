@@ -215,6 +215,7 @@ a.Button {
     border-color: #fc3d21;
     border-style: solid;
     border-width: thin;
+    color:#0B3D91;
 }
 
 input.LogInForm {
@@ -222,7 +223,7 @@ input.LogInForm {
 }
 
 .submitText {
-    color: white;
+    color: #0B3D91;
     font-family: "Helvetica";
 }
 
@@ -309,20 +310,11 @@ button:hover{
 		background-color:gray;
 	}
 
-	.SubmitBox{
-		border-color: #FC3D21;
-		border-style:solid;
-		border-width:thin;
-	}
-	
 	input.LogInForm{
-		border-radius:10px;
-	}
-	
-	.submitText{
-			color:white;
-			font-family: "Helvetica";
-	}
+        border-radius:50px;
+        border: solid 2px #0B3D91;
+        color: #0B3D91;
+    }
     
 	.initHidden{
 		display:none;
