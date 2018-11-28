@@ -211,20 +211,16 @@ a.Button {
     background-color: gray;
 }
 
-.SubmitBox {
-    border-color: #fc3d21;
+.logInBox {
+    border-color: #0B3D91;
     border-style: solid;
     border-width: thin;
     color:#0B3D91;
+    font-family: "Helvetica";
 }
 
 input.LogInForm {
-    border-radius: 10px;
-}
-
-.submitText {
-    color: #0B3D91;
-    font-family: "Helvetica";
+    border-radius: 50px;
 }
 
 .initHidden {
