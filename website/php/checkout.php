@@ -23,7 +23,7 @@
             return;
         }
         //Create an order
-        $query = 'INSERT INTO Orders VALUES (NULL, '.$user_id.', "temp");';
+        $query = 'INSERT INTO Orders VALUES (NULL, '.$user_id.');';
         mysqli_query($dbconn, $query);
         $order_id = mysqli_insert_id($dbconn);
 
