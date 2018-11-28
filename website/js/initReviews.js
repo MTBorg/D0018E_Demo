@@ -1,4 +1,4 @@
-function initReview() {
+function initReviews() {
   // Get product_id from url
   var product_id = window.location.search.split("=").pop();
 

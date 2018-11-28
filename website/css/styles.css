@@ -131,6 +131,7 @@ header {
     unicode-bidi: bidi-override;
     direction: rtl;
 }
+
 .star-rating > span:hover:before,
 .star-rating > span:hover ~ span:before {
     color: #0b3d91;

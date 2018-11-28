@@ -5,14 +5,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title>Log in</title>
          
-    <script src="../js/initReview.js" type="text/javascript"></script>
+    <script src="../js/initReviews.js" type="text/javascript"></script>
     <script src="../js/starRate.js" type="text/javascript"></script>
+    <script src="../js/setColor.js" type="text/javascript"></script>
+    <script src="../js/addComment.js" type="text/javascript"></script>
 
 
 
 
 </head>	
-<body onload='initReview();'> 
+<body onload='initReviews();'> 
 	<header role="banner">
 	<a href="../index.php" style = "text-decoration:none">
 		<h1 id="logoText"> StarTrader </h1>
@@ -69,24 +71,34 @@ getProduct($product_id);
                         <td>
                             <div class="star-rating">
                             <!-- You might think the parameters of function call are wrong BUT they are NOT! Check style.css -> .star-rating they have been reversed for reasons... -->
-                            <span class="fa fa-star" onclick=starRate(5);></span>
-                            <span class="fa fa-star" onclick=starRate(4);></span>
-                            <span class="fa fa-star" onclick=starRate(3);></span>
-                            <span class="fa fa-star" onclick=starRate(2);></span>
-                            <span class="fa fa-star" onclick=starRate(1);></span>
+                            <span id="5" class="fa fa-star" onclick=setColor(5);starRate(5); style="display:inline;"></span>
+                            <span class="fa fa-star" style="color: #0b3d91; display:none;"></span>
+                            <span id="4"class="fa fa-star" onclick=setColor(4);starRate(4); style="display:inline;"></span>
+                            <span class="fa fa-star" style="color: #0b3d91; display:none;"></span>
+                            <span id="3" class="fa fa-star" onclick=setColor(3);starRate(3);  style="display:inline;"></span>
+                            <span class="fa fa-star" style="color: #0b3d91; display:none;"></span>
+                            <span id="2" class="fa fa-star" onclick=setColor(2);starRate(2); style="display:inline;"></span>
+                            <span class="fa fa-star" style="color: #0b3d91; display:none;"></span>
+                            <span id="1"class="fa fa-star" onclick=setColor(1);starRate(1); style="display:inline;"></span>
+                            <span class="fa fa-star" style="color: #0b3d91; display:none;"></span>
 </div>
+
 
                     </td>
                     </tr>
                     <tr>
                         <td><p class="submitTextBlack">Comment: </p></td>
-                        <td><textarea rows="4" cols="50" placeholder="How did you like the product?"></textarea></td>
+                        <td><textarea id="comment" rows="4" cols="50" placeholder="How did you like the product?"></textarea></td>
                     </tr>
 
 
                 </table>
-                <input type="submit" class="Button" value="Submit">
+
                     </form>
+                    <input type="submit" class="Button" value="Submit" onclick=addComment(); >
+
+                    <input type="reset" class="Button" value="Reset" onclick=resetReview();>
+
 
         </div>
 
