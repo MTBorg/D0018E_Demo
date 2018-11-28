@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="../css/styles.css" rel="stylesheet">
         <title>Create user</title>
-        <script src="../js/getUserInput.js" type="text/javascript"></script>
+        <script src="../js/userSignUp.js" type="text/javascript"></script>
+        <link href="../css/styles.css" rel="stylesheet">
         <script src="/js/initNavButtons.js" type="text/javascript"></script>
 	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -12,7 +12,7 @@
             echo include 'initHeader.php'; 
         ?>
         <div class="submitBox">
-            <form action="javascript:getUserInput()" method="post" target="_self">
+            <form action="javascript:userSignUp()" method="post" target="_self">
                 <table>
                     <tr>
                         <td align="left">First name</td>
