@@ -133,19 +133,12 @@ header {
     text-align: right;
 }
 
-button {
-    text-align: left;
-}
 .adminBox {
   color:#0B3D91; 
   font-family: "Helvetica";
   text-align: center;
   display: grid;
   grid-template-columns: auto auto auto;
-}
-
-#adminForm{
-    color:#0B3D91;
 }
 
 img {
@@ -187,19 +180,6 @@ a.navButton:hover{
     transition: 0.3s;
 }
 
-.Button {
-    color: white;
-    background-color: black;
-    padding: 5px;
-    text-decoration: none;
-    text-align: center;
-    font-family: "Helvetica";
-}
-
-a.Button {
-    color: white;
-}
-
 #logInMain {
     float: right;
     width: 5%;
@@ -214,10 +194,6 @@ a.Button {
 #logOutMain {
     float: right;
     width: 5%;
-}
-
-.Button:hover {
-    background-color: gray;
 }
 
 .submitBox {
@@ -273,6 +249,7 @@ button{
     background-color: #FFFFFF;
     color: #0B3D91;
     border-radius: 50px;
+    text-align: center;
     font-family: "Helvetica";
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     border: solid 2px #0B3D91;
@@ -296,7 +273,6 @@ button:hover{
 	#logInMain{
 		float:right;
 		width:5%;
-		margin-bottom: 0%;
 	}
 
 	#signUpMain{
@@ -306,9 +282,6 @@ button:hover{
 	#logOutMain{
 		float:right;
 		width:5%;
-	}
-	.Button:hover{
-		background-color:gray;
 	}
 
 	input.submitField{
@@ -361,12 +334,6 @@ button:hover{
    
     .shoppingCartRemoveItemButton{
         padding: 10px;
-    }
-
-    .shoppingCartRemoveItemButton:hover{
-        color: #FFFFFF;
-        background-color: #0271fb;
-        transition: 0.2s;
     }
 
     .shoppingCartRemoveItemButton:hover i{
