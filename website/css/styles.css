@@ -133,7 +133,7 @@ button {
     text-align: left;
 }
 .adminBox {
-   
+  color:#0B3D91; 
   text-align: center;
   display: grid;
   grid-template-columns: auto auto auto;
