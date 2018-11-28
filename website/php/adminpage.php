@@ -98,7 +98,7 @@
             <div>
                 <form id="adminAddCat" action="javascript:addCatSubmit()" method="post" target="_self">
                     <table class="addTable" style="margin:auto;">
-                        <p style="color:white">ADD CATEGORY</p>
+                        ADD CATEGORY
                         <tr>
                             <td><p class="submitText" style="font-family:Helvetica">Category name</p></td>
                                 <td>
