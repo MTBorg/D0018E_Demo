@@ -96,6 +96,10 @@ header {
     text-align: center;
 }
 
+.adminWrap{
+    color:#0B3D91;
+}
+
 .shop {
     text-align: center;
     display: grid;
@@ -134,9 +138,14 @@ button {
 }
 .adminBox {
   color:#0B3D91; 
+  font-family: "Helvetica";
   text-align: center;
   display: grid;
   grid-template-columns: auto auto auto;
+}
+
+#adminForm{
+    color:#0B3D91;
 }
 
 img {
