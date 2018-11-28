@@ -1,7 +1,7 @@
 /*Some security still needs to be added, remove whitespaces, password hidden etc
   Also need to add a field which assigns role_id to indicate admin etc          */
 
-function getUserInput(idFirst_name, idLast_name, idEmail, idPassword) {
+function userSignUp() {
   xmlhttp = new XMLHttpRequest();
 
   xmlhttp.onreadystatechange = function() {
