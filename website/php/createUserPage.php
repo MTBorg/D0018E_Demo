@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Create user</title>
@@ -10,27 +11,27 @@
         <?php
             echo include 'initHeader.php'; 
         ?>
-        <div class="SubmitBox">
+        <div class="submitBox">
             <form action="javascript:userSignUp()" method="post" target="_self">
                 <table>
                     <tr>
-                        <td align="left"><p class="submitText" style="font-family:Helvetica">First name</p></td>
-                        <td align="right"><input type="text"></td>
+                        <td align="left">First name</td>
+                        <td align="right"><input class="submitField" type="text"></td>
                     </tr>
                     <tr>
-                        <td align="left"><p class="submitText" style="font-family:Helvetica">Last name</p></td>
-                        <td align="right"><input type="text"></td>
+                        <td align="left">Last name</td>
+                        <td align="right"><input class="submitField" type="text"></td>
                     </tr>
                     <tr>
-                        <td align="left"><p class="submitText" style="font-family:Helvetica">Email</p></td>
-                        <td align="right"><input type="text"></td>
+                        <td align="left">Email</td>
+                        <td align="right"><input class="submitField" type="text"></td>
                     </tr>
                     <tr>
-                        <td align="left"><p class="submitText" style="font-family:Helvetica">Password</p></td>
-                        <td align="right"><input type="password"></td>
+                        <td align="left">Password</td>
+                        <td align="right"><input class="submitField" type="password"></td>
                     </tr>
                 </table>
-                <input type="submit" class="Button" value="Submit">
+                <button type="submit" value="Submit">Sign up</button>
                 <p id="submit-info"></p>
             </form>
         </div>

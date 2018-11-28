@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Admin panel</title>
@@ -19,30 +20,30 @@
             }
         </script>
   
-        <div class="wrap">
+        <div class="adminWrap">
             <div class="adminBox">
                 <div>
                     <form id="adminCreateProd" action="javascript:CreateProductSubmit()" method="post" target="_self">
                         <table class="addTable" style="margin:auto;">
-                        <p style="color:white">ADD PRODUCT</p>
+                            ADD PRODUCT
                             <tr>
-                                <td><p class="submitText" style="font-family:Helvetica">Name</p></td>
-                                <td><input type="text"></td>
+                                <td>Name</td>
+                                <td><input class="submitField" type="text"></td>
                             </tr>
                             <tr>
-                                <td><p class="submitText" style="font-family:Helvetica">Price</p></td>
-                                <td><input type="text"></td>
+                                <td>Price</td>
+                                <td><input class="submitField" type="text"></td>
                             </tr>
                             <tr>
-                                <td><p class="submitText" style="font-family:Helvetica">Stock</p></td>
-                                <td><input type="text"></td>
+                                <td>Stock</td>
+                                <td><input class="submitField" type="text"></td>
                             </tr>
                             <tr>
-                                <td><p class="submitText" style="font-family:Helvetica">img_url</p></td>
-                                <td><input type="text"></td>
+                                <td>img_url</td>
+                                <td><input class="submitField" type="text"></td>
                             </tr>
                             <tr>
-                                <td><p class="submitText" style="font-family:Helvetica">Category</p></td>
+                                <td>Category</td>
                                 <td><input type="hidden" id="AddForm_catID" value="1">
                                         <select name="category" onchange="updateCatText('AddForm_catID', this.value);">
                                             <?php
@@ -53,14 +54,14 @@
                                 </td>
                             </tr>
                         </table>
-                        <input type="submit" class="Button" value="Submit" style="margin:10px;">
+                        <button type="submit" value="Submit" style="margin:10px;">Submit</button>
                     </form>
                 </div>
         
             <div>
                 <form id="adminForm">
-                    <table class="modifyTable" style="color:white; margin:auto;" >
-                        <p style="color:white">MODIFY PRODUCT</p>
+                    <table class="modifyTable" style="margin:auto;" >
+                        MODIFY PRODUCT
                         
                         <tr>
                             <th>id</th>
@@ -73,9 +74,9 @@
             
                         <tr>
                             <th></th>
-                            <th><input type="text" name="product name" size="5"></th>
-                            <th><input type="text" name="product price" size="5"></th>
-                            <th><input type="text" name="product stock" size="5"></th>
+                            <th><input class="submitField" type="text" name="product name" size="5"></th>
+                            <th><input class="submitField" type="text" name="product price" size="5"></th>
+                            <th><input class="submitField" type="text" name="product stock" size="5"></th>
                             <th>
                                 <input type="hidden" id="modForm_CatID" name="product category" size="5" value="1">
                                     <select name="category" onchange="updateCatText('modForm_CatID', this.value);">
@@ -97,12 +98,12 @@
             <div>
                 <form id="adminAddCat" action="javascript:addCatSubmit()" method="post" target="_self">
                     <table class="addTable" style="margin:auto;">
-                        <p style="color:white">ADD CATEGORY</p>
+                        ADD CATEGORY
                         <tr>
                             <td><p class="submitText" style="font-family:Helvetica">Category name</p></td>
                                 <td>
-                                    <input id="catName" type="text">
-                                    <input type="submit" value="Add" class="Button">
+                                    <input class="submitField" id="catName" type="text">
+                                    <button type="submit" value="Add">Add</button>
                                 </td>
                         </tr>
                     </table>

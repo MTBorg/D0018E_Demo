@@ -43,7 +43,7 @@ a:active {
    ---------------------------------------------------------*/
 
 body {
-    background-color: rgb(4, 27, 68);
+    background-color: #FFFFFF;
 }
 
 h1 {
@@ -65,7 +65,7 @@ nav {
 #logoSlogan {
     margin-top: 0.5%;
     text-align: center;
-    color: #fc3d21;
+    color: #FFFFFF;
     font-family: "Helvetica";
 }
 
@@ -73,12 +73,20 @@ nav {
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 1%;
-    color: #fc3d21;
+    color: #FFFFFF;
     font-family: "Helvetica";
+}
+#logoText:hover i{
+    transform: rotate(360deg);
+    transition: 1s;
+}
+
+#logoIcon{
+    color:#FC3D21;
 }
 
 header {
-    background-color: #0b3d91;
+    background-color: #0B3D91;
     margin-top: 0;
     padding: 0;
 }
@@ -86,6 +94,10 @@ header {
 .wrap {
     margin: 50px;
     text-align: center;
+}
+
+.adminWrap{
+    color:#0B3D91;
 }
 
 .shop {
@@ -98,11 +110,19 @@ header {
 
 .item {
     background-color: white;
+    color: #0B3D91;
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 10%;
     font-size: 30px;
     border-radius: 3px;
     margin: 10px;
+    font-family: "Helvetica";
+}
+
+.item:hover{
+    background-color:#0B3D91;
+    color: #FFFFFF;
+    transition: 0.3s;
 }
 
 #namePos,
@@ -113,11 +133,9 @@ header {
     text-align: right;
 }
 
-button {
-    text-align: left;
-}
 .adminBox {
-   
+  color:#0B3D91; 
+  font-family: "Helvetica";
   text-align: center;
   display: grid;
   grid-template-columns: auto auto auto;
@@ -135,22 +153,31 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: gray;
-    color: white;
+    background-color: #0B3D91;
+    color: #FFFFFF;
     text-align: center;
 }
 
-.Button {
-    color: white;
-    background-color: black;
-    padding: 5px;
+a.navButton{
+    color:#0B3D91;
+    background-color: #FFFFFF;
+    border: solid 2px #0B3D91;
+    border-radius: 50px;
+    padding: 20px;
     text-decoration: none;
-    text-align: center;
+    text-align:center;
     font-family: "Helvetica";
+    margin-bottom:2px;
+    margin-right: 5px;
+    margin-left: 5px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    font-size: 16px;
 }
 
-a.Button {
-    color: white;
+a.navButton:hover{
+    color:#FFFFFF;
+    background-color: #0271fb;
+    transition: 0.3s;
 }
 
 #logInMain {
@@ -169,22 +196,11 @@ a.Button {
     width: 5%;
 }
 
-.Button:hover {
-    background-color: gray;
-}
-
-.SubmitBox {
-    border-color: #fc3d21;
+.submitBox {
+    border-color: #0B3D91;
     border-style: solid;
     border-width: thin;
-}
-
-input.LogInForm {
-    border-radius: 10px;
-}
-
-.submitText {
-    color: white;
+    color:#0B3D91;
     font-family: "Helvetica";
 }
 
@@ -228,23 +244,35 @@ input.LogInForm {
 .dropdown:hover .dropdown-content {
     display: block;
 }
-Button{
-		color:white;
-		background-color:black;
-		padding:5px;
-		text-decoration: none;
-		text-align:center;
-		font-family: "Helvetica";
-	}
 
-	a.Button{
-		color:white;
-	}
+button{
+    background-color: #FFFFFF;
+    color: #0B3D91;
+    border-radius: 50px;
+    text-align: center;
+    font-family: "Helvetica";
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border: solid 2px #0B3D91;
+}
+
+button:hover{
+    background-color: #0271fb;
+    color:#FFFFFF;
+    transition: 0.3s;
+}
+
+.addToCartButton{
+    padding: 10px;
+}
+
+.addToCartButton:hover i{
+    transform: rotate(360deg);
+    transition: 1s;
+}
 
 	#logInMain{
 		float:right;
 		width:5%;
-		margin-bottom: 0%;
 	}
 
 	#signUpMain{
@@ -255,50 +283,39 @@ Button{
 		float:right;
 		width:5%;
 	}
-	.Button:hover{
-		background-color:gray;
-	}
 
-	.SubmitBox{
-		border-color: #FC3D21;
-		border-style:solid;
-		border-width:thin;
-	}
-	
-	input.LogInForm{
-		border-radius:10px;
-	}
-	
-	.submitText{
-			color:white;
-			font-family: "Helvetica";
-	}
+	input.submitField{
+        border-radius:50px;
+        border: solid 2px #0B3D91;
+        color: #0B3D91;
+    }
     
 	.initHidden{
 		display:none;
 	}
 
-	#shoppingCart{
-		float:right;
-		color:white;
-		font-size:36px;
-		margin-right:10px;
-	}
+    #shoppingCart{
+        float:right;
+    }
+
+    #shoppingCart:hover i{
+        transform: rotate(360deg);
+        transition: 1.0s;
+    }
 
 	.shoppingCartTable{
-		border-color:#FC3D21;
 		border-collapse: collapse;
-		margin:auto;
+        margin:auto;
 	}
 
 	.shoppingCartTable td{
-		border-bottom: 1px solid #FC3D21;
-		color:white;
+		border-bottom: 1px solid #0B3D91;
+        color:#0B3D91;
 	}
 
 	.shoppingCartTable th{
-		color:white;
-		padding-right: 25px;
+		color:#0B3D91;
+        padding-right: 25px;
 	}
 
 	#shoppingCartTableHeader:hover{
@@ -306,11 +323,33 @@ Button{
 	}
 
 	.shoppingCartTable tr:hover{
-		background-color:#0B3D91;
+        background-color:#0B3D91;
+        transition: 0.2s;
     }
-    
+
+    .shoppingCartTable tr:hover td{
+        color:#FFFFFF;
+        transition: 0.2s;
+    }
+   
+    .shoppingCartRemoveItemButton{
+        padding: 10px;
+    }
+
+    .shoppingCartRemoveItemButton:hover i{
+        transform: rotate(360deg);
+        transition: 1s;
+    }
+
     #checkoutButton{
         margin: 10px;
+        padding: 10px;
+    }
+
+    #checkoutButton:hover{
+        color: #FFFFFF;
+        background-color: #0271fb;
+        transition: 0.2s;
     }
 
     #myOrders{
@@ -318,7 +357,7 @@ Button{
     }
 
     .ordersTable{
-        color:white;
+        color:#0B3D91;
         border-collapse: collapse;
         margin:auto;
     }
@@ -333,11 +372,14 @@ Button{
     }
 
     .ordersTable tr:hover{
-        background-color: #0B3D91;
+        background-color: #0271fb;
+        color:#FFFFFF;
+        transition: 0.2s;
     }
 
     .ordersTable .ordersTableHeader:hover{
         background-color:transparent;
+        color: #0B3D91;
     }
 
 /* ---------------------------------------------------------
