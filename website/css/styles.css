@@ -331,7 +331,16 @@ button:hover{
         color:#FFFFFF;
         transition: 0.2s;
     }
-   
+ 
+.shopCartQuantityIcon{
+    text-decoration: none;
+    color: #0B3D91;
+}
+
+.shoppingCartTable tr:hover .shopCartQuantityIcon{
+    text-decoration: none;
+    color: #FFFFFF;
+}  
     .shoppingCartRemoveItemButton{
         padding: 10px;
     }
@@ -381,6 +390,7 @@ button:hover{
         background-color:transparent;
         color: #0B3D91;
     }
+
 
 /* ---------------------------------------------------------
    Print styles
