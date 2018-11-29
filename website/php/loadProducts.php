@@ -24,10 +24,7 @@
                 echo '<img src="'. $row['img_url'] .'">';
                 echo '<p id="namePos">' . $row['name'] . '</p>';
                 echo '<p id="pricePos">' . $row['price'] . '$</p>';
-
-                $inStock_str = $row['stock'] ? 'In stock' : 'Out of stock';
-                $inStock_txtClr = $row['stock'] ? '#00aa00' : '#FF0000';
-                echo '<p id="stockPos" style="color:'.$inStock_txtClr.'">' . $inStock_str . '</p>';
+                echo '<p id="stockPos"> <b>stock</b>: ' . $row['stock'] . '</p>';
                 // echo '<p id="ratingPos"> <b>rating</b>: ' . $row['rating'] . '</p>';
                 
                 if(isAdmin()) {
