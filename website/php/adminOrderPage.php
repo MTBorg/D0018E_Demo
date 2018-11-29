@@ -36,6 +36,7 @@
   
         $query = 'SELECT * FROM OrderLines WHERE order_id='.$order_id.';';
         $orderLines = mysqli_query($dbconn, $query);
+        $totalSum = 0;
         if($orderLines){
             while($line = mysqli_fetch_array($orderLines)){
                 $product_id = $line["product_id"];
@@ -43,6 +44,7 @@
                 $price = $line["price"];
 
                 $sum = $quantity * $price;
+                $totalSum += $sum;
 
                 //Get the name and image url
                 $query = 'SELECT name, img_url FROM Products WHERE id='.$product_id.';';
@@ -60,6 +62,7 @@
                 echo '<td>'.$sum.'</td>';
                 echo '</tr>';
             }
+            echo '<tr> <td><td><td><td><td><td>'.$totalSum.'</td></td></td></td></td></td> </tr>';
         }else{
             echo '<p>Failed to get orderlines</p>';
             return;
