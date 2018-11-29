@@ -17,7 +17,7 @@
             return;
         }
 
-        $query = 'SELECT id, user_id FROM Orders';
+        $query = 'SELECT id, user_id FROM Orders ORDER BY id';
         $orders = mysqli_query($dbConn, $query);
         if($orders){
             echo '<table class="ordersTable">';
