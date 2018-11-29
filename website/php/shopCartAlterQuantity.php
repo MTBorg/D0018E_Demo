@@ -34,7 +34,12 @@
 
         if($increase == 1){ //Increase quantity
             if($stock){
-                $quantity += 1;
+                if($quantity < $stock){
+                    $quantity += 1;
+                }else{
+                    echo "No more items in stock";
+                    return;
+                }
             }else{
                 echo "Product out of stock";
                 return;
