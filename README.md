@@ -13,7 +13,7 @@ See the list of [contributors](https://github.com/dynematic/D0018E_Group1/graphs
 
 ### Scrum board
 
-![zube](https://imgur.com/d4jF4RY)
+![zube](https://i.imgur.com/d4jF4RY.png)
 
 
 ### Database tables
