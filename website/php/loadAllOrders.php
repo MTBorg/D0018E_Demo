@@ -35,7 +35,7 @@
                         <td>'.$order_id.' </td>
                         <td>'.$user_id.' </td>
                         <td>'.$user_email.'</td>
-                        <td><button  onclick=\'location.href="adminOrderPage.php?order_id='.$order_id.'"\'>View </td>
+                        <td><button  onclick=\'location.href="adminOrderPage.php?order_id='.$order_id.'"\'>View </button></td>
                         </tr>';
                 
             }
