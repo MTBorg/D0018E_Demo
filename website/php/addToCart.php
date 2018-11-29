@@ -22,26 +22,26 @@
         
         # The product is in stock
         if ($prodInfo['stock'] > 0) {
-            echo $newStock;
-
             $user_id = $_SESSION["user_id"];
 
             # Check if the user have already added the product to his shopping cart
             $queryCheckLines = 'SELECT * FROM ShoppingCartLines WHERE user_id = '.$user_id.' AND product_id = '.$prodInfo['id'].';';
             $cartLine = mysqli_fetch_array(mysqli_query($dbconn, $queryCheckLines));
             
-            # If the product already is in the shopping cart, only increase the quantity
-            if ($cartLine) {
-                $queryIncreaseQuantity = 'UPDATE ShoppingCartLines SET quantity = '.($cartLine['quantity'] + 1).' WHERE user_id = '.$user_id.' AND product_id = '.$prodInfo['id'].';';
-                mysqli_query($dbconn, $queryIncreaseQuantity);
+            if ($cartLine) {# If the product already is in the shopping cart, only increase the quantity
+                if($cartLine["quantity"] < $prodInfo['stock']){
+                    $queryIncreaseQuantity = 'UPDATE ShoppingCartLines SET quantity = '.($cartLine['quantity'] + 1).' WHERE user_id = '.$user_id.' AND product_id = '.$prodInfo['id'].';';
+                    mysqli_query($dbconn, $queryIncreaseQuantity);
+                } else{
+                    echo "Shopping cart already contains the entire stock";
+                }
             } else { # If not, create a new shopping cart line for the product
-                # ------------- #
-                # ---- OBS ---- #  !!!!!!!!! Price needs to be removed once database is updated to not have price in ShoppingCartLines !!!!!!!
-                # ------------- #
                 $queryCreateLine = 'INSERT INTO ShoppingCartLines VALUES ('.$user_id.', '.$prodInfo['id'].', 1);';
                 mysqli_query($dbconn, $queryCreateLine);
             }
 
+        }else{
+            echo "Product is out of stock";
         } 
         
     // If user not logged in
