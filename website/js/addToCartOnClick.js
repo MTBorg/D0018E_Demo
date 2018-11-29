@@ -19,12 +19,7 @@ function addToCartOnClick(product_id) {
       console.log(this.response);
       if (this.responseText == -1) {
         window.location.replace("../php/loginpage.php");
-      } else {
-        document
-          .getElementById(product_id)
-          .getElementsByTagName("p")[2].innerHTML =
-          "<b>stock</b>: " + this.responseText;
-      }
+      } 
     }
 
   };

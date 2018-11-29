@@ -22,10 +22,6 @@
         
         # The product is in stock
         if ($prodInfo['stock'] > 0) {
-            $newStock = $prodInfo['stock'] - 1;
-            $queryOrder = "UPDATE Products SET stock=".$newStock." WHERE id=".$prodInfo['id'].";";
-            mysqli_query($dbconn, $queryOrder);
-
             echo $newStock;
 
             $user_id = $_SESSION["user_id"];
@@ -46,9 +42,7 @@
                 mysqli_query($dbconn, $queryCreateLine);
             }
 
-        } else {
-            echo $prodInfo['stock'];
-        }
+        } 
         
     // If user not logged in
     } else {
