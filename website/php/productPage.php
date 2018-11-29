@@ -95,7 +95,7 @@ getProduct($product_id);
                 </table>
 
                     </form>
-                    <input type="submit" class="Button" value="Submit" onclick=addComment(); >
+                    <input type="submit" class="Button" value="Submit comment" onclick=addComment(); >
 
                     <input type="reset" class="Button" value="Reset" onclick=resetReview();>
 

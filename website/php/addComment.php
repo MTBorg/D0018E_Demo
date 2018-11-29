@@ -17,8 +17,13 @@
         $user_id = $_SESSION["user_id"];
 
         // Check if user bought the product
-        // $query = "SELECT id FROM Orders WHERE (SELECT product_id FROM OrderLines WHERE order_id = id) WHERE user_id = $user_id ();"
-
+        $query = "SELECT user_id FROM Orders WHERE id IN (SELECT order_id FROM OrderLines WHERE product_id = $product_id AND user_id = $user_id)";
+        $checkBought = mysqli_query($dbconn, $query);
+        if(mysqli_fetch_assoc($checkBought) == false) {
+            echo false;
+            mysqli_close($dbconn);
+            return;
+        }
 
         // Check if user already comment this product
         $query = "SELECT comment FROM Reviews WHERE user_id = $user_id";

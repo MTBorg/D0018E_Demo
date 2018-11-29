@@ -18,7 +18,13 @@
         $user_id = $_SESSION["user_id"];
 
         // Check if user bought the product
-        // $query = "SELECT id FROM Orders WHERE (SELECT product_id FROM OrderLines WHERE order_id = id) WHERE user_id = $user_id ();"
+        $query = "SELECT user_id FROM Orders WHERE id IN (SELECT order_id FROM OrderLines WHERE product_id = $product_id AND user_id = $user_id)";
+        $checkBought = mysqli_query($dbconn, $query);
+        if(mysqli_fetch_assoc($checkBought) == false) {
+            echo false;
+            mysqli_close($dbconn);
+            return;
+        }
 
 
         // Check if user already stared this product
@@ -26,7 +32,7 @@
         $checkRated = mysqli_query($dbconn, $query);
 
         // Returns true if it holds data
-        if(mysqli_fetch_array($checkRated)) {
+        if(mysqli_fetch_assoc($checkRated)) {
             $query = "UPDATE Reviews SET rating = $rating WHERE user_id = $user_id";
             mysqli_query($dbconn, $query);
             echo true;

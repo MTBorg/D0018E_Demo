@@ -11,6 +11,7 @@ function setColor(stars) {
 }
 
 function resetReview() {
+    document.getElementById("comment").value = "";
     window.location.reload();
 
 }
