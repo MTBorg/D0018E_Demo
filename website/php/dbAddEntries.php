@@ -41,6 +41,10 @@
 
         mysqli_query($dbconn, $query);
 
+        $query = "INSERT INTO Products VALUES (NULL, 'Movie set', 1000, 1, 'img/Moon-Landing.jpg', 1);";
+
+        mysqli_query($dbconn, $query);
+    
     } catch (Exception $e) {
         echo 'Exception: ', $e -> getMessage(), "\n";
     }
