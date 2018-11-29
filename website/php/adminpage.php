@@ -78,8 +78,9 @@
                             <th><input class="submitField" type="text" name="product price" size="5"></th>
                             <th><input class="submitField" type="text" name="product stock" size="5"></th>
                             <th>
-                                <input type="hidden" id="modForm_CatID" name="product category" size="5" value="1">
+                                <input type="hidden" id="modForm_CatID" name="product category" size="5" value="-1">
                                     <select name="category" onchange="updateCatText('modForm_CatID', this.value);">
+                                        <option value="-1">-- Unchanged --</option>
                                         <?php
                                             include_once 'getCategories.php';
                                             getCategories();
@@ -111,7 +112,7 @@
             </div>
 
             <div>
-                <p style="color:white">ALL ORDERS</p>
+                ALL ORDERS
                 <?php
                     include_once 'loadAllOrders.php';
                     loadAllOrders();
