@@ -39,7 +39,7 @@
         echo "stock\n";
     }
 
-    if(empty($cat_id) == false) {
+    if($cat_id != "-1") {
         $query = "UPDATE Products SET cat_id='$cat_id' WHERE Products.id=$id";
         $update = mysqli_query($dbconn, $query);
         echo "category";
