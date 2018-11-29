@@ -34,7 +34,12 @@
 
         if($increase == 1){ //Increase quantity
             if($stock){
-                $quantity += 1;
+                if($quantity < $stock){
+                    $quantity += 1;
+                }else{
+                    echo "No more items in stock";
+                    return;
+                }
             }else{
                 echo "Product out of stock";
                 return;
@@ -59,18 +64,8 @@
         $result = mysqli_query($dbConn, $query);
         if(!$result){
             echo "Failed to update database (UPDATE)";
-        }
-
-        //Update the product stock
-        $stock += $increase == 1 ? -1 : 1;
-        $query = 'UPDATE Products
-                    SET stock='.$stock.'
-                    WHERE id='.$product_id.';';
-        $result = mysqli_query($dbConn, $query);
-        if(!$result){
-            echo "Failed to update product stock";
         }else{
-            echo true; //Everything was successfull if this is reached
+           echo true; //Everything was successfull if this is reached
         }
     }else{
         echo "Failed to query database (SELECT)";
