@@ -123,6 +123,7 @@
                                               (NULL, 'Rocket', 70, 5, 'img/rocket.jpg', 1, 0),
                                               (NULL, 'Dog', 100, 20, 'img/dog.jpg', 1, 0),
                                               (NULL, 'Rover', 50, 30, 'img/rover.jpg', 1, 0),
+                                              (NULL, 'Movie Set', 1000, 1, 'img/Moon-Landing.jpg', 1, 0),
                                               (NULL, 'Space Monkey', 200, 5, 'img/spacemonkey.jpg', 1, 0);";
 
         mysqli_query($dbconn, $query);
