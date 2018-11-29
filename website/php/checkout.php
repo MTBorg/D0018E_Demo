@@ -14,12 +14,6 @@
         echo "Failed to connect to database";
         return;
     }
-
-    //Create an order
-    $query = 'INSERT INTO Orders VALUES (NULL, '.$user_id.', "temp");';
-    mysqli_query($dbconn, $query);
-    $order_id = mysqli_insert_id($dbconn);
-
     //Get all items in the shopping cart
     $query = 'SELECT * FROM ShoppingCartLines WHERE user_id='.$user_id;
     $lines = mysqli_query($dbconn, $query);
@@ -27,7 +21,13 @@
         if($lines->num_rows == 0){
             echo "Empty shopping cart";
             return;
-        } 
+        }
+        //Create an order
+        $query = 'INSERT INTO Orders VALUES (NULL, '.$user_id.');';
+        mysqli_query($dbconn, $query);
+        $order_id = mysqli_insert_id($dbconn);
+
+        //Insert the products
         while($row = mysqli_fetch_array($lines)){
             $product_id=$row["product_id"];
             $quantity = $row["quantity"];

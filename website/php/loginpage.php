@@ -14,19 +14,19 @@
 	<?php
 		 echo include 'initHeader.php';	
 	?>
-	<div class="SubmitBox">
+	<div class="submitBox">
 		<form action="javascript:LogInSubmit()" method="post" style="text-align:center" target="_self">
 			<table style="width:50%; margin:auto;">
 				<tr>
-					<td align="right"><p class="submitText" style="font-family:Helvetica">Email</td>
-					<td align="left"><input type="text" placeholder="email" name="email" class="LogInForm" /></td>
+					<td align="right">Email</td>
+					<td align="left"><input type="text" name="email" class="submitField" /></td>
 				</tr>
 				<tr>
-					<td align="right"><p class="submitText" style="font-family:Helvetica">Password</td>
-					<td align="left"><input type="password" placeholder="password" name="password" class="LogInForm"/></td>
+					<td align="right">Password</td>
+					<td align="left"><input type="password" name="password" class="submitField"/></td>
 				</tr>
 			</table>
-			<input type="submit" class="Button" value="Log in"  />
+			<button type="submit" class="button" value="Log in">Log In</button>
 		</form>
 	</div>
 

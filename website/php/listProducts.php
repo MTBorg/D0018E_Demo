@@ -22,7 +22,7 @@ function listProducts() {
         $cat_name = mysqli_fetch_array($fetchCatName);
 
         echo "<td>" . $cat_name['cat_name'] . "</td>";
-        echo "<td> <input id='".$row['id']."' type='button' value='Modify' onclick='modifyProduct(this.id)'> </td>";
+        echo "<td> <button id='".$row['id']."' type='button' value='Modify' onclick='modifyProduct(this.id)'>Modify</button> </td>";
         echo "</tr>";
     }
 
