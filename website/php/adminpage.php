@@ -112,7 +112,7 @@
             </div>
 
             <div>
-                <p style="color:white">ALL ORDERS</p>
+                ALL ORDERS
                 <?php
                     include_once 'loadAllOrders.php';
                     loadAllOrders();
