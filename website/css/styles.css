@@ -82,6 +82,7 @@ nav {
 }
 
 #logoIcon{
+    transition: 1s;
     color:#FC3D21;
 }
 
