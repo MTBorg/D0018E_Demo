@@ -13,9 +13,18 @@
 
 
     if(empty($name) == false) {
-        $query = "UPDATE Products SET name='$name' WHERE Products.id=$id";
-        $update = mysqli_query($dbconn, $query);
-        echo "name\n";
+        # Check if the new product name is already in use
+        $queryName = "SELECT name FROM Products WHERE name = '$name';";
+        $checkName = mysqli_query($dbconn, $queryName);
+        if (mysqli_num_rows($checkName) == 0) {
+            $query = "UPDATE Products SET name='$name' WHERE Products.id=$id";
+            $update = mysqli_query($dbconn, $query);
+            echo "name\n";
+        } else {
+            echo "0";
+            return;
+        }
+        
     }
 
     if(empty($price) == false || $price == "0") {
@@ -30,7 +39,7 @@
         echo "stock\n";
     }
 
-    if(empty($cat_id) == false) {
+    if($cat_id != "-1") {
         $query = "UPDATE Products SET cat_id='$cat_id' WHERE Products.id=$id";
         $update = mysqli_query($dbconn, $query);
         echo "category";

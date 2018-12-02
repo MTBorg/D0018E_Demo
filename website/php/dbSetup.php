@@ -26,7 +26,7 @@
 
         $query = "CREATE TABLE IF NOT EXISTS Categories(
             id INT NOT NULL AUTO_INCREMENT,
-            cat_name VARCHAR(255),
+            cat_name VARCHAR(30),
             PRIMARY KEY (id)
         );";
 
@@ -39,6 +39,7 @@
                     stock INT NOT NULL CHECK (stock>=0), 
                     img_url VARCHAR(255),
                     cat_id INT NOT NULL,
+                    archived BOOLEAN NOT NULL,
                     PRIMARY KEY(id),
                     FOREIGN KEY (cat_id) REFERENCES Categories(id)
                 );";
@@ -50,8 +51,8 @@
                     role_id INT NOT NULL,
                     first_name VARCHAR(20) NOT NULL,
                     last_name VARCHAR(20) NOT NULL,
-                    email VARCHAR(25) NOT NULL, 
-                    password VARCHAR(18) NOT NULL,
+                    email VARCHAR(40) NOT NULL, 
+                    password VARCHAR(30) NOT NULL,
                     PRIMARY KEY(id)
                 );";
 
@@ -60,7 +61,6 @@
         $query = "CREATE TABLE IF NOT EXISTS Orders(
                     id INT NOT NULL AUTO_INCREMENT,
                     user_id INT NOT NULL,
-                    status VARCHAR(20),
                     PRIMARY KEY(id),
                     FOREIGN KEY(user_id) REFERENCES Users(id)
                 );";
@@ -118,12 +118,13 @@
 
         mysqli_query($dbconn, $query);
 
-        $query = "INSERT INTO Products VALUES (NULL, 'Boat', 10, 3, 'img/boat.png', 1), 
-                                              (NULL, 'Car', 50, 5, 'img/car.jpg', 1), 
-                                              (NULL, 'Rocket', 70, 5, 'img/rocket.jpg', 1),
-                                              (NULL, 'Dog', 100, 20, 'img/dog.jpg', 1),
-                                              (NULL, 'Rover', 50, 30, 'img/rover.jpg', 1),
-                                              (NULL, 'Space Monkey', 200, 5, 'img/spacemonkey.jpg', 1);";
+        $query = "INSERT INTO Products VALUES (NULL, 'Boat', 10, 3, 'img/boat.png', 1, 0), 
+                                              (NULL, 'Car', 50, 5, 'img/car.jpg', 1, 0), 
+                                              (NULL, 'Rocket', 70, 5, 'img/rocket.jpg', 1, 0),
+                                              (NULL, 'Dog', 100, 20, 'img/dog.jpg', 1, 0),
+                                              (NULL, 'Rover', 50, 30, 'img/rover.jpg', 1, 0),
+                                              (NULL, 'Movie Set', 1000, 1, 'img/Moon-Landing.jpg', 1, 0),
+                                              (NULL, 'Space Monkey', 200, 5, 'img/spacemonkey.jpg', 1, 0);";
 
         mysqli_query($dbconn, $query);
 

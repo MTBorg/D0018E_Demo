@@ -18,7 +18,7 @@
     }
 
 
-    $query_values = '(NULL, "'.$prod_name.'","'.$prod_price.'","'.$prod_stock.'", "'.$prod_img_url.'", "'.$prod_cat_id.'");'; 
+    $query_values = '(NULL, "'.$prod_name.'","'.$prod_price.'","'.$prod_stock.'", "'.$prod_img_url.'", "'.$prod_cat_id.'", 0);'; 
 
     // Check if product name already exists
     $query_findProduct = 'SELECT name FROM Products WHERE name = "'.$prod_name.'";';

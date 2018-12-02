@@ -17,11 +17,14 @@ function modifyProduct(product_id) {
        */
       // If user not logged in.
       //console.log(this.response);
-      if (this.responseText) {
+      if (this.responseText != "0") {
 
         alert("modified:\n" + this.responseText);
+        document.getElementById('adminForm').reset();
         window.location.reload();
 
+      } else {
+        alert("Error: The product name already exists.\nChoose a different name or modify the already existing product instead.")
       }
       
     }

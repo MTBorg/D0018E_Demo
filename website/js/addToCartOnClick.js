@@ -7,24 +7,11 @@ function addToCartOnClick(product_id) {
   xmlhttp.onreadystatechange = function () {
 
     if (this.readyState == 4 && this.status == 200) {
-      /** Selects product id which is unique
-       * Selects the 3rd <p> tag which is stock
-       *  [0] = name
-       *  [1] = price
-       *  [2] = stock
-       *  [3] = rating
-       * That said this script can be reused!
-       */
-      // If user not logged in. 
-      console.log(this.response);
-      if (this.responseText == -1) {
+      if (this.responseText == -1) { // If user not logged in. 
         window.location.replace("../php/loginpage.php");
-      } else {
-        document
-          .getElementById(product_id)
-          .getElementsByTagName("p")[2].innerHTML =
-          "<b>stock</b>: " + this.responseText;
-      }
+      }else if(this.responseText.replace(/\s/g,"") != ""){ //This is necessary to check for empty whitespaces
+        alert(this.responseText);
+      } 
     }
 
   };

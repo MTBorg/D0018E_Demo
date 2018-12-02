@@ -10,6 +10,7 @@ function CreateProductSubmit() {
 
       if (this.response == true) {
         alert("Product added");
+        document.getElementById('adminCreateProd').reset();
         window.location.reload();
         // window.location.replace("..");
       } else {

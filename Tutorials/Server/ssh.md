@@ -40,7 +40,7 @@ Done.
 ### Linux
 
 ```
-Save the private key located in the keys folder to "~/.ssh/"
+Save the private key located in the keys folder to "~/.ssh/" and use "chmod 700 id_rsa" 
 ```
 
 then
