@@ -3,8 +3,9 @@
 <head>
 	<link href="../css/styles.css" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<title>Log in</title>
-         
+	<title>Product Page</title>
+   
+    <script src="../js/initNavButtons.js" type="text/javascript"></script>
     <script src="../js/initReviews.js" type="text/javascript"></script>
     <script src="../js/starRate.js" type="text/javascript"></script>
     <script src="../js/setColor.js" type="text/javascript"></script>
@@ -14,21 +15,12 @@
 
 
 </head>	
-<body onload='initReviews();'> 
-	<header role="banner">
-	<a href="../index.php" style = "text-decoration:none">
-		<h1 id="logoText"> StarTrader </h1>
-		<h3 id="logoSlogan"> The biggest market in the universe </h3>
-</a>
+<body onload='initReviews(); initNavButtons();'> 
 
-        <nav role="navigation">
-           
+<?php
+echo include 'initHeader.php';
 
-			<a href="createUserPage.php" id="signUpMain" class="Button">Sign up</a>
-        </nav>
-    </header>
-
-
+?>
 
      <div class="wrap">
 

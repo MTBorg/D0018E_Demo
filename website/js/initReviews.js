@@ -18,6 +18,8 @@ function initReviews() {
             .getElementById("userBox")
             .appendChild(document.createElement("textarea")).innerHTML =
             reviewData[i];
+            document
+            .getElementById("userBox").getElementsByTagName("textarea")[i].disabled = true;
         }
 
         // Random colors for user box
