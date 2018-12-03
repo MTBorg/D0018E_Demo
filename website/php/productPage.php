@@ -64,15 +64,15 @@ getProduct($product_id);
                             <div class="star-rating">
                             <!-- You might think the parameters of function call are wrong BUT they are NOT! Check style.css -> .star-rating they have been reversed for reasons... -->
                             <span id="5" class="fa fa-star" onclick=setColor(5);starRate(5); style="display:inline;"></span>
-                            <span class="fa fa-star" style="color: #0b3d91; display:none;"></span>
+                            <span class="fa fa-star fa-star-color" style="display:none;"></span>
                             <span id="4"class="fa fa-star" onclick=setColor(4);starRate(4); style="display:inline;"></span>
-                            <span class="fa fa-star" style="color: #0b3d91; display:none;"></span>
+                            <span class="fa fa-star fa-star-color" style="display:none;"></span>
                             <span id="3" class="fa fa-star" onclick=setColor(3);starRate(3);  style="display:inline;"></span>
-                            <span class="fa fa-star" style="color: #0b3d91; display:none;"></span>
+                            <span class="fa fa-star fa-star-color" style="display:none;"></span>
                             <span id="2" class="fa fa-star" onclick=setColor(2);starRate(2); style="display:inline;"></span>
-                            <span class="fa fa-star" style="color: #0b3d91; display:none;"></span>
+                            <span class="fa fa-star fa-star-color" style="display:none;"></span>
                             <span id="1"class="fa fa-star" onclick=setColor(1);starRate(1); style="display:inline;"></span>
-                            <span class="fa fa-star" style="color: #0b3d91; display:none;"></span>
+                            <span class="fa fa-star fa-star-color" style="display:none;"></span>
                             </div>
 
 
@@ -87,9 +87,9 @@ getProduct($product_id);
                 </table>
 
                     </form>
-                    <input type="submit" class="Button" value="Submit comment" onclick=addComment(); >
+                    <button type="submit" value="Submit comment" onclick=addComment();>Submit</button>
 
-                    <input type="reset" class="Button" value="Reset" onclick=resetReview();>
+                    <button type="reset" value="Reset" onclick=resetReview();>Reset</button>
 
 
         </div>

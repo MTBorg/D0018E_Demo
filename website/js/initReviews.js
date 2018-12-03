@@ -18,26 +18,29 @@ function initReviews() {
 
           var userBox = document.getElementById("userBox");
           var nameAndRatingBox = document.createElement("div");
-          
           var commentBox = document.createElement("textarea");
+          var br = document.createElement("br");
           
           // Install div where name and rating shows
           userBox.appendChild(nameAndRatingBox);
           // array ["comment", "rating", "user"]
           nameAndRatingBox.innerHTML = reviewData[i + 2];
           nameAndRatingBox.style.backgroundColor = randomNr;
-
+          nameAndRatingBox.style.borderRadius = "3px";
+          
           // Install stars dependent on user rating 1-5
           for(var a = 0; a < reviewData[i + 1]; a++) {
             var starSpan = document.createElement("span");
-            starSpan.className = "fa fa-star";
+            starSpan.className = "fa fa-star fa-star-color";
             userBox.appendChild(starSpan);
 
-        }
-
+        } 
+          // newline
+          userBox.appendChild(br);
+        
           // Install textarea where comment shows
           userBox.appendChild(commentBox);
-
+  
           commentBox.innerHTML = reviewData[i];
           commentBox.disabled = true;
         }

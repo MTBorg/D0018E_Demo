@@ -127,23 +127,28 @@ header {
 .product img {
     width: 300px;
     height: 300px;
-    /* float: left; */
     border-radius: 3px;
 }
 
-.addReview .reviews {
+.addReview {
     margin-left:auto;
     margin-right:auto;
 }
 
-
-.product-review {
-    
+.reviews {
+    /* Center table of reviews */
+    margin: 0 auto;
 }
+
+.fa-star-color {
+    color: #0b3d91;
+}
+
 /* With help from https://css-tricks.com/star-ratings/  */
 .star-rating {
     unicode-bidi: bidi-override;
     direction: rtl;
+    float: left;
 }
 
 .star-rating > span:hover:before,
@@ -450,12 +455,7 @@ button:hover{
    Print styles
    ---------------------------------------------------------*/
 
-/* Fattar ni? testa ändra storlek på window */
-
 @media screen and (max-width: 480px) {
     body {
-        background-color: gray !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
     }
 }
