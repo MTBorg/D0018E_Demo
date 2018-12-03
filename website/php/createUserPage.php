@@ -35,5 +35,9 @@
                 <p id="submit-info"></p>
             </form>
         </div>
+        <?php
+echo include 'initFooter.php';
+
+?>
     </body>
 </html>

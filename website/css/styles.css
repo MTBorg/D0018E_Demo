@@ -55,6 +55,10 @@ nav {
     overflow: hidden;
 }
 
+form {
+    display: inline-block;
+}
+
 #navIcon {
     font-size: 36px;
     color: white;
@@ -203,13 +207,13 @@ header {
 }
 
 footer {
-    position: fixed;
-    left: 0;
+    position: relative;
     bottom: 0;
     width: 100%;
     background-color: #0B3D91;
     color: #FFFFFF;
     text-align: center;
+    padding: 5px;
 }
 
 a.navButton{
@@ -250,12 +254,16 @@ a.navButton:hover{
     width: 5%;
 }
 
+
+
 .submitBox {
     border-color: #0B3D91;
     border-style: solid;
     border-width: thin;
     color:#0B3D91;
     font-family: "Helvetica";
+    text-align: center;
+
 }
 
 .submitTextBlack {

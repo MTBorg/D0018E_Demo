@@ -117,7 +117,10 @@ getProduct($product_id);
 </main>
 </div>
 	
+<?php
+echo include 'initFooter.php';
 
+?>
 </body>
 
 </html>

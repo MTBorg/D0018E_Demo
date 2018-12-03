@@ -58,21 +58,11 @@
             </div>
         </main>
     </div>
-    <!-- The main page footer can
-                        contain items such as copyright and contact information. It can also contain a duplicated
-                        navigation of your site which is not usually contained within a <nav> -->
-    <footer role="contentinfo">
 
-        <!-- The <address> element contains contact information for the nearest <article> or <body> element. This example is for the <body> -->
-        <address>
-            <p>This is the footer for the one who might not know.
-                Website currently under development</a>.</p>
-        </address>
+<?php
+echo include 'php/initFooter.php';
 
-        <!-- Copyright information can be contained within the <small> element. The <time> element is used here to indicate that the '2018' is a date -->
-        Copyright &copy; <time>2018</time>
-
-    </footer>
+?>
 
 </body>
 

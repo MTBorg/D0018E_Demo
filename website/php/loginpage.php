@@ -15,7 +15,7 @@
 		 echo include 'initHeader.php';	
 	?>
 	<div class="submitBox">
-		<form action="javascript:LogInSubmit()" method="post" style="text-align:center" target="_self">
+		<form action="javascript:LogInSubmit()" method="post" target="_self">
 			<table style="width:50%; margin:auto;">
 				<tr>
 					<td align="right">Email</td>
@@ -29,6 +29,10 @@
 			<button type="submit" class="button" value="Log in">Log In</button>
 		</form>
 	</div>
+<?php
+echo include 'initFooter.php';
 
+?>
 </body>
+
 </html>
