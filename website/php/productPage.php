@@ -73,7 +73,7 @@ getProduct($product_id);
                             <span class="fa fa-star" style="color: #0b3d91; display:none;"></span>
                             <span id="1"class="fa fa-star" onclick=setColor(1);starRate(1); style="display:inline;"></span>
                             <span class="fa fa-star" style="color: #0b3d91; display:none;"></span>
-</div>
+                            </div>
 
 
                     </td>
