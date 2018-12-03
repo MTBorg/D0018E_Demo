@@ -98,7 +98,7 @@ getProduct($product_id);
 
         <p> Product Review </p>
         
-        <table class="Reviews">
+        <table class="reviews">
                     <tr>
                         <td>
                         <div id="userBox"></div>
