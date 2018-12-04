@@ -1,6 +1,6 @@
 <?php
     function getCategories() {
-        include_once 'dbConnect.php';
+        include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
         $dbconn = dbConnect();
 
         $queryCat = "SELECT id, cat_name FROM Categories;";

@@ -5,7 +5,7 @@
     function loadProducts() {
         include_once 'isAdmin.php';
         include_once 'isLoggedIn.php';
-        include_once 'dbConnect.php';
+        include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
         $dbconn = dbConnect();
         
         if(!isset($_SESSION["user_id"])) {

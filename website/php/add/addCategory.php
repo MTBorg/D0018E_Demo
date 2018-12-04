@@ -1,5 +1,5 @@
 <?php
-    include_once 'dbConnect.php';
+    include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
     $dbconn = dbConnect();
 
     $catName = $_POST["catName"];

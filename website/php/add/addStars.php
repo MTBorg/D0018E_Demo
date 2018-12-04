@@ -1,7 +1,7 @@
 <?php
     
 
-    include 'dbConnect.php';
+        include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
     include_once 'isLoggedIn.php';
     
     // TODO Check if user bought the product!

@@ -9,7 +9,7 @@
             return;
         }
 
-        include_once 'dbConnect.php';
+        include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
         $dbConn = dbConnect(); 
 
         if($dbConn == false){

@@ -3,7 +3,7 @@
         $user_id = $_POST["user_id"];
         $product_id = $_POST["product_id"];
         
-        include_once 'dbConnect.php';
+        include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
         $dbconn = dbConnect();
 
         $query = 'DELETE FROM ShoppingCartLines WHERE

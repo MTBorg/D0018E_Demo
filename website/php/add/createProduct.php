@@ -1,7 +1,7 @@
 <?php
     //We still need to implement role_id but that has to be added in later.
 
-    include_once 'dbConnect.php';
+    include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
     $dbconn = dbConnect();
 
     $prod_name = $_POST["name"];
