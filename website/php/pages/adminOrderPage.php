@@ -11,7 +11,7 @@
 <body onload="initNavButtons()">
 
     <?php
-        echo include_once 'initHeader.php';
+        echo include_once $_SERVER['DOCUMENT_ROOT'].'/php/init/initHeader.php';
         include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
         $dbconn = dbConnect();
 
@@ -71,7 +71,7 @@
         echo '</table>';
     ?>
     <div style="text-align:center; margin-top:10px">
-        <button onClick='window.location="\/php/pages/adminPage.php"'>Go back</button>
+        <button onClick='window.location="/php/pages/adminPage.php"'>Go back</button>
     </div>
 </body>
 </html>
