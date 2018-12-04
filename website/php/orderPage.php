@@ -74,4 +74,8 @@
         <button onClick='window.location="myOrdersPage.php"'>Go back</button>
     </div>
 </body>
+<?php
+echo include 'initFooter.php';
+
+?>
 </html>

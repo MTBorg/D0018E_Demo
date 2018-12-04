@@ -120,7 +120,10 @@
             </div>
     </div>
 </div>
-       
+<?php
+echo include 'initFooter.php';
+
+?>
         
 </body>
 </html>
