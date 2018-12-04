@@ -115,6 +115,8 @@ header {
     border-radius: 3px;
     display: grid;
     grid-template-columns: auto auto auto;
+    color: #0B3D91;
+    font-family: "Helvetica";
 
 }
 
@@ -149,6 +151,7 @@ header {
     unicode-bidi: bidi-override;
     direction: rtl;
     float: left;
+    color: black;
 }
 
 .star-rating > span:hover:before,
@@ -157,9 +160,11 @@ header {
 
 }
 
-.userBox {
+#userBox {
     /* background-color: gray; */
     position: relative;
+    color: black;
+    font-size: 30px;
 }
 
 .item {
@@ -255,11 +260,6 @@ a.navButton:hover{
     border-style: solid;
     border-width: thin;
     color:#0B3D91;
-    font-family: "Helvetica";
-}
-
-.submitTextBlack {
-    color: black;
     font-family: "Helvetica";
 }
 

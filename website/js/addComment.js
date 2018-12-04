@@ -11,6 +11,7 @@ function addComment() {
       if (this.readyState == 4 && this.status == 200) {
           if (this.response == true) {
             alert("thank you for commenting!");
+            window.location.reload();
   
         } else {
             alert(this.responseText);
