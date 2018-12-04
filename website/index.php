@@ -17,6 +17,7 @@
     <!-- Add normalize.css which enables browsers to render all elements more consistently and in line with modern standards as it only targets particular styles that need normalizing -->
     <link href="css/normalize.css" rel="stylesheet" media="all">
     <!-- For legacy support (IE 6/7, Firefox < 4, and Safari < 5) use normalize-legacy.css instead -->
+    <link rel="shortcut icon" href="fa-rocket.ico">
     <!--<link href="css/normalize-legacy.css" rel="stylesheet" media="all">-->
 
     <!-- Include the site stylesheet -->
