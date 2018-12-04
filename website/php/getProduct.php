@@ -22,8 +22,8 @@ function getProduct($product_id)
         // Hence we do not need to know the url only the name
 
         echo '<img src="../' . $row['img_url'] . '">';
-        echo '<p> <b>name</b>: ' . $row['name'] . '</p>';
-        echo '<p> <b>price</b>: ' . $row['price'] . '</p>';
+        echo '<p>' . $row['name'] . '</p>';
+        echo '<p>' . $row['price'] . '$</p>';
         echo '<p> <b>stock</b>: ' . $row['stock'] . '</p>';
 
 
