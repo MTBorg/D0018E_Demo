@@ -96,7 +96,7 @@ getProduct($product_id);
 
         <div class="product-review">
 
-        <p> Product Review </p>
+        <p> Product Reviews </p>
         
         <table class="reviews">
                     <tr>

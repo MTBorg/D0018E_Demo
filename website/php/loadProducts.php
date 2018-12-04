@@ -28,9 +28,10 @@
                 // echo '<p id="ratingPos"> <b>rating</b>: ' . $row['rating'] . '</p>';
 
                 if(isAdmin()) {
+                    echo '<a href="../php/productPage.php?product_id='.$row['id'].'"><button>Reviews</button></a>';
                     echo '<button id="'.$row['id'].'" class="addToCartButton" type="button">Add to cart <i class="fa fa-shopping-cart"></i></button>';
                 } else {
-                    echo '<a href="../php/productPage.php?product_id='.$row['id'].'"><button>Review</button></a>';
+                    echo '<a href="../php/productPage.php?product_id='.$row['id'].'"><button>Reviews</button></a>';
                     echo '<button id="'.$row['id'].'" class="addToCartButton" type="button" onclick="addToCartOnClick(this.id)">Add to Cart<i class="fa fa-shopping-cart"></i></button>';
                 }
                 echo '</div>';
