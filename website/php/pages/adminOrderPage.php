@@ -2,9 +2,7 @@
 <html>
 <head>
     <title> Order </title>
-
     <link  href="/css/styles.css" rel="stylesheet" media="all">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="/js/initNavButtons.js" type="text/javascript"></script>
 </head>
@@ -52,9 +50,9 @@
                 $obj = mysqli_fetch_object($result);
                 $name = $obj->name;
                 $img_url = $obj->img_url;
-
+                
                 echo '<tr>';
-                echo '<td><img src="../img/'.$img_url.'" alt="Product image" style="width:64px;height:64px"></img></td>';
+                echo '<td><img src="/'.$img_url.'" alt="Product image" style="width:64px;height:64px"></img></td>';
                 echo '<td>'.$product_id.'</td>';
                 echo '<td>'.$name.'</td>';
                 echo '<td>'.$quantity.'</td>';
