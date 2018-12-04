@@ -18,7 +18,7 @@
 <body onload='initReviews(); initNavButtons();'> 
 
 <?php
-echo include 'initHeader.php';
+echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initHeader.php';
 
 ?>
 
@@ -33,7 +33,7 @@ echo include 'initHeader.php';
 <div class="product">
 
 <?php
-include 'getProduct.php';
+include $_SERVER['DOCUMENT_ROOT'].'/php/product/getProduct.php';
 
 if (isset($_GET["product_id"])) {
     $product_id = $_GET["product_id"];
@@ -77,7 +77,7 @@ getProduct($product_id);
 
 </body>
 <?php
-echo include 'initFooter.php';
+echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initFooter.php';
 
 ?>
 </html>

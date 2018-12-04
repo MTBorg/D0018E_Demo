@@ -11,7 +11,7 @@ function removeShoppingCartItemSubmit(user_id, product_id) {
 		}
     };
 
-	xmlhttp.open("POST", "../php/removeShoppingCartItem.php", true);
+	xmlhttp.open("POST", "/php/cart/removeShoppingCartItem.php", true);
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xmlhttp.send("user_id=" + user_id + "&product_id=" + product_id);
 }	

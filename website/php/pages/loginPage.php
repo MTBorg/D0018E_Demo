@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link href="../css/styles.css" rel="stylesheet"> 
+	<link href="/css/styles.css" rel="stylesheet"> 
 
 	<title>Log in</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="../js/LogInSubmit.js" type="text/javascript">
-	</script>
-
+	<script src="/js/LogInSubmit.js" type="text/javascript"></script>
 	<script src="/js/initNavButtons.js" type="text/javascript"></script>
 </head>	
+
 <body onload="initNavButtons()">
 	<?php
-		 echo include 'initHeader.php';	
+		 echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initHeader.php';	
 	?>
 	<div class="submitBox">
 		<form action="javascript:LogInSubmit()" method="post" target="_self">
@@ -30,7 +29,7 @@
 		</form>
 	</div>
 <?php
-echo include 'initFooter.php';
+echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initFooter.php';
 
 ?>
 </body>

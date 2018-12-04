@@ -1,7 +1,7 @@
 <?php
 function loadShoppingCart(){
-    echo '<script type="text/javascript" src="../js/removeShoppingCartItemSubmit.js"></script>';
-        include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
+    echo '<script type="text/javascript" src="../../js/removeShoppingCartItemSubmit.js"></script>';
+    include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
     $dbconn = dbConnect();
 
     session_start();

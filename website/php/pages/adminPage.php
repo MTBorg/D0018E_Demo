@@ -6,13 +6,13 @@
         <script src="../js/modifyProduct.js" type="text/javascript"></script>
         <script src="../js/addCatSubmit.js" type="text/javascript"></script>
         <link href="../css/styles.css" rel="stylesheet">
-        <script src="/js/initNavButtons.js" type="text/javascrtip"></script>
+        <script src="../js/initNavButtons.js" type="text/javascrtip"></script>
 	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
     <body onload="initNavButtons()">
         <?php
-            echo include 'initHeader.php'; 
+            echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initHeader.php'; 
         ?>
         <script>
             function updateCatText(id, element) {
@@ -47,7 +47,7 @@
                                 <td><input type="hidden" id="AddForm_catID" value="1">
                                         <select name="category" onchange="updateCatText('AddForm_catID', this.value);">
                                             <?php
-                                                include_once 'getCategories.php';
+                                                include_once $_SERVER['DOCUMENT_ROOT'].'/php/category/getCategories.php';
                                                 getCategories();
                                             ?>
                                         </select>
@@ -82,14 +82,14 @@
                                     <select name="category" onchange="updateCatText('modForm_CatID', this.value);">
                                         <option value="-1">-- Unchanged --</option>
                                         <?php
-                                            include_once 'getCategories.php';
+                                            include_once $_SERVER['DOCUMENT_ROOT'].'/php/category/getCategories.php';
                                             getCategories();
                                         ?>
                                     </select>
                             </th>
                         </tr>
                             <?php
-                                include_once 'listProducts.php';
+                                include_once $_SERVER['DOCUMENT_ROOT'].'/php/product/loadAdminProducts.php';
                                 listProducts();
                             ?>
                     </table>
@@ -114,14 +114,14 @@
             <div>
                 ALL ORDERS
                 <?php
-                    include_once 'loadAllOrders.php';
+                    include_once $_SERVER['DOCUMENT_ROOT'].'/php/order/loadAllOrders.php';
                     loadAllOrders();
                 ?>
             </div>
     </div>
 </div>
 <?php
-echo include 'initFooter.php';
+echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initFooter.php';
 
 ?>
         

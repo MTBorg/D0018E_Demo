@@ -31,7 +31,7 @@ function initNavButtons(){
 	};
 
 	
-	xmlhttp.open("POST", "../php/initNavButtons.php", true);
+	xmlhttp.open("POST", "/php/init/initNavButtons.php", true);
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xmlhttp.send();
 }	

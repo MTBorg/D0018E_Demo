@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link href="../css/styles.css" rel="stylesheet"> 
+	<link href="/css/styles.css" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title>Product Page</title>
    
-    <script src="../js/initNavButtons.js" type="text/javascript"></script>
-    <script src="../js/initReviews.js" type="text/javascript"></script>
-    <script src="../js/starRate.js" type="text/javascript"></script>
-    <script src="../js/setColor.js" type="text/javascript"></script>
-    <script src="../js/addComment.js" type="text/javascript"></script>
+    <script src="/js/initNavButtons.js" type="text/javascript"></script>
+    <script src="/js/initReviews.js" type="text/javascript"></script>
+    <script src="/js/starRate.js" type="text/javascript"></script>
+    <script src="/js/setColor.js" type="text/javascript"></script>
+    <script src="/js/addComment.js" type="text/javascript"></script>
 
 
 
@@ -18,7 +18,7 @@
 <body onload='initReviews(); initNavButtons();'> 
 
 <?php
-echo include 'initHeader.php';
+echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initHeader.php';
 
 ?>
 
@@ -33,7 +33,7 @@ echo include 'initHeader.php';
 <div class="product">
 
 <?php
-include 'getProduct.php';
+include $_SERVER['DOCUMENT_ROOT'].'/php/product/getProduct.php';
 
 if (isset($_GET["product_id"])) {
     $product_id = $_GET["product_id"];
@@ -119,7 +119,7 @@ getProduct($product_id);
 </div>
 	
 <?php
-echo include 'initFooter.php';
+echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initFooter.php';
 
 ?>
 </body>

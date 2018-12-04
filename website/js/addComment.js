@@ -22,7 +22,7 @@ function addComment() {
 
   var comment = document.getElementById("comment").value;
 
-    xmlhttp.open("POST", "../php/addComment.php", true);
+    xmlhttp.open("POST", "/php/review/addComment.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send(
         "product_id=" +

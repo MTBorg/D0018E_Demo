@@ -37,7 +37,7 @@ function modifyProduct(product_id) {
   var cat_id = usr_inputs[3].value;
 
 
-  xmlhttp.open("POST", "../php/modifyProduct.php", true);
+  xmlhttp.open("POST", "/php/product/modifyProduct.php", true);
   xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xmlhttp.send(
     "id=" + 

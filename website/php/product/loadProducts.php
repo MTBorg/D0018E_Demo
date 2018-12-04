@@ -3,8 +3,8 @@
 <?php
 
     function loadProducts() {
-        include_once 'isAdmin.php';
-        include_once 'isLoggedIn.php';
+        include_once $_SERVER['DOCUMENT_ROOT'].'/php/account/isAdmin.php';
+        include_once $_SERVER['DOCUMENT_ROOT'].'/php/account/isLoggedIn.php';
         include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
         $dbconn = dbConnect();
         
@@ -28,10 +28,10 @@
                 // echo '<p id="ratingPos"> <b>rating</b>: ' . $row['rating'] . '</p>';
 
                 if(isAdmin()) {
-                    echo '<a href="../php/adminProductPage.php?product_id='.$row['id'].'"><button>Reviews</button></a>';
+                    echo '<a href="/php/pages/adminProductPage.php?product_id='.$row['id'].'"><button>Reviews</button></a>';
                     echo '<button id="'.$row['id'].'" class="addToCartButton" type="button">Add to cart <i class="fa fa-shopping-cart"></i></button>';
                 } else {
-                    echo '<a href="../php/productPage.php?product_id='.$row['id'].'"><button>Reviews</button></a>';
+                    echo '<a href="/php/pages/productPage.php?product_id='.$row['id'].'"><button>Reviews</button></a>';
                     echo '<button id="'.$row['id'].'" class="addToCartButton" type="button" onclick="addToCartOnClick(this.id)">Add to Cart<i class="fa fa-shopping-cart"></i></button>';
                 }
                 echo '</div>';

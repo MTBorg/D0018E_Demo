@@ -1,7 +1,7 @@
 <?php
 
     // Setup connection
-    require_once 'dbConnect.php';
+    require_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
     $dbconn = dbConnect();
     
     try {
