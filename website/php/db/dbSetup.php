@@ -1,6 +1,5 @@
 <?php
-    require_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
-    
+    require_once 'dbConnect.php';
     // Setup connection, we do not use dbConnect.php since 3 parameters and not 4
     $dbhost = 'localhost';
     $dbuser = 'admin';
