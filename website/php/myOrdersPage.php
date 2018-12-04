@@ -20,4 +20,8 @@
         <button onClick="window.location='../index.php'"> Go back</button>
     </div>
 </body>
+<?php
+echo include 'initFooter.php';
+
+?>
 </html>

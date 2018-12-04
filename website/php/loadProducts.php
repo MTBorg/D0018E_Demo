@@ -26,10 +26,11 @@
                 echo '<p id="pricePos">' . $row['price'] . '$</p>';
                 echo '<p id="stockPos"> <b>stock</b>: ' . $row['stock'] . '</p>';
                 // echo '<p id="ratingPos"> <b>rating</b>: ' . $row['rating'] . '</p>';
-                
+
                 if(isAdmin()) {
                     echo '<button id="'.$row['id'].'" class="addToCartButton" type="button">Add to cart <i class="fa fa-shopping-cart"></i></button>';
                 } else {
+                    echo '<a href="../php/productPage.php?product_id='.$row['id'].'"><button>Review</button></a>';
                     echo '<button id="'.$row['id'].'" class="addToCartButton" type="button" onclick="addToCartOnClick(this.id)">Add to Cart<i class="fa fa-shopping-cart"></i></button>';
                 }
                 echo '</div>';
