@@ -117,13 +117,13 @@
 
         mysqli_query($dbconn, $query);
 
-        $query = "INSERT INTO Products VALUES (NULL, 'Boat', 10, 3, 'img/boat.png', 1, 0), 
-                                              (NULL, 'Car', 50, 5, 'img/car.jpg', 1, 0), 
-                                              (NULL, 'Rocket', 70, 5, 'img/rocket.jpg', 1, 0),
-                                              (NULL, 'Dog', 100, 20, 'img/dog.jpg', 1, 0),
-                                              (NULL, 'Rover', 50, 30, 'img/rover.jpg', 1, 0),
-                                              (NULL, 'Movie Set', 1000, 1, 'img/Moon-Landing.jpg', 1, 0),
-                                              (NULL, 'Space Monkey', 200, 5, 'img/spacemonkey.jpg', 1, 0);";
+        $query = "INSERT INTO Products VALUES (NULL, 'Boat', 10, 3, '/img/boat.png', 1, 0), 
+                                              (NULL, 'Car', 50, 5, '/img/car.jpg', 1, 0), 
+                                              (NULL, 'Rocket', 70, 5, '/img/rocket.jpg', 1, 0),
+                                              (NULL, 'Dog', 100, 20, '/img/dog.jpg', 1, 0),
+                                              (NULL, 'Rover', 50, 30, '/img/rover.jpg', 1, 0),
+                                              (NULL, 'Movie Set', 1000, 1, '/img/Moon-Landing.jpg', 1, 0),
+                                              (NULL, 'Space Monkey', 200, 5, '/img/spacemonkey.jpg', 1, 0);";
 
         mysqli_query($dbconn, $query);
 

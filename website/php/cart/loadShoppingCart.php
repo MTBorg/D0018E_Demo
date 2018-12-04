@@ -1,6 +1,6 @@
 <?php
 function loadShoppingCart(){
-    echo '<script type="text/javascript" src="../../js/removeShoppingCartItemSubmit.js"></script>';
+    echo '<script type="text/javascript" src="/js/removeShoppingCartItemSubmit.js"></script>';
     include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
     $dbconn = dbConnect();
 
@@ -35,7 +35,7 @@ function loadShoppingCart(){
             $total_sum += $sum;
                         
             echo '<tr>';
-            echo '<td><img src="/'.$obj->img_url.'" alt="Product image" style="width:64px;height:64px"></src></td>';
+            echo '<td><img src="'.$obj->img_url.'" alt="Product image" style="width:64px;height:64px"></src></td>';
             echo "<td><p>$product_id</p></td> ";
             echo "<td><p>$product_name</p></td>";
             echo '<td><p>
