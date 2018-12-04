@@ -76,5 +76,8 @@ getProduct($product_id);
 	
 
 </body>
+<?php
+echo include 'initFooter.php';
 
+?>
 </html>
