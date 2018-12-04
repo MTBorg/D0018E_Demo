@@ -82,6 +82,7 @@ nav {
 }
 
 #logoIcon{
+    transition: 1s;
     color:#FC3D21;
 }
 
@@ -265,6 +266,10 @@ button:hover{
     padding: 10px;
 }
 
+.addToCartButton i{
+    transition: 1s;
+}
+
 .addToCartButton:hover i{
     transform: rotate(360deg);
     transition: 1s;
@@ -296,6 +301,10 @@ button:hover{
 
     #shoppingCart{
         float:right;
+    }
+
+    #shoppingCart i{
+        transition: 1.0s;
     }
 
     #shoppingCart:hover i{
