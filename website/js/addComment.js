@@ -13,7 +13,7 @@ function addComment() {
             alert("thank you for commenting!");
   
         } else {
-            alert("Only logged in user and users who have bought the product can comment!");
+            alert(this.responseText);
         }
         
       }

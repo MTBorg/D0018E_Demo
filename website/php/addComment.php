@@ -26,26 +26,17 @@
         }
 
         // Check if user already comment this product
-        $query = "SELECT comment FROM Reviews WHERE user_id = $user_id";
-        $checkCommented = mysqli_query($dbconn, $query);
+        $query = "SELECT rating FROM Reviews WHERE product_id = $product_id AND user_id = $user_id";
+        $checkRated = mysqli_query($dbconn, $query);
+        
         
         // Returns true if it holds data
-        if(mysqli_fetch_assoc($checkCommented)) {
-            $query = "UPDATE Reviews SET comment = '$comment' WHERE user_id = $user_id";
+        if(mysqli_fetch_assoc($checkRated)) {
+            $query = "UPDATE Reviews SET comment = '$comment' WHERE product_id = $product_id AND user_id = $user_id";
             mysqli_query($dbconn, $query);
             echo true;
         } else {
-
-        // Otherwise we insert the comment
-            $query = "INSERT INTO Reviews VALUES (NULL, $product_id, $user_id, NULL, $comment)";
-
-            $comment = mysqli_query($dbconn, $query);
-            
-            if($comment) {
-                echo true;
-            } else {
-                echo false;
-            }
+            echo "Please rate the product before you comment!";
 
 
         }
