@@ -28,7 +28,7 @@
                 // echo '<p id="ratingPos"> <b>rating</b>: ' . $row['rating'] . '</p>';
 
                 if(isAdmin()) {
-                    echo '<a href="../php/productPage.php?product_id='.$row['id'].'"><button>Reviews</button></a>';
+                    echo '<a href="../php/adminProductPage.php?product_id='.$row['id'].'"><button>Reviews</button></a>';
                     echo '<button id="'.$row['id'].'" class="addToCartButton" type="button">Add to cart <i class="fa fa-shopping-cart"></i></button>';
                 } else {
                     echo '<a href="../php/productPage.php?product_id='.$row['id'].'"><button>Reviews</button></a>';
