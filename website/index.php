@@ -15,25 +15,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
     <!-- Add normalize.css which enables browsers to render all elements more consistently and in line with modern standards as it only targets particular styles that need normalizing -->
-    <link href="css/normalize.css" rel="stylesheet" media="all">
+    <link href="/css/normalize.css" rel="stylesheet" media="all">
     <!-- For legacy support (IE 6/7, Firefox < 4, and Safari < 5) use normalize-legacy.css instead -->
     <link rel="shortcut icon" href="fa-rocket.ico">
     <!--<link href="css/normalize-legacy.css" rel="stylesheet" media="all">-->
 
     <!-- Include the site stylesheet -->
-    <link href="css/styles.css" rel="stylesheet" media="all">
+    <link href="/css/styles.css" rel="stylesheet" media="all">
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Include the HTML5 shiv print polyfill for Internet Explorer browsers 8 and below -->
     <!--[if lt IE 9]><script src="js/html5shiv-printshiv.js" media="all"></script><![endif]-->
-    <script src="../js/addToCartOnClick.js" type="text/javascript"></script>
-    <script src="js/initNavButtons.js" type="text/javascript"></script> 
+    <script src="/js/addToCartOnClick.js" type="text/javascript"></script>
+    <script src="/js/initNavButtons.js" type="text/javascript"></script> 
 </head>
 
 <body onload ='initNavButtons()'>
 
     <?php
-        echo include 'php/initHeader.php';
+        echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initHeader.php';
     ?>
 
     <!-- If you want to use an element as a wrapper, i.e. for styling only, then <div> is still the element to use -->
@@ -51,7 +51,7 @@
 
                 
                 <?php
-                include 'php/loadProducts.php';
+                include $_SERVER['DOCUMENT_ROOT'].'/php/product/loadProducts.php';
                 loadProducts();
                 ?>
 
@@ -61,7 +61,7 @@
     </div>
 
 <?php
-echo include 'php/initFooter.php';
+echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initFooter.php';
 
 ?>
 

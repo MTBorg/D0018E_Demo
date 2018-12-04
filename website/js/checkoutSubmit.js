@@ -12,7 +12,7 @@ function checkoutSubmit(){
 		}
     };
 
-	xmlhttp.open("POST", "../php/checkout.php", true);
+	xmlhttp.open("POST", "/php/cart/checkout.php", true);
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xmlhttp.send();
 }

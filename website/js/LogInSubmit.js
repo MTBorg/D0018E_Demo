@@ -4,7 +4,7 @@ function LogInSubmit() {
 	xmlhttp.onreadystatechange = function () {
 		if (this.readyState == 4 && this.status == 200) {
 			if (this.response == true) {
-				window.location.replace("../index.php");
+				window.location.replace("/index.php");
 			} else {
 				alert(this.responseText);
 			}
@@ -24,7 +24,7 @@ function LogInSubmit() {
 		}
 	}
 
-	xmlhttp.open("POST", "../php/login.php", true);
+	xmlhttp.open("POST", "/php/account/login.php", true);
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xmlhttp.send("email=" + email + "&password=" + password);
 

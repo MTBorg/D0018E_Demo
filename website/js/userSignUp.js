@@ -10,7 +10,7 @@ function userSignUp() {
       alert(this.responseText);
 
       if (this.responseText == "Success!") {
-        window.location.replace("..");
+        window.location.replace("/index.php");
       }
     }
   };
@@ -21,7 +21,7 @@ function userSignUp() {
   var email = user_inputs[2].value;
   var password = user_inputs[3].value;
 
-  xmlhttp.open("POST", "../php/createUser.php", true);
+  xmlhttp.open("POST", "/php/account/createUser.php", true);
   xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xmlhttp.send(
     "first_name=" +

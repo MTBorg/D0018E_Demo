@@ -48,6 +48,6 @@ function initReviews() {
     }
   };
 
-  xmlhttp.open("GET", "../php/getReview.php?id=" + product_id, true);
+  xmlhttp.open("GET", "/php/review/getReview.php?id=" + product_id, true);
   xmlhttp.send();
 }

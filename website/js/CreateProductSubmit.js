@@ -26,7 +26,7 @@ function CreateProductSubmit() {
   var prod_img_url = user_inputs[3].value;
   var prod_cat_id = user_inputs[4].value;
 
-  xmlhttp.open("POST", "../php/createProduct.php", true);
+  xmlhttp.open("POST", "/php/product/createProduct.php", true);
   xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xmlhttp.send(
     "name=" +

@@ -12,7 +12,8 @@
         !--THE SCRIPT ASSUMES THE DATABASE IS ALREADY SET UP--!
     */
 
-    require_once '../dbConnect.php';
+    require_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
+
     $dbconn = dbConnect();
 
     $users = "INSERT INTO Users VALUES (NULL, 0, 'test1', 'user', 't1email', '1'),
