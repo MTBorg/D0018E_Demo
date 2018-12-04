@@ -79,7 +79,7 @@ getProduct($product_id);
                     </td>
                     </tr>
                     <tr>
-                        <td><p class="submitTextBlack">Comment: </p></td>
+                        <td><p>Comment: </p></td>
                         <td><textarea id="comment" rows="4" cols="50" placeholder="How did you like the product?"></textarea></td>
                     </tr>
 
@@ -96,12 +96,13 @@ getProduct($product_id);
 
         <div class="product-review">
 
-        <p> Product Review </p>
+        <p> Product Reviews </p>
         
         <table class="reviews">
                     <tr>
                         <td>
                         <div id="userBox"></div>
+                        
                         
                         </td>
                     </tr>

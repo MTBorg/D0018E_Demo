@@ -28,12 +28,12 @@
 
 
         // Check if user already stared this product
-        $query = "SELECT rating FROM Reviews WHERE user_id = $user_id";
+        $query = "SELECT rating FROM Reviews WHERE product_id = $product_id AND user_id = $user_id";
         $checkRated = mysqli_query($dbconn, $query);
 
         // Returns true if it holds data
         if(mysqli_fetch_assoc($checkRated)) {
-            $query = "UPDATE Reviews SET rating = $rating WHERE user_id = $user_id";
+            $query = "UPDATE Reviews SET rating = $rating WHERE product_id = $product_id AND user_id = $user_id";
             mysqli_query($dbconn, $query);
             echo true;
         } else {

@@ -11,9 +11,10 @@ function addComment() {
       if (this.readyState == 4 && this.status == 200) {
           if (this.response == true) {
             alert("thank you for commenting!");
+            window.location.reload();
   
         } else {
-            alert("Only logged in user and users who have bought the product can comment!");
+            alert(this.responseText);
         }
         
       }
