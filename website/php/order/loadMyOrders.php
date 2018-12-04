@@ -25,7 +25,7 @@
             while($row = mysqli_fetch_object($orders)){
                 $order_id = $row->id;
 
-                $href = '\'location.href="\/php/pages/orderPage.php?order_id='.$order_id.'"\'';
+                $href = '\'location.href="/php/pages/orderPage.php?order_id='.$order_id.'"\'';
                 echo '<tr><td><button style="padding-right:10px;padding-left:10px" type="button" onclick='.$href.'>'.$order_id.'</button></td></tr>';
             }
             echo '</table>';

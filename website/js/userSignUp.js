@@ -10,7 +10,7 @@ function userSignUp() {
       alert(this.responseText);
 
       if (this.responseText == "Success!") {
-        window.location.replace("..");
+        window.location.replace("/index.php");
       }
     }
   };
