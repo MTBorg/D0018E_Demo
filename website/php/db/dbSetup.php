@@ -23,6 +23,13 @@
     
     try {
 
+        //OrderStatuses
+        $query = "CREATE TABLE IF NOT EXISTS OrderStatuses(
+                    id INT NOT NULL AUTO_INCREMENT,
+                    name VARCHAR(20) NOT NULL,
+                    PRIMARY KEY(id));";
+        mysqli_query($dbconn, $query);
+
         $query = "CREATE TABLE IF NOT EXISTS Categories(
             id INT NOT NULL AUTO_INCREMENT,
             cat_name VARCHAR(30),
@@ -60,12 +67,17 @@
         $query = "CREATE TABLE IF NOT EXISTS Orders(
                     id INT NOT NULL AUTO_INCREMENT,
                     user_id INT NOT NULL,
+                    status INT NOT NULL,
                     PRIMARY KEY(id),
-                    FOREIGN KEY(user_id) REFERENCES Users(id)
+                    FOREIGN KEY(user_id) REFERENCES Users(id),
+                    FOREIGN KEY(status) REFERENCES OrderStatuses(id)
                 );";
 
-        mysqli_query($dbconn, $query);
-
+        $test = mysqli_query($dbconn, $query);
+        if(!$test){
+            echo "ahwiduahwiduH";
+            return;
+        }
         $query = "CREATE TABLE IF NOT EXISTS OrderLines(
                     order_id INT NOT NULL,
                     product_id INT NOT NULL,
@@ -103,11 +115,7 @@
 
         mysqli_query($dbconn, $query);
 
-        $query = "CREATE TABLE IF NOT EXISTS OrderStatuses(
-                    id INT NOT NULL AUTO_INCREMENT,
-                    name VARCHAR(20) NOT NULL,
-                    PRIMARY KEY(id));";
-        mysqli_query($dbconn, $query);
+
 
         echo "The tables Products, Users, Orders and ShoppingCart created in the maindb database\n";
 
