@@ -8,8 +8,9 @@
     <script src="/js/checkoutSubmit.js" type="text/javascript"></script>
     <script src="/js/initNavButtons.js" type="text/javascript"></script>
     <script src="/js/shopCartAlterQuantitySubmit.js" type="text/javascript"></script>
+    <script src="/js/shopCartBtnUpdateQuantitySubmit.js" type="text/javascript"></script>
 </head>
-<body onload="initNavButtons()">
+<body onload="initNavButtons(); shopCartBtnUpdateQuantitySubmit();">
     <?php
         echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initHeader.php';
         include $_SERVER['DOCUMENT_ROOT'].'/php/cart/loadShoppingCart.php';
