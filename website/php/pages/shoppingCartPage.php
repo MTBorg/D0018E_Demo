@@ -8,6 +8,7 @@
     <script src="/js/cart/checkoutSubmit.js" type="text/javascript"></script>
     <script src="/js/init/initNavButtons.js" type="text/javascript"></script>
     <script src="/js/cart/shopCartAlterQuantitySubmit.js" type="text/javascript"></script>
+    <script src="/js/cart/removeShoppingCartItemSubmit.js" type="text/javascript"></script>
 </head>
 <body onload="initNavButtons();">
     <?php
