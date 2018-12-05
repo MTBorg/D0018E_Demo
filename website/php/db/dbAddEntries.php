@@ -9,7 +9,14 @@
 
         mysqli_query($dbconn, $query);
 
-    
+        //Create order statuses
+        $query = 'INSERT INTO OrderStatuses VALUES (NULL, "Pending"),
+                                                    (NULL, "Canceled"),
+                                                    (NULL, "Shipping"),
+                                                    (NULL, "Delivered"),
+                                                    (NULL, "Returned");';
+        mysqli_query($dbconn, $query);
+                                                 
 
         $query = "INSERT INTO Products VALUES (NULL, 'boat', 10, 3, 'img/boat.png', 1);";
 

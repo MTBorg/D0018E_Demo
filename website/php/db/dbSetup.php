@@ -136,7 +136,14 @@
         $query = "INSERT INTO Users VALUES (NULL, 1, 'auto', 'admin', 'admin', 'admin');";
 
         mysqli_query($dbconn, $query);
-
+        
+        //Create order statuses
+        $query = 'INSERT INTO OrderStatuses VALUES (NULL, "Pending"),
+                                                    (NULL, "Canceled"),
+                                                    (NULL, "Shipping"),
+                                                    (NULL, "Delivered"),
+                                                    (NULL, "Returned");';
+        mysqli_query($dbconn, $query);
 
     } catch (Exception $e) {
         echo 'Exception: ', $e -> getMessage(), "\n";
