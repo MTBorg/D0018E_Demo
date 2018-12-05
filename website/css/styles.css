@@ -183,6 +183,7 @@ header {
     position: relative;
     color:#0B3D91; 
 
+
 }
 a.div-click {
     position: absolute;
@@ -191,10 +192,7 @@ a.div-click {
     top: 0;
     left: 0;
     text-decoration: none;
-    z-index: 10;
-    background-color: white;
-    opacity: 0;
-    filter: alpha(opacity=0);
+    z-index: 1;
 }
 
 .item:hover {
@@ -203,7 +201,12 @@ a.div-click {
     transition: 0.3s;
     cursor: hand;
     cursor: pointer;
-    opacity: .9;
+}
+
+.button-top {
+    position: relative;
+    z-index: 10;
+    float: right;
 }
 
 #namePos,

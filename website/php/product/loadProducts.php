@@ -40,7 +40,7 @@
                     echo '<p id="pricePos">' . $row['price'] . '$</p>';
                     echo '<p id="stockPos"> <b>stock</b>: ' . $row['stock'] . '</p>';
                     // echo '<p id="ratingPos"> <b>rating</b>: ' . $row['rating'] . '</p>';
-                    echo '<button id="'.$row['id'].'" class="addToCartButton" type="button" onclick="addToCartOnClick(this.id)">Add to Cart<i class="fa fa-shopping-cart"></i></button>';
+                    echo '<div class="button-top"><button id="'.$row['id'].'" class="addToCartButton" type="button" onclick="addToCartOnClick(this.id)">Add to Cart<i class="fa fa-shopping-cart"></i></button></div>';
                     echo '<p><a class="div-click" href="/php/pages/productPage.php?product_id='.$row['id'].'"></a></p>';
 
                 }
