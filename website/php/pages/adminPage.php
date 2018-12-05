@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Admin Panel</title>
-        <script src="/js/CreateProductSubmit.js" type="text/javascript"></script>
-        <script src="/js/modifyProduct.js" type="text/javascript"></script>
-        <script src="/js/addCatSubmit.js" type="text/javascript"></script>
+        <title>Admin panel</title>
+        <script src="/js/product/CreateProductSubmit.js" type="text/javascript"></script>
+        <script src="/js/product/modifyProduct.js" type="text/javascript"></script>
+        <script src="/js/category/addCatSubmit.js" type="text/javascript"></script>
         <link href="/css/styles.css" rel="stylesheet">
-        <script src="/js/initNavButtons.js" type="text/javascript"></script>
+        <script src="/js/init/initNavButtons.js" type="text/javascript"></script>
 	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="shortcut icon" href="/fa-rocket.ico">
     </head>

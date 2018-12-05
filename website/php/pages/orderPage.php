@@ -5,7 +5,7 @@
     <link rel="shortcut icon" href="/fa-rocket.ico">
     <link  href="/css/styles.css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="/js/initNavButtons.js" type="text/javascript"></script>
+    <script src="/js/init/initNavButtons.js" type="text/javascript"></script>
 </head>
 <body onload="initNavButtons();">
 
