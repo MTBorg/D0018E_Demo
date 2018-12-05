@@ -103,6 +103,12 @@
 
         mysqli_query($dbconn, $query);
 
+        $query = "CREATE TABLE IF NOT EXISTS OrderStatuses(
+                    id INT NOT NULL AUTO_INCREMENT,
+                    name VARCHAR(20) NOT NULL,
+                    PRIMARY KEY(id));";
+        mysqli_query($dbconn, $query);
+
         echo "The tables Products, Users, Orders and ShoppingCart created in the maindb database\n";
 
     } catch (Exception $e) {
