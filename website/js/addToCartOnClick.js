@@ -11,6 +11,8 @@ function addToCartOnClick(product_id) {
         window.location.replace("/php/pages/loginPage.php");
       }else if(this.responseText.replace(/\s/g,"") != ""){ //This is necessary to check for empty whitespaces
         alert(this.responseText);
+      }else{
+        
       } 
     }
 
