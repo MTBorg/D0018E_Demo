@@ -9,7 +9,7 @@
 
     <script src="/js/initNavButtons.js" type="text/javascript"></script> 
 </head>
-<body onload="initNavButtons()">
+<body onload="initNavButtons();">
     <?php
         echo include_once $_SERVER['DOCUMENT_ROOT'].'/php/init/initHeader.php';
         include_once $_SERVER['DOCUMENT_ROOT'].'/php/order/loadMyOrders.php';

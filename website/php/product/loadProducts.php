@@ -34,6 +34,7 @@
 
 
                 } else {
+
                     echo '<div id="'.$row['id'].'" class="item">';
                     echo '<img src="'. $row['img_url'] .'">';
                     echo '<p id="namePos">' . $row['name'] . '</p>';
@@ -55,5 +56,3 @@
     }
 
 ?>
-
-
