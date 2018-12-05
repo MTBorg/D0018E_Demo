@@ -3,7 +3,8 @@
 <head>
 	<link href="/css/styles.css" rel="stylesheet"> 
 
-	<title>Log in</title>
+	<title>Log In</title>
+	<link rel="shortcut icon" href="/fa-rocket.ico">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="/js/account/LogInSubmit.js" type="text/javascript"></script>
 	<script src="/js/init/initNavButtons.js" type="text/javascript"></script>
