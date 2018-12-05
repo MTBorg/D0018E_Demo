@@ -28,7 +28,6 @@
     <!--[if lt IE 9]><script src="js/html5shiv-printshiv.js" media="all"></script><![endif]-->
     <script src="/js/addToCartOnClick.js" type="text/javascript"></script>
     <script src="/js/initNavButtons.js" type="text/javascript"></script> 
-    <script src="/js/shopCartBtnUpdateQuantitySubmit.js" type="text/javascript"></script>
 </head>
 
 <body onload ='initNavButtons();'>
