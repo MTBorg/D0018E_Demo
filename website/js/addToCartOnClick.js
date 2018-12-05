@@ -11,18 +11,14 @@ function addToCartOnClick(product_id) {
         window.location.replace("/php/pages/loginPage.php");
       }else if(this.responseText.replace(/\s/g,"") != ""){ //This is necessary to check for empty whitespaces
         alert(this.responseText);
+      }else{
+        shopCartBtnUpdateQuantitySubmit();
       } 
     }
 
   };
 
   // addToCartOnClick, if user is logged in ok
-  xmlhttp.open("GET", "/php/cart/addToCart.php?id=" + product_id, true);
+  xmlhttp.open("GET", "/php/cart/addToCart.php?id=" + product_id, true); 
   xmlhttp.send();
-
-
-
-
-
-
 }
