@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>E-Commerce</title>
+    <title>StarTrader</title>
 
     <!-- Enter a brief description of your page -->
     <meta name="a e-commerce website with relation database" content="not yet decided">
