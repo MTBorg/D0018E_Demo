@@ -8,9 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <script src="/js/initNavButtons.js" type="text/javascript"></script> 
-    <script src="/js/shopCartBtnUpdateQuantitySubmit.js" type="text/javascript"></script>
 </head>
-<body onload="initNavButtons(); shopCartBtnUpdateQuantitySubmit();">
+<body onload="initNavButtons();">
     <?php
         echo include_once $_SERVER['DOCUMENT_ROOT'].'/php/init/initHeader.php';
         include_once $_SERVER['DOCUMENT_ROOT'].'/php/order/loadMyOrders.php';

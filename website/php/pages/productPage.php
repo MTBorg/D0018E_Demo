@@ -16,7 +16,7 @@
 
 
 </head>	
-<body onload='initReviews(); initNavButtons(); shopCartBtnUpdateQuantitySubmit();'> 
+<body onload='initReviews(); initNavButtons();'> 
 
 <?php
 echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initHeader.php';

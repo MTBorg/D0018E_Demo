@@ -10,7 +10,7 @@
     <script src="/js/shopCartAlterQuantitySubmit.js" type="text/javascript"></script>
     <script src="/js/shopCartBtnUpdateQuantitySubmit.js" type="text/javascript"></script>
 </head>
-<body onload="initNavButtons(); shopCartBtnUpdateQuantitySubmit();">
+<body onload="initNavButtons();">
     <?php
         echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initHeader.php';
         include $_SERVER['DOCUMENT_ROOT'].'/php/cart/loadShoppingCart.php';
