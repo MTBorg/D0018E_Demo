@@ -17,7 +17,7 @@
             return;
         }
 
-        $query = 'SELECT id, user_id FROM Orders ORDER BY id';
+        $query = 'SELECT id, user_id, status FROM Orders ORDER BY id';
         $orders = mysqli_query($dbConn, $query);
         if($orders){
             echo '<table class="ordersTable">';
@@ -25,7 +25,7 @@
             while($row = mysqli_fetch_object($orders)){
                 $order_id = $row->id;
                 $user_id = $row->user_id;
-                $order_status = $row->order_status;
+                $order_status = $row->status;
                 
                 # Get the users email
                 $query_user = mysqli_query($dbConn, 'SELECT email FROM Users WHERE id = '.$user_id);
