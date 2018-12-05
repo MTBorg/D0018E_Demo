@@ -22,12 +22,10 @@
     $dbconn = dbConnect();
     
     try {
-
         //OrderStatuses
         $query = "CREATE TABLE IF NOT EXISTS OrderStatuses(
-                    id INT NOT NULL AUTO_INCREMENT,
                     name VARCHAR(20) NOT NULL,
-                    PRIMARY KEY(id));";
+                    PRIMARY KEY(name));";
         mysqli_query($dbconn, $query);
 
         $query = "CREATE TABLE IF NOT EXISTS Categories(
@@ -67,15 +65,15 @@
         $query = "CREATE TABLE IF NOT EXISTS Orders(
                     id INT NOT NULL AUTO_INCREMENT,
                     user_id INT NOT NULL,
-                    status INT NOT NULL,
+                    status VARCHAR(20) NOT NULL,
                     PRIMARY KEY(id),
                     FOREIGN KEY(user_id) REFERENCES Users(id),
-                    FOREIGN KEY(status) REFERENCES OrderStatuses(id)
+                    FOREIGN KEY(status) REFERENCES OrderStatuses(name)
                 );";
 
         $test = mysqli_query($dbconn, $query);
         if(!$test){
-            echo "ahwiduahwiduH";
+            echo mysqli_error($dbconn);
             return;
         }
         $query = "CREATE TABLE IF NOT EXISTS OrderLines(
