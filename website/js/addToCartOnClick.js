@@ -17,12 +17,7 @@ function addToCartOnClick(product_id) {
   };
 
   // addToCartOnClick, if user is logged in ok
-  xmlhttp.open("GET", "/php/cart/addToCart.php?id=" + product_id, true);
+  //TODO: Using a synchronous call gives a warning, but it's necessary to make the shopping cart button quantity functionality to work, how to fix?
+  xmlhttp.open("GET", "/php/cart/addToCart.php?id=" + product_id, false); 
   xmlhttp.send();
-
-
-
-
-
-
 }
