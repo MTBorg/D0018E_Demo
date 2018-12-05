@@ -10,13 +10,8 @@
     <script src="/js/starRate.js" type="text/javascript"></script>
     <script src="/js/setColor.js" type="text/javascript"></script>
     <script src="/js/addComment.js" type="text/javascript"></script>
-    <script src="/js/shopCartBtnUpdateQuantitySubmit.js" type="text/javascript"></script>
-
-
-
-
 </head>	
-<body onload='initReviews(); initNavButtons(); shopCartBtnUpdateQuantitySubmit();'> 
+<body onload='initReviews(); initNavButtons();'> 
 
 <?php
 echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initHeader.php';
