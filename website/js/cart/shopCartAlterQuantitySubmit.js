@@ -6,7 +6,7 @@ function shopCartAlterQuantitySubmit(user_id, product_id, increase, product_pric
 			if (this.response == true){
 				//Set new quantity
 				let element = document.getElementById("quantity"+product_id);
-				let newQuantity = (parseInt(element.innerText) + (increase ? 1 : -1)).toString();
+				let newQuantity = (parseInt(element.innerText) + (increase == 1 ? 1 : -1)).toString();
 				element.innerText = newQuantity;
 				
 				//Set new sum
@@ -14,7 +14,7 @@ function shopCartAlterQuantitySubmit(user_id, product_id, increase, product_pric
 
 				//Set the new total sum
 				let element_sumtot = document.getElementById("totalSum");
-				element_sumtot.innerText = (parseInt(element_sumtot.innerText) + product_price).toString();
+				element_sumtot.innerText = (parseInt(element_sumtot.innerText) + product_price * (increase == 1 ? 1 : -1)).toString();
 			}else{
 				alert(this.responseText);
 			}

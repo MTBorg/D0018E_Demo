@@ -39,8 +39,9 @@ function loadShoppingCart(){
             echo "<td><p>$product_name</p></td>";
             echo '<td> 
                     <span id="quantity'.$product_id.'">'.$quantity.'</span>
-                    <a href="#" onClick="shopCartAlterQuantitySubmit('.$user_id.','.$product_id.', true,'.$price.')"><i class="fa fa-plus shopCartQuantityIcon"></i></a>
-                    <a href="#" onClick="shopCartAlterQuantitySubmit('.$user_id.','.$product_id.', false,'.$price.')"><i class="fa fa-minus shopCartQuantityIcon"></i></a></td>';
+                    <a href="#" onClick="shopCartAlterQuantitySubmit('.$user_id.','.$product_id.', 1,'.$price.')"><i class="fa fa-plus shopCartQuantityIcon"></i></a>
+                    <a href="#" onClick="shopCartAlterQuantitySubmit('.$user_id.','.$product_id.', 0,'.$price.')"><i class="fa fa-minus shopCartQuantityIcon"></i></a>
+                    </td>';
             echo "<td>$price</td>";
             echo '<td id="sum'.$product_id.'">'.$sum.'</td>';
             $arg = $user_id . "," . $product_id;
