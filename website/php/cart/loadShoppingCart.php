@@ -48,9 +48,10 @@ function loadShoppingCart(){
             echo '<td><button class="shoppingCartRemoveItemButton" onClick="removeShoppingCartItemSubmit(' . $arg . ')">Remove<i class="fa fa-trash-o" style="font-size:18px"></i></button></td>';
             echo '</tr>';
         }
-        echo '<p><a class="div-click" style="position:relative" href="/php/pages/productPage.php?product_id='.$product_id.'"></a></p>';
 
         echo '<tr> <td><td><td><td><td><td>'. $total_sum .'</td></td></td></td></td></td> </tr>';
+        
+
         echo '</table>';
 
     }else{

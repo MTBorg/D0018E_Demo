@@ -398,6 +398,7 @@ button:hover{
     #shoppingCart:hover i{
         transform: rotate(360deg);
         transition: 1.0s;
+
     }
 
 	.shoppingCartTable{
