@@ -4,16 +4,12 @@
 	<link href="/css/styles.css" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title>Product Page</title>
+    <script src="/js/init/initNavButtons.js" type="text/javascript"></script>
+    <script src="/js/review/initReviews.js" type="text/javascript"></script>
+    <script src="/js/review/starRate.js" type="text/javascript"></script>
+    <script src="/js/review/setColor.js" type="text/javascript"></script>
+    <script src="/js/review/addComment.js" type="text/javascript"></script>
     <link rel="shortcut icon" href="/fa-rocket.ico">
-    <script src="/js/initNavButtons.js" type="text/javascript"></script>
-    <script src="/js/initReviews.js" type="text/javascript"></script>
-    <script src="/js/starRate.js" type="text/javascript"></script>
-    <script src="/js/setColor.js" type="text/javascript"></script>
-    <script src="/js/addComment.js" type="text/javascript"></script>
-
-
-
-
 </head>	
 <body onload='initReviews(); initNavButtons();'> 
 

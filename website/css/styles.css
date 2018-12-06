@@ -174,19 +174,39 @@ header {
 
 .item {
     background-color: white;
-    color: #0B3D91;
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 10%;
-    font-size: 30px;
     border-radius: 3px;
     margin: 10px;
+    font-size: 30px;
     font-family: "Helvetica";
+    position: relative;
+    color:#0B3D91; 
+
+
+}
+a.div-click {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none;
+    z-index: 1;
 }
 
-.item:hover{
+.item:hover {
     background-color:#0B3D91;
-    color: #FFFFFF;
+    color: white;
     transition: 0.3s;
+    cursor: hand;
+    cursor: pointer;
+}
+
+.button-top {
+    position: relative;
+    z-index: 10;
+    float: right;
 }
 
 #namePos,
@@ -195,6 +215,7 @@ header {
 #stockPos {
     margin-top: 0;
     text-align: right;
+
 }
 
 .adminBox {

@@ -1,6 +1,5 @@
 <?php
 function loadShoppingCart(){
-    echo '<script type="text/javascript" src="/js/removeShoppingCartItemSubmit.js"></script>';
     include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
     $dbconn = dbConnect();
 
@@ -53,7 +52,7 @@ function loadShoppingCart(){
 
 
         echo '<tr> <td><td><td><td><td><td>'. $total_sum .'</td></td></td></td></td></td> </tr>';
-
+        // echo '<p><a class="div-click" href="/php/pages/productPage.php?product_id='.$product_id.'"></a></p>';
         echo '</table>';
     }else{
         echo "<p> No items in shopping cart </p>";
