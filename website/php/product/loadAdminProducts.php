@@ -7,7 +7,7 @@ function listProducts() {
     $dbconn = dbConnect();
 
 
-    $query = "SELECT id, name, price, stock, cat_id FROM Products;";
+    $query = "SELECT id, name, price, stock, cat_id, archived FROM Products;";
     $fetchProducts = mysqli_query($dbconn, $query);
 
     while($row = mysqli_fetch_array($fetchProducts)) {
