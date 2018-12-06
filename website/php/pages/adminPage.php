@@ -72,6 +72,7 @@
                             <th>stock</th>
                             <th>category</th>
                             <th>MODIFY</th>
+                            <th>Archive Product</th>
                         </tr>
             
                         <tr>

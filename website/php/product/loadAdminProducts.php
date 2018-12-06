@@ -23,6 +23,7 @@ function listProducts() {
 
         echo "<td>" . $cat_name['cat_name'] . "</td>";
         echo "<td> <button id='".$row['id']."' type='button' value='Modify' onclick='modifyProduct(this.id)'>Modify</button> </td>";
+        echo "<td> <button id='".$row['id']."' type='button' value='Archive' onclick='archiveProduct(this.id)'>Archive</button> </td>";
         echo "</tr>";
     }
 
