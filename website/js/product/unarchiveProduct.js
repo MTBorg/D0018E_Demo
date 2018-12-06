@@ -7,6 +7,7 @@ function unarchiveProduct(product_id) {
               alert(this.responseText);
           } else {
               alert("The product has been unarchived.");
+              window.location.reload();
           }
       }
     };

@@ -7,6 +7,7 @@ function archiveProduct(product_id) {
               alert(this.responseText);
           } else {
               alert("The product has been archived.");
+              window.location.reload();
           }
       }
     };

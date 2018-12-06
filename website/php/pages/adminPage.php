@@ -93,10 +93,10 @@
                                     </select>
                             </th>
                         </tr>
-                            <?php
-                                include_once $_SERVER['DOCUMENT_ROOT'].'/php/product/loadAdminProducts.php';
-                                listProducts();
-                            ?>
+
+                        <?php
+                            include_once $_SERVER['DOCUMENT_ROOT'].'/php/product/loadAdminProducts.php';
+                        ?>
                     </table>
                 </form>
             </div>
@@ -117,7 +117,6 @@
 
                         <?php
                             include_once $_SERVER['DOCUMENT_ROOT'].'/php/product/getArchivedProducts.php';
-                            getArchivedProducts();
                         ?>
                     </table>
                 </form>
