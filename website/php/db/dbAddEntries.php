@@ -1,66 +1,52 @@
 <?php
-    require_once 'dbConnect.php';
-    $dbconn = dbConnect();
-    /*Below are entries added into the products table */
-    try {
+    function dbAddEntries() {
+        require_once 'dbConnect.php';
+        $dbconn = dbConnect();
 
-        // Create categories 1 2 3
-        $query = "INSERT INTO Categories VALUES(1, 'temp');";
+        /*Below are entries added into the products table */
+        try {
 
-        mysqli_query($dbconn, $query);
+            // Create default categories
+            $query = "INSERT INTO Categories VALUES (NULL, 'Misc'),
+                                                    (NULL, 'Cars'),
+                                                    (NULL, 'Boats'),
+                                                    (NULL, 'Animals'),
+                                                    (NULL, 'Rockets'),
+                                                    (NULL, 'Rovers');";
 
-        //Create order statuses
-        $query = 'INSERT INTO OrderStatuses VALUES (NULL, "Pending"),
-                                                    (NULL, "Canceled"),
-                                                    (NULL, "Shipping"),
-                                                    (NULL, "Delivered"),
-                                                    (NULL, "Returned");';
-        mysqli_query($dbconn, $query);
-                                                 
+            mysqli_query($dbconn, $query);
 
-        $query = "INSERT INTO Products VALUES (NULL, 'boat', 10, 3, 'img/boat.png', 1);";
+            //Create order statuses
+            $query = 'INSERT INTO OrderStatuses VALUES ("Pending"),
+                                                        ("Canceled"),
+                                                        ("Shipping"),
+                                                        ("Delivered"),
+                                                        ("Returned");';
+            mysqli_query($dbconn, $query);
+                                        
+            // Create default products
+            $query = "INSERT INTO Products VALUES (NULL, 'Boat', 10, 3, '/img/boat.png', 1, 0), 
+                                                (NULL, 'Car', 50, 5, '/img/car.jpg', 1, 0), 
+                                                (NULL, 'Rocket', 70, 5, '/img/rocket.jpg', 1, 0),
+                                                (NULL, 'Dog', 100, 20, '/img/dog.jpg', 1, 0),
+                                                (NULL, 'Rover', 50, 30, '/img/rover.jpg', 1, 0),
+                                                (NULL, 'Movie Set', 1000, 1, '/img/Moon-Landing.jpg', 1, 0),
+                                                (NULL, 'Space Monkey', 200, 5, '/img/spacemonkey.jpg', 1, 0);";
 
-        mysqli_query($dbconn, $query);
+            mysqli_query($dbconn, $query);
 
-        //echo "added new entry into database \n";
+            // Create default admin user
+            $query = "INSERT INTO Users VALUES (NULL, 1, 'auto', 'admin', 'admin', 'admin');";
 
-        $query = "INSERT INTO Products VALUES (NULL, 'car', 50, 5, 'img/car.jpg', 1);";
+            mysqli_query($dbconn, $query);
+        
+        } catch (Exception $e) {
+            echo 'Exception: ', $e -> getMessage(), "\n";
+        }
 
-        mysqli_query($dbconn, $query);
-
-        //echo "added new entry into database \n";   
-
-        $query = "INSERT INTO Products VALUES (NULL, 'rocket', 70, 5, 'img/rocket.jpg', 1);";
-
-        mysqli_query($dbconn, $query);
-
-        //echo "added new entry into database \n";
-
-        $query = "INSERT INTO Products VALUES (NULL, 'Dog', 100, 20, 'img/dog.jpg', 1);";
-
-        mysqli_query($dbconn, $query);
-
-        $query = "INSERT INTO Products VALUES (NULL, 'Rover', 50, 30, 'img/rover.jpg', 1);";
-
-        mysqli_query($dbconn, $query);
-
-        $query = "INSERT INTO Products VALUES (NULL, 'Space Monkey', 200, 5, 'img/spacemonkey.jpg', 1);";
-
-        mysqli_query($dbconn, $query);
-
-        $query = "INSERT INTO Products VALUES (NULL, 'Movie set', 1000, 1, 'img/Moon-Landing.jpg', 1);";
-
-        mysqli_query($dbconn, $query);
-    
-    } catch (Exception $e) {
-        echo 'Exception: ', $e -> getMessage(), "\n";
-    }
-
-
-    /* Below are entries added into the ShoppingCart table */
         # Close the connection to the DB
         mysqli_close($dbconn);
-
+    }
 ?>
 
 
