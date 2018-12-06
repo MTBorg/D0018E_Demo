@@ -5,9 +5,9 @@ function SetOrderStatus(order_id){
 
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            if(this.responseText == 1){
-                alert("Updated order status");
-            }else{
+            if(this.responseText == 1){ //If succesful
+                document.getElementById("orderStatus"+order_id).innerHTML = new_status;
+            }else{ //Not successful
                 alert("Failed to update order: " + this.responseText);
             }
         }
