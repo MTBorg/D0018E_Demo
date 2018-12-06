@@ -1,10 +1,12 @@
-function shopCartAlterQuantitySubmit($user_id, $product_id, $increase){
+function shopCartAlterQuantitySubmit(user_id, product_id, increase){
     xmlhttp = new XMLHttpRequest();
 
 	xmlhttp.onreadystatechange = function () {
 		if (this.readyState == 4 && this.status == 200) {
 			if (this.response == true){
-                window.location.reload();
+				let element = document.getElementById("quantity"+product_id);
+				let newText = (parseInt(element.innerText) + (increase ? 1 : -1)).toString();
+				element.innerText = newText;
 			}else{
 				alert(this.responseText);
 			}
@@ -13,5 +15,5 @@ function shopCartAlterQuantitySubmit($user_id, $product_id, $increase){
 
 	xmlhttp.open("POST", "/php/cart/shopCartAlterQuantity.php", true);
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	xmlhttp.send("user_id=" + $user_id + "&product_id=" + $product_id + "&increase=" + $increase);
+	xmlhttp.send("user_id=" + user_id + "&product_id=" + product_id + "&increase=" + increase);
 }

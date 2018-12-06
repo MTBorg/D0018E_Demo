@@ -31,7 +31,6 @@
         mysqli_query($dbconn, $query);
         $order_id = mysqli_insert_id($dbconn);
 
-
         //Insert the products
         while($row = mysqli_fetch_array($lines)){
             $product_id=$row["product_id"];
