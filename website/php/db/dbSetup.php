@@ -22,6 +22,11 @@
     $dbconn = dbConnect();
     
     try {
+        //OrderStatuses
+        $query = "CREATE TABLE IF NOT EXISTS OrderStatuses(
+                    name VARCHAR(20) NOT NULL,
+                    PRIMARY KEY(name));";
+        mysqli_query($dbconn, $query);
 
         $query = "CREATE TABLE IF NOT EXISTS Categories(
             id INT NOT NULL AUTO_INCREMENT,
@@ -60,12 +65,17 @@
         $query = "CREATE TABLE IF NOT EXISTS Orders(
                     id INT NOT NULL AUTO_INCREMENT,
                     user_id INT NOT NULL,
+                    status VARCHAR(20) NOT NULL,
                     PRIMARY KEY(id),
-                    FOREIGN KEY(user_id) REFERENCES Users(id)
+                    FOREIGN KEY(user_id) REFERENCES Users(id),
+                    FOREIGN KEY(status) REFERENCES OrderStatuses(name)
                 );";
 
-        mysqli_query($dbconn, $query);
-
+        $test = mysqli_query($dbconn, $query);
+        if(!$test){
+            echo mysqli_error($dbconn);
+            return;
+        }
         $query = "CREATE TABLE IF NOT EXISTS OrderLines(
                     order_id INT NOT NULL,
                     product_id INT NOT NULL,
@@ -103,6 +113,8 @@
 
         mysqli_query($dbconn, $query);
 
+
+
         echo "The tables Products, Users, Orders and ShoppingCart created in the maindb database\n";
 
     } catch (Exception $e) {
@@ -130,7 +142,14 @@
         $query = "INSERT INTO Users VALUES (NULL, 1, 'auto', 'admin', 'admin', 'admin');";
 
         mysqli_query($dbconn, $query);
-
+        
+        //Create order statuses
+        $query = 'INSERT INTO OrderStatuses VALUES ("Pending"),
+                                                    ("Canceled"),
+                                                    ("Shipping"),
+                                                    ("Delivered"),
+                                                    ("Returned");';
+        mysqli_query($dbconn, $query);
 
     } catch (Exception $e) {
         echo 'Exception: ', $e -> getMessage(), "\n";

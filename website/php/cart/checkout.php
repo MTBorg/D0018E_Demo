@@ -27,7 +27,7 @@
         mysqli_begin_transaction($dbconn, MYSQLI_TRANS_START_WITH_CONSISTENT_SNAPSHOT);
 
         //Create an order
-        $query = 'INSERT INTO Orders VALUES (NULL, '.$user_id.');';
+        $query = 'INSERT INTO Orders VALUES (NULL, '.$user_id.',"Pending");';
         mysqli_query($dbconn, $query);
         $order_id = mysqli_insert_id($dbconn);
 

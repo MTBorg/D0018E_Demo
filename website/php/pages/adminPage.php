@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Admin panel</title>
+        <title>Admin Panel</title>
+        <script src="/js/order/SetOrderStatus.js" tpye="text/javascript"></script>
         <script src="/js/product/CreateProductSubmit.js" type="text/javascript"></script>
         <script src="/js/product/modifyProduct.js" type="text/javascript"></script>
         <script src="/js/category/addCatSubmit.js" type="text/javascript"></script>
@@ -46,7 +47,7 @@
                             <tr>
                                 <td>Category</td>
                                 <td><input type="hidden" id="AddForm_catID" value="1">
-                                        <select name="category" onchange="updateCatText('AddForm_catID', this.value);">
+                                        <select name="category" onchange="updateCatText('AddForm_catID', this.value);"> //TODO: is updateCatText even implemented?
                                             <?php
                                                 include_once $_SERVER['DOCUMENT_ROOT'].'/php/category/getCategories.php';
                                                 getCategories();
