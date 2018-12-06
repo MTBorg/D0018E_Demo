@@ -42,7 +42,6 @@
                             <select>';
                                include_once $_SERVER["DOCUMENT_ROOT"].'/php/order/createOrderStatusDropdown.php';
                             echo '</select>
-                         
                         </form> </td>
                         <td><button  onclick=\'location.href="/php/pages/adminOrderPage.php?order_id='.$order_id.'"\'>View </button></td>
                         </tr>';
