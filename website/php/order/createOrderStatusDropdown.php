@@ -1,6 +1,6 @@
 <?php
     //Connect to database
-    require_once $_SERVER["DOCUMENT_ROOT"].'/php/db/dbConnect.php';
+    include_once $_SERVER["DOCUMENT_ROOT"].'/php/db/dbConnect.php';
     $dbConn = dbConnect();
     
     $query = 'SELECT name FROM OrderStatuses;';
@@ -11,4 +11,5 @@
             echo '<option>'.$row->name.'</option>';
         }
     }
+
 ?>

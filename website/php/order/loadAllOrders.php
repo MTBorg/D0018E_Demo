@@ -21,7 +21,7 @@
         $orders = mysqli_query($dbConn, $query);
         if($orders){
             echo '<table class="ordersTable">';
-            echo '<tr class="ordersTableHeader"> <th> Order ID </th> <th> User ID </th> <th> Email </th> <th> Status </th> <th> Set status </th> <th> </th> </tr>';
+            echo '<tr class="ordersTableHeader"> <th> Order ID </th> <th> User ID </th> <th> Email </th> <th> Status </th> <th> New status </th> <th> </th> </tr>';
             while($row = mysqli_fetch_object($orders)){
                 $order_id = $row->id;
                 $user_id = $row->user_id;
@@ -37,11 +37,13 @@
                         <td>'.$user_id.' </td>
                         <td>'.$user_email.'</td>
                         <td>'.$order_status.'</td>
-                        <td> <form>
+                        <td> <form action="javascript:SetOrderStatus()" method="post" target"_self">
                             <input type="hidden">
                             <select>';
-                               include_once $_SERVER["DOCUMENT_ROOT"].'/php/order/createOrderStatusDropdown.php';
+                               include $_SERVER["DOCUMENT_ROOT"].'/php/order/createOrderStatusDropdown.php';
                             echo '</select>
+                         
+                        <button type="submit" onclick="#"> Set status </button>
                         </form> </td>
                         <td><button  onclick=\'location.href="/php/pages/adminOrderPage.php?order_id='.$order_id.'"\'>View </button></td>
                         </tr>';
