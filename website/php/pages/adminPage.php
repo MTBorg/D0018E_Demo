@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Admin Panel</title>
-        <script src="/js/SetOrderStatus.js" tpye="text/javascript"></script>
+        <script src="/js/order/SetOrderStatus.js" tpye="text/javascript"></script>
         <script src="/js/product/CreateProductSubmit.js" type="text/javascript"></script>
         <script src="/js/product/modifyProduct.js" type="text/javascript"></script>
         <script src="/js/category/addCatSubmit.js" type="text/javascript"></script>
