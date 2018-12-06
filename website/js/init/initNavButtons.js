@@ -9,7 +9,8 @@ function initNavButtons(){
 				document.getElementById("logOutMain").style.display = "inline";
 				document.getElementById("shoppingCart").style.display = "inline";
 				document.getElementById("myOrders").style.display = "inline";
-        document.getElementById("adminMain").style.display = "none";
+				document.getElementById("adminMain").style.display = "none";
+				document.getElementById("searchButton").style.display = "inline";
 			
       }else if(this.responseText == false){ //If logged out
 				document.getElementById("logOutMain").style.display = "none";
@@ -17,7 +18,8 @@ function initNavButtons(){
 				document.getElementById("logInMain").style.display = "inline";
 				document.getElementById("shoppingCart").style.display = "none";
         document.getElementById("myOrders").style.display = "none";
-        document.getElementById("adminMain").style.display = "none";
+				document.getElementById("adminMain").style.display = "none";
+				document.getElementById("searchButton").style.display = "inline";
         
 			}else if(this.responseText == 11){ //is admin
 				document.getElementById("signUpMain").style.display = "none";
@@ -26,6 +28,7 @@ function initNavButtons(){
 				document.getElementById("shoppingCart").style.display = "none";
 				document.getElementById("adminMain").style.display = "inline";
 				document.getElementById("myOrders").style.display = "none";
+				document.getElementById("searchButton").style.display = "inline";
 			}
 		}
 	};

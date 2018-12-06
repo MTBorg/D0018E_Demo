@@ -5,9 +5,7 @@ function searchRequest() {
 		if (this.readyState == 4 && this.status == 200) {
 			if (this.responseText) {
                 console.log(this.responseText);
-                //window.location.replace("../php/searchPage.php");
-                //return this.responseText;
-                document.getElementById("search").innerHTML = this.responseText;
+                document.getElementById("shop").innerHTML = this.responseText;
                 
 			}else{
 				console.log("xxx");
@@ -20,7 +18,7 @@ function searchRequest() {
 
     console.log(search);
 
-	xmlhttp.open("POST", "../php/searchProduct.php", true);
+	xmlhttp.open("POST", "/php/product/searchProduct.php", true);
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xmlhttp.send("search=" + search);
 }
