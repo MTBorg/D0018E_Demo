@@ -17,11 +17,11 @@
             mysqli_query($dbconn, $query);
 
             //Create order statuses
-            $query = 'INSERT INTO OrderStatuses VALUES (NULL, "Pending"),
-                                                        (NULL, "Canceled"),
-                                                        (NULL, "Shipping"),
-                                                        (NULL, "Delivered"),
-                                                        (NULL, "Returned");';
+            $query = 'INSERT INTO OrderStatuses VALUES ("Pending"),
+                                                        ("Canceled"),
+                                                        ("Shipping"),
+                                                        ("Delivered"),
+                                                        ("Returned");';
             mysqli_query($dbconn, $query);
                                         
             // Create default products
