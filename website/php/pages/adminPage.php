@@ -7,6 +7,7 @@
         <script src="/js/product/modifyProduct.js" type="text/javascript"></script>
         <script src="/js/category/addCatSubmit.js" type="text/javascript"></script>
         <script src="/js/product/archiveProduct.js" type="text/javascript"></script>
+        <script src="/js/product/unarchiveProduct.js" type="text/javascript"></script>
         <link href="/css/styles.css" rel="stylesheet">
         <script src="/js/init/initNavButtons.js" type="text/javascript"></script>
 	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -28,7 +29,7 @@
                 <div>
                     <form id="adminCreateProd" action="javascript:CreateProductSubmit()" method="post" target="_self">
                         <table class="addTable" style="margin:auto;">
-                            ADD PRODUCT
+                            <b>ADD PRODUCT</b>
                             <tr>
                                 <td>Name</td>
                                 <td><input class="submitField" type="text"></td>
@@ -64,7 +65,7 @@
             <div>
                 <form id="adminForm">
                     <table class="modifyTable" style="margin:auto;" >
-                        MODIFY PRODUCT
+                        <b>MODIFY PRODUCT</b>
                         
                         <tr>
                             <th>id</th>
@@ -101,9 +102,31 @@
             </div>
 
             <div>
+                <form id="archivedForm">
+                    <table class="archivedTable" style="margin:auto;" >
+                        <b>ARCHIVED PRODUCTS</b>
+
+                        <tr>
+                            <th>id</th>
+                            <th>name</th>
+                            <th>price</th>
+                            <th>stock</th>
+                            <th>category</th>
+                            <th>Unarchive Product</th>
+                        </tr>
+
+                        <?php
+                            include_once $_SERVER['DOCUMENT_ROOT'].'/php/product/getArchivedProducts.php';
+                            getArchivedProducts();
+                        ?>
+                    </table>
+                </form>
+            </div>
+
+            <div>
                 <form id="adminAddCat" action="javascript:addCatSubmit()" method="post" target="_self">
                     <table class="addTable" style="margin:auto;">
-                        ADD CATEGORY
+                        <b>ADD CATEGORY</b>
                         <tr>
                             <td><p class="submitText" style="font-family:Helvetica">Category name</p></td>
                                 <td>
@@ -116,7 +139,7 @@
             </div>
 
             <div>
-                ALL ORDERS
+                <b>ALL ORDERS</b>
                 <?php
                     include_once $_SERVER['DOCUMENT_ROOT'].'/php/order/loadAllOrders.php';
                     loadAllOrders();

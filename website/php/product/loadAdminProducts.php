@@ -1,17 +1,13 @@
 <?php
+    function listProducts() {
+        include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
+        $dbconn = dbConnect();
 
+        # Get all the products which are not archived
+        $query = "SELECT id, name, price, stock, cat_id FROM Products WHERE archived = 0;";
+        $fetchProducts = mysqli_query($dbconn, $query);
 
-
-function listProducts() {
-    include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
-    $dbconn = dbConnect();
-
-
-    $query = "SELECT id, name, price, stock, cat_id, archived FROM Products;";
-    $fetchProducts = mysqli_query($dbconn, $query);
-
-    while($row = mysqli_fetch_array($fetchProducts)) {
-        if(!$row['archived']) {
+        while($row = mysqli_fetch_array($fetchProducts)) {
             echo "<tr>";
             echo "<td>" . $row['id'] . "</td>";
             echo "<td>" . $row['name'] . "</td>";
@@ -27,9 +23,8 @@ function listProducts() {
             echo "<td> <button id='".$row['id']."' type='button' value='Archive' onclick='archiveProduct(this.id)'>Archive</button> </td>";
             echo "</tr>";
         }
-    }
 
-    mysqli_close($dbconn);
+        mysqli_close($dbconn);
 
     }
 ?>
