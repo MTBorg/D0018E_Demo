@@ -36,14 +36,12 @@
                         <td>'.$order_id.' </td>
                         <td>'.$user_id.' </td>
                         <td>'.$user_email.'</td>
-                        <td>'.$order_status.'</td>
-                        <td> <form action="javascript:SetOrderStatus()" method="post" target"_self">
-                            <input type="hidden">
-                            <select>';
+                        <td id="orderStatus'.$order_id.'">'.$order_status.'</td>
+                        <td>
+                            <select id="newStatus'.$order_id.'">';
                                include $_SERVER["DOCUMENT_ROOT"].'/php/order/createOrderStatusDropdown.php';
                             echo '</select>
-                         
-                        <button type="submit" onclick="#"> Set status </button>
+                        <button onClick="SetOrderStatus('.$order_id.')"> Set status </button>
                         </form> </td>
                         <td><button  onclick=\'location.href="/php/pages/adminOrderPage.php?order_id='.$order_id.'"\'>View </button></td>
                         </tr>';

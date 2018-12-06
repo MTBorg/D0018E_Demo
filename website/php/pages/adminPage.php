@@ -5,6 +5,7 @@
         <script src="/js/CreateProductSubmit.js" type="text/javascript"></script>
         <script src="/js/modifyProduct.js" type="text/javascript"></script>
         <script src="/js/addCatSubmit.js" type="text/javascript"></script>
+        <script src="/js/SetOrderStatus.js" tpye="text/javascript"></script>
         <link href="/css/styles.css" rel="stylesheet">
         <script src="/js/initNavButtons.js" type="text/javascript"></script>
 	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
