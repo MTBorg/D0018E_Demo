@@ -195,6 +195,7 @@ a.div-click {
     z-index: 1;
 }
 
+
 .item:hover {
     background-color:#0B3D91;
     color: white;
@@ -363,71 +364,75 @@ button:hover{
     transition: 1s;
 }
 
-	#logInMain{
-		float:right;
-		width:5%;
-	}
+#logInMain{
+    float:right;
+    width:5%;
+}
 
-	#signUpMain{
-		float:right;
-		width:5%;
-	}
-	#logOutMain{
-		float:right;
-		width:5%;
-	}
+#signUpMain{
+    float:right;
+    width:5%;
+}
+#logOutMain{
+    float:right;
+    width:5%;
+}
 
-	input.submitField{
-        border-radius:50px;
-        border: solid 2px #0B3D91;
-        color: #0B3D91;
-    }
-    
-	.initHidden{
-		display:none;
-	}
+input.submitField{
+    border-radius:50px;
+    border: solid 2px #0B3D91;
+    color: #0B3D91;
+}
 
-    #shoppingCart{
-        float:right;
-    }
+.initHidden{
+    display:none;
+}
 
-    #shoppingCart i{
-        transition: 1.0s;
-    }
+#shoppingCart{
+    float:right;
+}
 
-    #shoppingCart:hover i{
-        transform: rotate(360deg);
-        transition: 1.0s;
-    }
+#shoppingCart i{
+    transition: 1.0s;
+}
 
-	.shoppingCartTable{
-		border-collapse: collapse;
-        margin:auto;
-	}
+#shoppingCart:hover i{
+    transform: rotate(360deg);
+    transition: 1.0s;
 
-	.shoppingCartTable td{
-		border-bottom: 1px solid #0B3D91;
-        color:#0B3D91;
-	}
+}
 
-	.shoppingCartTable th{
-		color:#0B3D91;
-        padding-right: 25px;
-	}
+.shoppingCartTable{
+    border-collapse: collapse;
+    margin:auto;
 
-	#shoppingCartTableHeader:hover{
-		background-color:transparent;
-	}
+}
 
-	.shoppingCartTable tr:hover{
-        background-color:#0B3D91;
-        transition: 0.2s;
-    }
+.shoppingCartTable td{
+    border-bottom: 1px solid #0B3D91;
+    color:#0B3D91;
+}
 
-    .shoppingCartTable tr:hover td{
-        color:#FFFFFF;
-        transition: 0.2s;
-    }
+.shoppingCartTable th{
+    color:#0B3D91;
+    padding-right: 25px;
+}
+
+#shoppingCartTableHeader:hover{
+    background-color:transparent;
+}
+
+.shoppingCartTable tr:hover{
+    background-color:#0B3D91;
+    transition: 0.2s;
+    cursor: hand;
+    cursor: pointer;
+}
+
+.shoppingCartTable tr:hover td{
+    color:#FFFFFF;
+    transition: 0.2s;
+}
  
 .shopCartQuantityIcon{
     text-decoration: none;
@@ -438,55 +443,57 @@ button:hover{
     text-decoration: none;
     color: #FFFFFF;
 }  
-    .shoppingCartRemoveItemButton{
-        padding: 10px;
-    }
+.shoppingCartRemoveItemButton{
+    padding: 10px;
+ 
+}
 
-    .shoppingCartRemoveItemButton:hover i{
-        transform: rotate(360deg);
-        transition: 1s;
-    }
+.shoppingCartRemoveItemButton:hover i{
+    transform: rotate(360deg);
+    transition: 1s;
+}
 
-    #checkoutButton{
-        margin: 10px;
-        padding: 10px;
-    }
+#checkoutButton{
+    margin: 10px;
+    padding: 10px;
+}
 
-    #checkoutButton:hover{
-        color: #FFFFFF;
-        background-color: #0271fb;
-        transition: 0.2s;
-    }
+#checkoutButton:hover{
+    color: #FFFFFF;
+    background-color: #0271fb;
+    transition: 0.2s;
+}
 
-    #myOrders{
-        float:right;
-    }
+#myOrders{
+    float:right;
+}
 
-    .ordersTable{
-        color:#0B3D91;
-        border-collapse: collapse;
-        margin:auto;
-    }
-    .ordersTable tr{
-        text-align: center;
-        border-bottom: 1px solid #ddd;
-    }
+.ordersTable {
+    color:#0B3D91;
+    border-collapse: collapse;
+    margin:auto;
+}
 
-    .ordersTable th{
-        padding-right: 20px;
-        padding-left: 20px;
-    }
+.ordersTable tr{
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
 
-    .ordersTable tr:hover{
-        background-color: #0271fb;
-        color:#FFFFFF;
-        transition: 0.2s;
-    }
+.ordersTable th{
+    padding-right: 20px;
+    padding-left: 20px;
+}
 
-    .ordersTable .ordersTableHeader:hover{
-        background-color:transparent;
-        color: #0B3D91;
-    }
+.ordersTable tr:hover{
+    background-color: #0B3D91;
+    color:#FFFFFF;
+    transition: 0.2s;
+}
+
+.ordersTable .ordersTableHeader:hover{
+    background-color:transparent;
+    color: #0B3D91;
+}
 
 
 /* ---------------------------------------------------------
