@@ -13,9 +13,9 @@
 
         <nav role="navigation">
         <div>
-            <div class="dropdown">
+            <div class="catDropdown">
                 <button id="categoriesButton">Categories <i style="font-size: 24px" class="fa fa-align-justify"></i></button>
-                <div class="dropdown-content">
+                <div class="catDropdown-content">
                     <a href="../index.php">Home</a>
                     <a href="#">Category</a>
                     <a href="#">Contact</a>
