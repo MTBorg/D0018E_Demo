@@ -1,11 +1,8 @@
 <?php
-    
-
     include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
     include_once $_SERVER['DOCUMENT_ROOT'].'/php/account/isLoggedIn.php';
     
     // TODO Check if user bought the product!
-
 
     // Make sure we get the integer value since we sending it to the database
     $product_id = $_POST['product_id'];
@@ -29,7 +26,6 @@
         $query = "SELECT rating FROM Reviews WHERE product_id = $product_id AND user_id = $user_id";
         $checkRated = mysqli_query($dbconn, $query);
         
-
         // Returns true if it holds data
         if(mysqli_fetch_assoc($checkRated)) {
             $query = "UPDATE Reviews SET comment = '$comment' WHERE product_id = $product_id AND user_id = $user_id";
@@ -37,19 +33,11 @@
             echo true;
         } else {
             echo "Please rate the product before you comment!";
-
-
         }
     } else {
         echo "Only logged in user and user who have bought the product can rate!";
     }
 
     mysqli_close($dbconn);
-
-
-    
-   
-       
-
 ?>
     

@@ -17,4 +17,5 @@
         echo true;
     }
 
+    mysqli_close($dbconn);
 ?>

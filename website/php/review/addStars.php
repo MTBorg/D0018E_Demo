@@ -1,19 +1,17 @@
 <?php
-    
-
     include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
     include_once $_SERVER['DOCUMENT_ROOT'].'/php/account/isLoggedIn.php';
     
     // TODO Check if user bought the product!
 
-
     // Make sure we get the integer value since we sending it to the database
     $product_id = $_POST['product_id'];
     $rating = $_POST['rating'];
   
-    $dbconn = dbConnect();
     // Handle is user logged in
     if(isLoggedIn()) {
+        $dbconn = dbConnect();
+
         // Get logged in user
         $user_id = $_SESSION["user_id"];
 
@@ -25,7 +23,6 @@
             mysqli_close($dbconn);
             return;
         }
-
 
         // Check if user already stared this product
         $query = "SELECT rating FROM Reviews WHERE product_id = $product_id AND user_id = $user_id";
@@ -48,16 +45,9 @@
             } else {
                 echo false;
             }
-
-
         }
 
         mysqli_close($dbconn);
-
-
     }
-   
-       
-
 ?>
     

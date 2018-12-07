@@ -1,8 +1,5 @@
 <?php
 function loadShoppingCart(){
-    include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
-    $dbconn = dbConnect();
-
     session_start();
 
     $user_id;
@@ -12,6 +9,9 @@ function loadShoppingCart(){
         echo "Warning: Could not get user id";
         return;
     }
+    
+    include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
+    $dbconn = dbConnect();
 
     $query = 'SELECT * FROM ShoppingCartLines WHERE user_id="'.$user_id.'";';
     $lines = mysqli_query($dbconn, $query);
@@ -57,5 +57,6 @@ function loadShoppingCart(){
     }else{
         echo "<p> No items in shopping cart </p>";
     }
+    mysqli_close($dbconn);
 }
 ?>

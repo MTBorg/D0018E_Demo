@@ -6,7 +6,6 @@ function listProducts() {
     include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
     $dbconn = dbConnect();
 
-
     $query = "SELECT id, name, price, stock, cat_id FROM Products;";
     $fetchProducts = mysqli_query($dbconn, $query);
 
@@ -25,11 +24,7 @@ function listProducts() {
         echo "<td> <button id='".$row['id']."' type='button' value='Modify' onclick='modifyProduct(this.id)'>Modify</button> </td>";
         echo "</tr>";
     }
-
-
     mysqli_close($dbconn);
-     
-
 }
 
 

@@ -1,6 +1,4 @@
 <?php
-    
-   
     include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
     $dbconn = dbConnect();
 
@@ -9,8 +7,6 @@
     $price = $_POST["price"];
     $stock = $_POST["stock"];
     $cat_id = $_POST["cat_id"];
-
-
 
     if(empty($name) == false) {
         # Check if the new product name is already in use
@@ -46,15 +42,4 @@
     }
 
     mysqli_close($dbconn);
-
-
-    
-    
-
-
-
-
-
-
 ?>
-    

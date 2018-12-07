@@ -11,5 +11,7 @@
             echo '<option>'.$row->name.'</option>';
         }
     }
+    
+    mysqli_close($dbConn);
 
 ?>

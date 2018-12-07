@@ -5,12 +5,13 @@
     function loadProducts() {
         include_once $_SERVER['DOCUMENT_ROOT'].'/php/account/isAdmin.php';
         include_once $_SERVER['DOCUMENT_ROOT'].'/php/account/isLoggedIn.php';
-        include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
-        $dbconn = dbConnect();
-        
+
         if(!isset($_SESSION["user_id"])) {
             @session_start();
         }
+        
+        include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
+        $dbconn = dbConnect();
         
         $query = "SELECT * FROM Products";
 
@@ -53,6 +54,7 @@
             echo '<p> No products ... </p>';
         }
                 
+        mysqli_close($dbconn);
     }
 
 ?>

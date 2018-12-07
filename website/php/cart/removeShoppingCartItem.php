@@ -14,6 +14,7 @@
             echo "Failed to remove item from shopping cart";
         }
 
+        mysqli_close($dbconn);
         echo true;
     }else{
         echo false;

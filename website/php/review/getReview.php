@@ -1,6 +1,4 @@
 <?php
-
-
 include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
 $dbconn = dbConnect();
 $product_id = intval($_GET['id']);
@@ -8,8 +6,6 @@ $product_id = intval($_GET['id']);
 $query = "SELECT comment, rating, user_id FROM Reviews WHERE Reviews.product_id = $product_id";
 $review = mysqli_query($dbconn, $query);
 
-
-    
     // Check if review exists
 while ($row = mysqli_fetch_object($review)) {
     // $comment_array = array('comment' => $row['comment']);
@@ -29,11 +25,5 @@ while ($row = mysqli_fetch_object($review)) {
     // echo $row['first_name'] . "|";
     // echo json_encode($first_name_array);
     echo $row->first_name . "|";
-
 }
-
-
-
-
-
 ?>
