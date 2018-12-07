@@ -37,13 +37,13 @@ function loadShoppingCart(){
             echo '<td><img src="'.$obj->img_url.'" alt="Product image" style="width:64px;height:64px"></src></td>';
             echo "<td><p>$product_id</p></td> ";
             echo "<td><p>$product_name</p></td>";
-            echo '<td><p>
-            '.$quantity.'
-            <a href="#" onClick="shopCartAlterQuantitySubmit('.$user_id.','.$product_id.','.true.')"><i class="fa fa-plus shopCartQuantityIcon"></i></a>
-            <a href="#" onClick="shopCartAlterQuantitySubmit('.$user_id.','.$product_id.','.false.')"><i class="fa fa-minus shopCartQuantityIcon"></i></a>
-            </p></td>';
-            echo "<td></p>$price</p></td>";
-            echo "<td></p>$sum </p></td>";
+            echo '<td> 
+                    <span id="quantity'.$product_id.'">'.$quantity.'</span>
+                    <a href="#" onClick="shopCartAlterQuantitySubmit('.$user_id.','.$product_id.', 1,'.$price.')"><i class="fa fa-plus shopCartQuantityIcon"></i></a>
+                    <a href="#" onClick="shopCartAlterQuantitySubmit('.$user_id.','.$product_id.', 0,'.$price.')"><i class="fa fa-minus shopCartQuantityIcon"></i></a>
+                    </td>';
+            echo "<td>$price</td>";
+            echo '<td id="sum'.$product_id.'">'.$sum.'</td>';
             $arg = $user_id . "," . $product_id;
             echo '<td><button class="shoppingCartRemoveItemButton" onClick="removeShoppingCartItemSubmit(' . $arg . ')">Remove<i class="fa fa-trash-o" style="font-size:18px"></i></button></td>';
 
@@ -51,7 +51,7 @@ function loadShoppingCart(){
         }
 
 
-        echo '<tr> <td><td><td><td><td><td>'. $total_sum .'</td></td></td></td></td></td> </tr>';
+        echo '<tr> <td><td><td><td><td><td id="totalSum">'. $total_sum .'</td></td></td></td></td></td> </tr>';
         // echo '<p><a class="div-click" href="/php/pages/productPage.php?product_id='.$product_id.'"></a></p>';
         echo '</table>';
     }else{
