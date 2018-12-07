@@ -44,6 +44,8 @@ function initReviews() {
           commentBox.innerHTML = reviewData[i];
           commentBox.disabled = true;
         }
+      } else {
+        
       }
     }
   };
