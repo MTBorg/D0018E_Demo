@@ -34,5 +34,6 @@
 			echo "Login failure";
 		}
 	}
+	mysqli_close($connection);
 	
 ?>

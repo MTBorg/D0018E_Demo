@@ -50,5 +50,6 @@
         echo -1; 
     }
 
+    mysqli_close($dbconn);
 ?>
     

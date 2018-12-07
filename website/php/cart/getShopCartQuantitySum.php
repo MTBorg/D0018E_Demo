@@ -1,7 +1,4 @@
 <?php
-    include_once $_SERVER["DOCUMENT_ROOT"].'/php/db/dbConnect.php';
-    $dbConn = dbConnect();
-    
     //Get user id
     $user_id;
     session_start();
@@ -11,14 +8,19 @@
         return "Not logged in";
     }
 
+    include_once $_SERVER["DOCUMENT_ROOT"].'/php/db/dbConnect.php';
+    $dbConn = dbConnect();
+
     //Get the sum of the item quantities
     $query = 'SELECT SUM(quantity) AS quantity_sum FROM ShoppingCartLines WHERE user_id='.$user_id.';';
     $result = mysqli_query($dbConn, $query);
 
     if(!$result){
+        mysqli_close($dbConn);
         return "Failed to query database";
     }else{
         $quantity_sum = mysqli_fetch_object($result)->quantity_sum;
+        mysqli_close($dbConn);
         return $quantity_sum == NULL ? 0 : $quantity_sum; //Note: Select SUM... returns null if sum=0, but we need integers in the ajax request so return 0 if NULL
     }
 ?>
