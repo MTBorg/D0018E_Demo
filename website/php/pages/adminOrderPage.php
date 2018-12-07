@@ -6,6 +6,7 @@
     <link  href="/css/styles.css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="/js/init/initNavButtons.js" type="text/javascript"></script>
+    <script src="/js/cart/goToProduct.js" type="text/javascript"></script>
 </head>
 <body onload="initNavButtons()">
 
@@ -27,7 +28,7 @@
             return;
         }
 
-        echo '<table class="ordersTable">';
+        echo '<table class="ordersTable" style="cursor:hand;cursor:pointer">';
         echo '<tr class="ordersTableHeader">';
         echo '<th></th><th>Product ID</th><th>Product name</th><th>Quantity</th>';
         echo '<th>Price</th><th>Sum</th>';
@@ -52,7 +53,7 @@
                 $name = $obj->name;
                 $img_url = $obj->img_url;
                 
-                echo '<tr>';
+                echo '<tr onClick="adminGoToProduct('.$product_id.')">';
                 echo '<td><img src="'.$img_url.'" alt="Product image" style="width:64px;height:64px"></img></td>';
                 echo '<td>'.$product_id.'</td>';
                 echo '<td>'.$name.'</td>';
