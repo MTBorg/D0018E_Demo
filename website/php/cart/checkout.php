@@ -21,6 +21,7 @@
     if($lines){
         if($lines->num_rows == 0){
             echo "Empty shopping cart";
+            mysqli_close($dbconn);
             return;
         }
 
@@ -30,7 +31,6 @@
         $query = 'INSERT INTO Orders VALUES (NULL, '.$user_id.',"Pending");';
         mysqli_query($dbconn, $query);
         $order_id = mysqli_insert_id($dbconn);
-
 
         //Insert the products
         while($row = mysqli_fetch_array($lines)){
@@ -43,6 +43,7 @@
             if(!$result){
                 echo "Failed to get product, rolling back";
                 mysqli_rollback($dbconn);
+                mysqli_close($dbconn);
                 return;
             }
             $product = mysqli_fetch_object($result);
@@ -72,6 +73,7 @@
             if($quantity > $stock){
                 echo 'Quantity exceeds stock for product '. $product->name;
                 mysqli_rollback($dbconn);
+                mysqli_close($dbconn);
                 return;
             }else{
                 //Insert the product
@@ -79,6 +81,7 @@
                 if(!mysqli_query($dbconn, $query)){
                     echo "Failed to insert order item";
                     mysqli_rollback($dbconn);
+                    mysqli_close($dbconn);
                     return;
                 }
 
@@ -88,6 +91,7 @@
                 if(!mysqli_query($dbconn, $query)){
                     echo "Failed to update stock";
                     mysqli_rollback($dbconn);
+                    mysqli_close($dbconn);
                     return;
                 }
             }
@@ -98,6 +102,7 @@
         if(mysqli_query($dbconn, $query) == false){
             echo "Failed to delete shopping cart";
             mysqli_rollback($dbconn);
+            mysqli_close($dbconn);
             return;
         }else{
             echo true;
@@ -105,6 +110,7 @@
         }
     }else{
         echo "Failed to get shopping cart";
+        mysqli_close($dbconn);
         return;
     }
 ?>

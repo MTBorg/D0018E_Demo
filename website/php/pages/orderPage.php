@@ -11,19 +11,20 @@
 
     <?php
         echo include_once $_SERVER['DOCUMENT_ROOT'].'/php/init/initHeader.php';
-        include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
-        $dbconn = dbConnect();
-
-        if(!$dbconn){
-            echo '<p>Failed to connect to database</p>';
-            return;
-        }
 
         $order_id;
         if(isset($_GET["order_id"])){
             $order_id = $_GET["order_id"];
         }else{
             echo '<p>Order id not set in GET request';
+            return;
+        }
+        
+        include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
+        $dbconn = dbConnect();
+
+        if(!$dbconn){
+            echo '<p>Failed to connect to database</p>';
             return;
         }
 
@@ -64,10 +65,13 @@
             echo '<tr> <td><td><td><td><td><td>'.$totalSum.'</td></td></td></td></td></td> </tr>';
         }else{
             echo '<p>Failed to get orderlines</p>';
+            mysqli_close($dbconn);
             return;
         }
 
         echo '</table>';
+
+        mysqli_close($dbconn);
     ?>
     <div style="text-align:center; margin-top:10px">
         <button onClick='window.location="/php/pages/myOrdersPage.php"'>Go back</button>

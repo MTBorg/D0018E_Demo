@@ -3,15 +3,18 @@
     function loadProducts() {
         include_once $_SERVER['DOCUMENT_ROOT'].'/php/account/isAdmin.php';
         include_once $_SERVER['DOCUMENT_ROOT'].'/php/account/isLoggedIn.php';
-        include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
-        $dbconn = dbConnect();
-        
+
         if(!isset($_SESSION["user_id"])) {
             session_start();
         }
         
+
         // Get all the active products
         $query = "SELECT id, name, price, stock, img_url FROM Products WHERE archived = 0";  
+
+        include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
+        $dbconn = dbConnect();
+
         $products = mysqli_query($dbconn, $query);
         
         if($products) {
@@ -44,6 +47,7 @@
             echo '<p> No products ... </p>';
         }
                 
+        mysqli_close($dbconn);
     }
 
 ?>
