@@ -5,6 +5,7 @@
     }else{
         $quantity_sum = '('.$quantity_sum.')';
     }
+    $catDropdown = include_once $_SERVER["DOCUMENT_ROOT"].'/php/category/createCategoriesDropdown.php'; //This is really ugly
     return '<header role="banner">
         <a href="/index.php" style = "text-decoration:none">
 		    <h1 id="logoText"> StarTrader <i id="logoIcon" class="fa fa-rocket"></i> </h1>
@@ -15,12 +16,9 @@
         <div>
             <div class="catDropdown">
                 <button id="categoriesButton">Categories <i style="font-size: 24px" class="fa fa-align-justify"></i></button>
-                <div class="catDropdown-content">
-                    <a href="../index.php">Home</a>
-                    <a href="#">Category</a>
-                    <a href="#">Contact</a>
-                    <a href="#">About</a>   
-                </div>
+                <div class="catDropdown-content">'.
+                    $catDropdown
+                .'</div>
             </div>
             <a href="/php/pages/adminPage.php" id="adminMain" class="navButton initHidden">Admin panel</a>
 	        <a href="/php/pages/createUserPage.php" id="signUpMain" class="navButton initHidden">Sign up</a>
