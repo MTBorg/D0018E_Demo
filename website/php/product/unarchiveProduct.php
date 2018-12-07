@@ -10,4 +10,6 @@
     if(!$result) {
         echo mysqli_error($dbconn);
     }
+
+    mysqli_close($dbconn);
 ?>

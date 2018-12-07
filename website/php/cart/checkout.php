@@ -37,8 +37,8 @@
             $product_id=$row["product_id"];
             $quantity = $row["quantity"];
 
-            //Get the price and stock of the product
-            $query = 'SELECT price, stock, name FROM Products WHERE id='.$product_id.';';
+            //Get the info of the product
+            $query = 'SELECT price, stock, name, archived FROM Products WHERE id='.$product_id.';';
             $result = mysqli_query($dbconn, $query);
             if(!$result){
                 echo "Failed to get product, rolling back";
@@ -48,6 +48,25 @@
             $product = mysqli_fetch_object($result);
             $price = $product->price;
             $stock = $product->stock;
+            
+
+            // Make sure that the user doesn't order a product which has been archived by the admin
+            if($product->archived) {
+                $dbconn2 = dbConnect();
+                $removeFromCart = 'DELETE FROM ShoppingCartLines WHERE user_id = '.$user_id.' AND product_id = '.$product_id.';';
+                
+                if(!mysqli_query($dbconn2, $removeFromCart)) {
+                    echo "Failed to remove archived product from shopping cart";
+                } else {
+                    echo "Sorry, the product $product->name in your shopping cart is not sold anymore and has been removed from your shopping cart. \n
+                        \nPlease checkout again if you still want to make this order.";
+                }
+                
+                mysqli_close($dbconn2);
+                mysqli_rollback($dbconn);
+                mysqli_close($dbconn);
+                return;
+            }
 
             //Make sure that the quantity does not exceed the stock
             if($quantity > $stock){
