@@ -32,21 +32,21 @@ function loadShoppingCart(){
             $quantity = $row["quantity"];
             $sum = $price * $quantity;
             $total_sum += $sum;
-                        
-            echo '<tr>';
+            echo '<tr onClick="goToProduct('.$product_id.')">';
             echo '<td><img src="'.$obj->img_url.'" alt="Product image" style="width:64px;height:64px"></src></td>';
             echo "<td><p>$product_id</p></td> ";
             echo "<td><p>$product_name</p></td>";
             echo '<td><p>
             '.$quantity.'
-            <a href="#" onClick="shopCartAlterQuantitySubmit('.$user_id.','.$product_id.','.true.')"><i class="fa fa-plus shopCartQuantityIcon"></i></a>
-            <a href="#" onClick="shopCartAlterQuantitySubmit('.$user_id.','.$product_id.','.false.')"><i class="fa fa-minus shopCartQuantityIcon"></i></a>
+            <a href="#" onClick="cancelEvent(event); shopCartAlterQuantitySubmit('.$user_id.','.$product_id.','.true.')"><i class="fa fa-plus shopCartQuantityIcon"></i></a>
+            <a href="#" onClick="cancelEvent(event); shopCartAlterQuantitySubmit('.$user_id.','.$product_id.','.false.')"><i class="fa fa-minus shopCartQuantityIcon"></i></a>
             </p></td>';
             echo "<td></p>$price</p></td>";
             echo "<td></p>$sum </p></td>";
             $arg = $user_id . "," . $product_id;
-            echo '<td><button class="shoppingCartRemoveItemButton" onClick="removeShoppingCartItemSubmit(' . $arg . ')">Remove<i class="fa fa-trash-o" style="font-size:18px"></i></button></td>';
+            echo '<td><button class="shoppingCartRemoveItemButton" onClick="cancelEvent(event); removeShoppingCartItemSubmit(' . $arg . ')">Remove<i class="fa fa-trash-o" style="font-size:18px"></i></button></td>';
             echo '</tr>';
+         
         }
 
         echo '<tr> <td><td><td><td><td><td>'. $total_sum .'</td></td></td></td></td></td> </tr>';

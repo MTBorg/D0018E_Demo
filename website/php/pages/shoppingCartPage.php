@@ -14,6 +14,8 @@
     <script src="/js/init/initNavButtons.js" type="text/javascript"></script>
     <script src="/js/cart/shopCartAlterQuantitySubmit.js" type="text/javascript"></script>
     <script src="/js/cart/removeShoppingCartItemSubmit.js" type="text/javascript"></script>
+    <script src="/js/cart/goToProduct.js" type="text/javascript"></script>
+    <script src="/js/cart/cancelEvent.js" type="text/javascript"></script>
 </head>
 
 
@@ -24,6 +26,7 @@
             include $_SERVER['DOCUMENT_ROOT'].'/php/cart/loadShoppingCart.php';
             loadShoppingCart();
         ?>
+
         <div style="text-align:center">
             <button  id="checkoutButton" onClick="checkoutSubmit()">Checkout</button>
             <button onClick='window.location = "/index.php"'>Go back</button>
