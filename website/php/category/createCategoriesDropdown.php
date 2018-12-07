@@ -10,7 +10,7 @@
     $categories = mysqli_query($dbConn, 'SELECT cat_name FROM Categories;');
     if($categories){
         while($cat = mysqli_fetch_object($categories)){
-            $result = $result. '<a href="#">'.$cat->cat_name.'</a>';
+            $result = $result. '<a href="/php/pages/categoryPage.php">'.$cat->cat_name.'</a>';
         }
     }else{
         return 'Failed to retrieve categories: '.mysqli_error($dbConn);
