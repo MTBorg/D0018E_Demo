@@ -14,8 +14,7 @@
         <nav role="navigation">
         <div>
             <div class="dropdown">
-                <button class="dropbutton fa fa-align-justify" style="font-size: 36px;
-                color: white;"></button>
+                <button id="categoriesButton">Categories <i style="font-size: 24px" class="fa fa-align-justify"></i></button>
                 <div class="dropdown-content">
                     <a href="../index.php">Home</a>
                     <a href="#">Category</a>
