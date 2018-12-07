@@ -1,10 +1,5 @@
 <?php
-
-    include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
-    $dbConn = dbConnect();
-
-    if(!$dbConn
-        or !isset($_POST["user_id"])
+    if(!isset($_POST["user_id"])
         or !isset($_POST["product_id"])
         or !isset($_POST["increase"])){
         echo "Missing argument in POST request";
@@ -13,6 +8,13 @@
     $user_id = $_POST["user_id"];
     $product_id = $_POST["product_id"];
     $increase = $_POST["increase"];
+    
+    include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
+    $dbConn = dbConnect();
+    if(!$dbConn){
+        echo "Failed to connect to database";
+        return;
+    }
 
     //Get the current quantity
     $query = 'SELECT quantity 
@@ -29,6 +31,7 @@
         $result = mysqli_query($dbConn, $query);
         if(!$result){
             echo "Failed to get stock from product";
+            mysqli_close($dbConn);
             return;
         }
         $stock = mysqli_fetch_object($result)->stock;
@@ -39,10 +42,12 @@
                     $quantity += 1;
                 }else{
                     echo "No more items in stock";
+                    mysqli_close($dbConn);
                     return;
                 }
             }else{
                 echo "Product out of stock";
+                mysqli_close($dbConn);
                 return;
             }
         }else{ //Decrease quantity
@@ -53,6 +58,7 @@
                 $result = mysqli_query($dbConn, $query);
                 if(!$result){
                     echo "Failed to remove shopping cart line";
+                    mysqli_close($dbConn);
                     return;
                 }
             }
@@ -71,4 +77,5 @@
     }else{
         echo "Failed to query database (SELECT)";
     }
+    mysqli_close($dbConn);
 ?>

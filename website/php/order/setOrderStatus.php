@@ -25,4 +25,6 @@
     }else{
         echo 1;
     }
+
+    mysqli_close($dbConn);
 ?>
