@@ -32,16 +32,25 @@
 </head>
 
 <body onload ='initNavButtons();'>
-
     <?php
         echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initHeader.php';
     ?>
-
-<?php
-echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initFooter.php';
-
-?>
-
+    <div class="wrap">
+        <main role="main">
+            <div class="shop">
+                <?php
+                    if(!isset($_GET['cat_id'])){
+                        echo '<script> alert("Failed to retrieve the category id in GET request"); </script>';
+                        return;
+                    }
+                    $cat_id = $_GET["cat_id"];
+                    include $_SERVER["DOCUMENT_ROOT"].'/php/product/loadProductCategory.php'; 
+                ?>
+            </div>
+        </main>
+    </div>
+    <?php
+        echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initFooter.php';
+    ?>
 </body>
-
 </html>
