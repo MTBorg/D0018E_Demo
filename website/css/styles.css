@@ -468,11 +468,12 @@ input.submitField{
     float:right;
 }
 
-.ordersTable{
+.ordersTable {
     color:#0B3D91;
     border-collapse: collapse;
     margin:auto;
 }
+
 .ordersTable tr{
     text-align: center;
     border-bottom: 1px solid #ddd;
@@ -484,7 +485,7 @@ input.submitField{
 }
 
 .ordersTable tr:hover{
-    background-color: #0271fb;
+    background-color: #0B3D91;
     color:#FFFFFF;
     transition: 0.2s;
 }
