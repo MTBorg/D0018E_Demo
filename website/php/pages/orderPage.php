@@ -29,7 +29,7 @@
             return;
         }
 
-        echo '<table class="ordersTable" style="cursor:hand;cursor:pointer">';
+        echo '<table class="ordersTable">';
         echo '<tr class="ordersTableHeader">';
         echo '<th></th><th>Product ID</th><th>Product name</th><th>Quantity</th>';
         echo '<th>Price</th><th>Sum</th>';
@@ -63,7 +63,7 @@
                 echo '<td>'.$sum.'</td>';
                 echo '</tr>';
             }
-            echo '<tr> <td><td><td><td><td><td>'.$totalSum.'</td></td></td></td></td></td> </tr>';
+            echo '<tr id="orderSum"> <td><td><td><td><td><td>'.$totalSum.'</td></td></td></td></td></td> </tr>';
         }else{
             echo '<p>Failed to get orderlines</p>';
             mysqli_close($dbconn);

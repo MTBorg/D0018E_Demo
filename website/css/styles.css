@@ -452,7 +452,7 @@ input.submitField{
  
 }
 
-#adminOrderSum {
+#adminOrderSum, #orderSum {
     pointer-events: none; 
 }
 
