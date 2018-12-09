@@ -51,7 +51,7 @@ function loadShoppingCart(){
          
         }
 
-        echo '<tr> <td><td><td><td><td><td id="totalSum">'. $total_sum .'</td></td></td></td></td></td> </tr>';
+        echo '<tr id="shoppingCartSum"> <td><td><td><td><td><td id="totalSum">'. $total_sum .'</td></td></td></td></td></td> </tr>';
         // echo '<p><a class="div-click" href="/php/pages/productPage.php?product_id='.$product_id.'"></a></p>';
 
         echo '</table>';

@@ -418,8 +418,13 @@ input.submitField{
     padding-right: 25px;
 }
 
-#shoppingCartTableHeader:hover{
+#shoppingCartTableHeader:hover {
     background-color:transparent;
+    cursor: default;
+}
+
+#shoppingCartSum:hover {
+    pointer-events: none;
 }
 
 .shoppingCartTable tr:hover{
