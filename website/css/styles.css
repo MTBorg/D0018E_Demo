@@ -302,10 +302,9 @@ a.navButton:hover{
 }
 
 #categoriesButton i{
-    padding-left: 10px;
-    padding-top: 10px;
     transform: rotate(0deg);
     transition: 0.5s;
+    vertical-align: middle;
 }
 
 #categoriesButton:hover i{
