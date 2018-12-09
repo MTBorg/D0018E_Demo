@@ -182,7 +182,7 @@ header {
     font-family: "Helvetica";
     position: relative;
     color:#0B3D91; 
-
+    z-index: -1;
 
 }
 a.div-click {
