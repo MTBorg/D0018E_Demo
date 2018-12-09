@@ -418,8 +418,12 @@ input.submitField{
     padding-right: 25px;
 }
 
-#shoppingCartTableHeader:hover{
+#shoppingCartTableHeader:hover {
     background-color:transparent;
+
+}
+.ordersTableHeader {
+    cursor: default;
 }
 
 .shoppingCartTable tr:hover{
@@ -446,6 +450,10 @@ input.submitField{
 .shoppingCartRemoveItemButton{
     padding: 10px;
  
+}
+
+#adminOrderSum {
+    pointer-events: none; 
 }
 
 .shoppingCartRemoveItemButton:hover i{
@@ -488,11 +496,20 @@ input.submitField{
     background-color: #0B3D91;
     color:#FFFFFF;
     transition: 0.2s;
+    cursor: pointer;
+    cursor: hand;
 }
 
-.ordersTable .ordersTableHeader:hover{
+.ordersTableHeader:hover {
+    pointer-events: none;
+
+}
+
+.ordersTable {
     background-color:transparent;
     color: #0B3D91;
+
+    
 }
 
 
