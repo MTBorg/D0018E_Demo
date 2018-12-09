@@ -37,13 +37,35 @@
     ?>
     <div class="wrap">
         <main role="main">
+            <?php
+                //Get the GET request arguments
+                if(!isset($_GET['cat_id'])){
+                    echo '<script> alert("Failed to retrieve the category id in GET request"); </script>';
+                    return;
+                }
+                $cat_id = $_GET["cat_id"];
+
+                //Connect to the database
+                include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
+                $dbConn = dbConnect();
+                if(!$dbConn){
+                    echo '<script> alert("Failed to connect to database"); </script>';
+                }
+
+                //Get the category name from the database
+                $query = 'SELECT cat_name FROM Categories WHERE id='.$cat_id.';';
+                $result = mysqli_query($dbConn, $query);  
+                if(!$result){
+                    echo '<script> alert("Failed to query database")</script>';
+                    return;
+                }
+                $cat_name = mysqli_fetch_object($result)->cat_name;
+
+                //Display the category name
+                echo '<h1>'.$cat_name.'</h1>';
+            ?>
             <div class="shop">
                 <?php
-                    if(!isset($_GET['cat_id'])){
-                        echo '<script> alert("Failed to retrieve the category id in GET request"); </script>';
-                        return;
-                    }
-                    $cat_id = $_GET["cat_id"];
                     include $_SERVER["DOCUMENT_ROOT"].'/php/product/loadProductCategory.php'; 
                 ?>
             </div>
