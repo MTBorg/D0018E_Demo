@@ -50,6 +50,7 @@
                 $dbConn = dbConnect();
                 if(!$dbConn){
                     echo '<script> alert("Failed to connect to database"); </script>';
+                    return;
                 }
 
                 //Get the category name from the database

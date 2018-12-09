@@ -31,4 +31,6 @@
     } else {
         echo '<p> No products ... </p>';
     }
+    
+    mysqli_close($dbconn);
 ?>
