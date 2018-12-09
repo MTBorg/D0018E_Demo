@@ -314,7 +314,7 @@ a.navButton:hover{
 }
 
 .catDropdown {
-    position: relative;
+    position: absolute;
     display: inline-block;
     outline: none;
 }
@@ -326,7 +326,7 @@ a.navButton:hover{
 }
 
 .catDropdown-content {
-    position: fixed;
+    position: relative;
     background-color: white;
     min-width: 160px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.8);
