@@ -57,12 +57,13 @@
                 $result = mysqli_query($dbConn, $query);  
                 if(!$result){
                     echo '<script> alert("Failed to query database")</script>';
-                    return;
-                }
-                $cat_name = mysqli_fetch_object($result)->cat_name;
+                }else{
+                    $cat_name = mysqli_fetch_object($result)->cat_name;
 
-                //Display the category name
-                echo '<h1 style=\'color:#0B3D91;font-family:"Helvetica"\'>'.$cat_name.'</h1>';
+                    //Display the category name
+                    echo '<h1 style=\'color:#0B3D91;font-family:"Helvetica"\'>'.$cat_name.'</h1>';
+                }
+                mysqli_close($dbConn);
             ?>
             <div class="shop">
                 <?php
