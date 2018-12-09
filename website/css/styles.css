@@ -120,6 +120,7 @@ header {
     border-radius: 3px;
     display: grid;
     grid-template-columns: auto auto auto;
+    margin: 2%;
     color: #0B3D91;
     font-family: "Helvetica";
 
