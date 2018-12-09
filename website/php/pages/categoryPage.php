@@ -62,7 +62,7 @@
                 $cat_name = mysqli_fetch_object($result)->cat_name;
 
                 //Display the category name
-                echo '<h1>'.$cat_name.'</h1>';
+                echo '<h1 style=\'color:#0B3D91;font-family:"Helvetica"\'>'.$cat_name.'</h1>';
             ?>
             <div class="shop">
                 <?php
