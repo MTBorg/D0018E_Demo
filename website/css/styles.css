@@ -337,7 +337,22 @@ a.navButton:hover{
     transition: 0.4s;
 }
 
-.catDropdown-content a {
+.catDropdown-content a span:after{
+    content: '\00bb';
+    font-size: 20px;
+    padding-left: 0px;
+    color: #FFFFFF;
+    opacity: 0;
+    transition: padding-left 0.7s, opacity 1.0s;
+}
+
+.catDropdown-content a:hover span:after{
+    opacity: 1;
+    color:#FFFFFF;
+    padding-left: 10px;
+}
+
+.catDropdown-content a{
     color: #0B3D91;
     padding: 12px 16px;
     text-decoration: none;
