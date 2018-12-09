@@ -91,6 +91,9 @@ form {
 }
 
 header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
     background-color: #0B3D91;
     margin-top: 0;
     padding: 0;
@@ -182,7 +185,7 @@ header {
     font-family: "Helvetica";
     position: relative;
     color:#0B3D91; 
-
+    z-index: 0;
 
 }
 a.div-click {
