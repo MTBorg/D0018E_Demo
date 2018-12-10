@@ -294,6 +294,10 @@ a.navButton:hover{
 
 }
 
+#adminMain{
+    float:right;
+}
+
 .initHidden {
     display: none;
 }

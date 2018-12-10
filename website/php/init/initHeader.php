@@ -20,9 +20,9 @@
                     $catDropdown
                 .'</div>
             </div>
-            <a href="/php/pages/adminPage.php" id="adminMain" class="navButton initHidden">Admin panel</a>
 	        <a href="/php/pages/createUserPage.php" id="signUpMain" class="navButton initHidden">Sign up</a>
             <a href="/php/account/logOut.php" id="logOutMain" class="navButton initHidden">Log out</a>
+            <a href="/php/pages/adminPage.php" id="adminMain" class="navButton initHidden">Admin panel</a>
             <a href="/php/pages/myOrdersPage.php" id="myOrders" class="navButton initHidden">My Orders</a>
             <a href="/php/pages/shoppingCartPage.php" id="shoppingCart" class="navButton initHidden"> Shopping Cart <span id="shoppingCartBtnQuantity">'.$quantity_sum.'</span> <i class="fa fa-shopping-cart"></i></a>
 	        <a href="/php/pages/loginPage.php" id="logInMain" class="navButton initHidden">Log In</a>
