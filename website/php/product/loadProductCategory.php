@@ -4,7 +4,7 @@
     include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
     $dbconn = dbConnect();
 
-    $query = 'SELECT * FROM Products WHERE cat_id='.$cat_id.';';
+    $query = 'SELECT * FROM Products WHERE cat_id='.$cat_id.' AND archived = 0;';
 
     $products = mysqli_query($dbconn, $query);
         
