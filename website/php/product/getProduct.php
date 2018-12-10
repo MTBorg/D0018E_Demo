@@ -18,6 +18,7 @@ function getProduct($product_id)
         echo '<p>' . $row['name'] . '</p>';
         echo '<p>' . $row['price'] . '$</p>';
         echo '<p> <b>stock</b>: ' . $row['stock'] . '</p>';
+        echo '<div class="button"><button id="'.$row['id'].'" class="addToCartButton" type="button" onclick="addToCartOnClick('.$product_id.')">Add to Cart<i class="fa fa-shopping-cart"></i></button></div>';
 
     } else {
         echo 'Product does not exist... How did you get here?';
