@@ -18,7 +18,7 @@
             echo $row->rating . "|";
         
 
-                // Get first name of the user who made the comment
+            // Get first name of the user who made the comment
             $query = 'SELECT first_name FROM Users WHERE Users.id =  ' .$row->user_id. ';';
             $first_name = mysqli_query($dbconn, $query);
 
@@ -28,6 +28,8 @@
             // echo json_encode($first_name_array);
             echo $row->first_name . "|";
         }
+    } else {
+        echo 0;
     }
 
 ?>
