@@ -26,6 +26,7 @@
     $price_rand_max = 10000;
     $stock_rand_max = 50;
     $item_amount = $_GET["amount"];
+    $items_inserted = $item_amount;
     for($i = 0; $i < $item_amount; $i++){
         $price = rand(1, $price_rand_max);
         $stock = rand(0, $stock_rand_max);
@@ -39,6 +40,8 @@
                                                 .$cat_id.',0);'; //cat_id + archived(false)
         if(!mysqli_query($dbConn, $query)){
             echo "<p>Failed to insert product</p>";
+            $items_inserted--;
         }
     }
+    echo '<p> Done! Added '.$items_inserted.' items</p>';
 ?>
