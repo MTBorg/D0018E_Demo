@@ -1,4 +1,10 @@
 <?php
+    //Make sure the GET request parameter is set
+    if(!isset($_GET["amount"])){
+        echo '<script> alert("Please set the amount in the url (spamProducts.php?amount=<amount>)"); </script>';
+        return;
+    }
+
     //Connect to database
     include_once $_SERVER["DOCUMENT_ROOT"].'/php/db/dbConnect.php';
     $dbConn = dbConnect();
@@ -19,7 +25,7 @@
 
     $price_rand_max = 10000;
     $stock_rand_max = 50;
-    $item_amount = 1000;
+    $item_amount = $_GET["amount"];
     for($i = 0; $i < $item_amount; $i++){
         $price = rand(1, $price_rand_max);
         $stock = rand(0, $stock_rand_max);
@@ -34,6 +40,5 @@
         if(!mysqli_query($dbConn, $query)){
             echo "<p>Failed to insert product</p>";
         }
-        
     }
 ?>
