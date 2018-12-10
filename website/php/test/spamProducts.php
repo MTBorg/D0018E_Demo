@@ -24,11 +24,12 @@
         $price = rand(1, $price_rand_max);
         $stock = rand(0, $stock_rand_max);
         $cat_id = rand(1, $category);
+        $img_url = '"/img/test/'.rand(1,3).'.jpg"';
         $query = 'INSERT INTO Products VALUES(NULL, 
                                                 '.$i.',' //name
                                                 .$price.',' //price
                                                 .$stock.',' //stock
-                                                .'NULL,' //img_url
+                                                .$img_url.',' //img_url
                                                 .$cat_id.',0);'; //cat_id + archived(false)
         if(!mysqli_query($dbConn, $query)){
             echo "<p>Failed to insert product</p>";
