@@ -6,6 +6,7 @@
     <link  href="/css/styles.css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="/js/init/initNavButtons.js" type="text/javascript"></script>
+    <script src="/js/cart/goToProduct.js" type="text/javascript"></script>
 </head>
 <body onload="initNavButtons()">
 
@@ -52,7 +53,7 @@
                 $name = $obj->name;
                 $img_url = $obj->img_url;
                 
-                echo '<tr>';
+                echo '<tr onClick="adminGoToProduct('.$product_id.')">';
                 echo '<td><img src="'.$img_url.'" alt="Product image" style="width:64px;height:64px"></img></td>';
                 echo '<td>'.$product_id.'</td>';
                 echo '<td>'.$name.'</td>';
@@ -61,7 +62,7 @@
                 echo '<td>'.$sum.'</td>';
                 echo '</tr>';
             }
-            echo '<tr> <td><td><td><td><td><td>'.$totalSum.'</td></td></td></td></td></td> </tr>';
+            echo '<tr id="adminOrderSum" > <td><td><td><td><td><td>'.$totalSum.'</td></td></td></td></td></td> </tr>';
         }else{
             echo '<p>Failed to get orderlines</p>';
             mysqli_close($dbconn);
