@@ -123,6 +123,7 @@ header {
     border-radius: 3px;
     display: grid;
     grid-template-columns: auto auto auto;
+    margin: 2%;
     color: #0B3D91;
     font-family: "Helvetica";
 
@@ -297,45 +298,90 @@ a.navButton:hover{
 
 }
 
+#adminMain{
+    float:right;
+}
+
 .initHidden {
     display: none;
 }
 
-.dropbutton {
-    color: white;
-    padding: 3px;
-    background-color: black;
+#categoriesButton{
+    padding: 15px;
 }
 
-.dropdown {
-    position: relative;
+#categoriesButton i{
+    transform: rotate(0deg);
+    transition: 0.5s;
+    vertical-align: middle;
+}
+
+#categoriesButton:hover i{
+    transform: rotate(90deg);
+    transition: 0.5s;
+}
+
+.catDropdown {
+    position: absolute;
     display: inline-block;
     outline: none;
 }
 
-.dropdown-content {
-    display: none;
-    position: fixed;
+.catDropdown:hover .catDropdown-content{
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: 0.4s;
+}
+
+.catDropdown-content {
+    position: relative;
     background-color: white;
     min-width: 160px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.8);
-    /* Go to front */
-    z-index: 1;
+    font-family: "Helvetica";
+    z-index: 1; /* Go to front */
+    border-radius: 5px;
+    transform: ScaleY(0);
+    transform-origin: top;
+    transition: 0.4s;
 }
 
-.dropdown-content a {
-    color: black;
+.catDropdown-content a span:after{
+    content: '\00bb';
+    font-size: 20px;
+    padding-left: 0px;
+    color: #FFFFFF;
+    opacity: 0;
+    transition: padding-left 0.7s, opacity 1.0s;
+}
+
+.catDropdown-content a:hover span:after{
+    opacity: 1;
+    color:#FFFFFF;
+    padding-left: 10px;
+}
+
+.catDropdown-content a{
+    color: #0B3D91;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    transition: 0.2s;
 }
 
-.dropdown-content a:hover {
-    background-color: #ddd;
+.catDropdown-content a:hover {
+    background-color: #0B3D91;
+    color: #FFFFFF;
+    transition: 0.2s;
 }
 
-.dropdown:hover .dropdown-content {
+.catDropdown:hover .catDropdown-content {
     display: block;
+}
+
+.catDropdown:hover #categoriesButton i{
+    transform: rotate(90deg);
+    transition: 0.5s;
 }
 
 button{
