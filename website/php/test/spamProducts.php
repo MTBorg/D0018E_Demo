@@ -1,0 +1,38 @@
+<?php
+    //Connect to database
+    include_once $_SERVER["DOCUMENT_ROOT"].'/php/db/dbConnect.php';
+    $dbConn = dbConnect();
+    if(!$dbConn){
+        echo '<script> alert("Failed to connect to database"); </script>';
+        return;
+    }
+
+    //Get the maximum category id so we know what
+    //range to generate random category id's from
+    $query = 'SELECT MAX(id) AS cat_id_max FROM Categories'; 
+    $result = mysqli_query($dbConn, $query);
+    if(!$result){
+        echo '<script> alert("Failed to get max category id from database"); </script>';
+        return;
+    }
+    $cat_id_max = mysqli_fetch_object($result)->cat_id_max;
+
+    $price_rand_max = 10000;
+    $stock_rand_max = 50;
+    $item_amount = 1000;
+    for($i = 0; $i < $item_amount; $i++){
+        $price = rand(1, $price_rand_max);
+        $stock = rand(0, $stock_rand_max);
+        $cat_id = rand(1, $category);
+        $query = 'INSERT INTO Products VALUES(NULL, 
+                                                '.$i.',' //name
+                                                .$price.',' //price
+                                                .$stock.',' //stock
+                                                .'NULL,' //img_url
+                                                .$cat_id.',0);'; //cat_id + archived(false)
+        if(!mysqli_query($dbConn, $query)){
+            echo "<p>Failed to insert product</p>";
+        }
+        
+    }
+?>
