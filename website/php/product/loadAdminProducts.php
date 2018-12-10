@@ -1,12 +1,9 @@
 <?php
-
-
-
-function listProducts() {
     include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
     $dbconn = dbConnect();
 
-    $query = "SELECT id, name, price, stock, cat_id FROM Products;";
+    # Get all the products which are not archived
+    $query = "SELECT id, name, price, stock, cat_id FROM Products WHERE archived = 0;";
     $fetchProducts = mysqli_query($dbconn, $query);
 
     while($row = mysqli_fetch_array($fetchProducts)) {
@@ -22,11 +19,10 @@ function listProducts() {
 
         echo "<td>" . $cat_name['cat_name'] . "</td>";
         echo "<td> <button id='".$row['id']."' type='button' value='Modify' onclick='modifyProduct(this.id)'>Modify</button> </td>";
+        echo "<td> <button id='".$row['id']."' type='button' value='Archive' onclick='archiveProduct(this.id)'>Archive</button> </td>";
         echo "</tr>";
     }
+
     mysqli_close($dbconn);
-}
-
-
 
 ?>
