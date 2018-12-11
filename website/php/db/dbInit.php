@@ -11,9 +11,8 @@
             mysqli_query($dbconn, $query);
 
             $query = "CREATE TABLE IF NOT EXISTS Categories(
-                id INT NOT NULL AUTO_INCREMENT,
-                cat_name VARCHAR(30),
-                PRIMARY KEY (id)
+                name VARCHAR(30) NOT NULL UNIQUE,
+                PRIMARY KEY (name)
             );";
 
             mysqli_query($dbconn, $query);
@@ -24,7 +23,7 @@
                         price INT NOT NULL CHECK (price>=0),
                         stock INT NOT NULL CHECK (stock>=0), 
                         img_url VARCHAR(255),
-                        cat_id INT NOT NULL,
+                        cat_name VARCHAR(30) NOT NULL,
                         archived BOOLEAN NOT NULL,
                         PRIMARY KEY(id),
                         FOREIGN KEY (cat_id) REFERENCES Categories(id),
