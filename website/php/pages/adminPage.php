@@ -8,9 +8,9 @@
         <script src="/js/category/addCatSubmit.js" type="text/javascript"></script>
         <script src="/js/product/archiveProduct.js" type="text/javascript"></script>
         <script src="/js/product/unarchiveProduct.js" type="text/javascript"></script>
+        <link href="/css/normalize.css" rel="stylesheet" media="all">
         <link href="/css/styles.css" rel="stylesheet">
         <script src="/js/init/initNavButtons.js" type="text/javascript"></script>
-        <link href="/css/normalize.css" rel="stylesheet" media="all">
 	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="shortcut icon" href="/fa-rocket.ico">
     </head>
