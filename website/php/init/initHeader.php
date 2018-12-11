@@ -27,7 +27,7 @@
             
             <form action="javascript:searchRequest()" method ="post" target="_self">
                 <input class="searchBar" placeholder="Search here..." type ="text" id = "searchInput">
-                <button type ="submit" value="Submit"><i id="searchLogo" class="fas fa-search"></i></button>
+                <button type ="submit" value="Submit" class="searchButton"><i id="searchLogo" class="fas fa-search"></i></button>
             </form>
             
             <a href="/php/pages/adminPage.php" id="adminMain" class="navButton initHidden">Admin panel</a>
