@@ -14,8 +14,7 @@
         $user_id = $_SESSION["user_id"];
 
         //Get status of the order that belongs to the user and contains the product (if such exists)
-        $query = 'SELECT status FROM Orders WHERE user_id='.$user_id.' AND EXISTS
-                    (SELECT order_id FROM OrderLines WHERE product_id='.$product_id.');';
+        $query = "SELECT user_id, status FROM Orders WHERE id IN (SELECT order_id FROM OrderLines WHERE product_id = $product_id AND user_id = $user_id)";
         $result = mysqli_query($dbconn, $query);
         if(!$result){
             echo "Failed to query database";
