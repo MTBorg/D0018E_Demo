@@ -1,11 +1,8 @@
-
-
 function addComment() {
     // Get product_id from url, can be done with PHP $_GET but not really good.
     var product_id = window.location.search.split("=").pop();
 
     xmlhttp = new XMLHttpRequest();
-
 
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
@@ -31,6 +28,4 @@ function addComment() {
         comment
 
     );
-    
-
 }

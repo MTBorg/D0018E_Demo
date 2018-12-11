@@ -89,17 +89,12 @@
                         FOREIGN KEY (product_id) REFERENCES Products(id),
                         FOREIGN KEY (user_id) REFERENCES Users(id)
             );";
-
             mysqli_query($dbconn, $query);
 
-
-
             echo "The tables Products, Users, Orders and ShoppingCart created in the maindb database\n";
-
         } catch (Exception $e) {
             echo 'Exception: ', $e -> getMessage(), "\n";
         }
-
         mysqli_close($dbconn);
     }
 ?>

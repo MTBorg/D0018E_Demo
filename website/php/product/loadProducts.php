@@ -1,5 +1,4 @@
 <?php
-
     function loadProducts() {
         include_once $_SERVER['DOCUMENT_ROOT'].'/php/account/isAdmin.php';
         include_once $_SERVER['DOCUMENT_ROOT'].'/php/account/isLoggedIn.php';
@@ -7,7 +6,6 @@
         if(!isset($_SESSION["user_id"])) {
             session_start();
         }
-        
 
         // Get all the active products
         $query = "SELECT id, name, price, stock, img_url FROM Products WHERE archived = 0";  
@@ -39,15 +37,11 @@
                     echo '<div class="button-top"><button id="'.$row['id'].'" class="addToCartButton" type="button" onclick="addToCartOnClick(this.id)">Add to Cart<i class="fa fa-shopping-cart"></i></button></div>';
                     echo '<p><a class="div-click" href="/php/pages/productPage.php?product_id='.$row['id'].'"></a></p>';
                 }
-
                 echo '</div>';
-
             }
          } else {
             echo '<p> No products ... </p>';
         }
-                
         mysqli_close($dbconn);
     }
-
 ?>

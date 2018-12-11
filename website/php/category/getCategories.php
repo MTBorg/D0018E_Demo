@@ -12,5 +12,4 @@
 
         mysqli_close($dbconn);
     }
-
 ?>
