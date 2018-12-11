@@ -19,12 +19,6 @@ function userSignUp() {
   var email = document.getElementById("email").value;
   var password = document.getElementById("password").value;
 
-  /*
-  var first_name = user_inputs[1].value;
-  var last_name = user_inputs[2].value;
-  var email = user_inputs[3].value;
-  var password = user_inputs[4].value;
-  */
   xmlhttp.open("POST", "/php/account/createUser.php", true);
   xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xmlhttp.send(

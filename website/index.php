@@ -45,6 +45,8 @@
         <!-- The <main> element is used to enclose the main content, i.e. that which contains the central topic of a document -->
         <!-- ARIA: the landmark role "main" is added here as it contains the main content of the document, and it is recommended to add it to the
         <main> element until user agents implement the required role mapping. -->
+        
+        
         <main role="main">
             <!-- PROTOTYPE. This is the grid for the shop, each item is a square and inside the
             item you can add images, buttons etc. -->

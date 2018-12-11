@@ -24,7 +24,7 @@
           
           <form action="javascript:searchRequest()" method ="post" target="_self">
               <input class="searchBar" placeholder="Search here..." type ="text" id = "searchInput">
-              <button type ="submit" value="Submit" class="searchButton"><i id="searchLogo" class="fas fa-search"></i></button>
+              <button type ="submit" value="Submit" class="searchButton" id="searchButton"><i id="searchLogo" class="fas fa-search"></i></button>
           </form>
 
 	        <a href="/php/pages/createUserPage.php" id="signUpMain" class="navButton initHidden">Sign up</a>
