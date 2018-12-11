@@ -1,6 +1,5 @@
 <?php
     function dbCreate() {
-
         // Setup connection, we do not use dbConnect.php since 3 parameters and not 4
         $dbhost = 'localhost';
         $dbuser = 'admin';

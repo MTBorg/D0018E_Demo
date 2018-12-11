@@ -1,11 +1,6 @@
-    <?php
-    
-
+ <?php
     include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
     include_once $_SERVER['DOCUMENT_ROOT'].'/php/account/isLoggedIn.php';
-
-
-
     
     $prodID = intval($_GET['id']);
     $dbconn = dbConnect();
@@ -16,7 +11,6 @@
 
         $product = mysqli_query($dbconn, $queryProduct);
         
-
         # Create an array of the query result
         $prodInfo = mysqli_fetch_array($product);
         
@@ -49,6 +43,6 @@
         // Only solution I found
         echo -1; 
     }
-
+    mysqli_close($dbconn);
 ?>
     

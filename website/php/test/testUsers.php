@@ -24,4 +24,6 @@
     mysqli_query($dbconn, $users);
     
     echo "Users created.\n";
+
+    mysqli_close($dbconn);
 ?>

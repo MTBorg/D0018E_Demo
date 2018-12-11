@@ -3,6 +3,7 @@
 <head>
 	<link href="/css/styles.css" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="/css/normalize.css" rel="stylesheet" media="all">
 	<title>Product Page</title>
     <script src="/js/init/initNavButtons.js" type="text/javascript"></script>
     <script src="/js/review/initReviews.js" type="text/javascript"></script>
@@ -15,19 +16,12 @@
 
 <?php
 echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initHeader.php';
-
 ?>
 
      <div class="wrap">
-
-
 <main role="main">
-
-
 <div class="product-background">
-
 <div class="product">
-
 <?php
 include $_SERVER['DOCUMENT_ROOT'].'/php/product/getProduct.php';
 
@@ -41,11 +35,7 @@ if (isset($_GET["product_id"])) {
 
     // Get product info as name, price and stock
 getProduct($product_id);
-
-
-
 ?>
-        
         </div>
         <div class="product-review">
 
@@ -58,22 +48,13 @@ getProduct($product_id);
                         
                         </td>
                     </tr>
-
-
                 </table>
-
         </div>
-        
-
 </div>
-
 </main>
 </div>
-	
-
 </body>
 <?php
 echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initFooter.php';
-
 ?>
 </html>

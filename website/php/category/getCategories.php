@@ -9,6 +9,7 @@
         while ($row = mysqli_fetch_array($cats)) {
             echo '<option value="'.$row['id'].'">'.$row['cat_name'].'</option>';
         }
-    }
 
+        mysqli_close($dbconn);
+    }
 ?>

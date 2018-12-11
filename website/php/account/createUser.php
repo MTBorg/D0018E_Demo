@@ -40,7 +40,6 @@
 
     $query_values = '(NULL, 0, "'.$first_name.'","'.$last_name.'","'.$email.'","'.$password.'");'; 
 
-
     $query_findEmail = 'SELECT email FROM Users WHERE email = "'.$email.'";';
 
     $search = mysqli_query($dbconn, $query_findEmail);
@@ -55,10 +54,5 @@
         echo "Success!";
     }
 
-
     mysqli_close($dbconn);
-    
-
-
-    
 ?>

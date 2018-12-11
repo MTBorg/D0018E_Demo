@@ -1,22 +1,19 @@
 <?php
     //We still need to implement role_id but that has to be added in later.
 
-    include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
-    $dbconn = dbConnect();
-
     $prod_name = $_POST["name"];
     $prod_price = $_POST["price"];
     $prod_stock = $_POST["stock"];
     $prod_img_url = $_POST["img_url"];
     $prod_cat_id = $_POST["cat_id"];
 
-
     if(empty($prod_name) || empty($prod_price) || empty($prod_stock) ||  empty($prod_img_url) || empty($prod_cat_id)) {
         echo "Please fill all fields";
-        mysqli_close($dbconn);
         return;
     }
 
+    include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
+    $dbconn = dbConnect();
 
     $query_values = '(NULL, "'.$prod_name.'","'.$prod_price.'","'.$prod_stock.'", "'.$prod_img_url.'", "'.$prod_cat_id.'", 0);'; 
 
@@ -35,10 +32,5 @@
         echo true;
     }
 
-
     mysqli_close($dbconn);
-    
-
-
-    
 ?>

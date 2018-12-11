@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link href="/css/normalize.css" rel="stylesheet" media="all">
 	<link href="/css/styles.css" rel="stylesheet"> 
 
 	<title>Log In</title>
@@ -31,7 +32,6 @@
 	</div>
 <?php
 echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initFooter.php';
-
 ?>
 </body>
 

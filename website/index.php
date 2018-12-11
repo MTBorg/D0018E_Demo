@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Set this to the main language of your site -->
 
 <head>
     <meta charset="utf-8">

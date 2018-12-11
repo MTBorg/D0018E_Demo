@@ -4,7 +4,6 @@
 
     $catName = $_POST["catName"];
     
-    
     $checkCat = 'SELECT cat_name FROM Categories WHERE cat_name = "'.$catName.'";';
     $queryCheckCat = mysqli_query($dbconn, $checkCat);
     
@@ -17,4 +16,5 @@
         echo true;
     }
 
+    mysqli_close($dbconn);
 ?>
