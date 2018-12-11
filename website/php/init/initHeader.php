@@ -14,17 +14,18 @@
 
         <nav role="navigation">
         <div>
-            <div class="catDropdown">
-                <button id="categoriesButton">Categories <i style="font-size: 24px" class="fa fa-align-justify"></i></button>
-                <div class="catDropdown-content">'.
-                    $catDropdown
-                .'</div>
-            </div>
-
-            <form action="javascript:searchRequest()" method ="post" target="_self">
-                <input class="searchBar" placeholder="Search here..." type ="text" id = "searchInput">
-                <button type ="submit" value="Submit" class="searchButton"><i id="searchLogo" class="fas fa-search"></i></button>
-            </form>
+        
+          <div class="catDropdown">
+              <button id="categoriesButton">Categories <i style="font-size: 24px" class="fa fa-align-justify"></i></button>
+              <div class="catDropdown-content">'.
+                  $catDropdown
+              .'</div>
+          </div>
+          
+          <form action="javascript:searchRequest()" method ="post" target="_self">
+              <input class="searchBar" placeholder="Search here..." type ="text" id = "searchInput">
+              <button type ="submit" value="Submit"><i id="searchLogo" class="fas fa-search"></i></button>
+          </form>
 
 	        <a href="/php/pages/createUserPage.php" id="signUpMain" class="navButton initHidden">Sign up</a>
             <a href="/php/account/logOut.php" id="logOutMain" class="navButton initHidden">Log out</a>
