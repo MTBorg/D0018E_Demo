@@ -25,6 +25,7 @@
 
     $quantity_max = 5;
     $customer_id = $_GET["customer_id"];
+    $inserted_lines = 0;
     while($row = mysqli_fetch_object($result)){
         $quantity = rand(0, $quantity_max);
         if($quantity != 0){ //Only add non-empty shopping cart lines
@@ -35,6 +36,9 @@
 
         if(!mysqli_query($dbConn, $query)){
             echo '<p> Failed to insert shopping cart lines: '.mysqli_error($dbConn).' </p>';
+        }else{
+            $inserted_lines++;
         }
     }
+    echo '<p> Inserted '. $inserted_lines.' lines </p>';
 ?>
