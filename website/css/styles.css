@@ -17,8 +17,6 @@
 
 /* ===========================THANK YOU! /ARON ============================== */
 
-body {}
-
 /* Default link styling */
 
 a:link {
@@ -44,6 +42,7 @@ a:active {
 
 body {
     background-color: #FFFFFF;
+    margin: 0;
 }
 
 h1 {
@@ -53,6 +52,16 @@ h1 {
 nav {
     display: block;
     overflow: hidden;
+}
+
+/* From normalize.css */
+button,
+input,
+select {
+  font-family: inherit;
+  font-size: 100%; 
+  line-height: 1.15; 
+  margin: 0;
 }
 
 form {
