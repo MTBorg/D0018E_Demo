@@ -16,18 +16,17 @@
     }
 
     //Get all non archived products
-    $query = 'SELECT id FROM Products WHERE archived=0;';
+    $query = 'SELECT id, stock FROM Products WHERE archived=0;';
     $result = mysqli_query($dbConn, $query);
     if(!$result){
         echo '<script> alert("Failed to query database"); </script>';
         return;
     }
 
-    $quantity_max = 5;
     $customer_id = $_GET["customer_id"];
     $inserted_lines = 0;
     while($row = mysqli_fetch_object($result)){
-        $quantity = rand(0, $quantity_max);
+        $quantity = rand(0, $row->stock); //At max, only insert as many items as there is in stock
         if($quantity != 0){ //Only add non-empty shopping cart lines
             $query = 'INSERT INTO ShoppingCartLines VALUES('.$customer_id.','
                                                         .$row->id.','
