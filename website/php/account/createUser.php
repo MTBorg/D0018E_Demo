@@ -36,21 +36,15 @@
         return;
     }
 
-    //echo strlen($first_name);
+    $query = 'INSERT INTO Users VALUES (NULL, 0, "'.$first_name.'","'.$last_name.'","'.$email.'","'.$password.'");';
 
-    $query_values = '(NULL, 0, "'.$first_name.'","'.$last_name.'","'.$email.'","'.$password.'");'; 
-
-    $query_findEmail = 'SELECT email FROM Users WHERE email = "'.$email.'";';
-
-    $search = mysqli_query($dbconn, $query_findEmail);
-
-    if(mysqli_num_rows($search) > 0) {
-
-        echo "Email already exists!";
-        
+    if (!mysqli_query($dbconn, $query)) {
+        if (mysqli_errno($dbconn) == 1062) { # Error number for email not unique
+            echo "Email already exists!";
+        } else {
+            echo "Something went wrong, please try again.";
+        }
     } else {
-        $query = 'INSERT INTO Users VALUES '.$query_values;
-        mysqli_query($dbconn, $query);
         echo "Success!";
     }
 
