@@ -26,12 +26,12 @@
         return;
     
     } elseif(strlen($email) > 40) {
-        echo "Max 25 characters as email";
+        echo "Max 40 characters as email";
         mysqli_close($dbconn);
         return;
     
     } elseif(strlen($password) > 30) {
-        echo "Max 18 characters as password";
+        echo "Max 30 characters as password";
         mysqli_close($dbconn);
         return;
     }
