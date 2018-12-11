@@ -20,14 +20,14 @@
                     <a href="../index.php">Home</a>
                     <a href="#">Category</a>
                     <a href="#">Contact</a>
-                    <a href="#">About</a>   
+                    <a href="#">About</a>
                 </div>
             </div>
             
             
             <form action="javascript:searchRequest()" method ="post" target="_self">
-                <input class="submitField" type ="text" id = "searchInput">
-                <button type ="submit" value="Submit">dong</button>
+                <input class="searchBar" placeholder="Search here..." type ="text" id = "searchInput">
+                <button type ="submit" value="Submit"><i id="searchLogo" class="fas fa-search"></i></button>
             </form>
             
             <a href="/php/pages/adminPage.php" id="adminMain" class="navButton initHidden">Admin panel</a>

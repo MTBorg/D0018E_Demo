@@ -283,7 +283,10 @@ a.navButton:hover{
 
 .searchBar {
     float: left;
-    width: 10%;
+    width: 70%;
+    border-radius:50px;
+    border: solid 2px #0B3D91;
+    color: #0B3D91;
 }
 
 .submitBox {

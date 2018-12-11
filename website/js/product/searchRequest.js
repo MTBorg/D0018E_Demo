@@ -1,5 +1,4 @@
 function searchRequest() {
-	console.log("babing");
 	xmlhttp = new XMLHttpRequest();
 
 	xmlhttp.onreadystatechange = function () {
@@ -13,14 +12,6 @@ function searchRequest() {
 
     input = document.getElementsByTagName("input");
 	var search = input[0].value;
-	
-	console.log(search);
-
-	/*
-	if(search = "") {
-		return;
-	}
-	*/
 
 	xmlhttp.open("POST", "/php/product/searchProduct.php", true);
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");

@@ -17,19 +17,19 @@
                 <table>
                     <tr>
                         <td align="left">First name</td>
-                        <td align="right"><input class="submitField" type="text"></td>
+                        <td align="right"><input class="submitField" type="text" id="fname"></td>
                     </tr>
                     <tr>
                         <td align="left">Last name</td>
-                        <td align="right"><input class="submitField" type="text"></td>
+                        <td align="right"><input class="submitField" type="text" id="lname"></td>
                     </tr>
                     <tr>
                         <td align="left">Email</td>
-                        <td align="right"><input class="submitField" type="text"></td>
+                        <td align="right"><input class="submitField" type="text" id="email"></td>
                     </tr>
                     <tr>
                         <td align="left">Password</td>
-                        <td align="right"><input class="submitField" type="password"></td>
+                        <td align="right"><input class="submitField" type="password" id="password"></td>
                     </tr>
                 </table>
                 <button type="submit" value="Submit">Sign up</button>

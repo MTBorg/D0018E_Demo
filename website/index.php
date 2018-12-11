@@ -19,11 +19,13 @@
     <!-- For legacy support (IE 6/7, Firefox < 4, and Safari < 5) use normalize-legacy.css instead -->
     <link rel="shortcut icon" href="fa-rocket.ico">
     <!--<link href="css/normalize-legacy.css" rel="stylesheet" media="all">-->
+    <link rel="shortcut icon" href="fa-search.ico">
 
     <!-- Include the site stylesheet -->
     <link href="/css/styles.css" rel="stylesheet" media="all">
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
     <!-- Include the HTML5 shiv print polyfill for Internet Explorer browsers 8 and below -->
     <!--[if lt IE 9]><script src="js/html5shiv-printshiv.js" media="all"></script><![endif]-->
     <script src="/js/cart/addToCartOnClick.js" type="text/javascript"></script>
