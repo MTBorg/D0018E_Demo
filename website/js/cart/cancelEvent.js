@@ -7,7 +7,4 @@ function cancelEvent(e) {
     if(e.stopPropagation) {
         e.stopPropagation();
     }
-        
-
-    
 }

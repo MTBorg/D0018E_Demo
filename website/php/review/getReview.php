@@ -16,7 +16,6 @@
             // echo .$row['rating'];
             echo $row->comment . "|";
             echo $row->rating . "|";
-        
 
             // Get first name of the user who made the comment
             $query = 'SELECT first_name FROM Users WHERE Users.id =  ' .$row->user_id. ';';
@@ -31,5 +30,4 @@
     } else {
         echo 0;
     }
-
 ?>

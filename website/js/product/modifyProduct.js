@@ -1,10 +1,6 @@
 function modifyProduct(product_id) {
   xmlhttp = new XMLHttpRequest();
 
-
-
-
-
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       /** Selects product id which is unique
@@ -35,7 +31,6 @@ function modifyProduct(product_id) {
   var price = usr_inputs[1].value;
   var stock = usr_inputs[2].value;
   var cat_id = usr_inputs[3].value;
-
 
   xmlhttp.open("POST", "/php/product/modifyProduct.php", true);
   xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");

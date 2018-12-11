@@ -41,20 +41,12 @@ if (isset($_GET["product_id"])) {
     echo '<p>Product id not set in GET request</p>';
     return;
 }
-
     // Get product info as name, price and stock
 getProduct($product_id);
-
-
-
 ?>
-        
         </div>
-
         <div class="add-product-review">
-
         <p> Add review </p>
-
             <form action="" method="post" target="_self">
                 <table class="addReview">
                     <tr>
@@ -73,30 +65,20 @@ getProduct($product_id);
                             <span id="1"class="fa fa-star" onclick=setColor(1);starRate(1); style="display:inline;"></span>
                             <span class="fa fa-star fa-star-color" style="display:none;"></span>
                             </div>
-
-
                     </td>
                     </tr>
                     <tr>
                         <td><p>Comment: </p></td>
                         <td><textarea id="comment" rows="4" cols="50" placeholder="How did you like the product?"></textarea></td>
                     </tr>
-
-
                 </table>
-
                     </form>
                     <button type="submit" value="Submit comment" onclick=addComment();>Submit</button>
 
                     <button type="reset" value="Reset" onclick=resetReview();>Reset</button>
-
-
         </div>
-
         <div class="product-review">
-
         <p> Product Reviews </p>
-        
         <table class="reviews">
                     <tr>
                         <td>
@@ -105,13 +87,8 @@ getProduct($product_id);
                         
                         </td>
                     </tr>
-
-
                 </table>
-
         </div>
-        
-
 </div>
 
 </main>
@@ -119,7 +96,6 @@ getProduct($product_id);
 	
 <?php
 echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initFooter.php';
-
 ?>
 </body>
 

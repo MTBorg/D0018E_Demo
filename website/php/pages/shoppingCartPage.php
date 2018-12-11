@@ -17,8 +17,6 @@
     <script src="/js/cart/goToProduct.js" type="text/javascript"></script>
     <script src="/js/cart/cancelEvent.js" type="text/javascript"></script>
 </head>
-
-
     <body onload="initNavButtons();">
 
         <?php
@@ -31,12 +29,9 @@
             <button  id="checkoutButton" onClick="checkoutSubmit()">Checkout</button>
             <button onClick='window.location = "/index.php"'>Go back</button>
         </div>
-
-
     </body>
 
 <?php
 echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initFooter.php';
-
 ?>
 </html>

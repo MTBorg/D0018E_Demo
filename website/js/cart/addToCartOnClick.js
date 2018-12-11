@@ -1,7 +1,4 @@
 function addToCartOnClick(product_id) {
-
-
-
   xmlhttp = new XMLHttpRequest();
 
   xmlhttp.onreadystatechange = function () {

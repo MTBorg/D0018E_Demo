@@ -22,6 +22,5 @@
 </body>
 <?php
 echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initFooter.php';
-
 ?>
 </html>

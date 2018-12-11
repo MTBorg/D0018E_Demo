@@ -1,8 +1,4 @@
-
-
 <?php
-
-
 function getProduct($product_id)
 {
     include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
@@ -26,8 +22,4 @@ function getProduct($product_id)
 
     mysqli_close($dbconn);
 }
-
-
 ?>
-
-

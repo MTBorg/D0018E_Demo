@@ -1,6 +1,5 @@
 /*Some security still needs to be added, remove whitespaces, password hidden etc
   Also need to add a field which assigns role_id to indicate admin etc          */
-
 function CreateProductSubmit() {
   xmlhttp = new XMLHttpRequest();
 
@@ -41,4 +40,3 @@ function CreateProductSubmit() {
       prod_cat_id
   );
 }
-// }

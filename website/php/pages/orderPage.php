@@ -9,7 +9,6 @@
     <script src="/js/cart/goToProduct.js" type="text/javascript"></script>
 </head>
 <body onload="initNavButtons();">
-
     <?php
         echo include_once $_SERVER['DOCUMENT_ROOT'].'/php/init/initHeader.php';
 
@@ -80,6 +79,5 @@
 </body>
 <?php
 echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initFooter.php';
-
 ?>
 </html>

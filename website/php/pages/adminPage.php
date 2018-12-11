@@ -148,7 +148,6 @@
 </div>
 <?php
 echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initFooter.php';
-
 ?>
         
 </body>

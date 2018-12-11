@@ -34,7 +34,6 @@
             }
             echo '</table>';
         }
-
         mysqli_close($dbConn);
     }
 ?>

@@ -15,19 +15,12 @@
 
 <?php
 echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initHeader.php';
-
 ?>
 
      <div class="wrap">
-
-
 <main role="main">
-
-
 <div class="product-background">
-
 <div class="product">
-
 <?php
 include $_SERVER['DOCUMENT_ROOT'].'/php/product/getProduct.php';
 
@@ -41,11 +34,7 @@ if (isset($_GET["product_id"])) {
 
     // Get product info as name, price and stock
 getProduct($product_id);
-
-
-
 ?>
-        
         </div>
         <div class="product-review">
 
@@ -58,22 +47,13 @@ getProduct($product_id);
                         
                         </td>
                     </tr>
-
-
                 </table>
-
         </div>
-        
-
 </div>
-
 </main>
 </div>
-	
-
 </body>
 <?php
 echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initFooter.php';
-
 ?>
 </html>
