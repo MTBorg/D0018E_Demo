@@ -27,7 +27,9 @@
                         cat_id INT NOT NULL,
                         archived BOOLEAN NOT NULL,
                         PRIMARY KEY(id),
-                        FOREIGN KEY (cat_id) REFERENCES Categories(id)
+                        FOREIGN KEY (cat_id) REFERENCES Categories(id),
+                        INDEX (archived)    # Make archived an index since it's used a lot in WHERE clauses when querying the Products table
+                                            # e.g don't want to show archived products on the front page. Products should also not be archived too often, so not much updating.
                     );";
                 
             mysqli_query($dbconn, $query);
@@ -39,7 +41,9 @@
                         last_name VARCHAR(20) NOT NULL,
                         email VARCHAR(40) NOT NULL, 
                         password VARCHAR(30) NOT NULL,
-                        PRIMARY KEY(id)
+                        PRIMARY KEY(id),
+                        UNIQUE (email)  # Make email an unique index since it's used a lot for log in/sign up and supposed to be unique. 
+                                        # Email will also never be updated, which makes it a good index.
                     );";
 
             mysqli_query($dbconn, $query);
