@@ -377,7 +377,7 @@ a.navButton:hover{
 }
 
 .searchBar {
-    overflow: auto;
+    font-family: "Helvetica";
     padding: 18px;
     margin-left: 150px;
     width: 200px;
