@@ -5,10 +5,10 @@
     <link rel="shortcut icon" href="/fa-rocket.ico">
     <link href="/css/normalize.css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="/css/styles.css" media="all">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
     <script src="/js/init/initNavButtons.js" type="text/javascript"></script> 
+    <script src="/js/product/searchRequest.js" type="text/javascript"></script>
 </head>
 <body onload="initNavButtons();">
     <?php

@@ -18,16 +18,19 @@
     <!-- For legacy support (IE 6/7, Firefox < 4, and Safari < 5) use normalize-legacy.css instead -->
     <link rel="shortcut icon" href="fa-rocket.ico">
     <!--<link href="css/normalize-legacy.css" rel="stylesheet" media="all">-->
+    <link rel="shortcut icon" href="fa-search.ico">
 
     <!-- Include the site stylesheet -->
     <link href="/css/styles.css" rel="stylesheet" media="all">
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
     <!-- Include the HTML5 shiv print polyfill for Internet Explorer browsers 8 and below -->
     <!--[if lt IE 9]><script src="js/html5shiv-printshiv.js" media="all"></script><![endif]-->
     <script src="/js/cart/addToCartOnClick.js" type="text/javascript"></script>
     <script src="/js/init/initNavButtons.js" type="text/javascript"></script> 
     <script src="/js/cart/shopCartBtnUpdateQuantitySubmit.js" type="text/javascript"></script>
+    <script src="/js/product/searchRequest.js" type="text/javascript"></script>
 </head>
 
 <body onload ='initNavButtons();'>
@@ -42,21 +45,26 @@
         <!-- The <main> element is used to enclose the main content, i.e. that which contains the central topic of a document -->
         <!-- ARIA: the landmark role "main" is added here as it contains the main content of the document, and it is recommended to add it to the
         <main> element until user agents implement the required role mapping. -->
+        
+        
         <main role="main">
-
-
             <!-- PROTOTYPE. This is the grid for the shop, each item is a square and inside the
             item you can add images, buttons etc. -->
-            <div class="shop">
+            <div class="shop" id = "shop">
 
                 
                 <?php
+                if(!isset($_GET["search"])){
                 include $_SERVER['DOCUMENT_ROOT'].'/php/product/loadProducts.php';
                 loadProducts();
+                }else{
+                    include $_SERVER["DOCUMENT_ROOT"].'/php/product/searchProduct.php';
+                }
                 ?>
 
 
             </div>
+            
         </main>
     </div>
 

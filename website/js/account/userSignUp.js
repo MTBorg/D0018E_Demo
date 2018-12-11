@@ -14,11 +14,10 @@ function userSignUp() {
     }
   };
 
-  user_inputs = document.getElementsByTagName("input");
-  var first_name = user_inputs[0].value;
-  var last_name = user_inputs[1].value;
-  var email = user_inputs[2].value;
-  var password = user_inputs[3].value;
+  var first_name = document.getElementById("fname").value;
+  var last_name= document.getElementById("lname").value;
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
 
   xmlhttp.open("POST", "/php/account/createUser.php", true);
   xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
