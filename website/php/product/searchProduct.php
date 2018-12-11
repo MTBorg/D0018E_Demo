@@ -7,7 +7,7 @@ $dbconn = dbConnect();
 
 session_start();
 
-$search = $_POST["search"];
+$search = $_GET["search"];
 
 $query = "SELECT * FROM Products WHERE name LIKE '%$search%' AND archived = 0;";
 $searchResult = mysqli_query($dbconn, $query);

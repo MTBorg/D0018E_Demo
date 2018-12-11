@@ -54,8 +54,12 @@
 
                 
                 <?php
+                if(!isset($_GET["search"])){
                 include $_SERVER['DOCUMENT_ROOT'].'/php/product/loadProducts.php';
                 loadProducts();
+                }else{
+                    include $_SERVER["DOCUMENT_ROOT"].'/php/product/searchProduct.php';
+                }
                 ?>
 
 
