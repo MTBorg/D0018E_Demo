@@ -3,6 +3,7 @@
 <head>
 	<link href="/css/styles.css" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="/css/normalize.css" rel="stylesheet" media="all">
 	<title>Product Page</title>
    
     <script src="/js/init/initNavButtons.js" type="text/javascript"></script>
@@ -10,6 +11,8 @@
     <script src="/js/review/starRate.js" type="text/javascript"></script>
     <script src="/js/review/setColor.js" type="text/javascript"></script>
     <script src="/js/review/addComment.js" type="text/javascript"></script>
+    <script src="/js/cart/addToCartOnClick.js" type="text/javascript"></script>
+    <script src="/js/cart/shopCartBtnUpdateQuantitySubmit.js" type="text/javascript"></script>
     <link rel="shortcut icon" href="/fa-rocket.ico">
 </head>	
 <body onload='initReviews(); initNavButtons();'> 

@@ -6,10 +6,8 @@ function initReviews() {
 
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      console.log(this.responseText);
-      if (this.responseText) {
+      if (this.responseText != 0) {
         var reviewData = this.responseText.split("|");
-        console.log(reviewData);
         for (var i = 0; i < reviewData.length - 1; i += 3) {
           // Random colors for user box
           //Ref: https://css-tricks.com/snippets/javascript/random-hex-color/
@@ -44,6 +42,8 @@ function initReviews() {
           commentBox.innerHTML = reviewData[i];
           commentBox.disabled = true;
         }
+      } else {
+        document.getElementById("userBox").innerHTML = "No reviews have been made yet";
       }
     }
   };

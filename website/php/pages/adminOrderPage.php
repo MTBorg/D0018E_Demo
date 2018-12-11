@@ -4,26 +4,28 @@
     <title> Order </title>
     <link rel="shortcut icon" href="/fa-rocket.ico">
     <link  href="/css/styles.css" rel="stylesheet" media="all">
+    <link href="/css/normalize.css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="/js/init/initNavButtons.js" type="text/javascript"></script>
+    <script src="/js/cart/goToProduct.js" type="text/javascript"></script>
 </head>
 <body onload="initNavButtons()">
 
     <?php
         echo include_once $_SERVER['DOCUMENT_ROOT'].'/php/init/initHeader.php';
-        include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
-        $dbconn = dbConnect();
-
-        if(!$dbconn){
-            echo '<p>Failed to connect to database</p>';
-            return;
-        }
 
         $order_id;
         if(isset($_GET["order_id"])){
             $order_id = $_GET["order_id"];
         }else{
             echo '<p>Order id not set in GET request';
+            return;
+        }
+
+        include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
+        $dbconn = dbConnect();
+        if(!$dbconn){
+            echo '<p>Failed to connect to database</p>';
             return;
         }
 
@@ -52,7 +54,7 @@
                 $name = $obj->name;
                 $img_url = $obj->img_url;
                 
-                echo '<tr>';
+                echo '<tr onClick="adminGoToProduct('.$product_id.')">';
                 echo '<td><img src="'.$img_url.'" alt="Product image" style="width:64px;height:64px"></img></td>';
                 echo '<td>'.$product_id.'</td>';
                 echo '<td>'.$name.'</td>';
@@ -61,13 +63,16 @@
                 echo '<td>'.$sum.'</td>';
                 echo '</tr>';
             }
-            echo '<tr> <td><td><td><td><td><td>'.$totalSum.'</td></td></td></td></td></td> </tr>';
+            echo '<tr id="adminOrderSum" > <td><td><td><td><td><td>'.$totalSum.'</td></td></td></td></td></td> </tr>';
         }else{
             echo '<p>Failed to get orderlines</p>';
+            mysqli_close($dbconn);
             return;
         }
 
         echo '</table>';
+
+        mysqli_close($dbconn);
     ?>
     <div style="text-align:center; margin-top:10px">
         <button onClick='window.location="/php/pages/adminPage.php"'>Go back</button>

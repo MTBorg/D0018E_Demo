@@ -8,6 +8,7 @@ function checkoutSubmit(){
 				window.location.reload();
 			}else{
 				alert(this.responseText);
+				window.location.reload();
 			}
 		}
     };

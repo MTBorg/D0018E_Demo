@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link href="/css/normalize.css" rel="stylesheet" media="all">
 	<link href="/css/styles.css" rel="stylesheet"> 
 
 	<title>Log In</title>
