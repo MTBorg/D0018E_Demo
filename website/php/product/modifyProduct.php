@@ -6,7 +6,7 @@
     $name = $_POST["name"];
     $price = $_POST["price"];
     $stock = $_POST["stock"];
-    $cat_id = $_POST["cat_id"];
+    $cat_name = $_POST["cat_name"];
 
     if(empty($name) == false) {
         # Check if the new product name is already in use
@@ -35,8 +35,8 @@
         echo "stock\n";
     }
 
-    if($cat_id != "-1") {
-        $query = "UPDATE Products SET cat_id='$cat_id' WHERE Products.id=$id";
+    if($cat_name != "-1") { # category value of -1 is the unchanged option in the dropdown
+        $query = "UPDATE Products SET cat_name='$cat_name' WHERE Products.id=$id";
         $update = mysqli_query($dbconn, $query);
         echo "category";
     }

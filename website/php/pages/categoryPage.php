@@ -38,11 +38,11 @@
         <main role="main">
             <?php
                 //Get the GET request arguments
-                if(!isset($_GET['cat_id'])){
-                    echo '<script> alert("Failed to retrieve the category id in GET request"); </script>';
+                if(!isset($_GET['cat_name'])){
+                    echo '<script> alert("Failed to retrieve the category name in GET request"); </script>';
                     return;
                 }
-                $cat_id = $_GET["cat_id"];
+                $cat_name = $_GET["cat_name"];
 
                 //Connect to the database
                 include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
@@ -51,18 +51,10 @@
                     echo '<script> alert("Failed to connect to database"); </script>';
                     return;
                 }
-
-                //Get the category name from the database
-                $query = 'SELECT cat_name FROM Categories WHERE id='.$cat_id.';';
-                $result = mysqli_query($dbConn, $query);  
-                if(!$result){
-                    echo '<script> alert("Failed to query database")</script>';
-                }else{
-                    $cat_name = mysqli_fetch_object($result)->cat_name;
-
-                    //Display the category name
-                    echo '<h1 style=\'color:#0B3D91;font-family:"Helvetica"\'>'.$cat_name.'</h1>';
-                }
+                
+                //Display the category name
+                echo '<h1 style=\'color:#0B3D91;font-family:"Helvetica"\'>'.$cat_name.'</h1>';
+                
                 mysqli_close($dbConn);
             ?>
             <div class="shop">

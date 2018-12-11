@@ -26,7 +26,7 @@
                         cat_name VARCHAR(30) NOT NULL,
                         archived BOOLEAN NOT NULL,
                         PRIMARY KEY(id),
-                        FOREIGN KEY (cat_id) REFERENCES Categories(id),
+                        FOREIGN KEY (cat_name) REFERENCES Categories(name),
                         INDEX (archived)    # Make archived an index since it's used a lot in WHERE clauses when querying the Products table
                                             # e.g don't want to show archived products on the front page. Products should also not be archived too often, so not much updating.
                     );";
