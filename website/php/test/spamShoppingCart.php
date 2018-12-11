@@ -1,4 +1,6 @@
 <?php
+    //NOTE: This scripts assumes an already created user with an empty shopping cart
+
     //Make sure the GET request parameters is set
     if(!isset($_GET["customer_id"])){
         echo '<script> alert("Missing GET request parameter (spamShoppingCart.php?customer_id=<customer_id>)"); </script>';
@@ -23,7 +25,6 @@
 
     $quantity_max = 5;
     $customer_id = $_GET["customer_id"];
-    echo '<h1>'.mysqli_num_rows($result).'</h1>';//DEBUG
     while($row = mysqli_fetch_object($result)){
         $quantity = rand(0, $quantity_max);
         if($quantity != 0){ //Only add non-empty shopping cart lines
