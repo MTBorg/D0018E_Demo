@@ -4,8 +4,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <link href="/css/normalize.css" rel="stylesheet" media="all">
-
     <title>Shopping Cart</title>
     <link rel="shortcut icon" href="/fa-rocket.ico">
     <link href="/css/styles.css" rel="stylesheet" media="all">
