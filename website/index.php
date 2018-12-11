@@ -18,7 +18,6 @@
     <!-- For legacy support (IE 6/7, Firefox < 4, and Safari < 5) use normalize-legacy.css instead -->
     <link rel="shortcut icon" href="fa-rocket.ico">
     <!--<link href="css/normalize-legacy.css" rel="stylesheet" media="all">-->
-    <link rel="shortcut icon" href="fa-search.ico">
 
     <!-- Include the site stylesheet -->
     <link href="/css/styles.css" rel="stylesheet" media="all">
