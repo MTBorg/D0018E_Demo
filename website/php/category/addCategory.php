@@ -3,6 +3,11 @@
     $dbconn = dbConnect();
 
     $catName = $_POST["catName"];
+
+    if (empty($catName)) {
+        echo "Error: The category name is empty";
+        return;
+    }
     
     $insertCat = 'INSERT INTO Categories VALUES ("'.$catName.'");';
     
