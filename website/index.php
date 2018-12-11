@@ -29,6 +29,7 @@
     <script src="/js/cart/addToCartOnClick.js" type="text/javascript"></script>
     <script src="/js/init/initNavButtons.js" type="text/javascript"></script> 
     <script src="/js/cart/shopCartBtnUpdateQuantitySubmit.js" type="text/javascript"></script>
+    <script src="/js/product/searchRequest.js" type="text/javascript"></script>
 </head>
 
 <body onload ='initNavButtons();'>
@@ -44,11 +45,9 @@
         <!-- ARIA: the landmark role "main" is added here as it contains the main content of the document, and it is recommended to add it to the
         <main> element until user agents implement the required role mapping. -->
         <main role="main">
-
-
             <!-- PROTOTYPE. This is the grid for the shop, each item is a square and inside the
             item you can add images, buttons etc. -->
-            <div class="shop">
+            <div class="shop" id = "shop">
 
                 
                 <?php
@@ -58,6 +57,7 @@
 
 
             </div>
+            
         </main>
     </div>
 

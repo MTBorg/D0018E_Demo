@@ -286,11 +286,6 @@ a.navButton:hover{
     width: 10%;
 }
 
-.searchButton {
-    float: left;
-    width: 3%;
-}
-
 .submitBox {
     border-color: #0B3D91;
     border-style: solid;

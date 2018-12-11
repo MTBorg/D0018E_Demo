@@ -1,4 +1,5 @@
 function searchRequest() {
+	console.log("babing");
 	xmlhttp = new XMLHttpRequest();
 
 	xmlhttp.onreadystatechange = function () {
@@ -6,17 +7,20 @@ function searchRequest() {
 			if (this.responseText) {
                 console.log(this.responseText);
                 document.getElementById("shop").innerHTML = this.responseText;
-                
-			}else{
-				console.log("xxx");
 			}
 		}
     };
 
     input = document.getElementsByTagName("input");
-    var search = input[0].value;
+	var search = input[0].value;
+	
+	console.log(search);
 
-    console.log(search);
+	/*
+	if(search = "") {
+		return;
+	}
+	*/
 
 	xmlhttp.open("POST", "/php/product/searchProduct.php", true);
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");

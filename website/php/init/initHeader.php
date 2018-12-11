@@ -25,12 +25,11 @@
             </div>
             
             
-                <form action="javascript:searchRequest()" method ="post" target="_self">
-                    <input class="submitField" type ="text" id = "searchInput">
-                </form>
+            <form action="javascript:searchRequest()" method ="post" target="_self">
+                <input class="submitField" type ="text" id = "searchInput">
+                <button type ="submit" value="Submit">dong</button>
+            </form>
             
-            
-            <a href="/index.php" id="searchButton" class="navButton initHidden">Search</a>
             <a href="/php/pages/adminPage.php" id="adminMain" class="navButton initHidden">Admin panel</a>
 	        <a href="/php/pages/createUserPage.php" id="signUpMain" class="navButton initHidden">Sign up</a>
             <a href="/php/account/logOut.php" id="logOutMain" class="navButton initHidden">Log out</a>
