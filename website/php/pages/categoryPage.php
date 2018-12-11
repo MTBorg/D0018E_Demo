@@ -30,6 +30,7 @@
     <script src="/js/cart/addToCartOnClick.js" type="text/javascript"></script>
     <script src="/js/init/initNavButtons.js" type="text/javascript"></script> 
     <script src="/js/cart/shopCartBtnUpdateQuantitySubmit.js" type="text/javascript"></script>
+    <script src="/js/product/searchRequest.js" type="text/javascript"></script>
 </head>
 
 <body onload ='initNavButtons();'>

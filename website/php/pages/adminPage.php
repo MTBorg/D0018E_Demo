@@ -7,6 +7,7 @@
         <script src="/js/product/modifyProduct.js" type="text/javascript"></script>
         <script src="/js/category/addCatSubmit.js" type="text/javascript"></script>
         <script src="/js/product/archiveProduct.js" type="text/javascript"></script>
+        <script src="/js/product/searchRequest.js" type="text/javascript"></script>
         <script src="/js/product/unarchiveProduct.js" type="text/javascript"></script>
         <link href="/css/normalize.css" rel="stylesheet" media="all">
         <link href="/css/styles.css" rel="stylesheet">

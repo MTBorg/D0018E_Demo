@@ -11,6 +11,7 @@
     <script src="/js/review/starRate.js" type="text/javascript"></script>
     <script src="/js/review/setColor.js" type="text/javascript"></script>
     <script src="/js/review/addComment.js" type="text/javascript"></script>
+    <script src="/js/product/searchRequest.js" type="text/javascript"></script>
     <link rel="shortcut icon" href="/fa-rocket.ico">
 </head>	
 <body onload='initReviews(); initNavButtons();'> 
