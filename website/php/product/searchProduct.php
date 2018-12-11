@@ -9,7 +9,7 @@ session_start();
 
 $search = $_POST["search"];
 
-$query = "SELECT * FROM Products WHERE name LIKE '%$search%';";
+$query = "SELECT * FROM Products WHERE name LIKE '%$search%' AND archived = 0;";
 $searchResult = mysqli_query($dbconn, $query);
 
 if($searchResult->num_rows != 0) {
