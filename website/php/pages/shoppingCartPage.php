@@ -17,6 +17,7 @@
     <script src="/js/cart/removeShoppingCartItemSubmit.js" type="text/javascript"></script>
     <script src="/js/cart/goToProduct.js" type="text/javascript"></script>
     <script src="/js/cart/cancelEvent.js" type="text/javascript"></script>
+    <script src="/js/product/searchRequest.js" type="text/javascript"></script>
 </head>
     <body onload="initNavButtons();">
 
