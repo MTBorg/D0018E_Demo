@@ -14,6 +14,7 @@
     }
 
     //Get the category names so we know what random categories to give the new products
+    
     $query = 'SELECT name FROM Categories';
     $result = mysqli_query($dbConn, $query);
     if(!$result){
@@ -21,7 +22,13 @@
         return;
     }
     $numCategories = mysqli_num_rows($result) - 1;
-    $categories = mysqli_fetch_array($result, MYSQLI_NUM);
+    $cat_names = array();
+
+    // Insert the categories into an array to randomize from later
+    while($category = mysqli_fetch_array($result, MYSQLI_NUM)) {
+        array_push($cat_names, $category[0]);
+    }
+    
     $price_rand_max = 10000;
     $stock_rand_max = 50;
     $item_amount = $_GET["amount"];
@@ -29,14 +36,14 @@
     for($i = 0; $i < $item_amount; $i++){
         $price = rand(1, $price_rand_max);
         $stock = rand(0, $stock_rand_max);
-        $cat_name = $categories[rand(0, $numCategories)];
+        $cat_name = $cat_names[rand(0, $numCategories)];
         $img_url = '"/img/test/'.rand(1,3).'.jpg"';
         $query = 'INSERT INTO Products VALUES(NULL, 
                                                 '.$i.',' //name
                                                 .$price.',' //price
                                                 .$stock.',' //stock
-                                                .$img_url.',' //img_url
-                                                .$cat_name.',0);'; //cat_id + archived(false)
+                                                .$img_url.',"' //img_url
+                                                .$cat_name.'",0);'; //cat_id + archived(false)
         if(!mysqli_query($dbConn, $query)){
             echo "<p>Failed to insert product</p>";
             $items_inserted--;
