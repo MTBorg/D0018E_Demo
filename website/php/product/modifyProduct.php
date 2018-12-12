@@ -9,16 +9,16 @@
     $cat_id = $_POST["cat_id"];
 
     if(empty($name) == false) {
-        # Check if the new product name is already in use
-        $queryName = "SELECT name FROM Products WHERE name = '$name';";
-        $checkName = mysqli_query($dbconn, $queryName);
-        if (mysqli_num_rows($checkName) == 0) {
-            $query = "UPDATE Products SET name='$name' WHERE Products.id=$id";
-            $update = mysqli_query($dbconn, $query);
-            echo "name\n";
+        $query = "UPDATE Products SET name='$name' WHERE Products.id=$id";
+
+        # Check if the new product name is already in use, other wise change it
+        if (!mysqli_query($dbconn, $query)) {
+            if (mysqli_errno($dbconn) == 1062) {
+                echo "0";
+                return;
+            }
         } else {
-            echo "0";
-            return;
+            echo "name\n";
         }
         
     }

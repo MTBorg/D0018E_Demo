@@ -15,22 +15,17 @@
     include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
     $dbconn = dbConnect();
 
-    $query_values = '(NULL, "'.$prod_name.'","'.$prod_price.'","'.$prod_stock.'", "'.$prod_img_url.'", "'.$prod_cat_id.'", 0);'; 
-
-    // Check if product name already exists
-    $query_findProduct = 'SELECT name FROM Products WHERE name = "'.$prod_name.'";';
-
-    $search = mysqli_query($dbconn, $query_findProduct);
-
-    if(mysqli_num_rows($search) > 0) {
-
-        echo "Product already exists!";
-    // Product name those not exist   
+    $query = 'INSERT INTO Products VALUES (NULL, "'.$prod_name.'","'.$prod_price.'","'.$prod_stock.'", "'.$prod_img_url.'", "'.$prod_cat_id.'", 0);';
+    
+    if(!mysqli_query($dbconn, $query)) {    # Create product/check for errors
+        if (mysqli_errno($dbconn) == 1062) {    # Error number for name not unique
+            echo "That product already exists! \n\nPlease modify the existing product instead.";
+        } else {    # Other error happened
+            echo "Something went wrong, please try again.";
+        }
     } else {
-        $query = 'INSERT INTO Products VALUES '.$query_values;
-        mysqli_query($dbconn, $query);
         echo true;
     }
-
+    
     mysqli_close($dbconn);
 ?>
