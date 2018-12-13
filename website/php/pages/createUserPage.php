@@ -4,7 +4,6 @@
         <title>Sign Up</title>
         <script src="/js/account/userSignUp.js" type="text/javascript"></script>
         <link rel="shortcut icon" href="/fa-rocket.ico">
-        <link href="/css/normalize.css" rel="stylesheet" media="all">
         <link href="/css/styles.css" rel="stylesheet">
         <script src="/js/init/initNavButtons.js" type="text/javascript"></script>
         <script src="/js/product/searchRequest.js" type="text/javascript"></script>
