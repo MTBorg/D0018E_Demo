@@ -51,8 +51,9 @@
                             </tr>
                             <tr>
                                 <td>Category</td>
-                                <td><input type="hidden" id="AddForm_catID" value="1">
-                                        <select name="category" onchange="updateCatText('AddForm_catID', this.value);"> //TODO: is updateCatText even implemented?
+                                <td><input type="hidden" id="AddForm_catID" value="-1">
+                                        <select name="category" onchange="updateCatText('AddForm_catID', this.value);">
+                                            <option value="-1">-- Select category --</option>
                                             <?php
                                                 include_once $_SERVER['DOCUMENT_ROOT'].'/php/category/getCategories.php';
                                                 getCategories();

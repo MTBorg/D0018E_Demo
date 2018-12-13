@@ -13,16 +13,22 @@
         return;
     }
 
-    //Get the maximum category id so we know what
-    //range to generate random category id's from
-    $query = 'SELECT MAX(id) AS cat_id_max FROM Categories'; 
+    //Get the category names so we know what random categories to give the new products
+    
+    $query = 'SELECT name FROM Categories';
     $result = mysqli_query($dbConn, $query);
     if(!$result){
-        echo '<script> alert("Failed to get max category id from database"); </script>';
+        echo '<script> alert("Failed to get categories from database"); </script>';
         return;
     }
-    $cat_id_max = mysqli_fetch_object($result)->cat_id_max;
+    $numCategories = mysqli_num_rows($result) - 1;
+    $cat_names = array();
 
+    // Insert the categories into an array to randomize from later
+    while($category = mysqli_fetch_array($result, MYSQLI_NUM)) {
+        array_push($cat_names, $category[0]);
+    }
+    
     $price_rand_max = 10000;
     $stock_rand_max = 50;
     $item_amount = $_GET["amount"];
@@ -30,14 +36,14 @@
     for($i = 0; $i < $item_amount; $i++){
         $price = rand(1, $price_rand_max);
         $stock = rand(0, $stock_rand_max);
-        $cat_id = rand(1, $category);
+        $cat_name = $cat_names[rand(0, $numCategories)];
         $img_url = '"/img/test/'.rand(1,3).'.jpg"';
         $query = 'INSERT INTO Products VALUES(NULL, 
                                                 '.$i.',' //name
                                                 .$price.',' //price
                                                 .$stock.',' //stock
-                                                .$img_url.',' //img_url
-                                                .$cat_id.',0);'; //cat_id + archived(false)
+                                                .$img_url.',"' //img_url
+                                                .$cat_name.'",0);'; //cat_id + archived(false)
         if(!mysqli_query($dbConn, $query)){
             echo "<p>Failed to insert product</p>";
             $items_inserted--;

@@ -3,7 +3,7 @@
     $dbconn = dbConnect();
 
     # Get all the products which are not archived
-    $query = "SELECT id, name, price, stock, cat_id FROM Products WHERE archived = 0;";
+    $query = "SELECT id, name, price, stock, cat_name FROM Products WHERE archived = 0;";
     $fetchProducts = mysqli_query($dbconn, $query);
 
     while($row = mysqli_fetch_array($fetchProducts)) {
@@ -12,12 +12,7 @@
         echo "<td>" . $row['name'] . "</td>";
         echo "<td>" . $row['price'] . "</td>";
         echo "<td>" . $row['stock'] . "</td>";
-
-        # Get the name of the products cat_id
-        $fetchCatName = mysqli_query($dbconn, 'SELECT cat_name FROM Categories WHERE id = '.$row['cat_id'].';');
-        $cat_name = mysqli_fetch_array($fetchCatName);
-
-        echo "<td>" . $cat_name['cat_name'] . "</td>";
+        echo "<td>" . $row['cat_name'] . "</td>";
         echo "<td> <button id='".$row['id']."' type='button' value='Modify' onclick='modifyProduct(this.id)'>Modify</button> </td>";
         echo "<td> <button id='".$row['id']."' type='button' value='Archive' onclick='archiveProduct(this.id)'>Archive</button> </td>";
         echo "</tr>";
