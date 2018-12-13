@@ -18,7 +18,7 @@ See the list of [contributors](https://github.com/dynematic/D0018E_Group1/graphs
 
 ### Database tables
 
-![db tables](https://i.imgur.com/cJDg0Qe.png)
+![db tables](https://i.imgur.com/bCzyxLf.png)
 
 ## Getting Started
 
