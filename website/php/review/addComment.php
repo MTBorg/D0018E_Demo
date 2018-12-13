@@ -16,7 +16,7 @@
         //Get status of the order that belongs to the user and contains the product (if such exists)
         $query = '  SELECT status
                     FROM Orders 
-                    WHERE (status="Delivered" OR status="Returned") AND EXISTS(
+                    WHERE (status="Delivered" OR status="Returned") AND id IN(
                         SELECT order_id
                         FROM OrderLines
                         WHERE product_id='.$product_id.' AND user_id='.$user_id.');';
