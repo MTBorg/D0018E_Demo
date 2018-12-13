@@ -2,10 +2,13 @@
     $quantity_sum = include $_SERVER["DOCUMENT_ROOT"].'/php/cart/getShopCartQuantitySum.php';
     if($quantity_sum == 0){
         $quantity_sum = '';
+
     }else{
         $quantity_sum = '('.$quantity_sum.')';
     }
-    $catDropdown = include_once $_SERVER["DOCUMENT_ROOT"].'/php/category/createCategoriesDropdown.php'; //This is really ugly
+
+    $catDropdown = include_once $_SERVER["DOCUMENT_ROOT"].'/php/category/createCategoriesDropdown.php';
+
     return '<header role="banner">
         <a href="/index.php" style = "text-decoration:none">
 		    <h1 id="logoText"> StarTrader <i id="logoIcon" class="fa fa-rocket"></i> </h1>

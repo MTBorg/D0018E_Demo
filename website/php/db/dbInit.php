@@ -70,7 +70,6 @@
 
             mysqli_query($dbconn, $query);
 
-            # New code using only shopping cart lines
             $query = "CREATE TABLE IF NOT EXISTS ShoppingCartLines(
                 user_id INT NOT NULL,
                 product_id INT NOT NULL,

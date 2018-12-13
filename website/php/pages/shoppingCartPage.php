@@ -20,14 +20,14 @@
     
 <body onload="initNavButtons();">
 
-    //Load a users shopping cart
+    <!-- Load a users shopping cart -->
     <?php
         echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initHeader.php';
         include $_SERVER['DOCUMENT_ROOT'].'/php/cart/loadShoppingCart.php';
         loadShoppingCart();
     ?>
 
-    //Create checkout button
+    <!-- Create checkout button -->
     <div style="text-align:center">
         <button  id="checkoutButton" onClick="checkoutSubmit()">Checkout</button>
         <button onClick='window.location = "/index.php"'>Go back</button>

@@ -14,7 +14,6 @@
             
         mysqli_query($dbconn, $query);
 
-        # Close the connection  to the DB.
         mysqli_close($dbconn);
     }
 ?>
