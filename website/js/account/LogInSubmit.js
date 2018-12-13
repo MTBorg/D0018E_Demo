@@ -16,6 +16,7 @@ function LogInSubmit() {
 	var email;
 	var i;
 
+	//Get user input
 	for (i = 0; i < inputs.length; i++) {
 		if (inputs[i].name == "email") {
 			email = inputs[i].value;
@@ -27,5 +28,4 @@ function LogInSubmit() {
 	xmlhttp.open("POST", "/php/account/login.php", true);
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xmlhttp.send("email=" + email + "&password=" + password);
-
 }	

@@ -15,6 +15,8 @@
 	<?php
 		 echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initHeader.php';	
 	?>
+
+	//Create fields for user to input email and password
 	<div class="submitBox">
 		<form action="javascript:LogInSubmit()" method="post" target="_self">
 			<table style="width:50%; margin:auto;">
@@ -30,8 +32,9 @@
 			<button type="submit" class="button" value="Log in">Log In</button>
 		</form>
 	</div>
+
 <?php
-echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initFooter.php';
+	echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initFooter.php';
 ?>
 </body>
 

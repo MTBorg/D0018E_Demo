@@ -14,6 +14,7 @@ function addCatSubmit() {
     };
     
     var catName = document.getElementById("catName").value;
+    
     xmlhttp.open("POST", "/php/category/addCategory.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.send("catName=" + catName);

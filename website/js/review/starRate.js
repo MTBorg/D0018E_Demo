@@ -19,11 +19,5 @@ function starRate(rating) {
 
     xmlhttp.open("POST", "/php/review/addStars.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xmlhttp.send(
-        "product_id=" +
-        product_id +
-      "&rating=" + 
-        rating
-
-    );
+    xmlhttp.send("product_id=" + product_id + "&rating=" + rating);
 }

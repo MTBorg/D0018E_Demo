@@ -1,6 +1,4 @@
 <?php
-    //We still need to implement role_id but that has to be added in later.
-
     include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
     $dbconn = dbConnect();
 
@@ -36,6 +34,7 @@
         return;
     }
 
+    //Table fields: (user_id, role_id, firstname, lastname, email, password)
     $query = 'INSERT INTO Users VALUES (NULL, 0, "'.$first_name.'","'.$last_name.'","'.$email.'","'.$password.'");';
 
     if (!mysqli_query($dbconn, $query)) {
