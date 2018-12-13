@@ -243,11 +243,11 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    background-color: #0B3D91;
-    color: #FFFFFF;
+    color: rgba(0,0,0,0.6);
+    margin-top: 3%;
+    margin-bottom: 1%;
     text-align: center;
-    padding: 5px;
-}
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.1);}
 
 a.navButton{
     color:#0B3D91;
@@ -288,9 +288,6 @@ a.navButton:hover{
 }
 
 .submitBox {
-    border-color: #0B3D91;
-    border-style: solid;
-    border-width: thin;
     color:#0B3D91;
     font-family: "Helvetica";
     text-align: center;
