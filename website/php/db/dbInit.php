@@ -19,7 +19,7 @@
 
             $query = "CREATE TABLE IF NOT EXISTS Products(
                         id INT NOT NULL AUTO_INCREMENT,
-                        name VARCHAR(20) NOT NULL,
+                        name VARCHAR(20) NOT NULL UNIQUE,
                         price INT NOT NULL CHECK (price>=0),
                         stock INT NOT NULL CHECK (stock>=0), 
                         img_url VARCHAR(255),
