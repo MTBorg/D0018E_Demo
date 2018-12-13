@@ -93,7 +93,7 @@
             );";
             mysqli_query($dbconn, $query);
 
-            echo "The tables Products, Users, Orders and ShoppingCart created in the maindb database\n";
+            echo "The tables Products, Users, Orders, Categories, Reviews, OrderStatuses, OrderLines and ShoppingCartLines created in the maindb database\n";
         } catch (Exception $e) {
             echo 'Exception: ', $e -> getMessage(), "\n";
         }
