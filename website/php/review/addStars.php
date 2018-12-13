@@ -25,7 +25,10 @@
         if(mysqli_num_rows($result) == 0){ //If the user hasn't bought the product
             echo 'Only users who have bought the product can rate!';
             return;
-        }else if(mysqli_fetch_object($result)->status != "Delivered"){ //If the user hasn't received the product
+        }
+
+        $status = mysqli_fetch_object($result)->status;
+        if($status != "Delivered" and $status != "Returned"){ //If the user hasn't received the product
             echo 'Only users who have received their product can rate!';
             return;
         }
