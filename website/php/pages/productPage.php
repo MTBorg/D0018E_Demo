@@ -75,7 +75,7 @@ getProduct($product_id);
                 </table>
                     </form>
                     <div>
-                    <button type="submit" value="Submit comment" onclick=addComment();>Submit</button>
+                    <button type="submit" value="Submit comment" onclick=addComment();>Comment</button>
 
                     <button type="reset" value="Reset" onclick=resetReview();>Reset</button>
                     </div>
