@@ -32,9 +32,6 @@ Du kan se vilken branch du är på genom att skriva
 git status
 ```
 **OBS! Ändra ALDRIG någonting på master.**
-**DEN SOM ÄNDÅ BESTÄMMER SIG FÖR ATT GÖRA DET HAR TVÅ VAL:**
-1. **FÅ KICKEN**
-2. **BLI AVRÄTTAD**
 
 Alla förändringar du vill göra **MÅSTE** du göra på en ny branch.
 Du kan se vilken branch du är på samt alla som finns med
@@ -69,8 +66,6 @@ För att "pusha" dina commits till github repon skriver du
 git push origin <branchName>
 ```
 Du bör pusha varje gång du slutar arbeta.
-**ALLA MERGES I DET HÄR PROJEKTET SKA SKE VIA PULL REQUEST PÅ GITHUB. DÄRFÖR KOMMER JAG INTE DELA MED MIG OM HUR MAN
-MERGAR LOKALT. HA!**
 
 Du kan ta bort en lokal branch (du kan inte vara på den branch du ska ta bort) genom
 ```
