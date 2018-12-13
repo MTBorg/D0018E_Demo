@@ -13,12 +13,20 @@
         // Get logged in user
         $user_id = $_SESSION["user_id"];
 
-        // Check if user bought the product
-        $query = "SELECT user_id FROM Orders WHERE id IN (SELECT order_id FROM OrderLines WHERE product_id = $product_id AND user_id = $user_id)";
-        $checkBought = mysqli_query($dbconn, $query);
-        if(mysqli_fetch_assoc($checkBought) == false) {
-            echo "Only users who have bought the product can rate!";
-            mysqli_close($dbconn);
+        //Get status of the order that belongs to the user and contains the product (if such exists)
+        $query = '  SELECT status
+                    FROM Orders 
+                    WHERE (status="Delivered" OR status="Returned") AND id IN(
+                        SELECT order_id
+                        FROM OrderLines
+                        WHERE product_id='.$product_id.' AND user_id='.$user_id.');';
+        $result = mysqli_query($dbconn, $query);
+        if(!$result){
+            echo "Failed to query database";
+            return;
+        }
+        if(mysqli_num_rows($result) == 0){ //If the user hasn't bought the product
+            echo 'Only users who have bought and received the product can review!';
             return;
         }
 
@@ -35,7 +43,7 @@
             echo "Please rate the product before you comment!";
         }
     } else {
-        echo "Only logged in user and user who have bought the product can rate!";
+        echo "Only logged in users can review!";
     }
 
     mysqli_close($dbconn);

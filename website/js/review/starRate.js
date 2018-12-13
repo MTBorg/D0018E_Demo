@@ -8,10 +8,10 @@ function starRate(rating) {
       if (this.readyState == 4 && this.status == 200) {
         
         if (this.response == true) {
-            alert("thank you!");
+            alert("Thank you for rating!");
   
         } else {
-            alert("Only logged in user and users who have bought the product can rate!");
+            alert(this.responseText);
         }
         
       }
