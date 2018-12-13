@@ -54,6 +54,8 @@
         }
 
         mysqli_close($dbconn);
+    }else{
+        echo "Only logged in users can rate";
     }
 ?>
     
