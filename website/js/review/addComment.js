@@ -7,7 +7,7 @@ function addComment() {
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
           if (this.response == true) {
-            alert("thank you for commenting!");
+            alert("Thank you for commenting!");
             window.location.reload();
   
         } else {
@@ -17,15 +17,9 @@ function addComment() {
       }
     };
 
-  var comment = document.getElementById("comment").value;
+    var comment = document.getElementById("comment").value;
 
     xmlhttp.open("POST", "/php/review/addComment.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xmlhttp.send(
-        "product_id=" +
-        product_id +
-      "&comment=" + 
-        comment
-
-    );
+    xmlhttp.send("product_id=" + product_id + "&comment=" + comment);
 }

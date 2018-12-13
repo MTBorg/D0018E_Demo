@@ -9,6 +9,7 @@
     <script src="/js/init/initNavButtons.js" type="text/javascript"></script> 
     <script src="/js/product/searchRequest.js" type="text/javascript"></script>
 </head>
+
 <body onload="initNavButtons();">
     <?php
         echo include_once $_SERVER['DOCUMENT_ROOT'].'/php/init/initHeader.php';
@@ -20,7 +21,9 @@
         <button onClick="window.location='/index.php'"> Go back</button>
     </div>
 </body>
+
 <?php
-echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initFooter.php';
+    echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initFooter.php';
 ?>
+
 </html>

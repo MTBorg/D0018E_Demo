@@ -17,11 +17,11 @@ function initNavButtons(){
 				document.getElementById("signUpMain").style.display = "inline";
 				document.getElementById("logInMain").style.display = "inline";
 				document.getElementById("shoppingCart").style.display = "none";
-        document.getElementById("myOrders").style.display = "none";
+        		document.getElementById("myOrders").style.display = "none";
 				document.getElementById("adminMain").style.display = "none";
 				document.getElementById("searchButton").style.display = "inline";
         
-			}else if(this.responseText == 11){ //is admin
+			}else if(this.responseText == 11){ //User is an admin
 				document.getElementById("signUpMain").style.display = "none";
 				document.getElementById("logInMain").style.display = "none";
 				document.getElementById("logOutMain").style.display = "inline";
@@ -32,7 +32,6 @@ function initNavButtons(){
 			}
 		}
 	};
-
 	
 	xmlhttp.open("POST", "/php/init/initNavButtons.php", true);
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");

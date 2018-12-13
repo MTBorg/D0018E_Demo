@@ -7,7 +7,7 @@
     $query = 'SELECT * FROM Products WHERE cat_name="'.$cat_name.'" AND archived = 0;';
 
     $products = mysqli_query($dbconn, $query);
-        
+    
     if($products) {
         while ($row = mysqli_fetch_array($products)) {
             if(isAdmin()) {
@@ -17,6 +17,7 @@
                 echo '<p id="pricePos">' . $row['price'] . '$</p>';
                 echo '<p id="stockPos"> <b>stock</b>: ' . $row['stock'] . '</p>';
                 echo '<p><a class="div-click" href="/php/pages/adminProductPage.php?product_id='.$row['id'].'"></a></p>';
+
             } else {
                 echo '<div id="'.$row['id'].'" class="item">';
                 echo '<img src="'. $row['img_url'] .'">';

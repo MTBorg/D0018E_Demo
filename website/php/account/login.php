@@ -11,13 +11,12 @@
 
 	$connection = dbConnect();
 	$query_result = mysqli_query($connection, 'SELECT password FROM Users WHERE email="'.$email.'";');
+	
 	if($query_result == FALSE){
 		echo "Failed to query user";
 	}else{
 		$row = $query_result->fetch_assoc();
 		if($password == $row["password"]){
-			//echo "Login success";
-
 			# Since log in was successful the session is started and user id and role is stored in the session vars.
 			$query_user = mysqli_query($connection, 'SELECT id, role_id FROM Users WHERE email="'.$email.'";');
 			$userInfo = $query_user->fetch_assoc();
@@ -36,5 +35,4 @@
 		}
 	}
 	mysqli_close($connection);
-	
 ?>

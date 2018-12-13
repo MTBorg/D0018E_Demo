@@ -5,7 +5,6 @@ function userSignUp() {
 
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      //document.getElementById("submit-info").innerHTML = this.responseText;
       alert(this.responseText);
 
       if (this.responseText == "Success!") {
@@ -21,14 +20,6 @@ function userSignUp() {
 
   xmlhttp.open("POST", "/php/account/createUser.php", true);
   xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xmlhttp.send(
-    "first_name=" +
-      first_name +
-      "&last_name=" +
-      last_name +
-      "&email=" +
-      email +
-      "&password=" +
-      password
+  xmlhttp.send("first_name=" + first_name + "&last_name=" + last_name + "&email=" + email + "&password=" + password
   );
 }

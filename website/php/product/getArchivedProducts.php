@@ -6,6 +6,7 @@
     $query = "SELECT id, name, price, stock, cat_name FROM Products WHERE archived = 1;";
     $archivedProducts = mysqli_query($dbconn, $query);
 
+    //Go through archived products and create table entries for them
     while($row = mysqli_fetch_array($archivedProducts)) {
         echo "<tr>";
         echo "<td>" . $row['id'] . "</td>";

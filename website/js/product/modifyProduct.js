@@ -3,10 +3,13 @@ function modifyProduct(product_id) {
 
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
+      
+      //The modification of a product was successful
       if (this.responseText != "0") {
         alert("modified:\n" + this.responseText);
         document.getElementById('adminForm').reset();
         window.location.reload();
+        
       } else {
         alert("Error: The product name already exists.\nChoose a different name or modify the already existing product instead.")
       }

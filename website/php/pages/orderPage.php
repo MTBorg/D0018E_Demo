@@ -10,10 +10,12 @@
     <script src="/js/cart/goToProduct.js" type="text/javascript"></script>
     <script src="/js/product/searchRequest.js" type="text/javascript"></script>
 </head>
+
 <body onload="initNavButtons();">
     <?php
         echo include_once $_SERVER['DOCUMENT_ROOT'].'/php/init/initHeader.php';
 
+        //Retrieve order_id from GET request
         $order_id;
         if(isset($_GET["order_id"])){
             $order_id = $_GET["order_id"];
@@ -22,6 +24,7 @@
             return;
         }
         
+        //Connect to database
         include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
         $dbconn = dbConnect();
 
@@ -30,16 +33,20 @@
             return;
         }
 
+        //Create a table to load order into
         echo '<table class="ordersTable">';
         echo '<tr class="ordersTableHeader">';
         echo '<th></th><th>Product ID</th><th>Product name</th><th>Quantity</th>';
         echo '<th>Price</th><th>Sum</th>';
         echo '</tr>';
   
+        //Retrieve order from database using order_id
         $query = 'SELECT * FROM OrderLines WHERE order_id='.$order_id.';';
         $orderLines = mysqli_query($dbconn, $query);
         $totalSum = 0;
+
         if($orderLines){
+            //Go through all the products in the order
             while($line = mysqli_fetch_array($orderLines)){
                 $product_id = $line["product_id"];
                 $quantity = $line["quantity"];
@@ -55,6 +62,7 @@
                 $name = $obj->name;
                 $img_url = $obj->img_url;
 
+                //Display the found products in a table
                 echo '<tr onClick="goToProduct('.$product_id.')">';
                 echo '<td><img src="'.$img_url.'" alt="Product image" style="width:64px;height:64px"></img></td>';
                 echo '<td>'.$product_id.'</td>';
@@ -65,6 +73,7 @@
                 echo '</tr>';
             }
             echo '<tr id="orderSum"> <td><td><td><td><td><td>'.$totalSum.'</td></td></td></td></td></td> </tr>';
+
         }else{
             echo '<p>Failed to get orderlines</p>';
             mysqli_close($dbconn);
@@ -75,11 +84,14 @@
 
         mysqli_close($dbconn);
     ?>
+
     <div style="text-align:center">
         <button onClick='window.location="/php/pages/myOrdersPage.php"'>Go back</button>
     </div>
 </body>
+
 <?php
-echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initFooter.php';
+    echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initFooter.php';
 ?>
+
 </html>

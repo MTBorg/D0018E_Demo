@@ -11,7 +11,7 @@
     if(empty($name) == false) {
         $query = "UPDATE Products SET name='$name' WHERE Products.id=$id";
 
-        # Check if the new product name is already in use, other wise change it
+        # Check if the new product name is already in use, otherwise change it
         if (!mysqli_query($dbconn, $query)) {
             if (mysqli_errno($dbconn) == 1062) {
                 echo "0";
@@ -20,7 +20,6 @@
         } else {
             echo "name\n";
         }
-        
     }
 
     if(empty($price) == false || $price == "0") {

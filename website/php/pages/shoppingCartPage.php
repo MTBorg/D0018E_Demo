@@ -17,21 +17,25 @@
     <script src="/js/cart/cancelEvent.js" type="text/javascript"></script>
     <script src="/js/product/searchRequest.js" type="text/javascript"></script>
 </head>
-    <body onload="initNavButtons();">
+    
+<body onload="initNavButtons();">
 
-        <?php
-            echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initHeader.php';
-            include $_SERVER['DOCUMENT_ROOT'].'/php/cart/loadShoppingCart.php';
-            loadShoppingCart();
-        ?>
+    <!-- Load a users shopping cart -->
+    <?php
+        echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initHeader.php';
+        include $_SERVER['DOCUMENT_ROOT'].'/php/cart/loadShoppingCart.php';
+        loadShoppingCart();
+    ?>
 
-        <div style="text-align:center">
-            <button  id="checkoutButton" onClick="checkoutSubmit()">Checkout</button>
-            <button onClick='window.location = "/index.php"'>Go back</button>
-        </div>
-    </body>
+    <!-- Create checkout button -->
+    <div style="text-align:center">
+        <button  id="checkoutButton" onClick="checkoutSubmit()">Checkout</button>
+        <button onClick='window.location = "/index.php"'>Go back</button>
+    </div>
+</body>
 
 <?php
-echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initFooter.php';
+    echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initFooter.php';
 ?>
+
 </html>

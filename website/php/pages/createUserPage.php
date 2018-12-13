@@ -14,8 +14,10 @@
         <?php
             echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initHeader.php'; 
         ?>
+        
         <div class="submitBox">
             <form action="javascript:userSignUp()" method="post" target="_self">
+                <!-- Create submit fields for users to submit their information -->
                 <table>
                     <tr>
                         <td align="left">First name</td>
@@ -38,9 +40,9 @@
                 <p id="submit-info"></p>
             </form>
         </div>
-        <?php
-echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initFooter.php';
 
-?>
+        <?php
+            echo include $_SERVER['DOCUMENT_ROOT'].'/php/init/initFooter.php';
+        ?>
     </body>
 </html>
