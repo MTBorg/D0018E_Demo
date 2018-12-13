@@ -26,7 +26,7 @@
             return;
         }
         if(mysqli_num_rows($result) == 0){ //If the user hasn't bought the product
-            echo 'Only users who have bought the product can comment!';
+            echo 'Only users who have bought and received the product can review!';
             return;
         }
 
@@ -43,7 +43,7 @@
             echo "Please rate the product before you comment!";
         }
     } else {
-        echo "Only logged in user and user who have bought the product can rate!";
+        echo "Only logged in users can review!";
     }
 
     mysqli_close($dbconn);
