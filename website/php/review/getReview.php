@@ -10,10 +10,6 @@
     if (mysqli_num_rows($review) > 0) {
         // Print the reviews
         while ($row = mysqli_fetch_object($review)) {
-            // $comment_array = array('comment' => $row['comment']);
-            // echo $row['comment'] . "|";
-            // echo json_encode($comment_array);
-            // echo .$row['rating'];
             echo $row->comment . "|";
             echo $row->rating . "|";
 
@@ -22,9 +18,6 @@
             $first_name = mysqli_query($dbconn, $query);
 
             $row = mysqli_fetch_object($first_name);
-            // $first_name_array = array('first_name' => $row['first_name']);
-            // echo $row['first_name'] . "|";
-            // echo json_encode($first_name_array);
             echo $row->first_name . "|";
         }
     } else {

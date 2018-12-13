@@ -6,6 +6,7 @@
     $query = "SELECT id, name, price, stock, cat_name FROM Products WHERE archived = 0;";
     $fetchProducts = mysqli_query($dbconn, $query);
 
+    //Create table on the admin page and fill with entries for each product not archived
     while($row = mysqli_fetch_array($fetchProducts)) {
         echo "<tr>";
         echo "<td>" . $row['id'] . "</td>";

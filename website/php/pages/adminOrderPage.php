@@ -30,6 +30,7 @@
             return;
         }
 
+        //Create table header
         echo '<table class="ordersTable">';
         echo '<tr class="ordersTableHeader">';
         echo '<th></th><th>Product ID</th><th>Product name</th><th>Quantity</th>';
@@ -40,6 +41,7 @@
         $orderLines = mysqli_query($dbconn, $query);
         $totalSum = 0;
         if($orderLines){
+            //Go through the products in the order
             while($line = mysqli_fetch_array($orderLines)){
                 $product_id = $line["product_id"];
                 $quantity = $line["quantity"];
@@ -48,13 +50,14 @@
                 $sum = $quantity * $price;
                 $totalSum += $sum;
 
-                //Get the name and image url
+                //Get the name and image url from the database
                 $query = 'SELECT name, img_url FROM Products WHERE id='.$product_id.';';
                 $result = mysqli_query($dbconn, $query);
                 $obj = mysqli_fetch_object($result);
                 $name = $obj->name;
                 $img_url = $obj->img_url;
                 
+                //Create table to display products in order
                 echo '<tr onClick="adminGoToProduct('.$product_id.')">';
                 echo '<td><img src="'.$img_url.'" alt="Product image" style="width:64px;height:64px"></img></td>';
                 echo '<td>'.$product_id.'</td>';

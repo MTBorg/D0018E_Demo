@@ -13,6 +13,7 @@
     include_once $_SERVER['DOCUMENT_ROOT'].'/php/db/dbConnect.php';
     $dbconn = dbConnect();
 
+    //Table fields: (id, name, price, stock, img_url, cat_name, archived)
     $query = 'INSERT INTO Products VALUES (NULL, "'.$prod_name.'","'.$prod_price.'","'.$prod_stock.'", "'.$prod_img_url.'", "'.$prod_cat_name.'", 0);';
     
     if(!mysqli_query($dbconn, $query)) {    # Create product/check for errors
