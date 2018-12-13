@@ -14,20 +14,19 @@
         $user_id = $_SESSION["user_id"];
 
         //Get status of the order that belongs to the user and contains the product (if such exists)
-        $query = "SELECT user_id, status FROM Orders WHERE id IN (SELECT order_id FROM OrderLines WHERE product_id = $product_id AND user_id = $user_id)";
+        $query = '  SELECT status
+                    FROM Orders 
+                    WHERE (status="Delivered" OR status="Returned") AND EXISTS(
+                        SELECT order_id
+                        FROM OrderLines
+                        WHERE product_id='.$product_id.' AND user_id='.$user_id.');';
         $result = mysqli_query($dbconn, $query);
         if(!$result){
             echo "Failed to query database";
             return;
         }
         if(mysqli_num_rows($result) == 0){ //If the user hasn't bought the product
-            echo 'Only users who have bought the product can rate!';
-            return;
-        }
-        
-        $status = mysqli_fetch_object($result)->status;
-        if($status != "Delivered" and $status != "Returned"){ //If the user hasn't received the product
-            echo 'Only users who have received their product can rate!';
+            echo 'Only users who have bought the product can comment!';
             return;
         }
 
