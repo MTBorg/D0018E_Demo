@@ -11,14 +11,18 @@ A minimalistic website with a e-commerce system were you can buy products, a sho
 
 See the list of [contributors](https://github.com/dynematic/D0018E_Group1/graphs/contributors) who participated in this project.
 
-### Scrum board
+### Scrum board backlog
 
-![zube](https://i.imgur.com/d4jF4RY.png)
+![zube](https://imgur.com/mqRmTZ2.jpg)
 
 
 ### Database tables
 
 ![db tables](https://i.imgur.com/bCzyxLf.png)
+
+
+### The front page of the website
+![frontpage](https://imgur.com/PMDlnwX.png)
 
 ## Getting Started
 
