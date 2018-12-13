@@ -9,7 +9,6 @@
         <script src="/js/product/archiveProduct.js" type="text/javascript"></script>
         <script src="/js/product/searchRequest.js" type="text/javascript"></script>
         <script src="/js/product/unarchiveProduct.js" type="text/javascript"></script>
-        <link href="/css/normalize.css" rel="stylesheet" media="all">
         <link href="/css/styles.css" rel="stylesheet">
         <script src="/js/init/initNavButtons.js" type="text/javascript"></script>
 	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -51,8 +50,9 @@
                             </tr>
                             <tr>
                                 <td>Category</td>
-                                <td><input type="hidden" id="AddForm_catID" value="1">
-                                        <select name="category" onchange="updateCatText('AddForm_catID', this.value);"> //TODO: is updateCatText even implemented?
+                                <td><input type="hidden" id="AddForm_catID" value="-1">
+                                        <select name="category" onchange="updateCatText('AddForm_catID', this.value);">
+                                            <option value="-1">-- Select category --</option>
                                             <?php
                                                 include_once $_SERVER['DOCUMENT_ROOT'].'/php/category/getCategories.php';
                                                 getCategories();

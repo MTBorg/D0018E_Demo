@@ -3,16 +3,21 @@
     $dbconn = dbConnect();
 
     $catName = $_POST["catName"];
+
+    if (empty($catName)) {
+        echo "Error: The category name is empty";
+        return;
+    }
     
-    $checkCat = 'SELECT cat_name FROM Categories WHERE cat_name = "'.$catName.'";';
-    $queryCheckCat = mysqli_query($dbconn, $checkCat);
+    $insertCat = 'INSERT INTO Categories VALUES ("'.$catName.'");';
     
-    # Check if the category already exists
-    if ($result = mysqli_fetch_array($queryCheckCat)) {
-        echo "Error: the category you tried to create already exists.\n\nPlease try again with a different name.";
+    if (!mysqli_query($dbconn, $insertCat)) {   # Check if the category already exists
+        if (mysqli_errno($dbconn) == 1062) { # Error number for UNIQUE restraint on category name broken
+            echo "Error: the category you tried to create already exists.\n\nPlease try again with a different name.";
+        } else {
+            echo "Something went wrong, please try again!";
+        }
     } else {
-        $insertCat = 'INSERT INTO Categories VALUES (NULL, "'.$catName.'");';
-        mysqli_query($dbconn, $insertCat);
         echo true;
     }
 

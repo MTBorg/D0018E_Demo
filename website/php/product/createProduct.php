@@ -1,13 +1,11 @@
 <?php
-    //We still need to implement role_id but that has to be added in later.
-
     $prod_name = $_POST["name"];
     $prod_price = $_POST["price"];
     $prod_stock = $_POST["stock"];
     $prod_img_url = $_POST["img_url"];
-    $prod_cat_id = $_POST["cat_id"];
+    $prod_cat_name = $_POST["cat_name"];
 
-    if(empty($prod_name) || empty($prod_price) || empty($prod_stock) ||  empty($prod_img_url) || empty($prod_cat_id)) {
+    if(empty($prod_name) || empty($prod_price) || empty($prod_stock) ||  empty($prod_img_url) || empty($prod_cat_name)) {
         echo "Please fill all fields";
         return;
     }
