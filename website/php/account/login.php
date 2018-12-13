@@ -5,7 +5,8 @@
 	$password = $_POST["password"];	
 
 	if($email == "" or $password == ""){
-		return; //TODO: Return something useful
+		echo "Please fill all fields";
+		return;
 	}
 
 	$connection = dbConnect();
