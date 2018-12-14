@@ -26,7 +26,8 @@
         }
 
         mysqli_begin_transaction($dbconn, MYSQLI_TRANS_START_WITH_CONSISTENT_SNAPSHOT);
-
+        mysqli_autocommit($dbconn, FALSE);
+        
         //Create an order
         $query = 'INSERT INTO Orders VALUES (NULL, '.$user_id.',"Pending");';
         mysqli_query($dbconn, $query);
