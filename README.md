@@ -8,10 +8,10 @@ A minimalistic website with a e-commerce system were you can buy products, a sho
 
 ## Group 1, Authors
 
-* **Hugo Wangler**, hugwan-6
-* **Aron Strandberg**, arostr-5
+* **Hugo Wangler**, hugwan-6, https://github.com/banunkers
+* **Aron Strandberg**, arostr-5 https://github.com/dynematic
 * **Martin Terneborg**, termar-5, https://github.com/MTBorg
-* **Robin Vernström Persson**, robper-6
+* **Robin Vernström Persson**, robper-6, https://github.com/robinvp
 
 See the list of [contributors](https://github.com/dynematic/D0018E_Group1/graphs/contributors) who participated in this project.
 
