@@ -1,5 +1,7 @@
 # Note: This a demo branch forked from the original repo (found at https://github.com/dynematic/D0018E_Group1 (might be private)), the code and the feautres should still be complete though.
 
+# To view the report written about this project, view file Report.pdf
+
 # E-Commerce and relational database
 
 A minimalistic website with a e-commerce system were you can buy products, a shoping cart and rating system. Database built on MariaDB.
