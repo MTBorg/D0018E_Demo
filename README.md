@@ -8,7 +8,7 @@ A minimalistic website with a e-commerce system were you can buy products, a sho
 
 * **Hugo Wangler**, hugwan-6
 * **Aron Strandberg**, arostr-5
-* **Martin Terneborg**, termar-5
+* **Martin Terneborg**, termar-5, https://github.com/MTBorg
 * **Robin Vernström Persson**, robper-6
 
 See the list of [contributors](https://github.com/dynematic/D0018E_Group1/graphs/contributors) who participated in this project.
@@ -63,7 +63,7 @@ sudo a2enmod php7.0
 
 ### Built With
 
-* [HTTP] (https://httpd.apache.org/) - The web server
+* [Apache] (https://httpd.apache.org/) - The web server
 * [MariaDB] (https://mariadb.com/) - Relational SQL database
 * [PHP] (http://www.php.net/) - Hypertext Preprocessor
 
